@@ -1,11 +1,14 @@
 [project]
-name = "llm-learning"
+name = "cogmas-tdd"
 version = "0.1.0"
-description = "Add your description here"
+description = "Cognitive-layered Multi-Agent TDD workflow scaffold"
 readme = "README.md"
 requires-python = ">=3.13"
 dependencies = [
-    "langchain>=1.2.15",
-    "langchain-openai>=1.2.1",
-    "langgraph>=1.1.10",
+    "langchain>=0.3.0",
+    "langchain-openai>=0.2.0",
+    "langgraph>=0.2.0",
+    "outlines>=0.0.46",
+    "pytest>=8.3.0",
+    "pytest-asyncio>=0.24.0",
 ]
