@@ -1,0 +1,163 @@
+{
+  "sample_file": "F:\\LLM\\LLM_learning\\results\\runs\\humaneval_plus\\ours\\20260521_200608__ours__humaneval_plus__humaneval_plus_ours_missing_51_b_20260521_200558\\humaneval_samples.jsonl",
+  "problem_file": "F:\\LLM\\LLM_learning\\human-eval\\data\\HumanEval.jsonl.gz",
+  "sample_count": 25,
+  "task_count": 25,
+  "passed_count": 8,
+  "pass_metrics": {
+    "pass@1": 0.32
+  },
+  "detailed_results": [
+    {
+      "task_id": "HumanEval/141",
+      "passed": false,
+      "result": "failed: name 're' is not defined",
+      "completion_id": 0
+    },
+    {
+      "task_id": "HumanEval/139",
+      "passed": true,
+      "result": "passed",
+      "completion_id": 0
+    },
+    {
+      "task_id": "HumanEval/140",
+      "passed": true,
+      "result": "passed",
+      "completion_id": 0
+    },
+    {
+      "task_id": "HumanEval/142",
+      "passed": false,
+      "result": "failed: ",
+      "completion_id": 0
+    },
+    {
+      "task_id": "HumanEval/144",
+      "passed": false,
+      "result": "failed: unexpected character after line continuation character (<string>, line 14)",
+      "completion_id": 0
+    },
+    {
+      "task_id": "HumanEval/145",
+      "passed": false,
+      "result": "failed: ",
+      "completion_id": 0
+    },
+    {
+      "task_id": "HumanEval/143",
+      "passed": false,
+      "result": "failed: name 'is_prime' is not defined",
+      "completion_id": 0
+    },
+    {
+      "task_id": "HumanEval/146",
+      "passed": false,
+      "result": "failed: ",
+      "completion_id": 0
+    },
+    {
+      "task_id": "HumanEval/147",
+      "passed": false,
+      "result": "failed: ",
+      "completion_id": 0
+    },
+    {
+      "task_id": "HumanEval/148",
+      "passed": false,
+      "result": "failed: object of type 'NoneType' has no len()",
+      "completion_id": 0
+    },
+    {
+      "task_id": "HumanEval/149",
+      "passed": true,
+      "result": "passed",
+      "completion_id": 0
+    },
+    {
+      "task_id": "HumanEval/150",
+      "passed": false,
+      "result": "failed: ",
+      "completion_id": 0
+    },
+    {
+      "task_id": "HumanEval/152",
+      "passed": false,
+      "result": "failed: This prints if this assert fails 1 (good for debugging!)",
+      "completion_id": 0
+    },
+    {
+      "task_id": "HumanEval/151",
+      "passed": false,
+      "result": "failed: This prints if this assert fails 3 (good for debugging!)",
+      "completion_id": 0
+    },
+    {
+      "task_id": "HumanEval/153",
+      "passed": false,
+      "result": "failed: ",
+      "completion_id": 0
+    },
+    {
+      "task_id": "HumanEval/154",
+      "passed": false,
+      "result": "failed: test #0",
+      "completion_id": 0
+    },
+    {
+      "task_id": "HumanEval/156",
+      "passed": true,
+      "result": "passed",
+      "completion_id": 0
+    },
+    {
+      "task_id": "HumanEval/155",
+      "passed": true,
+      "result": "passed",
+      "completion_id": 0
+    },
+    {
+      "task_id": "HumanEval/157",
+      "passed": false,
+      "result": "failed: This prints if this assert fails 1 (good for debugging!)",
+      "completion_id": 0
+    },
+    {
+      "task_id": "HumanEval/158",
+      "passed": true,
+      "result": "passed",
+      "completion_id": 0
+    },
+    {
+      "task_id": "HumanEval/159",
+      "passed": true,
+      "result": "passed",
+      "completion_id": 0
+    },
+    {
+      "task_id": "HumanEval/160",
+      "passed": false,
+      "result": "failed: name 'numbers' is not defined",
+      "completion_id": 0
+    },
+    {
+      "task_id": "HumanEval/162",
+      "passed": false,
+      "result": "failed: name 'hashlib' is not defined",
+      "completion_id": 0
+    },
+    {
+      "task_id": "HumanEval/161",
+      "passed": true,
+      "result": "passed",
+      "completion_id": 0
+    },
+    {
+      "task_id": "HumanEval/163",
+      "passed": false,
+      "result": "failed: Test 1",
+      "completion_id": 0
+    }
+  ],
+  "detailed_result_count": 25
+}

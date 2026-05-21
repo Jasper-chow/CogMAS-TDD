@@ -1,0 +1,253 @@
+{
+  "name": "humaneval_plus_full_a_20260521_182128",
+  "description": "Auto-split [a] from humaneval_plus_full at 20260521_182128",
+  "items": [
+    {
+      "task_id": "HumanEval/0"
+    },
+    {
+      "task_id": "HumanEval/1"
+    },
+    {
+      "task_id": "HumanEval/2"
+    },
+    {
+      "task_id": "HumanEval/3"
+    },
+    {
+      "task_id": "HumanEval/4"
+    },
+    {
+      "task_id": "HumanEval/5"
+    },
+    {
+      "task_id": "HumanEval/6"
+    },
+    {
+      "task_id": "HumanEval/7"
+    },
+    {
+      "task_id": "HumanEval/8"
+    },
+    {
+      "task_id": "HumanEval/9"
+    },
+    {
+      "task_id": "HumanEval/10"
+    },
+    {
+      "task_id": "HumanEval/11"
+    },
+    {
+      "task_id": "HumanEval/12"
+    },
+    {
+      "task_id": "HumanEval/13"
+    },
+    {
+      "task_id": "HumanEval/14"
+    },
+    {
+      "task_id": "HumanEval/15"
+    },
+    {
+      "task_id": "HumanEval/16"
+    },
+    {
+      "task_id": "HumanEval/17"
+    },
+    {
+      "task_id": "HumanEval/18"
+    },
+    {
+      "task_id": "HumanEval/19"
+    },
+    {
+      "task_id": "HumanEval/20"
+    },
+    {
+      "task_id": "HumanEval/21"
+    },
+    {
+      "task_id": "HumanEval/22"
+    },
+    {
+      "task_id": "HumanEval/23"
+    },
+    {
+      "task_id": "HumanEval/24"
+    },
+    {
+      "task_id": "HumanEval/25"
+    },
+    {
+      "task_id": "HumanEval/26"
+    },
+    {
+      "task_id": "HumanEval/27"
+    },
+    {
+      "task_id": "HumanEval/28"
+    },
+    {
+      "task_id": "HumanEval/29"
+    },
+    {
+      "task_id": "HumanEval/30"
+    },
+    {
+      "task_id": "HumanEval/31"
+    },
+    {
+      "task_id": "HumanEval/32"
+    },
+    {
+      "task_id": "HumanEval/33"
+    },
+    {
+      "task_id": "HumanEval/34"
+    },
+    {
+      "task_id": "HumanEval/35"
+    },
+    {
+      "task_id": "HumanEval/36"
+    },
+    {
+      "task_id": "HumanEval/37"
+    },
+    {
+      "task_id": "HumanEval/38"
+    },
+    {
+      "task_id": "HumanEval/39"
+    },
+    {
+      "task_id": "HumanEval/40"
+    },
+    {
+      "task_id": "HumanEval/41"
+    },
+    {
+      "task_id": "HumanEval/42"
+    },
+    {
+      "task_id": "HumanEval/43"
+    },
+    {
+      "task_id": "HumanEval/44"
+    },
+    {
+      "task_id": "HumanEval/45"
+    },
+    {
+      "task_id": "HumanEval/46"
+    },
+    {
+      "task_id": "HumanEval/47"
+    },
+    {
+      "task_id": "HumanEval/48"
+    },
+    {
+      "task_id": "HumanEval/49"
+    },
+    {
+      "task_id": "HumanEval/50"
+    },
+    {
+      "task_id": "HumanEval/51"
+    },
+    {
+      "task_id": "HumanEval/52"
+    },
+    {
+      "task_id": "HumanEval/53"
+    },
+    {
+      "task_id": "HumanEval/54"
+    },
+    {
+      "task_id": "HumanEval/55"
+    },
+    {
+      "task_id": "HumanEval/56"
+    },
+    {
+      "task_id": "HumanEval/57"
+    },
+    {
+      "task_id": "HumanEval/58"
+    },
+    {
+      "task_id": "HumanEval/59"
+    },
+    {
+      "task_id": "HumanEval/60"
+    },
+    {
+      "task_id": "HumanEval/61"
+    },
+    {
+      "task_id": "HumanEval/62"
+    },
+    {
+      "task_id": "HumanEval/63"
+    },
+    {
+      "task_id": "HumanEval/64"
+    },
+    {
+      "task_id": "HumanEval/65"
+    },
+    {
+      "task_id": "HumanEval/66"
+    },
+    {
+      "task_id": "HumanEval/67"
+    },
+    {
+      "task_id": "HumanEval/68"
+    },
+    {
+      "task_id": "HumanEval/69"
+    },
+    {
+      "task_id": "HumanEval/70"
+    },
+    {
+      "task_id": "HumanEval/71"
+    },
+    {
+      "task_id": "HumanEval/72"
+    },
+    {
+      "task_id": "HumanEval/73"
+    },
+    {
+      "task_id": "HumanEval/74"
+    },
+    {
+      "task_id": "HumanEval/75"
+    },
+    {
+      "task_id": "HumanEval/76"
+    },
+    {
+      "task_id": "HumanEval/77"
+    },
+    {
+      "task_id": "HumanEval/78"
+    },
+    {
+      "task_id": "HumanEval/79"
+    },
+    {
+      "task_id": "HumanEval/80"
+    },
+    {
+      "task_id": "HumanEval/81"
+    }
+  ],
+  "default_dataset": "humaneval_plus"
+}
