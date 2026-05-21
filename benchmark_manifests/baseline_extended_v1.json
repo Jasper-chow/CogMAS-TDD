@@ -1,0 +1,212 @@
+{
+  "name": "baseline_extended_v1",
+  "description": "25-task extended baseline subset mixing 20 MBPP + 5 HumanEval tasks. Designed for statistically meaningful Experiment 1 results.",
+  "metadata": {
+    "split": "extended_baseline",
+    "version": "v1",
+    "owner": "cogmas-tdd",
+    "note": "Extends shared_baseline_subset_v1. Excludes tasks already in that manifest."
+  },
+  "items": [
+    {
+      "dataset": "mbpp",
+      "task_id": "4",
+      "tags": [
+        "extended_baseline",
+        "mbpp"
+      ]
+    },
+    {
+      "dataset": "mbpp",
+      "task_id": "7",
+      "tags": [
+        "extended_baseline",
+        "mbpp"
+      ]
+    },
+    {
+      "dataset": "mbpp",
+      "task_id": "8",
+      "tags": [
+        "extended_baseline",
+        "mbpp"
+      ]
+    },
+    {
+      "dataset": "mbpp",
+      "task_id": "16",
+      "tags": [
+        "extended_baseline",
+        "mbpp"
+      ]
+    },
+    {
+      "dataset": "mbpp",
+      "task_id": "62",
+      "tags": [
+        "extended_baseline",
+        "mbpp"
+      ]
+    },
+    {
+      "dataset": "mbpp",
+      "task_id": "65",
+      "tags": [
+        "extended_baseline",
+        "mbpp"
+      ]
+    },
+    {
+      "dataset": "mbpp",
+      "task_id": "68",
+      "tags": [
+        "extended_baseline",
+        "mbpp"
+      ]
+    },
+    {
+      "dataset": "mbpp",
+      "task_id": "71",
+      "tags": [
+        "extended_baseline",
+        "mbpp"
+      ]
+    },
+    {
+      "dataset": "mbpp",
+      "task_id": "82",
+      "tags": [
+        "extended_baseline",
+        "mbpp"
+      ]
+    },
+    {
+      "dataset": "mbpp",
+      "task_id": "88",
+      "tags": [
+        "extended_baseline",
+        "mbpp"
+      ]
+    },
+    {
+      "dataset": "mbpp",
+      "task_id": "99",
+      "tags": [
+        "extended_baseline",
+        "mbpp"
+      ]
+    },
+    {
+      "dataset": "mbpp",
+      "task_id": "102",
+      "tags": [
+        "extended_baseline",
+        "mbpp"
+      ]
+    },
+    {
+      "dataset": "mbpp",
+      "task_id": "105",
+      "tags": [
+        "extended_baseline",
+        "mbpp"
+      ]
+    },
+    {
+      "dataset": "mbpp",
+      "task_id": "118",
+      "tags": [
+        "extended_baseline",
+        "mbpp"
+      ]
+    },
+    {
+      "dataset": "mbpp",
+      "task_id": "130",
+      "tags": [
+        "extended_baseline",
+        "mbpp"
+      ]
+    },
+    {
+      "dataset": "mbpp",
+      "task_id": "161",
+      "tags": [
+        "extended_baseline",
+        "mbpp"
+      ]
+    },
+    {
+      "dataset": "mbpp",
+      "task_id": "222",
+      "tags": [
+        "extended_baseline",
+        "mbpp"
+      ]
+    },
+    {
+      "dataset": "mbpp",
+      "task_id": "230",
+      "tags": [
+        "extended_baseline",
+        "mbpp"
+      ]
+    },
+    {
+      "dataset": "mbpp",
+      "task_id": "246",
+      "tags": [
+        "extended_baseline",
+        "mbpp"
+      ]
+    },
+    {
+      "dataset": "mbpp",
+      "task_id": "248",
+      "tags": [
+        "extended_baseline",
+        "mbpp"
+      ]
+    },
+    {
+      "dataset": "humaneval",
+      "task_id": "HumanEval/2",
+      "tags": [
+        "extended_baseline",
+        "humaneval"
+      ]
+    },
+    {
+      "dataset": "humaneval",
+      "task_id": "HumanEval/3",
+      "tags": [
+        "extended_baseline",
+        "humaneval"
+      ]
+    },
+    {
+      "dataset": "humaneval",
+      "task_id": "HumanEval/5",
+      "tags": [
+        "extended_baseline",
+        "humaneval"
+      ]
+    },
+    {
+      "dataset": "humaneval",
+      "task_id": "HumanEval/13",
+      "tags": [
+        "extended_baseline",
+        "humaneval"
+      ]
+    },
+    {
+      "dataset": "humaneval",
+      "task_id": "HumanEval/16",
+      "tags": [
+        "extended_baseline",
+        "humaneval"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,2 @@
+{"task_id": "HumanEval/0", "completion": "def placeholder_impl() -> bool:\n    return True"}
+{"task_id": "HumanEval/1", "completion": "def placeholder_impl() -> bool:\n    return True"}

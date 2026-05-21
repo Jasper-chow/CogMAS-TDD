@@ -1,0 +1,22 @@
+{
+  "dataset": "mixed",
+  "profile": "b1_vanilla_ai_tdd",
+  "manifest_name": "baseline_extended_v1",
+  "seed_source": "empty",
+  "run_dir": "F:\\LLM\\LLM_learning\\results\\runs\\mixed\\b1_vanilla_ai_tdd\\20260520_005603__b1_vanilla_ai_tdd__mixed__baseline_extended_v1",
+  "total_tasks": 25,
+  "workflow_success_rate": 0.6,
+  "test_pass_rate": 0.6,
+  "avg_green_attempts": 2.92,
+  "avg_iteration": 0.0,
+  "official_humaneval_eval": {
+    "sample_file": "F:\\LLM\\LLM_learning\\results\\runs\\mixed\\b1_vanilla_ai_tdd\\20260520_005603__b1_vanilla_ai_tdd__mixed__baseline_extended_v1\\humaneval_samples.jsonl",
+    "problem_file": "F:\\LLM\\LLM_learning\\human-eval\\data\\HumanEval.jsonl.gz",
+    "sample_count": 5,
+    "task_count": 5,
+    "passed_count": 4,
+    "pass_metrics": {
+      "pass@1": 0.8
+    }
+  }
+}

@@ -8,12 +8,15 @@ Agent 模块注册中心。
 """
 
 from . import (
+    code_review_node,
     evaluation_node,
     green_node,
+    ldb_debug_node,
     l2_refactor_node,
     l3_refactor_node,
     rar4is_node,
     red_node,
+    test_runner_node,
 )
 
 NODE_REGISTRY = {
@@ -21,6 +24,9 @@ NODE_REGISTRY = {
     "rar4is_node": rar4is_node,
     "red_node": red_node,
     "green_node": green_node,
+    "ldb_debug_node": ldb_debug_node,
+    "test_runner_node": test_runner_node,
+    "code_review_node": code_review_node,
     "l2_refactor_node": l2_refactor_node,
     "l3_refactor_node": l3_refactor_node,
     "evaluation_node": evaluation_node,

@@ -1,0 +1,10 @@
+{
+  "dataset": "humaneval",
+  "profile": "b0_direct_generation",
+  "seed_source": "reference",
+  "total_tasks": 1,
+  "workflow_success_rate": 1.0,
+  "test_pass_rate": 1.0,
+  "avg_green_attempts": 1.0,
+  "avg_iteration": 0.0
+}

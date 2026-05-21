@@ -1,0 +1,5 @@
+{"task_id": "HumanEval/2", "completion": "    integer_part, decimal_part = divmod(number, 1)\n    return decimal_part"}
+{"task_id": "HumanEval/3", "completion": "    balance = 0\n    for op in operations:\n        balance += op\n        if balance < 0:\n            return True\n    return False"}
+{"task_id": "HumanEval/5", "completion": "from typing import List List\n\ndef intersperse(numbers: "}
+{"task_id": "HumanEval/13", "completion": "    \n    while b:\n        a, b = b, a % b\n    return a"}
+{"task_id": "HumanEval/16", "completion": "    return len(set(string.lower()))"}

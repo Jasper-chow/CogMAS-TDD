@@ -1,0 +1,43 @@
+{
+  "sample_file": "F:\\LLM\\LLM_learning\\results\\runs\\mixed\\ours\\20260521_023119__ours__mixed__baseline_extended_v1__smoke_test_ours\\humaneval_samples.jsonl",
+  "problem_file": "F:\\LLM\\LLM_learning\\human-eval\\data\\HumanEval.jsonl.gz",
+  "sample_count": 5,
+  "task_count": 5,
+  "passed_count": 0,
+  "pass_metrics": {
+    "pass@1": 0.0
+  },
+  "detailed_results": [
+    {
+      "task_id": "HumanEval/2",
+      "passed": false,
+      "result": "failed: unexpected character after line continuation character (<string>, line 12)",
+      "completion_id": 0
+    },
+    {
+      "task_id": "HumanEval/3",
+      "passed": false,
+      "result": "failed: invalid syntax (<string>, line 13)",
+      "completion_id": 0
+    },
+    {
+      "task_id": "HumanEval/13",
+      "passed": false,
+      "result": "failed: invalid syntax (<string>, line 10)",
+      "completion_id": 0
+    },
+    {
+      "task_id": "HumanEval/5",
+      "passed": false,
+      "result": "failed: unindent does not match any outer indentation level (<string>, line 11)",
+      "completion_id": 0
+    },
+    {
+      "task_id": "HumanEval/16",
+      "passed": false,
+      "result": "failed: '(' was never closed (<string>, line 10)",
+      "completion_id": 0
+    }
+  ],
+  "detailed_result_count": 5
+}

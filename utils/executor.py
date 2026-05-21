@@ -3,9 +3,10 @@ from __future__ import annotations
 """
 LDB 执行引擎（简化版）。
 
-这个文件提供两类能力：
+这个文件提供三类能力：
 1. 轨迹采集：用 sys.settrace 捕获函数逐行执行信息；
-2. 轨迹比对：给出重构前后是否“足够一致”的判定。
+2. 弱等价比对：关键节点与关键变量集合是否一致；
+3. 强等价比对：在弱等价基础上进一步比较行级路径与变量值。
 
 注意：
 - 当前是可运行的教学级实现，不是生产级语义等价证明器。
@@ -13,6 +14,11 @@ LDB 执行引擎（简化版）。
 """
 
 import sys
+import tempfile
+import types
+import uuid
+from importlib import util as importlib_util
+from pathlib import Path
 from types import FrameType
 from typing import Any, Callable
 
@@ -55,7 +61,85 @@ def trace_function(func: Callable[[], Any]) -> list[TraceRecord]:
     return records
 
 
-def compare_traces(
+def _load_module_from_file(module_name: str, file_path: Path) -> types.ModuleType:
+    """从文件路径动态加载模块。"""
+    spec = importlib_util.spec_from_file_location(module_name, str(file_path))
+    if spec is None or spec.loader is None:
+        raise RuntimeError(f"cannot load module spec for {file_path}")
+    module = importlib_util.module_from_spec(spec)
+    spec.loader.exec_module(module)
+    return module
+
+
+def _ensure_test_imports(test_code: str) -> str:
+    """若测试未导入 app 模块，则补充默认导入。"""
+    if "from app import" in test_code or "import app" in test_code:
+        return test_code
+    return "from app import *\n\n" + test_code
+
+
+def execute_code_with_trace(code: str, test_cases: str) -> dict[str, Any]:
+    """
+    执行代码与测试并捕获真实运行轨迹。
+
+    返回：
+    - passed: 是否通过执行
+    - error: 错误摘要（为空表示成功）
+    - trace: 轨迹记录列表
+    """
+    if not code or not test_cases:
+        return {
+            "passed": False,
+            "error": "missing code or test_cases for trace execution",
+            "trace": [],
+        }
+
+    trace: list[TraceRecord] = []
+    with tempfile.TemporaryDirectory(prefix="cogmas_trace_") as tmpdir:
+        workspace = Path(tmpdir)
+        app_path = workspace / "app.py"
+        test_path = workspace / "test_app.py"
+        app_path.write_text(code, encoding="utf-8")
+        test_path.write_text(_ensure_test_imports(test_cases), encoding="utf-8")
+
+        previous_sys_path = list(sys.path)
+        app_module_name = f"app_{uuid.uuid4().hex}"
+        test_module_name = f"test_app_{uuid.uuid4().hex}"
+        try:
+            sys.path.insert(0, str(workspace))
+            app_module = _load_module_from_file(app_module_name, app_path)
+            # 兼容测试中显式 import app 的情况，挂载别名。
+            sys.modules["app"] = app_module
+            test_module = _load_module_from_file(test_module_name, test_path)
+
+            test_functions = [
+                getattr(test_module, name)
+                for name in dir(test_module)
+                if name.startswith("test_") and callable(getattr(test_module, name))
+            ]
+            if not test_functions:
+                return {
+                    "passed": False,
+                    "error": "no test_ functions found for trace execution",
+                    "trace": [],
+                }
+
+            def _runner() -> None:
+                for test_func in test_functions:
+                    test_func()
+
+            trace = trace_function(_runner)
+            return {"passed": True, "error": "", "trace": trace}
+        except Exception as exc:  # noqa: BLE001
+            return {"passed": False, "error": repr(exc), "trace": trace}
+        finally:
+            sys.path = previous_sys_path
+            sys.modules.pop("app", None)
+            sys.modules.pop(app_module_name, None)
+            sys.modules.pop(test_module_name, None)
+
+
+def compare_traces_weak(
     original_trace: list[TraceRecord], refactored_trace: list[TraceRecord]
 ) -> bool:
     """
@@ -79,3 +163,85 @@ def compare_traces(
         if set(left["locals"].keys()) != set(right["locals"].keys()):
             return False
     return True
+
+
+def compare_traces_strong(
+    original_trace: list[TraceRecord], refactored_trace: list[TraceRecord]
+) -> bool:
+    """
+    强等价比较：在弱等价通过后，再比对路径与变量值。
+
+    当前规则：
+    1. 先要求 weak 通过；
+    2. 每一步 line_no 必须一致；
+    3. 每一步 locals 的值表示（repr）必须一致。
+    """
+    if not compare_traces_weak(original_trace, refactored_trace):
+        return False
+
+    for left, right in zip(original_trace, refactored_trace):
+        if left["line_no"] != right["line_no"]:
+            return False
+        left_locals = {k: repr(v) for k, v in left["locals"].items()}
+        right_locals = {k: repr(v) for k, v in right["locals"].items()}
+        if left_locals != right_locals:
+            return False
+    return True
+
+
+def compare_traces(
+    original_trace: list[TraceRecord],
+    refactored_trace: list[TraceRecord],
+    *,
+    mode: str = "weak",
+) -> bool:
+    """统一比较入口：mode=weak 或 strong。"""
+    if mode == "strong":
+        return compare_traces_strong(original_trace, refactored_trace)
+    return compare_traces_weak(original_trace, refactored_trace)
+
+
+def summarize_trace_difference(
+    original_trace: list[TraceRecord], refactored_trace: list[TraceRecord]
+) -> str:
+    """
+    生成面向 Agent 的轨迹差异反馈。
+
+    目标不是完整证明，而是给下一轮重构一个足够具体的修复线索。
+    """
+    if not original_trace and not refactored_trace:
+        return "两侧均未产生运行轨迹，请检查测试是否真正执行。"
+    if len(original_trace) != len(refactored_trace):
+        return (
+            f"轨迹长度不一致：L1 为 {len(original_trace)} 步，"
+            f"L3 为 {len(refactored_trace)} 步。"
+        )
+
+    for index, (left, right) in enumerate(zip(original_trace, refactored_trace), start=1):
+        if left["function"] != right["function"]:
+            return (
+                f"第 {index} 个关键节点函数不同："
+                f"L1 为 {left['function']}，L3 为 {right['function']}。"
+            )
+        if left["line_no"] != right["line_no"]:
+            return (
+                f"第 {index} 个关键节点行号不同："
+                f"L1 在第 {left['line_no']} 行，L3 在第 {right['line_no']} 行。"
+            )
+
+        left_keys = set(left["locals"].keys())
+        right_keys = set(right["locals"].keys())
+        if left_keys != right_keys:
+            return (
+                f"第 {index} 个关键节点局部变量集合不同："
+                f"L1 为 {sorted(left_keys)}，L3 为 {sorted(right_keys)}。"
+            )
+
+        for key in sorted(left_keys):
+            if repr(left["locals"][key]) != repr(right["locals"][key]):
+                return (
+                    f"第 {index} 个关键节点变量 `{key}` 的值不同："
+                    f"L1 为 {left['locals'][key]!r}，L3 为 {right['locals'][key]!r}。"
+                )
+
+    return "未检测到关键轨迹差异。"

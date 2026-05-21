@@ -1,0 +1,43 @@
+{
+  "sample_file": "F:\\LLM\\LLM_learning\\results\\runs\\mixed\\b0_direct_generation\\20260519_211552__b0_direct_generation__mixed__baseline_extended_v1\\humaneval_samples.jsonl",
+  "problem_file": "F:\\LLM\\LLM_learning\\human-eval\\data\\HumanEval.jsonl.gz",
+  "sample_count": 5,
+  "task_count": 5,
+  "passed_count": 2,
+  "pass_metrics": {
+    "pass@1": 0.4
+  },
+  "detailed_results": [
+    {
+      "task_id": "HumanEval/13",
+      "passed": false,
+      "result": "failed: ",
+      "completion_id": 0
+    },
+    {
+      "task_id": "HumanEval/5",
+      "passed": false,
+      "result": "failed: ",
+      "completion_id": 0
+    },
+    {
+      "task_id": "HumanEval/2",
+      "passed": true,
+      "result": "passed",
+      "completion_id": 0
+    },
+    {
+      "task_id": "HumanEval/3",
+      "passed": true,
+      "result": "passed",
+      "completion_id": 0
+    },
+    {
+      "task_id": "HumanEval/16",
+      "passed": false,
+      "result": "failed: ",
+      "completion_id": 0
+    }
+  ],
+  "detailed_result_count": 5
+}

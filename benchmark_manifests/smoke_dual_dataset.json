@@ -1,0 +1,32 @@
+{
+  "name": "smoke_dual_dataset",
+  "description": "A small fixed benchmark batch for end-to-end smoke experiments.",
+  "metadata": {
+    "split": "smoke",
+    "owner": "cogmas-tdd"
+  },
+  "items": [
+    {
+      "dataset": "mbpp",
+      "task_id": "2",
+      "metadata": {
+        "purpose": "basic_mbpp_smoke"
+      },
+      "tags": [
+        "smoke",
+        "mbpp"
+      ]
+    },
+    {
+      "dataset": "humaneval",
+      "task_id": "HumanEval/0",
+      "metadata": {
+        "purpose": "basic_humaneval_smoke"
+      },
+      "tags": [
+        "smoke",
+        "humaneval"
+      ]
+    }
+  ]
+}

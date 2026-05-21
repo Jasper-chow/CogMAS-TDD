@@ -1,0 +1,278 @@
+[
+  {
+    "CWE_ID": "407",
+    "Characteristic": "Maintainability",
+    "Description": "Algorithmic Complexity",
+    "Refactor_Advice": "Analyze the algorithm's time complexity. Replace inefficient algorithms (e.g., nested loops) with optimized data structures or algorithms."
+  },
+  {
+    "CWE_ID": "480",
+    "Characteristic": "Maintainability",
+    "Description": "Use of Incorrect Operator",
+    "Refactor_Advice": "Review conditional and mathematical expressions to ensure the correct operator is used (e.g., using '==' instead of '=')."
+  },
+  {
+    "CWE_ID": "561",
+    "Characteristic": "Maintainability",
+    "Description": "Dead code",
+    "Refactor_Advice": "Identify and remove unreachable code segments, unused functions, or obsolete conditional branches to reduce maintenance overhead."
+  },
+  {
+    "CWE_ID": "570",
+    "Characteristic": "Maintainability",
+    "Description": "Expression is Always False",
+    "Refactor_Advice": "Refactor the logical condition. Remove the dead conditional block or correct the logic so it can evaluate dynamically."
+  },
+  {
+    "CWE_ID": "571",
+    "Characteristic": "Maintainability",
+    "Description": "Expression is Always True",
+    "Refactor_Advice": "Refactor the logical condition. Remove the redundant check and execute the code block directly, or fix the logic."
+  },
+  {
+    "CWE_ID": "783",
+    "Characteristic": "Maintainability",
+    "Description": "Operator Precedence Logic Error",
+    "Refactor_Advice": "Use explicit parentheses in complex expressions to force the intended order of operations and clarify logic."
+  },
+  {
+    "CWE_ID": "1041",
+    "Characteristic": "Maintainability",
+    "Description": "Use of Redundant Code (Copy-Paste)",
+    "Refactor_Advice": "Extract duplicate or redundant code patterns shared across multiple locations into a single, reusable function or method."
+  },
+  {
+    "CWE_ID": "1052",
+    "Characteristic": "Maintainability",
+    "Description": "Excessive Use of Hard-Coded Literals in Initialization",
+    "Refactor_Advice": "Replace hard-coded literal strings and 'magic numbers' with named constants, enums, or configuration parameters."
+  },
+  {
+    "CWE_ID": "1095",
+    "Characteristic": "Maintainability",
+    "Description": "Loop Condition Value Update within the Loop",
+    "Refactor_Advice": "Ensure loop control variables are updated exclusively in the loop signature to prevent unpredictable control flow logic."
+  },
+  {
+    "CWE_ID": "1121",
+    "Characteristic": "Maintainability",
+    "Description": "Excessive McCabe Cyclomatic Complexity",
+    "Refactor_Advice": "Reduce branching by extracting complex nested if/else logic into smaller helper functions or using polymorphism."
+  },
+  {
+    "CWE_ID": "404",
+    "Characteristic": "Performance Efficiency",
+    "Description": "Improper Resource Shutdown or Release",
+    "Refactor_Advice": "Guarantee resource closure by utilizing try-with-resources statements or explicit 'finally' blocks."
+  },
+  {
+    "CWE_ID": "772",
+    "Characteristic": "Performance Efficiency",
+    "Description": "Missing Release of Resource after Effective Lifetime",
+    "Refactor_Advice": "Release network connections, threads, or memory immediately after their functional use has completed."
+  },
+  {
+    "CWE_ID": "775",
+    "Characteristic": "Performance Efficiency",
+    "Description": "Missing Release of File Descriptor or Handle after Effective Lifetime",
+    "Refactor_Advice": "Always explicitly close file descriptors/handles in error-handling 'finally' blocks to prevent descriptor exhaustion."
+  },
+  {
+    "CWE_ID": "1050",
+    "Characteristic": "Performance Efficiency",
+    "Description": "Excessive Platform Resource Consumption within a Loop",
+    "Refactor_Advice": "Extract resource-heavy operations (e.g., database connections, file I/O) out of the loop body."
+  },
+  {
+    "CWE_ID": "252",
+    "Characteristic": "Reliability",
+    "Description": "Unchecked Return Value",
+    "Refactor_Advice": "Explicitly verify the return values of all method calls, particularly I/O and system APIs, and implement appropriate error-handling logic."
+  },
+  {
+    "CWE_ID": "390",
+    "Characteristic": "Reliability",
+    "Description": "Detection of Error Condition Without Action",
+    "Refactor_Advice": "Populate empty catch blocks or error branches with meaningful handling logic, such as structured logging or state recovery."
+  },
+  {
+    "CWE_ID": "459",
+    "Characteristic": "Reliability",
+    "Description": "Incomplete Cleanup",
+    "Refactor_Advice": "Ensure all temporary files, caches, and supporting resources are systematically deleted or scrubbed after their designated use."
+  },
+  {
+    "CWE_ID": "597",
+    "Characteristic": "Reliability",
+    "Description": "Use of Wrong Operator in String Comparison",
+    "Refactor_Advice": "Utilize dedicated string comparison methods rather than identity operators when evaluating string equivalence."
+  },
+  {
+    "CWE_ID": "665",
+    "Characteristic": "Reliability",
+    "Description": "Improper Initialization",
+    "Refactor_Advice": "Ensure complex resources are fully initialized and valid before their references are exposed to the rest of the application."
+  },
+  {
+    "CWE_ID": "672",
+    "Characteristic": "Reliability",
+    "Description": "Operation on a Resource after Expiration or Release",
+    "Refactor_Advice": "Invalidate resource references immediately upon release and verify state flags before attempting subsequent operations."
+  },
+  {
+    "CWE_ID": "197",
+    "Characteristic": "Reliability",
+    "Description": "Numeric Truncation Error",
+    "Refactor_Advice": "Check bounds before downcasting primitive types (e.g., 64-bit to 32-bit) to prevent high-order bit data loss."
+  },
+  {
+    "CWE_ID": "682",
+    "Characteristic": "Reliability",
+    "Description": "Incorrect Calculation",
+    "Refactor_Advice": "Audit arithmetic logic for critical decision-making or resource management code, adding comprehensive unit tests for mathematical correctness."
+  },
+  {
+    "CWE_ID": "369",
+    "Characteristic": "Reliability",
+    "Description": "Divide By Zero",
+    "Refactor_Advice": "Add conditional guards to explicitly verify that the denominator is strictly non-zero before executing any division."
+  },
+  {
+    "CWE_ID": "703",
+    "Characteristic": "Reliability",
+    "Description": "Improper Check or Handling of Exceptional Conditions",
+    "Refactor_Advice": "Anticipate edge cases and implement comprehensive try-catch mechanisms to handle conditions that disrupt normal flow."
+  },
+  {
+    "CWE_ID": "248",
+    "Characteristic": "Reliability",
+    "Description": "Uncaught Exception",
+    "Refactor_Advice": "Ensure all thrown exceptions are caught and handled by an appropriate upstream catch block or global exception handler."
+  },
+  {
+    "CWE_ID": "391",
+    "Characteristic": "Reliability",
+    "Description": "Unchecked Error Condition",
+    "Refactor_Advice": "Do not ignore error conditions or swallow exceptions silently; log them properly and handle the state transition."
+  },
+  {
+    "CWE_ID": "392",
+    "Characteristic": "Reliability",
+    "Description": "Missing Report of Error Condition",
+    "Refactor_Advice": "Ensure functions encountering errors explicitly return informative status codes or throw structured exceptions to the caller."
+  },
+  {
+    "CWE_ID": "835",
+    "Characteristic": "Reliability",
+    "Description": "Loop with Unreachable Exit Condition ('Infinite Loop')",
+    "Refactor_Advice": "Review loop control variables to ensure they are properly updated within the loop body to reach the termination condition."
+  },
+  {
+    "CWE_ID": "908",
+    "Characteristic": "Reliability",
+    "Description": "Use of Uninitialized Resource",
+    "Refactor_Advice": "Ensure resources and connections are completely initialized and verified before exposing them to business logic execution."
+  },
+  {
+    "CWE_ID": "1077",
+    "Characteristic": "Reliability",
+    "Description": "Floating Point Comparison with Incorrect Operator",
+    "Refactor_Advice": "Compare floating-point values using an acceptable tolerance threshold (epsilon) rather than direct strict equality operators (==)."
+  },
+  {
+    "CWE_ID": "22",
+    "Characteristic": "Security",
+    "Description": "Improper Limitation of a Pathname to a Restricted Directory ('Path Traversal')",
+    "Refactor_Advice": "Validate all filesystem path inputs against a strict allowlist and resolve paths to their canonical absolute format before access."
+  },
+  {
+    "CWE_ID": "23",
+    "Characteristic": "Security",
+    "Description": "Relative Path Traversal",
+    "Refactor_Advice": "Neutralize relative path sequences (like '../') by strictly validating inputs against allowed directory scopes."
+  },
+  {
+    "CWE_ID": "36",
+    "Characteristic": "Security",
+    "Description": "Absolute Path Traversal",
+    "Refactor_Advice": "Reject any input containing absolute path definitions and construct file paths programmatically from a safe base directory."
+  },
+  {
+    "CWE_ID": "77",
+    "Characteristic": "Security",
+    "Description": "Improper Neutralization of Special Elements used in a Command ('Command Injection')",
+    "Refactor_Advice": "Avoid shelling out to the OS. Use safe, parameterized API bindings that bypass the shell interpreter entirely."
+  },
+  {
+    "CWE_ID": "78",
+    "Characteristic": "Security",
+    "Description": "Improper Neutralization of Special Elements used in an OS Command ('OS Command Injection')",
+    "Refactor_Advice": "Do not pass user input directly into OS command execution functions; strictly sanitize inputs and use execution APIs that separate command from arguments."
+  },
+  {
+    "CWE_ID": "88",
+    "Characteristic": "Security",
+    "Description": "Argument Injection or Modification",
+    "Refactor_Advice": "Strictly delimit and sanitize all arguments passed to downstream components or processes to prevent flag/argument injection."
+  },
+  {
+    "CWE_ID": "99",
+    "Characteristic": "Security",
+    "Description": "Improper Control of Resource Identifiers (‘Resource injection’)",
+    "Refactor_Advice": "Implement strict validation and access control checks before allowing external input to dictate resource identifiers (e.g., port numbers, file IDs)."
+  },
+  {
+    "CWE_ID": "129",
+    "Characteristic": "Security",
+    "Description": "Improper Validation of Array Index",
+    "Refactor_Advice": "Validate array indices derived from untrusted input against strict upper and lower bounds before using them for data access."
+  },
+  {
+    "CWE_ID": "134",
+    "Characteristic": "Security",
+    "Description": "Use of Externally Controlled Format String",
+    "Refactor_Advice": "Never pass unvalidated user input directly as the format string parameter to formatting functions (e.g., printf); use static strings."
+  },
+  {
+    "CWE_ID": "477",
+    "Characteristic": "Security",
+    "Description": "Use of Obsolete Function",
+    "Refactor_Advice": "Replace deprecated or obsolete functions with their modernized, secure equivalents provided by updated standard libraries."
+  },
+  {
+    "CWE_ID": "502",
+    "Characteristic": "Security",
+    "Description": "Deserialization of Untrusted Data",
+    "Refactor_Advice": "Avoid deserializing complex objects from untrusted sources; utilize safe data formats like JSON or enforce strict class allowlists."
+  },
+  {
+    "CWE_ID": "606",
+    "Characteristic": "Security",
+    "Description": "Unchecked Input for Loop Condition",
+    "Refactor_Advice": "Sanitize and strictly bound inputs used for loop conditions to prevent attackers from causing excessive CPU consumption."
+  },
+  {
+    "CWE_ID": "789",
+    "Characteristic": "Security",
+    "Description": "Uncontrolled Memory Allocation",
+    "Refactor_Advice": "Enforce strict upper limits and validation checks on size parameters derived from external inputs before dynamic memory allocation."
+  },
+  {
+    "CWE_ID": "798",
+    "Characteristic": "Security",
+    "Description": "Use of Hard-coded Credentials",
+    "Refactor_Advice": "Extract all hard-coded secrets from the source code and inject them dynamically via secure environment variables or a vault."
+  },
+  {
+    "CWE_ID": "259",
+    "Characteristic": "Security",
+    "Description": "Use of Hard-coded Password",
+    "Refactor_Advice": "Do not commit passwords into version control. Abstract authentication secrets into external configuration files or secret managers."
+  },
+  {
+    "CWE_ID": "321",
+    "Characteristic": "Security",
+    "Description": "Use of Hard-coded Cryptographic Key",
+    "Refactor_Advice": "Manage cryptographic keys via secure key management systems (KMS) or HSMs rather than embedding them directly in source code."
+  }
+]

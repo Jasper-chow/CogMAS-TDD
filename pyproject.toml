@@ -5,10 +5,20 @@ description = "Cognitive-layered Multi-Agent TDD workflow scaffold"
 readme = "README.md"
 requires-python = ">=3.13"
 dependencies = [
+    "accelerate>=1.13.0",
+    "astor>=0.8.1",
+    "astroid>=3.0.0",
+    "chromadb>=0.5.0",
+    "graphviz>=0.20.3",
+    "jsonlines>=4.0.0",
     "langchain>=0.3.0",
     "langchain-openai>=0.2.0",
     "langgraph>=0.2.0",
+    "openai>=2.33.0",
     "outlines>=0.0.46",
+    "pydantic>=2.0.0",
     "pytest>=8.3.0",
     "pytest-asyncio>=0.24.0",
+    "tenacity>=9.1.4",
+    "transformers>=5.8.1",
 ]

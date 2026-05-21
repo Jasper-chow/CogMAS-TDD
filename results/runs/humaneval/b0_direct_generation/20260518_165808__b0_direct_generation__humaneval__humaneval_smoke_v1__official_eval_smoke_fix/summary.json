@@ -1,0 +1,22 @@
+{
+  "dataset": "humaneval",
+  "profile": "b0_direct_generation",
+  "manifest_name": "humaneval_smoke_v1",
+  "seed_source": "reference",
+  "run_dir": "F:\\LLM\\LLM_learning\\results\\runs\\humaneval\\b0_direct_generation\\20260518_165808__b0_direct_generation__humaneval__humaneval_smoke_v1__official_eval_smoke_fix",
+  "total_tasks": 2,
+  "workflow_success_rate": 1.0,
+  "test_pass_rate": 1.0,
+  "avg_green_attempts": 1.0,
+  "avg_iteration": 0.0,
+  "official_humaneval_eval": {
+    "sample_file": "F:\\LLM\\LLM_learning\\results\\runs\\humaneval\\b0_direct_generation\\20260518_165808__b0_direct_generation__humaneval__humaneval_smoke_v1__official_eval_smoke_fix\\humaneval_samples.jsonl",
+    "problem_file": "F:\\LLM\\LLM_learning\\human-eval\\data\\HumanEval.jsonl.gz",
+    "sample_count": 2,
+    "task_count": 2,
+    "passed_count": 0,
+    "pass_metrics": {
+      "pass@1": 0.0
+    }
+  }
+}

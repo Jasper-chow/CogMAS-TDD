@@ -1,0 +1,21 @@
+{
+  "name": "humaneval_smoke_v1",
+  "description": "A fixed HumanEval smoke subset for official pass@1 evaluation checks.",
+  "metadata": {
+    "split": "humaneval_smoke",
+    "version": "v1",
+    "owner": "cogmas-tdd"
+  },
+  "items": [
+    {
+      "dataset": "humaneval",
+      "task_id": "HumanEval/0",
+      "tags": ["smoke", "humaneval"]
+    },
+    {
+      "dataset": "humaneval",
+      "task_id": "HumanEval/1",
+      "tags": ["smoke", "humaneval"]
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "dataset_label": "mixed",
+  "profile": "b0_direct_generation",
+  "manifest_name": "shared_baseline_subset_v1",
+  "manifest_description": "A fixed shared subset for baseline and ablation experiments across MBPP and HumanEval.",
+  "task_count": 4,
+  "task_ids": [
+    "2",
+    "3",
+    "HumanEval/0",
+    "HumanEval/1"
+  ],
+  "results_dir": "F:\\LLM\\LLM_learning\\results\\runs\\mixed\\b0_direct_generation\\20260518_201951__b0_direct_generation__mixed__shared_baseline_subset_v1",
+  "seed_source": "empty",
+  "equivalence_mode": "weak"
+}

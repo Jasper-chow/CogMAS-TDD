@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "PowerShell(uv run *)",
+      "PowerShell(Get-Item *)"
+    ]
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "name": "shared_baseline_subset_v1",
+  "description": "A fixed shared subset for baseline and ablation experiments across MBPP and HumanEval.",
+  "metadata": {
+    "split": "baseline_shared",
+    "version": "v1",
+    "owner": "cogmas-tdd"
+  },
+  "items": [
+    {
+      "dataset": "mbpp",
+      "task_id": "2",
+      "tags": ["baseline", "mbpp", "tuple"]
+    },
+    {
+      "dataset": "mbpp",
+      "task_id": "3",
+      "tags": ["baseline", "mbpp", "math"]
+    },
+    {
+      "dataset": "humaneval",
+      "task_id": "HumanEval/0",
+      "tags": ["baseline", "humaneval", "list"]
+    },
+    {
+      "dataset": "humaneval",
+      "task_id": "HumanEval/1",
+      "tags": ["baseline", "humaneval", "string"]
+    }
+  ]
+}

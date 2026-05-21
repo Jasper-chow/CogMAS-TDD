@@ -1,0 +1,5 @@
+{"task_id": "HumanEval/2", "completion": "def truncate_number(number: float) -> float:\\nn   Return the decimal part of the number."}
+{"task_id": "HumanEval/3", "completion": "def belowbelow_zero(deposs:):\\\\n "}
+{"task_id": "HumanEval/5", "completion": " for i in in rangerange(len(numbers) - 1"}
+{"task_id": "HumanEval/13", "completion": "def greatest_common_divisor(a:int: int, b: int):\\n       "}
+{"task_id": "HumanEval/16", "completion": "def count_distinct_characters(string:strstr "}

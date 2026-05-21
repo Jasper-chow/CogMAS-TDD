@@ -1,0 +1,5 @@
+{"task_id": "HumanEval/2", "completion": "    return number - int(number)"}
+{"task_id": "HumanEval/3", "completion": "    balance = 0\n    for op in operations:\n        balance += op\n        if balance < 0:\n            return True\n    return False"}
+{"task_id": "HumanEval/5", "completion": "from typing import List\\n\\n\\ndef intersperse(numbers: List[int], delimiter: int) -> List[int]:\\n    if not numbers:\\n        return []\\n    return [numbers[i] if i % 2 == 0 else delimiter for i in range(len(numbers) * 2 - 1)]\\n"}
+{"task_id": "HumanEval/13", "completion": "def placeholder_impl() -> bool:\n    return True"}
+{"task_id": "HumanEval/16", "completion": "def placeholder_impl() -> bool:\n    return True"}

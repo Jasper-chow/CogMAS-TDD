@@ -1,0 +1,72 @@
+[
+  {
+    "rule_id": "CWE-89",
+    "dimension": "security",
+    "title": "SQL Injection",
+    "keywords": ["sql", "database", "query", "input", "user"],
+    "risk_reason": "数据库查询若直接拼接用户输入，可能引发注入风险。",
+    "repair_pattern": "使用参数化查询，避免动态拼接 SQL。",
+    "priority": "high",
+    "source": "cisq"
+  },
+  {
+    "rule_id": "CWE-476",
+    "dimension": "security",
+    "title": "NULL Pointer Dereference",
+    "keywords": ["null", "none", "optional", "user", "input"],
+    "risk_reason": "缺少空值检查会导致运行时异常或逻辑偏移。",
+    "repair_pattern": "在使用对象前增加空值检查和兜底分支。",
+    "priority": "medium",
+    "source": "cisq"
+  },
+  {
+    "rule_id": "CWE-404",
+    "dimension": "reliability",
+    "title": "Improper Resource Shutdown",
+    "keywords": ["file", "stream", "resource", "close", "io"],
+    "risk_reason": "文件、连接、句柄等资源若未正确释放，可能造成泄漏。",
+    "repair_pattern": "使用 context manager 或 finally 关闭资源。",
+    "priority": "high",
+    "source": "cisq"
+  },
+  {
+    "rule_id": "REL-001",
+    "dimension": "reliability",
+    "title": "External Call Without Timeout",
+    "keywords": ["http", "network", "request", "api", "connect"],
+    "risk_reason": "外部调用缺少 timeout 会导致线程或请求长时间挂起。",
+    "repair_pattern": "为网络调用补充 timeout 和异常处理。",
+    "priority": "medium",
+    "source": "cisq"
+  },
+  {
+    "rule_id": "PERF-001",
+    "dimension": "performance_efficiency",
+    "title": "Nested Loop Hotspot",
+    "keywords": ["loop", "list", "matrix", "performance", "batch"],
+    "risk_reason": "多层循环可能导致可预期的性能瓶颈。",
+    "repair_pattern": "缓存中间结果，减少重复遍历，必要时改变数据结构。",
+    "priority": "medium",
+    "source": "cisq"
+  },
+  {
+    "rule_id": "MAINT-001",
+    "dimension": "maintainability",
+    "title": "Long Function",
+    "keywords": ["function", "service", "handler", "logic"],
+    "risk_reason": "过长函数难以理解、测试与复用。",
+    "repair_pattern": "按职责拆分函数，抽取辅助函数。",
+    "priority": "medium",
+    "source": "cisq"
+  },
+  {
+    "rule_id": "MAINT-002",
+    "dimension": "maintainability",
+    "title": "High Cyclomatic Complexity",
+    "keywords": ["branch", "if", "for", "while", "complex"],
+    "risk_reason": "复杂分支会增加缺陷率并提升维护成本。",
+    "repair_pattern": "减少嵌套层级，拆分条件分支，提取策略函数。",
+    "priority": "high",
+    "source": "cisq"
+  }
+]

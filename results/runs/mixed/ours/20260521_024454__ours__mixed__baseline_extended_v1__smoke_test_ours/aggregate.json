@@ -1,0 +1,229 @@
+{
+  "input_record_count": 25,
+  "aggregation": {
+    "overview": {
+      "label": "all",
+      "total_runs": 25,
+      "unique_tasks": 25,
+      "task_ids": [
+        "102",
+        "105",
+        "118",
+        "130",
+        "16",
+        "161",
+        "222",
+        "230",
+        "246",
+        "248",
+        "4",
+        "62",
+        "65",
+        "68",
+        "7",
+        "71",
+        "8",
+        "82",
+        "88",
+        "99",
+        "HumanEval/13",
+        "HumanEval/16",
+        "HumanEval/2",
+        "HumanEval/3",
+        "HumanEval/5"
+      ],
+      "profiles": [
+        "ours"
+      ],
+      "datasets": [
+        "humaneval",
+        "mbpp"
+      ],
+      "source_files": [],
+      "workflow_success_rate": 0.0,
+      "test_pass_rate": 0.04,
+      "evaluation_pass_rate": 0.0,
+      "avg_green_attempts": 4.84,
+      "avg_same_error_streak": 0.96,
+      "avg_iteration": 0.12,
+      "avg_failed_rule_count": 0.0,
+      "avg_activated_rule_count": 0.0,
+      "weak_equivalence": {
+        "coverage": 0.04,
+        "pass_rate": 0.0,
+        "count": 1
+      },
+      "strong_equivalence": {
+        "coverage": 0.04,
+        "pass_rate": 0.0,
+        "count": 1
+      },
+      "semantic_equivalence": {
+        "coverage": 0.04,
+        "pass_rate": 0.0,
+        "count": 1
+      },
+      "l2_refactor_rate": 0.0,
+      "l3_refactor_rate": 0.04,
+      "workflow_status_distribution": {
+        "failed": 25
+      },
+      "stop_reason_distribution": {
+        "max_green_attempts": 24,
+        "max_refactor_retries": 1
+      },
+      "final_verdict_distribution": {
+        "fail": 1,
+        "unknown": 24
+      },
+      "dynamic_verdict_distribution": {
+        "fail": 1,
+        "unknown": 24
+      },
+      "static_verdict_distribution": {
+        "pass": 1,
+        "unknown": 24
+      }
+    },
+    "group_by": "profile_dataset",
+    "groups": {
+      "ours::humaneval": {
+        "label": "ours::humaneval",
+        "total_runs": 5,
+        "unique_tasks": 5,
+        "task_ids": [
+          "HumanEval/13",
+          "HumanEval/16",
+          "HumanEval/2",
+          "HumanEval/3",
+          "HumanEval/5"
+        ],
+        "profiles": [
+          "ours"
+        ],
+        "datasets": [
+          "humaneval"
+        ],
+        "source_files": [],
+        "workflow_success_rate": 0.0,
+        "test_pass_rate": 0.0,
+        "evaluation_pass_rate": 0.0,
+        "avg_green_attempts": 5.0,
+        "avg_same_error_streak": 1.0,
+        "avg_iteration": 0.0,
+        "avg_failed_rule_count": 0.0,
+        "avg_activated_rule_count": 0.0,
+        "weak_equivalence": {
+          "coverage": 0.0,
+          "pass_rate": 0.0,
+          "count": 0
+        },
+        "strong_equivalence": {
+          "coverage": 0.0,
+          "pass_rate": 0.0,
+          "count": 0
+        },
+        "semantic_equivalence": {
+          "coverage": 0.0,
+          "pass_rate": 0.0,
+          "count": 0
+        },
+        "l2_refactor_rate": 0.0,
+        "l3_refactor_rate": 0.0,
+        "workflow_status_distribution": {
+          "failed": 5
+        },
+        "stop_reason_distribution": {
+          "max_green_attempts": 5
+        },
+        "final_verdict_distribution": {
+          "unknown": 5
+        },
+        "dynamic_verdict_distribution": {
+          "unknown": 5
+        },
+        "static_verdict_distribution": {
+          "unknown": 5
+        }
+      },
+      "ours::mbpp": {
+        "label": "ours::mbpp",
+        "total_runs": 20,
+        "unique_tasks": 20,
+        "task_ids": [
+          "102",
+          "105",
+          "118",
+          "130",
+          "16",
+          "161",
+          "222",
+          "230",
+          "246",
+          "248",
+          "4",
+          "62",
+          "65",
+          "68",
+          "7",
+          "71",
+          "8",
+          "82",
+          "88",
+          "99"
+        ],
+        "profiles": [
+          "ours"
+        ],
+        "datasets": [
+          "mbpp"
+        ],
+        "source_files": [],
+        "workflow_success_rate": 0.0,
+        "test_pass_rate": 0.05,
+        "evaluation_pass_rate": 0.0,
+        "avg_green_attempts": 4.8,
+        "avg_same_error_streak": 0.95,
+        "avg_iteration": 0.15,
+        "avg_failed_rule_count": 0.0,
+        "avg_activated_rule_count": 0.0,
+        "weak_equivalence": {
+          "coverage": 0.05,
+          "pass_rate": 0.0,
+          "count": 1
+        },
+        "strong_equivalence": {
+          "coverage": 0.05,
+          "pass_rate": 0.0,
+          "count": 1
+        },
+        "semantic_equivalence": {
+          "coverage": 0.05,
+          "pass_rate": 0.0,
+          "count": 1
+        },
+        "l2_refactor_rate": 0.0,
+        "l3_refactor_rate": 0.05,
+        "workflow_status_distribution": {
+          "failed": 20
+        },
+        "stop_reason_distribution": {
+          "max_green_attempts": 19,
+          "max_refactor_retries": 1
+        },
+        "final_verdict_distribution": {
+          "fail": 1,
+          "unknown": 19
+        },
+        "dynamic_verdict_distribution": {
+          "fail": 1,
+          "unknown": 19
+        },
+        "static_verdict_distribution": {
+          "pass": 1,
+          "unknown": 19
+        }
+      }
+    }
+  }
+}

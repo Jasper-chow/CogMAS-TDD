@@ -1,0 +1,5 @@
+{"task_id": "HumanEval/2", "completion": "    return number - int(number)"}
+{"task_id": "HumanEval/3", "completion": "    balance = 0\n    for op in operations:\n        balance += op\n        if balance < 0:\n            return True\n    return False"}
+{"task_id": "HumanEval/5", "completion": "from typing import List List"}
+{"task_id": "HumanEval/13", "completion": "    n   Return the greatest common divisor of two integers a and b.\n    if b == 0:\n        return a\n    else:\n        return greatest_common_divisor(b, a % b)"}
+{"task_id": "HumanEval/16", "completion": "    string = string.lower()\n    return len(set(string))"}

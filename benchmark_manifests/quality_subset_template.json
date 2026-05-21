@@ -1,0 +1,24 @@
+{
+  "name": "quality_subset_template",
+  "description": "Template for a curated quality-focused benchmark subset with optional seed implementations.",
+  "metadata": {
+    "split": "quality_subset",
+    "owner": "cogmas-tdd"
+  },
+  "items": [
+    {
+      "dataset": "mbpp",
+      "task_id": "2",
+      "note": "Example item. Replace with your own curated task.",
+      "tags": [
+        "quality",
+        "maintainability"
+      ],
+      "seed_code": "def similar_elements(test_tup1, test_tup2):\n    # TODO: replace with a low-quality but executable seed implementation\n    return ()\n",
+      "metadata": {
+        "quality_issue": "placeholder_seed",
+        "source": "manual_curate"
+      }
+    }
+  ]
+}

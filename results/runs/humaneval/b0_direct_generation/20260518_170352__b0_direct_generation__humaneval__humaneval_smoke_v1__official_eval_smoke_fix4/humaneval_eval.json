@@ -1,0 +1,11 @@
+{
+  "sample_file": "F:\\LLM\\LLM_learning\\results\\runs\\humaneval\\b0_direct_generation\\20260518_170352__b0_direct_generation__humaneval__humaneval_smoke_v1__official_eval_smoke_fix4\\humaneval_samples.jsonl",
+  "problem_file": "F:\\LLM\\LLM_learning\\human-eval\\data\\HumanEval.jsonl.gz",
+  "sample_count": 2,
+  "task_count": 2,
+  "passed_count": 0,
+  "pass_metrics": {
+    "pass@1": 0.0
+  },
+  "detailed_result_count": 2
+}

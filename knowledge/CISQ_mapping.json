@@ -1,0 +1,1286 @@
+[
+  {
+    "CWE_ID": "407",
+    "Characteristic": "Maintainability",
+    "Description": "Algorithmic Complexity",
+    "Refactor_Advice": "Analyze the algorithm's time complexity. Replace inefficient algorithms (e.g., nested loops) with optimized data structures or algorithms."
+  },
+  {
+    "CWE_ID": "478",
+    "Characteristic": "Maintainability",
+    "Description": "Missing Default Case in Switch Statement",
+    "Refactor_Advice": "Always provide a default case in switch constructs to explicitly handle unexpected values or log anomalies."
+  },
+  {
+    "CWE_ID": "480",
+    "Characteristic": "Maintainability",
+    "Description": "Use of Incorrect Operator",
+    "Refactor_Advice": "Review conditional and mathematical expressions to ensure the correct operator is used (e.g., using '==' instead of '=')."
+  },
+  {
+    "CWE_ID": "484",
+    "Characteristic": "Maintainability",
+    "Description": "Omitted Break Statement in Switch",
+    "Refactor_Advice": "Insert 'break' statements at the end of each switch case block to prevent unintended fall-through execution."
+  },
+  {
+    "CWE_ID": "561",
+    "Characteristic": "Maintainability",
+    "Description": "Dead code",
+    "Refactor_Advice": "Identify and remove unreachable code segments, unused functions, or obsolete conditional branches to reduce maintenance overhead."
+  },
+  {
+    "CWE_ID": "570",
+    "Characteristic": "Maintainability",
+    "Description": "Expression is Always False",
+    "Refactor_Advice": "Refactor the logical condition. Remove the dead conditional block or correct the logic so it can evaluate dynamically."
+  },
+  {
+    "CWE_ID": "571",
+    "Characteristic": "Maintainability",
+    "Description": "Expression is Always True",
+    "Refactor_Advice": "Refactor the logical condition. Remove the redundant check and execute the code block directly, or fix the logic."
+  },
+  {
+    "CWE_ID": "783",
+    "Characteristic": "Maintainability",
+    "Description": "Operator Precedence Logic Error",
+    "Refactor_Advice": "Use explicit parentheses in complex expressions to force the intended order of operations and clarify logic."
+  },
+  {
+    "CWE_ID": "1041",
+    "Characteristic": "Maintainability",
+    "Description": "Use of Redundant Code (Copy-Paste)",
+    "Refactor_Advice": "Extract duplicate or redundant code patterns shared across multiple locations into a single, reusable function or method."
+  },
+  {
+    "CWE_ID": "1045",
+    "Characteristic": "Maintainability",
+    "Description": "Parent Class with a Virtual Destructor and a Child Class without a Virtual Destructor",
+    "Refactor_Advice": "Declare the destructor as virtual in the child class to ensure proper cleanup of derived object resources."
+  },
+  {
+    "CWE_ID": "1047",
+    "Characteristic": "Maintainability",
+    "Description": "Modules with Circular Dependencies",
+    "Refactor_Advice": "Break circular dependencies by extracting common functionality into a shared interface or utilizing Dependency Injection."
+  },
+  {
+    "CWE_ID": "1048",
+    "Characteristic": "Maintainability",
+    "Description": "Invokable Control Element with Large Number of Outward Calls (Excessive Coupling or Fan-out)",
+    "Refactor_Advice": "Decouple classes by applying the Single Responsibility Principle and abstracting outward calls behind cohesive interfaces."
+  },
+  {
+    "CWE_ID": "1051",
+    "Characteristic": "Maintainability",
+    "Description": "Initialization with Hard-Coded Network Resource Configuration Data",
+    "Refactor_Advice": "Move hard-coded network identifiers (like IP addresses or URLs) to external configuration files or environment variables."
+  },
+  {
+    "CWE_ID": "1052",
+    "Characteristic": "Maintainability",
+    "Description": "Excessive Use of Hard-Coded Literals in Initialization",
+    "Refactor_Advice": "Replace hard-coded literal strings and 'magic numbers' with named constants, enums, or configuration parameters."
+  },
+  {
+    "CWE_ID": "1054",
+    "Characteristic": "Maintainability",
+    "Description": "Invocation of a Control Element at an Unnecessarily Deep Horizontal Layer (Layer-skipping Call)",
+    "Refactor_Advice": "Refactor the architecture to enforce strict layering; route calls sequentially through adjacent layers to reduce tight coupling."
+  },
+  {
+    "CWE_ID": "1055",
+    "Characteristic": "Maintainability",
+    "Description": "Multiple Inheritance from Concrete Classes",
+    "Refactor_Advice": "Replace multiple inheritance with object composition or inherit from multiple interfaces to avoid the diamond problem."
+  },
+  {
+    "CWE_ID": "1062",
+    "Characteristic": "Maintainability",
+    "Description": "Parent Class Element with References to Child Class",
+    "Refactor_Advice": "Remove downward dependencies. If a parent needs child-specific behavior, use abstract methods or the Template Method pattern."
+  },
+  {
+    "CWE_ID": "1064",
+    "Characteristic": "Maintainability",
+    "Description": "Invokable Control Element with Signature Containing an Excessive Number of Parameters",
+    "Refactor_Advice": "Encapsulate excessive parameters into a dedicated data transfer object (DTO) or configuration struct."
+  },
+  {
+    "CWE_ID": "1074",
+    "Characteristic": "Maintainability",
+    "Description": "Class with Excessively Deep Inheritance",
+    "Refactor_Advice": "Favor composition over inheritance. Flatten the inheritance hierarchy to reduce coupling and improve navigability."
+  },
+  {
+    "CWE_ID": "1075",
+    "Characteristic": "Maintainability",
+    "Description": "Unconditional Control Flow Transfer outside of Switch Block",
+    "Refactor_Advice": "Eliminate 'goto' statements. Refactor logic using standard structured control flow mechanisms like if/else blocks or loops."
+  },
+  {
+    "CWE_ID": "1079",
+    "Characteristic": "Maintainability",
+    "Description": "Parent Class without Virtual Destructor Method",
+    "Refactor_Advice": "Declare the destructor in the base class as virtual to guarantee correct polymorphic destruction of derived instances."
+  },
+  {
+    "CWE_ID": "1080",
+    "Characteristic": "Maintainability",
+    "Description": "Source Code File with Excessive Number of Lines of Code",
+    "Refactor_Advice": "Refactor massive files by splitting them into smaller, highly cohesive modules based on specific domain logic."
+  },
+  {
+    "CWE_ID": "1084",
+    "Characteristic": "Maintainability",
+    "Description": "Invokable Control Element with Excessive File or Data Access Operations",
+    "Refactor_Advice": "Batch database queries or delegate data access responsibilities to a dedicated Data Access Object (DAO) layer."
+  },
+  {
+    "CWE_ID": "1085",
+    "Characteristic": "Maintainability",
+    "Description": "Invokable Control Element with Excessive Volume of Commented-out Code",
+    "Refactor_Advice": "Delete commented-out code blocks completely and rely on version control systems for historical code tracking."
+  },
+  {
+    "CWE_ID": "1086",
+    "Characteristic": "Maintainability",
+    "Description": "Class with Excessive Number of Child Classes",
+    "Refactor_Advice": "Review the inheritance tree and consider extracting common behaviors into interfaces or utilizing the Strategy pattern."
+  },
+  {
+    "CWE_ID": "1087",
+    "Characteristic": "Maintainability",
+    "Description": "Class with Virtual Method without a Virtual Destructor",
+    "Refactor_Advice": "Add a virtual destructor to any polymorphic class to prevent resource leaks when instances are deleted."
+  },
+  {
+    "CWE_ID": "1090",
+    "Characteristic": "Maintainability",
+    "Description": "Method Containing Access of a Member Element from Another Class",
+    "Refactor_Advice": "Enforce encapsulation by making the member private and accessing it only via public getter/setter methods."
+  },
+  {
+    "CWE_ID": "1095",
+    "Characteristic": "Maintainability",
+    "Description": "Loop Condition Value Update within the Loop",
+    "Refactor_Advice": "Ensure loop control variables are updated exclusively in the loop signature to prevent unpredictable control flow logic."
+  },
+  {
+    "CWE_ID": "1121",
+    "Characteristic": "Maintainability",
+    "Description": "Excessive McCabe Cyclomatic Complexity",
+    "Refactor_Advice": "Reduce branching by extracting complex nested if/else logic into smaller helper functions or using polymorphism."
+  },
+  {
+    "CWE_ID": "1047",
+    "Characteristic": "Maintainability",
+    "Description": "Modules with Circular Dependencies",
+    "Refactor_Advice": "Break circular dependencies by extracting common functionality into a shared interface or utilizing Dependency Injection (DI)."
+  },
+  {
+    "CWE_ID": "1048",
+    "Characteristic": "Maintainability",
+    "Description": "Invokable Control Element with Large Number of Outward Calls (Excessive Coupling)",
+    "Refactor_Advice": "Decouple classes by applying the Single Responsibility Principle and abstracting outward calls behind cohesive interfaces or Facades."
+  },
+  {
+    "CWE_ID": "1051",
+    "Characteristic": "Maintainability",
+    "Description": "Initialization with Hard-Coded Network Resource Configuration Data",
+    "Refactor_Advice": "Move hard-coded IP addresses or URLs to external configuration files, environment variables, or a centralized secret manager."
+  },
+  {
+    "CWE_ID": "1052",
+    "Characteristic": "Maintainability",
+    "Description": "Excessive Use of Hard-Coded Literals in Initialization",
+    "Refactor_Advice": "Replace 'magic numbers' and hard-coded literal strings with named constants, enums, or configuration parameters."
+  },
+  {
+    "CWE_ID": "1054",
+    "Characteristic": "Maintainability",
+    "Description": "Invocation of a Control Element at an Unnecessarily Deep Horizontal Layer (Layer-skipping Call)",
+    "Refactor_Advice": "Refactor the architecture to enforce strict layering; route calls sequentially through adjacent layers or utilize an API gateway."
+  },
+  {
+    "CWE_ID": "1055",
+    "Characteristic": "Maintainability",
+    "Description": "Multiple Inheritance from Concrete Classes",
+    "Refactor_Advice": "Replace multiple inheritance with object composition or inherit from multiple interfaces/traits to avoid the diamond problem."
+  },
+  {
+    "CWE_ID": "1062",
+    "Characteristic": "Maintainability",
+    "Description": "Parent Class Element with References to Child Class",
+    "Refactor_Advice": "Remove downward dependencies. If a parent needs child-specific behavior, use abstract methods, generics, or the Template Method pattern."
+  },
+  {
+    "CWE_ID": "1064",
+    "Characteristic": "Maintainability",
+    "Description": "Invokable Control Element with Signature Containing an Excessive Number of Parameters",
+    "Refactor_Advice": "Encapsulate excessive parameters into a dedicated data transfer object (DTO), configuration struct, or use the Builder pattern."
+  },
+  {
+    "CWE_ID": "1074",
+    "Characteristic": "Maintainability",
+    "Description": "Class with Excessively Deep Inheritance",
+    "Refactor_Advice": "Favor composition over inheritance. Flatten the inheritance hierarchy to reduce tight coupling and improve code navigability."
+  },
+  {
+    "CWE_ID": "1075",
+    "Characteristic": "Maintainability",
+    "Description": "Unconditional Control Flow Transfer outside of Switch Block",
+    "Refactor_Advice": "Eliminate 'goto' statements. Refactor the logic using standard structured control flow mechanisms like if/else blocks or loops."
+  },
+  {
+    "CWE_ID": "1079",
+    "Characteristic": "Maintainability",
+    "Description": "Parent Class without Virtual Destructor Method",
+    "Refactor_Advice": "Declare the destructor in the parent class as virtual to guarantee proper polymorphic resource cleanup in derived classes."
+  },
+  {
+    "CWE_ID": "1080",
+    "Characteristic": "Maintainability",
+    "Description": "Source Code File with Excessive Number of Lines of Code",
+    "Refactor_Advice": "Refactor the 'God class' or massive file by splitting it into smaller, highly cohesive modules based on specific domain logic."
+  },
+  {
+    "CWE_ID": "1084",
+    "Characteristic": "Maintainability",
+    "Description": "Invokable Control Element with Excessive File or Data Access Operations",
+    "Refactor_Advice": "Batch database queries or delegate data access responsibilities to a dedicated Data Access Object (DAO) layer."
+  },
+  {
+    "CWE_ID": "1085",
+    "Characteristic": "Maintainability",
+    "Description": "Invokable Control Element with Excessive Volume of Commented-out Code",
+    "Refactor_Advice": "Delete commented-out code blocks completely and rely on your version control system (e.g., Git) for historical code tracking."
+  },
+  {
+    "CWE_ID": "1086",
+    "Characteristic": "Maintainability",
+    "Description": "Class with Excessive Number of Child Classes",
+    "Refactor_Advice": "Review the inheritance tree. Consider extracting common behaviors into interfaces or utilizing the Strategy design pattern."
+  },
+  {
+    "CWE_ID": "1087",
+    "Characteristic": "Maintainability",
+    "Description": "Class with Virtual Method without a Virtual Destructor",
+    "Refactor_Advice": "Add a virtual destructor to the class to ensure safe deletion of derived class instances via base class pointers."
+  },
+  {
+    "CWE_ID": "1090",
+    "Characteristic": "Maintainability",
+    "Description": "Method Containing Access of a Member Element from Another Class",
+    "Refactor_Advice": "Enforce encapsulation by making the member private and accessing it only via public getter/setter methods."
+  },
+  {
+    "CWE_ID": "1095",
+    "Characteristic": "Maintainability",
+    "Description": "Loop Condition Value Update within the Loop",
+    "Refactor_Advice": "Ensure loop control variables are updated exclusively in the loop signature (e.g., the 'for' loop header) to prevent logic errors."
+  },
+  {
+    "CWE_ID": "1121",
+    "Characteristic": "Maintainability",
+    "Description": "Excessive McCabe Cyclomatic Complexity",
+    "Refactor_Advice": "Reduce branching by extracting complex nested if/else logic into smaller helper functions or using polymorphism."
+  },
+  {
+    "CWE_ID": "404",
+    "Characteristic": "Performance Efficiency",
+    "Description": "Improper Resource Shutdown or Release",
+    "Refactor_Advice": "Guarantee resource closure by utilizing try-with-resources statements or explicit 'finally' blocks."
+  },
+  {
+    "CWE_ID": "401",
+    "Characteristic": "Performance Efficiency",
+    "Description": "Improper Release of Memory Before Removing Last Reference ('Memory Leak')",
+    "Refactor_Advice": "Utilize RAII/smart pointers or ensure explicit deallocation of memory objects before references go out of scope."
+  },
+  {
+    "CWE_ID": "772",
+    "Characteristic": "Performance Efficiency",
+    "Description": "Missing Release of Resource after Effective Lifetime",
+    "Refactor_Advice": "Release network connections, threads, or memory immediately after their functional use has completed."
+  },
+  {
+    "CWE_ID": "775",
+    "Characteristic": "Performance Efficiency",
+    "Description": "Missing Release of File Descriptor or Handle after Effective Lifetime",
+    "Refactor_Advice": "Always explicitly close file descriptors/handles in error-handling 'finally' blocks to prevent descriptor exhaustion."
+  },
+  {
+    "CWE_ID": "424",
+    "Characteristic": "Performance Efficiency",
+    "Description": "Improper Protection of Alternate Path",
+    "Refactor_Advice": "Implement a unified authentication and authorization middleware to secure all potential access paths to the data."
+  },
+  {
+    "CWE_ID": "1042",
+    "Characteristic": "Performance Efficiency",
+    "Description": "Static Member Data Element outside of a Singleton Class Element",
+    "Refactor_Advice": "Remove the static modifier or safely refactor the class structure into a thread-safe Singleton pattern."
+  },
+  {
+    "CWE_ID": "1043",
+    "Characteristic": "Performance Efficiency",
+    "Description": "Data Element Aggregating an Excessively Large Number of Non-Primitive Elements",
+    "Refactor_Advice": "Break down the monolithic data structure into smaller, highly cohesive, and lazily-loaded components."
+  },
+  {
+    "CWE_ID": "1046",
+    "Characteristic": "Performance Efficiency",
+    "Description": "Creation of Immutable Text Using String Concatenation",
+    "Refactor_Advice": "Replace repeated '+' string concatenations within iterations with a mutable StringBuilder or StringBuffer."
+  },
+  {
+    "CWE_ID": "1049",
+    "Characteristic": "Performance Efficiency",
+    "Description": "Excessive Data Query Operations in a Large Data Table",
+    "Refactor_Advice": "Optimize the query by reducing nested sub-queries, minimizing JOINs, and utilizing database materialized views."
+  },
+  {
+    "CWE_ID": "1050",
+    "Characteristic": "Performance Efficiency",
+    "Description": "Excessive Platform Resource Consumption within a Loop",
+    "Refactor_Advice": "Extract resource-heavy operations (e.g., database connections, file I/O) out of the loop body."
+  },
+  {
+    "CWE_ID": "1057",
+    "Characteristic": "Performance Efficiency",
+    "Description": "Data Access Operations Outside of Expected Data Manager Component",
+    "Refactor_Advice": "Route all database or file access operations strictly through the designated Data Access Object (DAO) component."
+  },
+  {
+    "CWE_ID": "1060",
+    "Characteristic": "Performance Efficiency",
+    "Description": "Excessive Number of Inefficient Server-Side Data Accesses",
+    "Refactor_Advice": "Consolidate multiple individual data queries into a single batch request or utilize a database stored procedure."
+  },
+  {
+    "CWE_ID": "1067",
+    "Characteristic": "Performance Efficiency",
+    "Description": "Excessive Execution of Sequential Searches of Data Resource",
+    "Refactor_Advice": "Add appropriate primary or composite indices to the database table to eliminate full table sequential scans."
+  },
+  {
+    "CWE_ID": "1072",
+    "Characteristic": "Performance Efficiency",
+    "Description": "Data Resource Access without Use of Connection Pooling",
+    "Refactor_Advice": "Implement and configure a database connection pool to reuse established connections and reduce connection overhead."
+  },
+  {
+    "CWE_ID": "1073",
+    "Characteristic": "Performance Efficiency",
+    "Description": "Non-SQL Invokable Control Element with Excessive Number of Data Resource Accesses",
+    "Refactor_Advice": "Optimize client-side data retrieval by utilizing efficient server-side filtering or batching APIs."
+  },
+  {
+    "CWE_ID": "1089",
+    "Characteristic": "Performance Efficiency",
+    "Description": "Large Data Table with Excessive Number of Indices",
+    "Refactor_Advice": "Review and prune redundant or unused database indices to reduce write-operation overhead and storage footprint."
+  },
+  {
+    "CWE_ID": "1091",
+    "Characteristic": "Performance Efficiency",
+    "Description": "Use of Object without Invoking Destructor Method",
+    "Refactor_Advice": "Ensure the object's destructor or finalize method is explicitly invoked, or bind the object to a managed scope."
+  },
+  {
+    "CWE_ID": "1094",
+    "Characteristic": "Performance Efficiency",
+    "Description": "Excessive Index Range Scan for a Data Resource",
+    "Refactor_Advice": "Refine query predicates to narrow the range scan scope, or optimize the indexing strategy to support point lookups."
+  },
+  {
+    "CWE_ID": "119",
+    "Characteristic": "Reliability",
+    "Description": "Improper Restriction of Operations within the Bounds of a Memory Buffer",
+    "Refactor_Advice": "Enforce strict boundary checking before any memory buffer access, or utilize memory-safe language abstractions like dynamically sized collections."
+  },
+  {
+    "CWE_ID": "120",
+    "Characteristic": "Reliability",
+    "Description": "Buffer Copy without Checking Size of Input ('Classic Buffer Overflow')",
+    "Refactor_Advice": "Verify the size of the input buffer does not exceed the output buffer before copying, or use safe bounded copy functions (e.g., strncpy)."
+  },
+  {
+    "CWE_ID": "123",
+    "Characteristic": "Reliability",
+    "Description": "Write-what-where condition",
+    "Refactor_Advice": "Validate all pointer arithmetic and memory offsets to ensure they strictly remain within authorized memory segments."
+  },
+  {
+    "CWE_ID": "125",
+    "Characteristic": "Reliability",
+    "Description": "Out-of-bounds read",
+    "Refactor_Advice": "Validate array indices and pointer offsets against allocated buffer limits before executing any read operations."
+  },
+  {
+    "CWE_ID": "130",
+    "Characteristic": "Reliability",
+    "Description": "Improper Handling of Length Parameter Inconsistency",
+    "Refactor_Advice": "Validate that explicit length fields in parsed messages or structures strictly match the actual payload size before processing."
+  },
+  {
+    "CWE_ID": "786",
+    "Characteristic": "Reliability",
+    "Description": "Access of Memory Location Before Start of Buffer",
+    "Refactor_Advice": "Ensure pointer decrements and negative indices are boundary-checked to prevent reading or writing before the buffer's base address."
+  },
+  {
+    "CWE_ID": "787",
+    "Characteristic": "Reliability",
+    "Description": "Out-of-bounds Write",
+    "Refactor_Advice": "Check bounds before writing to arrays or buffers, ensuring index variables and pointer arithmetic do not exceed allocated limits."
+  },
+  {
+    "CWE_ID": "788",
+    "Characteristic": "Reliability",
+    "Description": "Access of Memory Location After End of Buffer",
+    "Refactor_Advice": "Prevent pointer increments from passing the buffer's tail end by enforcing strict upper-bound limits during iteration."
+  },
+  {
+    "CWE_ID": "805",
+    "Characteristic": "Reliability",
+    "Description": "Buffer Access with Incorrect Length Value",
+    "Refactor_Advice": "Double-check length calculations passed to sequential read/write operations (like memcpy) to ensure they do not exceed actual buffer bounds."
+  },
+  {
+    "CWE_ID": "822",
+    "Characteristic": "Reliability",
+    "Description": "Untrusted Pointer Dereference",
+    "Refactor_Advice": "Never directly convert untrusted input into pointers; validate and sanitize any external data used to reference memory locations."
+  },
+  {
+    "CWE_ID": "823",
+    "Characteristic": "Reliability",
+    "Description": "Use of Out-of-range Pointer Offset",
+    "Refactor_Advice": "Validate that offset calculations derived from untrusted sources or complex arithmetic fall safely within the target structured data boundaries."
+  },
+  {
+    "CWE_ID": "824",
+    "Characteristic": "Reliability",
+    "Description": "Access of Uninitialized Pointer",
+    "Refactor_Advice": "Initialize all pointers to NULL or a valid memory address immediately upon declaration."
+  },
+  {
+    "CWE_ID": "825",
+    "Characteristic": "Reliability",
+    "Description": "Expired Pointer Dereference",
+    "Refactor_Advice": "Set pointers to NULL immediately after freeing the memory they point to, preventing dangling pointer usage."
+  },
+  {
+    "CWE_ID": "170",
+    "Characteristic": "Reliability",
+    "Description": "Improper Null Termination",
+    "Refactor_Advice": "Ensure strings and character arrays are explicitly null-terminated, or replace raw character arrays with standard string objects."
+  },
+  {
+    "CWE_ID": "252",
+    "Characteristic": "Reliability",
+    "Description": "Unchecked Return Value",
+    "Refactor_Advice": "Explicitly verify the return values of all method calls, particularly I/O and system APIs, and implement appropriate error-handling logic."
+  },
+  {
+    "CWE_ID": "390",
+    "Characteristic": "Reliability",
+    "Description": "Detection of Error Condition Without Action",
+    "Refactor_Advice": "Populate empty catch blocks or error branches with meaningful handling logic, such as structured logging or state recovery."
+  },
+  {
+    "CWE_ID": "394",
+    "Characteristic": "Reliability",
+    "Description": "Unexpected Status Code or Return Value",
+    "Refactor_Advice": "Implement comprehensive checks for all possible return status codes to handle unexpected states gracefully."
+  },
+  {
+    "CWE_ID": "404",
+    "Characteristic": "Reliability",
+    "Description": "Improper Resource Shutdown or Release",
+    "Refactor_Advice": "Guarantee resource closure by utilizing try-with-resources statements or explicit 'finally' blocks."
+  },
+  {
+    "CWE_ID": "401",
+    "Characteristic": "Reliability",
+    "Description": "Improper Release of Memory Before Removing Last Reference ('Memory Leak')",
+    "Refactor_Advice": "Utilize RAII/smart pointers or ensure explicit deallocation of memory objects before references go out of scope."
+  },
+  {
+    "CWE_ID": "772",
+    "Characteristic": "Reliability",
+    "Description": "Missing Release of Resource after Effective Lifetime",
+    "Refactor_Advice": "Release network connections, threads, or memory explicitly immediately after their functional use has completed."
+  },
+  {
+    "CWE_ID": "775",
+    "Characteristic": "Reliability",
+    "Description": "Missing Release of File Descriptor or Handle after Effective Lifetime",
+    "Refactor_Advice": "Always explicitly close file descriptors or handles in error-handling 'finally' blocks to prevent descriptor exhaustion."
+  },
+  {
+    "CWE_ID": "424",
+    "Characteristic": "Reliability",
+    "Description": "Improper Protection of Alternate Path",
+    "Refactor_Advice": "Implement a unified authentication and authorization middleware to secure all potential access paths to restricted functionality."
+  },
+  {
+    "CWE_ID": "459",
+    "Characteristic": "Reliability",
+    "Description": "Incomplete Cleanup",
+    "Refactor_Advice": "Ensure all temporary files, caches, and supporting resources are systematically deleted or scrubbed after their designated use."
+  },
+  {
+    "CWE_ID": "476",
+    "Characteristic": "Reliability",
+    "Description": "NULL Pointer Dereference",
+    "Refactor_Advice": "Implement explicit pre-dereference null checks, or encapsulate nullable variables inside safe wrapper types."
+  },
+  {
+    "CWE_ID": "480",
+    "Characteristic": "Reliability",
+    "Description": "Use of Incorrect Operator",
+    "Refactor_Advice": "Review logical and mathematical expressions to ensure correct operators are used (e.g., using '==' instead of '=')."
+  },
+  {
+    "CWE_ID": "484",
+    "Characteristic": "Reliability",
+    "Description": "Omitted Break Statement in Switch",
+    "Refactor_Advice": "Insert 'break' statements at the end of each switch case block to prevent unintended fall-through execution."
+  },
+  {
+    "CWE_ID": "562",
+    "Characteristic": "Reliability",
+    "Description": "Return of Stack Variable Address",
+    "Refactor_Advice": "Avoid returning pointers or references to local stack variables; allocate memory dynamically on the heap or pass parameters by reference instead."
+  },
+  {
+    "CWE_ID": "595",
+    "Characteristic": "Reliability",
+    "Description": "Comparison of Object References Instead of Object Contents",
+    "Refactor_Advice": "Use object-specific equality methods (e.g., .equals() in Java) instead of reference comparison operators (==) to compare object contents."
+  },
+  {
+    "CWE_ID": "597",
+    "Characteristic": "Reliability",
+    "Description": "Use of Wrong Operator in String Comparison",
+    "Refactor_Advice": "Utilize dedicated string comparison methods rather than identity operators when evaluating string equivalence."
+  },
+  {
+    "CWE_ID": "1097",
+    "Characteristic": "Reliability",
+    "Description": "Persistent Storable Data Element without Associated Comparison Control Element",
+    "Refactor_Advice": "Ensure persistent classes fully implement necessary comparison and hashing methods (e.g., equals() and hashCode()) to maintain data integrity."
+  },
+  {
+    "CWE_ID": "662",
+    "Characteristic": "Reliability",
+    "Description": "Improper Synchronization",
+    "Refactor_Advice": "Synchronize access to shared mutable state using locks/mutexes or thread-safe concurrency primitives."
+  },
+  {
+    "CWE_ID": "366",
+    "Characteristic": "Reliability",
+    "Description": "Race Condition within a Thread",
+    "Refactor_Advice": "Identify critical sections where shared resources are used concurrently and wrap them in mutual exclusion locks."
+  },
+  {
+    "CWE_ID": "543",
+    "Characteristic": "Reliability",
+    "Description": "Use of Singleton Pattern Without Synchronization in a Multithreaded Context",
+    "Refactor_Advice": "Implement double-checked locking or utilize thread-safe static initialization for Singletons accessed across multiple threads."
+  },
+  {
+    "CWE_ID": "567",
+    "Characteristic": "Reliability",
+    "Description": "Unsynchronized Access to Shared Data in a Multithreaded Context",
+    "Refactor_Advice": "Protect shared static variables or shared objects across threads by applying appropriate synchronization locks or using atomic variables."
+  },
+  {
+    "CWE_ID": "667",
+    "Characteristic": "Reliability",
+    "Description": "Improper Locking",
+    "Refactor_Advice": "Ensure locks are acquired correctly and definitively released in a robust 'finally' block or via RAII."
+  },
+  {
+    "CWE_ID": "764",
+    "Characteristic": "Reliability",
+    "Description": "Multiple Locks of a Critical Resource",
+    "Refactor_Advice": "Ensure proper lock tracking and avoid recursive locking unless using explicitly configured reentrant locks."
+  },
+  {
+    "CWE_ID": "820",
+    "Characteristic": "Reliability",
+    "Description": "Missing Synchronization",
+    "Refactor_Advice": "Identify concurrent access points to shared resources and apply appropriate synchronization mechanisms to ensure memory visibility."
+  },
+  {
+    "CWE_ID": "821",
+    "Characteristic": "Reliability",
+    "Description": "Incorrect Synchronization",
+    "Refactor_Advice": "Review synchronization blocks to ensure they lock on the correct shared object monitor rather than disparate or local instances."
+  },
+  {
+    "CWE_ID": "1058",
+    "Characteristic": "Reliability",
+    "Description": "Invokable Control Element in Multi-Thread Context with non-Final Static Storable or Member Element",
+    "Refactor_Advice": "Make static members final if they are read-only, or enforce synchronized access if they must be mutable in a multi-threaded context."
+  },
+  {
+    "CWE_ID": "1096",
+    "Characteristic": "Reliability",
+    "Description": "Singleton Class Instance Creation without Proper Locking or Synchronization",
+    "Refactor_Advice": "Apply thread-safe instantiation techniques (e.g., eager initialization or double-checked locking) to the Singleton factory method."
+  },
+  {
+    "CWE_ID": "665",
+    "Characteristic": "Reliability",
+    "Description": "Improper Initialization",
+    "Refactor_Advice": "Ensure complex resources are fully initialized and valid before their references are exposed to the rest of the application."
+  },
+  {
+    "CWE_ID": "456",
+    "Characteristic": "Reliability",
+    "Description": "Missing Initialization of a Variable",
+    "Refactor_Advice": "Initialize all critical variables explicitly at the point of declaration or within the constructor."
+  },
+  {
+    "CWE_ID": "457",
+    "Characteristic": "Reliability",
+    "Description": "Use of uninitialized variable",
+    "Refactor_Advice": "Assign a default or known safe value to variables before any read operations occur."
+  },
+  {
+    "CWE_ID": "672",
+    "Characteristic": "Reliability",
+    "Description": "Operation on a Resource after Expiration or Release",
+    "Refactor_Advice": "Invalidate resource references immediately upon release and verify state flags before attempting subsequent operations."
+  },
+  {
+    "CWE_ID": "415",
+    "Characteristic": "Reliability",
+    "Description": "Double Free",
+    "Refactor_Advice": "Nullify pointers immediately after freeing the associated memory, or adopt smart pointers to automate safe memory lifecycle management."
+  },
+  {
+    "CWE_ID": "416",
+    "Characteristic": "Reliability",
+    "Description": "Use After Free",
+    "Refactor_Advice": "Eliminate dangling pointers by clearing references after memory release to prevent program crashes or unexpected behavior."
+  },
+  {
+    "CWE_ID": "681",
+    "Characteristic": "Reliability",
+    "Description": "Incorrect Conversion between Numeric Types",
+    "Refactor_Advice": "Validate numeric ranges before performing type casting (e.g., long to int) to prevent data truncation or unexpected values."
+  },
+  {
+    "CWE_ID": "194",
+    "Characteristic": "Reliability",
+    "Description": "Unexpected Sign Extension",
+    "Refactor_Advice": "Use unsigned data types when performing bitwise operations or upcasting to prevent negative numbers from causing unintended sign extensions."
+  },
+  {
+    "CWE_ID": "195",
+    "Characteristic": "Reliability",
+    "Description": "Signed to Unsigned Conversion Error",
+    "Refactor_Advice": "Validate that a signed integer is positive before casting it to an unsigned type to prevent integer wrap-around errors."
+  },
+  {
+    "CWE_ID": "196",
+    "Characteristic": "Reliability",
+    "Description": "Unsigned to Signed Conversion Error",
+    "Refactor_Advice": "Ensure the unsigned value does not exceed the maximum capacity of the target signed type before casting."
+  },
+  {
+    "CWE_ID": "197",
+    "Characteristic": "Reliability",
+    "Description": "Numeric Truncation Error",
+    "Refactor_Advice": "Check bounds before downcasting primitive types (e.g., 64-bit to 32-bit) to prevent high-order bit data loss."
+  },
+  {
+    "CWE_ID": "682",
+    "Characteristic": "Reliability",
+    "Description": "Incorrect Calculation",
+    "Refactor_Advice": "Audit arithmetic logic for critical decision-making or resource management code, adding comprehensive unit tests for mathematical correctness."
+  },
+  {
+    "CWE_ID": "131",
+    "Characteristic": "Reliability",
+    "Description": "Incorrect Calculation of Buffer Size",
+    "Refactor_Advice": "Double-check buffer allocation sizing logic, accounting for string null terminators and correct struct padding/sizing."
+  },
+  {
+    "CWE_ID": "369",
+    "Characteristic": "Reliability",
+    "Description": "Divide By Zero",
+    "Refactor_Advice": "Add conditional guards to explicitly verify that the denominator is strictly non-zero before executing any division."
+  },
+  {
+    "CWE_ID": "703",
+    "Characteristic": "Reliability",
+    "Description": "Improper Check or Handling of Exceptional Conditions",
+    "Refactor_Advice": "Anticipate edge cases and implement comprehensive try-catch mechanisms to handle conditions that disrupt normal flow."
+  },
+  {
+    "CWE_ID": "248",
+    "Characteristic": "Reliability",
+    "Description": "Uncaught Exception",
+    "Refactor_Advice": "Ensure all thrown exceptions are caught and handled by an appropriate upstream catch block or global exception handler."
+  },
+  {
+    "CWE_ID": "391",
+    "Characteristic": "Reliability",
+    "Description": "Unchecked Error Condition",
+    "Refactor_Advice": "Do not ignore error conditions or swallow exceptions silently; log them properly and handle the state transition."
+  },
+  {
+    "CWE_ID": "392",
+    "Characteristic": "Reliability",
+    "Description": "Missing Report of Error Condition",
+    "Refactor_Advice": "Ensure functions encountering errors explicitly return informative status codes or throw structured exceptions to the caller."
+  },
+  {
+    "CWE_ID": "704",
+    "Characteristic": "Reliability",
+    "Description": "Incorrect Type Conversion or Cast",
+    "Refactor_Advice": "Use safe casting operators (e.g., dynamic_cast in C++, instanceof in Java) to verify object types before conversion."
+  },
+  {
+    "CWE_ID": "758",
+    "Characteristic": "Reliability",
+    "Description": "Reliance on Undefined, Unspecified, or Implementation-Defined Behavior",
+    "Refactor_Advice": "Remove dependencies on compiler-specific behaviors and strictly adhere to standardized language and API contracts."
+  },
+  {
+    "CWE_ID": "833",
+    "Characteristic": "Reliability",
+    "Description": "Deadlock",
+    "Refactor_Advice": "Refactor lock acquisition to follow a strict global hierarchy across all threads, or utilize timeout-based locking."
+  },
+  {
+    "CWE_ID": "835",
+    "Characteristic": "Reliability",
+    "Description": "Loop with Unreachable Exit Condition ('Infinite Loop')",
+    "Refactor_Advice": "Review loop control variables to ensure they are properly updated within the loop body to reach the termination condition."
+  },
+  {
+    "CWE_ID": "908",
+    "Characteristic": "Reliability",
+    "Description": "Use of Uninitialized Resource",
+    "Refactor_Advice": "Ensure resources and connections are completely initialized and verified before exposing them to business logic execution."
+  },
+  {
+    "CWE_ID": "1045",
+    "Characteristic": "Reliability",
+    "Description": "Parent Class with a Virtual Destructor and a Child Class without a Virtual Destructor",
+    "Refactor_Advice": "Declare the destructor as virtual in the child class to ensure proper cleanup of derived object resources."
+  },
+  {
+    "CWE_ID": "1051",
+    "Characteristic": "Reliability",
+    "Description": "Initialization with Hard-Coded Network Resource Configuration Data",
+    "Refactor_Advice": "Move hard-coded IP addresses or network identifiers to secure, environment-specific configuration files."
+  },
+  {
+    "CWE_ID": "1066",
+    "Characteristic": "Reliability",
+    "Description": "Missing Serialization Control Element",
+    "Refactor_Advice": "Implement explicit serialization version UIDs and correct serialization control methods for classes intended for transport/storage."
+  },
+  {
+    "CWE_ID": "1070",
+    "Characteristic": "Reliability",
+    "Description": "Serializable Data Element Containing non-Serializable Item Elements",
+    "Refactor_Advice": "Ensure all nested member objects within a serializable class also implement the serialization interface, or mark them as transient."
+  },
+  {
+    "CWE_ID": "1077",
+    "Characteristic": "Reliability",
+    "Description": "Floating Point Comparison with Incorrect Operator",
+    "Refactor_Advice": "Compare floating-point values using an acceptable tolerance threshold (epsilon) rather than direct strict equality operators (==)."
+  },
+  {
+    "CWE_ID": "1079",
+    "Characteristic": "Reliability",
+    "Description": "Parent Class without Virtual Destructor Method",
+    "Refactor_Advice": "Declare the destructor in the base class as virtual to guarantee correct polymorphic destruction of derived instances."
+  },
+  {
+    "CWE_ID": "1082",
+    "Characteristic": "Reliability",
+    "Description": "Class Instance Self Destruction Control Element",
+    "Refactor_Advice": "Avoid 'delete this' idioms; instead, rely on standard object lifecycle management patterns or smart pointers to handle destruction safely."
+  },
+  {
+    "CWE_ID": "1083",
+    "Characteristic": "Reliability",
+    "Description": "Data Access from Outside Designated Data Manager Component",
+    "Refactor_Advice": "Route all database or file access operations strictly through the designated Data Access Object (DAO) or data manager layer."
+  },
+  {
+    "CWE_ID": "1087",
+    "Characteristic": "Reliability",
+    "Description": "Class with Virtual Method without a Virtual Destructor",
+    "Refactor_Advice": "Add a virtual destructor to any polymorphic base class to prevent resource leaks when instances are deleted."
+  },
+  {
+    "CWE_ID": "1088",
+    "Characteristic": "Reliability",
+    "Description": "Synchronous Access of Remote Resource without Timeout",
+    "Refactor_Advice": "Configure explicit and reasonable timeouts for all network calls to prevent the application thread from hanging indefinitely."
+  },
+  {
+    "CWE_ID": "1098",
+    "Characteristic": "Reliability",
+    "Description": "Data Element containing Pointer Item without Proper Copy Control Element",
+    "Refactor_Advice": "Implement a proper copy constructor and assignment operator (Rule of Three/Five) to manage deep copies of pointer members."
+  },
+  {
+    "CWE_ID": "22",
+    "Characteristic": "Security",
+    "Description": "Improper Limitation of a Pathname to a Restricted Directory ('Path Traversal')",
+    "Refactor_Advice": "Validate all filesystem path inputs against a strict allowlist and resolve paths to their canonical absolute format before access."
+  },
+  {
+    "CWE_ID": "23",
+    "Characteristic": "Security",
+    "Description": "Relative Path Traversal",
+    "Refactor_Advice": "Neutralize relative path sequences (like '../') by strictly validating inputs against allowed directory scopes."
+  },
+  {
+    "CWE_ID": "36",
+    "Characteristic": "Security",
+    "Description": "Absolute Path Traversal",
+    "Refactor_Advice": "Reject any input containing absolute path definitions and construct file paths programmatically from a safe base directory."
+  },
+  {
+    "CWE_ID": "77",
+    "Characteristic": "Security",
+    "Description": "Improper Neutralization of Special Elements used in a Command ('Command Injection')",
+    "Refactor_Advice": "Avoid shelling out to the OS. Use safe, parameterized API bindings that bypass the shell interpreter entirely."
+  },
+  {
+    "CWE_ID": "78",
+    "Characteristic": "Security",
+    "Description": "Improper Neutralization of Special Elements used in an OS Command ('OS Command Injection')",
+    "Refactor_Advice": "Do not pass user input directly into OS command execution functions; strictly sanitize inputs and use execution APIs that separate command from arguments."
+  },
+  {
+    "CWE_ID": "88",
+    "Characteristic": "Security",
+    "Description": "Argument Injection or Modification",
+    "Refactor_Advice": "Strictly delimit and sanitize all arguments passed to downstream components or processes to prevent flag/argument injection."
+  },
+  {
+    "CWE_ID": "79",
+    "Characteristic": "Security",
+    "Description": "Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting')",
+    "Refactor_Advice": "Implement context-aware output encoding for all user-supplied data prior to rendering it in the DOM or HTML templates."
+  },
+  {
+    "CWE_ID": "89",
+    "Characteristic": "Security",
+    "Description": "Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection')",
+    "Refactor_Advice": "Enforce the exclusive use of parameterized queries or prepared statements for all database interactions."
+  },
+  {
+    "CWE_ID": "564",
+    "Characteristic": "Security",
+    "Description": "SQL Injection: Hibernate",
+    "Refactor_Advice": "Avoid building dynamic HQL/SQL queries using string concatenation with user input; always use Hibernate's parameter binding methods."
+  },
+  {
+    "CWE_ID": "90",
+    "Characteristic": "Security",
+    "Description": "Improper Neutralization of Special Elements used in an LDAP Query ('LDAP Injection')",
+    "Refactor_Advice": "Apply strict escaping rules specific to LDAP syntax for any user-controlled input incorporated into LDAP search filters."
+  },
+  {
+    "CWE_ID": "91",
+    "Characteristic": "Security",
+    "Description": "XML Injection (aka Blind XPath Injection)",
+    "Refactor_Advice": "Sanitize user inputs used in XML construction or XPath queries, and configure the XML parser to disallow arbitrary code execution."
+  },
+  {
+    "CWE_ID": "99",
+    "Characteristic": "Security",
+    "Description": "Improper Control of Resource Identifiers (‘Resource injection’)",
+    "Refactor_Advice": "Implement strict validation and access control checks before allowing external input to dictate resource identifiers (e.g., port numbers, file IDs)."
+  },
+  {
+    "CWE_ID": "119",
+    "Characteristic": "Security",
+    "Description": "Improper Restriction of Operations within the Bounds of a Memory Buffer",
+    "Refactor_Advice": "Enforce strict boundary checking before memory buffer access to prevent arbitrary read/write vulnerabilities."
+  },
+  {
+    "CWE_ID": "120",
+    "Characteristic": "Security",
+    "Description": "Buffer Copy without Checking Size of Input ('Classic Buffer Overflow')",
+    "Refactor_Advice": "Use safe bounded copy functions (e.g., strncpy instead of strcpy) to guarantee the input buffer does not overflow the output."
+  },
+  {
+    "CWE_ID": "123",
+    "Characteristic": "Security",
+    "Description": "Write-what-where condition",
+    "Refactor_Advice": "Validate all pointer arithmetic and memory offsets to prevent attackers from overwriting arbitrary memory locations."
+  },
+  {
+    "CWE_ID": "125",
+    "Characteristic": "Security",
+    "Description": "Out-of-bounds Read",
+    "Refactor_Advice": "Validate array indices and pointer offsets against buffer limits before executing read operations to prevent data leakage."
+  },
+  {
+    "CWE_ID": "130",
+    "Characteristic": "Security",
+    "Description": "Improper Handling of Length Parameter Inconsistency",
+    "Refactor_Advice": "Validate that explicit length fields in parsed network payloads strictly match the actual data size before processing."
+  },
+  {
+    "CWE_ID": "786",
+    "Characteristic": "Security",
+    "Description": "Access of Memory Location Before Start of Buffer",
+    "Refactor_Advice": "Ensure pointer decrements and negative indices are boundary-checked to prevent reading or writing before the buffer's base address."
+  },
+  {
+    "CWE_ID": "787",
+    "Characteristic": "Security",
+    "Description": "Out-of-bounds Write",
+    "Refactor_Advice": "Check bounds before writing to arrays, ensuring index variables do not exceed allocated limits to prevent memory corruption."
+  },
+  {
+    "CWE_ID": "788",
+    "Characteristic": "Security",
+    "Description": "Access of Memory Location After End of Buffer",
+    "Refactor_Advice": "Prevent pointer increments from passing the buffer's tail end by enforcing strict upper-bound limits."
+  },
+  {
+    "CWE_ID": "805",
+    "Characteristic": "Security",
+    "Description": "Buffer Access with Incorrect Length Value",
+    "Refactor_Advice": "Double-check length calculations passed to sequential read/write operations to ensure they do not exceed buffer bounds."
+  },
+  {
+    "CWE_ID": "822",
+    "Characteristic": "Security",
+    "Description": "Untrusted Pointer Dereference",
+    "Refactor_Advice": "Never directly convert untrusted input into pointers; strictly validate any external data used to reference memory locations."
+  },
+  {
+    "CWE_ID": "823",
+    "Characteristic": "Security",
+    "Description": "Use of Out-of-range Pointer Offset",
+    "Refactor_Advice": "Validate that offset calculations derived from untrusted sources fall safely within the target structured data boundaries."
+  },
+  {
+    "CWE_ID": "824",
+    "Characteristic": "Security",
+    "Description": "Access of Uninitialized Pointer",
+    "Refactor_Advice": "Initialize all pointers to NULL or a valid memory address immediately upon declaration to prevent exploitation."
+  },
+  {
+    "CWE_ID": "825",
+    "Characteristic": "Security",
+    "Description": "Expired Pointer Dereference",
+    "Refactor_Advice": "Set pointers to NULL immediately after freeing the memory they point to, preventing attackers from exploiting dangling pointers."
+  },
+  {
+    "CWE_ID": "129",
+    "Characteristic": "Security",
+    "Description": "Improper Validation of Array Index",
+    "Refactor_Advice": "Validate array indices derived from untrusted input against strict upper and lower bounds before using them for data access."
+  },
+  {
+    "CWE_ID": "134",
+    "Characteristic": "Security",
+    "Description": "Use of Externally Controlled Format String",
+    "Refactor_Advice": "Never pass unvalidated user input directly as the format string parameter to formatting functions (e.g., printf); use static strings."
+  },
+  {
+    "CWE_ID": "252",
+    "Characteristic": "Security",
+    "Description": "Unchecked Return Value",
+    "Refactor_Advice": "Verify the return values of all critical security, I/O, and system API calls to handle potential failure states securely."
+  },
+  {
+    "CWE_ID": "404",
+    "Characteristic": "Security",
+    "Description": "Improper Resource Shutdown or Release",
+    "Refactor_Advice": "Guarantee resource closure to prevent resource exhaustion attacks by utilizing try-with-resources or explicit 'finally' blocks."
+  },
+  {
+    "CWE_ID": "401",
+    "Characteristic": "Security",
+    "Description": "Improper Release of Memory Before Removing Last Reference ('Memory Leak')",
+    "Refactor_Advice": "Ensure explicit deallocation of memory objects to prevent gradual memory consumption and subsequent Denial of Service."
+  },
+  {
+    "CWE_ID": "772",
+    "Characteristic": "Security",
+    "Description": "Missing Release of Resource after Effective Lifetime",
+    "Refactor_Advice": "Release network connections and memory immediately after use to prevent resource starvation."
+  },
+  {
+    "CWE_ID": "775",
+    "Characteristic": "Security",
+    "Description": "Missing Release of File Descriptor or Handle after Effective Lifetime",
+    "Refactor_Advice": "Explicitly close file handles to prevent attackers from consuming all available descriptors and causing a DoS."
+  },
+  {
+    "CWE_ID": "424",
+    "Characteristic": "Security",
+    "Description": "Improper Protection of Alternate Path",
+    "Refactor_Advice": "Implement unified authentication and authorization middleware to secure all potential access paths."
+  },
+  {
+    "CWE_ID": "434",
+    "Characteristic": "Security",
+    "Description": "Unrestricted Upload of File with Dangerous Type",
+    "Refactor_Advice": "Verify file types using strict allowlists based on MIME types and magic numbers, and store them securely outside the web root."
+  },
+  {
+    "CWE_ID": "477",
+    "Characteristic": "Security",
+    "Description": "Use of Obsolete Function",
+    "Refactor_Advice": "Replace deprecated or obsolete functions with their modernized, secure equivalents provided by updated standard libraries."
+  },
+  {
+    "CWE_ID": "480",
+    "Characteristic": "Security",
+    "Description": "Use of Incorrect Operator",
+    "Refactor_Advice": "Review logical expressions to ensure correct operators are used to prevent security control bypasses."
+  },
+  {
+    "CWE_ID": "502",
+    "Characteristic": "Security",
+    "Description": "Deserialization of Untrusted Data",
+    "Refactor_Advice": "Avoid deserializing complex objects from untrusted sources; utilize safe data formats like JSON or enforce strict class allowlists."
+  },
+  {
+    "CWE_ID": "570",
+    "Characteristic": "Security",
+    "Description": "Expression is Always False",
+    "Refactor_Advice": "Refactor the logical condition to ensure security checks or access controls evaluate dynamically based on correct states."
+  },
+  {
+    "CWE_ID": "571",
+    "Characteristic": "Security",
+    "Description": "Expression Is Always True",
+    "Refactor_Advice": "Refactor the logical condition to ensure security-critical branches (like auth failure handling) are actually reachable."
+  },
+  {
+    "CWE_ID": "606",
+    "Characteristic": "Security",
+    "Description": "Unchecked Input for Loop Condition",
+    "Refactor_Advice": "Sanitize and strictly bound inputs used for loop conditions to prevent attackers from causing excessive CPU consumption."
+  },
+  {
+    "CWE_ID": "611",
+    "Characteristic": "Security",
+    "Description": "Improper Restriction of XML External Entity Reference ('XXE')",
+    "Refactor_Advice": "Explicitly disable DTD (Document Type Definition) and XML external entity processing in the XML parser configuration."
+  },
+  {
+    "CWE_ID": "643",
+    "Characteristic": "Security",
+    "Description": "Improper Neutralization of Data within XPath Expressions ('XPath Injection')",
+    "Refactor_Advice": "Use precompiled or parameterized XPath queries to safely inject variables without altering the core XPath structure."
+  },
+  {
+    "CWE_ID": "652",
+    "Characteristic": "Security",
+    "Description": "CWE-652 Improper Neutralization of Data within XQuery Expressions ('XQuery Injection')",
+    "Refactor_Advice": "Use parameterized queries or strictly validate input before embedding it into dynamic XQuery expressions."
+  },
+  {
+    "CWE_ID": "665",
+    "Characteristic": "Security",
+    "Description": "Improper Initialization",
+    "Refactor_Advice": "Ensure complex resources are fully initialized and valid before their references are exposed, preventing access to unsecured states."
+  },
+  {
+    "CWE_ID": "456",
+    "Characteristic": "Security",
+    "Description": "Missing Initialization of a Variable",
+    "Refactor_Advice": "Initialize all critical variables explicitly at the point of declaration to prevent attackers from reading residual memory."
+  },
+  {
+    "CWE_ID": "457",
+    "Characteristic": "Security",
+    "Description": "Use of uninitialized variable",
+    "Refactor_Advice": "Assign a default, secure value to variables before any read operations occur."
+  },
+  {
+    "CWE_ID": "662",
+    "Characteristic": "Security",
+    "Description": "Improper Synchronization",
+    "Refactor_Advice": "Synchronize access to shared mutable state to prevent attackers from exploiting timing windows to corrupt state."
+  },
+  {
+    "CWE_ID": "366",
+    "Characteristic": "Security",
+    "Description": "Race Condition within a Thread",
+    "Refactor_Advice": "Identify critical sections where shared resources are used concurrently and wrap them in mutual exclusion locks."
+  },
+  {
+    "CWE_ID": "543",
+    "Characteristic": "Security",
+    "Description": "Use of Singleton Pattern Without Synchronization in a Multithreaded Context",
+    "Refactor_Advice": "Implement thread-safe initialization for Singletons to ensure critical shared objects cannot be maliciously duplicated."
+  },
+  {
+    "CWE_ID": "567",
+    "Characteristic": "Security",
+    "Description": "Unsynchronized Access to Shared Data in a Multithreaded Context",
+    "Refactor_Advice": "Protect shared static variables across threads using appropriate synchronization locks to maintain data integrity."
+  },
+  {
+    "CWE_ID": "667",
+    "Characteristic": "Security",
+    "Description": "Improper Locking",
+    "Refactor_Advice": "Ensure locks are acquired correctly and definitively released in a robust 'finally' block to prevent resource deadlocks."
+  },
+  {
+    "CWE_ID": "820",
+    "Characteristic": "Security",
+    "Description": "Missing Synchronization",
+    "Refactor_Advice": "Identify concurrent access points to shared resources and apply appropriate synchronization to prevent race conditions."
+  },
+  {
+    "CWE_ID": "821",
+    "Characteristic": "Security",
+    "Description": "Incorrect Synchronization",
+    "Refactor_Advice": "Review synchronization blocks to ensure they lock on the correct shared object monitor."
+  },
+  {
+    "CWE_ID": "672",
+    "Characteristic": "Security",
+    "Description": "Operation on a Resource after Expiration or Release",
+    "Refactor_Advice": "Invalidate resource references immediately upon release and verify authorization states before attempting subsequent operations."
+  },
+  {
+    "CWE_ID": "415",
+    "Characteristic": "Security",
+    "Description": "Double Free",
+    "Refactor_Advice": "Nullify pointers immediately after freeing the associated memory to prevent heap corruption exploits."
+  },
+  {
+    "CWE_ID": "416",
+    "Characteristic": "Security",
+    "Description": "Use After Free",
+    "Refactor_Advice": "Eliminate dangling pointers by clearing references after memory release to prevent arbitrary code execution vulnerabilities."
+  },
+  {
+    "CWE_ID": "681",
+    "Characteristic": "Security",
+    "Description": "Incorrect Conversion between Numeric Types",
+    "Refactor_Advice": "Validate numeric ranges before type casting to prevent integer truncation that could bypass security checks."
+  },
+  {
+    "CWE_ID": "194",
+    "Characteristic": "Security",
+    "Description": "Unexpected Sign Extension",
+    "Refactor_Advice": "Use unsigned data types when upcasting to prevent negative numbers from enabling boundary check bypasses."
+  },
+  {
+    "CWE_ID": "195",
+    "Characteristic": "Security",
+    "Description": "Signed to Unsigned Conversion Error",
+    "Refactor_Advice": "Validate that a signed integer is positive before casting it to an unsigned type to prevent massive unintended allocations."
+  },
+  {
+    "CWE_ID": "196",
+    "Characteristic": "Security",
+    "Description": "Unsigned to Signed Conversion Error",
+    "Refactor_Advice": "Ensure the unsigned value does not exceed the maximum capacity of the target signed type before casting."
+  },
+  {
+    "CWE_ID": "197",
+    "Characteristic": "Security",
+    "Description": "Numeric Truncation Error",
+    "Refactor_Advice": "Check bounds before downcasting primitive types to prevent data loss that could bypass size constraints."
+  },
+  {
+    "CWE_ID": "682",
+    "Characteristic": "Security",
+    "Description": "Incorrect Calculation",
+    "Refactor_Advice": "Audit arithmetic logic for critical decision-making code, adding comprehensive unit tests for mathematical correctness."
+  },
+  {
+    "CWE_ID": "131",
+    "Characteristic": "Security",
+    "Description": "Incorrect Calculation of Buffer Size",
+    "Refactor_Advice": "Double-check buffer allocation sizing logic to prevent attackers from causing overflows via undersized buffers."
+  },
+  {
+    "CWE_ID": "369",
+    "Characteristic": "Security",
+    "Description": "Divide By Zero",
+    "Refactor_Advice": "Add conditional guards to explicitly verify that the denominator is strictly non-zero to prevent Denial of Service crashes."
+  },
+  {
+    "CWE_ID": "732",
+    "Characteristic": "Security",
+    "Description": "Incorrect Permission Assignment for Critical Resource",
+    "Refactor_Advice": "Apply the Principle of Least Privilege by setting restrictive permissions (e.g., chmod) on sensitive files and directories."
+  },
+  {
+    "CWE_ID": "778",
+    "Characteristic": "Security",
+    "Description": "Insufficient Logging",
+    "Refactor_Advice": "Log all security-critical events (authentication, authorization, state changes) with sufficient context to support incident forensics."
+  },
+  {
+    "CWE_ID": "783",
+    "Characteristic": "Security",
+    "Description": "Operator Precedence Logic Error",
+    "Refactor_Advice": "Use explicit parentheses in complex expressions to force the intended order of operations, especially in security-critical logic."
+  },
+  {
+    "CWE_ID": "789",
+    "Characteristic": "Security",
+    "Description": "Uncontrolled Memory Allocation",
+    "Refactor_Advice": "Enforce strict upper limits and validation checks on size parameters derived from external inputs before dynamic memory allocation."
+  },
+  {
+    "CWE_ID": "798",
+    "Characteristic": "Security",
+    "Description": "Use of Hard-coded Credentials",
+    "Refactor_Advice": "Extract all hard-coded secrets from the source code and inject them dynamically via secure environment variables or a vault."
+  },
+  {
+    "CWE_ID": "259",
+    "Characteristic": "Security",
+    "Description": "Use of Hard-coded Password",
+    "Refactor_Advice": "Do not commit passwords into version control. Abstract authentication secrets into external configuration files or secret managers."
+  },
+  {
+    "CWE_ID": "321",
+    "Characteristic": "Security",
+    "Description": "Use of Hard-coded Cryptographic Key",
+    "Refactor_Advice": "Manage cryptographic keys via secure key management systems (KMS) or HSMs rather than embedding them directly in source code."
+  },
+  {
+    "CWE_ID": "835",
+    "Characteristic": "Security",
+    "Description": "Loop with Unreachable Exit Condition ('Infinite Loop')",
+    "Refactor_Advice": "Review loop control variables to ensure they are updated correctly so attackers cannot trigger infinite loops and DoS the service."
+  },
+  {
+    "CWE_ID": "917",
+    "Characteristic": "Security",
+    "Description": "Improper Neutralization of Special Elements used in an Expression Language Statement ('Expression Language Injection')",
+    "Refactor_Advice": "Disable dynamic EL resolution for user inputs, or rigorously sanitize data before processing it within Expression Language engines."
+  },
+  {
+    "CWE_ID": "1057",
+    "Characteristic": "Security",
+    "Description": "Data Access Operations Outside of Expected Data Manager Component",
+    "Refactor_Advice": "Route all data access operations strictly through the designated DAO layer to ensure security controls are uniformly applied."
+  }
+]

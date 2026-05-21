@@ -1,0 +1,22 @@
+{
+  "dataset": "mixed",
+  "profile": "ours",
+  "manifest_name": "baseline_extended_v1",
+  "seed_source": "empty",
+  "run_dir": "F:\\LLM\\LLM_learning\\results\\runs\\mixed\\ours\\20260521_024454__ours__mixed__baseline_extended_v1__smoke_test_ours",
+  "total_tasks": 25,
+  "workflow_success_rate": 0.0,
+  "test_pass_rate": 0.04,
+  "avg_green_attempts": 4.84,
+  "avg_iteration": 0.12,
+  "official_humaneval_eval": {
+    "sample_file": "F:\\LLM\\LLM_learning\\results\\runs\\mixed\\ours\\20260521_024454__ours__mixed__baseline_extended_v1__smoke_test_ours\\humaneval_samples.jsonl",
+    "problem_file": "F:\\LLM\\LLM_learning\\human-eval\\data\\HumanEval.jsonl.gz",
+    "sample_count": 5,
+    "task_count": 5,
+    "passed_count": 0,
+    "pass_metrics": {
+      "pass@1": 0.0
+    }
+  }
+}

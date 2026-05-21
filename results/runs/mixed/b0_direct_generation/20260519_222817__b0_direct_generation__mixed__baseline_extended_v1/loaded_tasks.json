@@ -1,0 +1,522 @@
+[
+  {
+    "dataset_name": "mbpp",
+    "task_id": "4",
+    "requirement": "Write a function to find the n largest integers from a given list of numbers, returned in descending order.",
+    "entry_point": "heap_queue_largest",
+    "test_cases": "def test_mbpp_task():\n    assert heap_queue_largest( [25, 35, 22, 85, 14, 65, 75, 22, 58],3)==[85, 75, 65]\n    assert heap_queue_largest( [25, 35, 22, 85, 14, 65, 75, 22, 58],2)==[85, 75]\n    assert heap_queue_largest( [25, 35, 22, 85, 14, 65, 75, 22, 58],5)==[85, 75, 65, 58, 35]\n",
+    "reference_code": "import heapq as hq\ndef heap_queue_largest(nums,n):\n  largest_nums = hq.nlargest(n, nums)\n  return largest_nums",
+    "seed_code": "",
+    "metadata": {
+      "source_file": "Benchmark Questions Verification V2.ipynb",
+      "dataset_path": "F:\\LLM\\LLM_learning\\MBPP\\sanitized-mbpp.json",
+      "split": "extended_baseline",
+      "version": "v1",
+      "owner": "cogmas-tdd",
+      "note": "Extends shared_baseline_subset_v1. Excludes tasks already in that manifest.",
+      "tags": [
+        "extended_baseline",
+        "mbpp"
+      ]
+    }
+  },
+  {
+    "dataset_name": "mbpp",
+    "task_id": "7",
+    "requirement": "Write a function to find all words which are at least 4 characters long in a string.",
+    "entry_point": "find_char_long",
+    "test_cases": "def test_mbpp_task():\n    assert set(find_char_long('Please move back to stream')) == set(['Please', 'move', 'back', 'stream'])\n    assert set(find_char_long('Jing Eco and Tech')) == set(['Jing', 'Tech'])\n    assert set(find_char_long('Jhingai wulu road Zone 3')) == set(['Jhingai', 'wulu', 'road', 'Zone'])\n",
+    "reference_code": "import re\ndef find_char_long(text):\n  return (re.findall(r\"\\b\\w{4,}\\b\", text))",
+    "seed_code": "",
+    "metadata": {
+      "source_file": "Benchmark Questions Verification V2.ipynb",
+      "dataset_path": "F:\\LLM\\LLM_learning\\MBPP\\sanitized-mbpp.json",
+      "split": "extended_baseline",
+      "version": "v1",
+      "owner": "cogmas-tdd",
+      "note": "Extends shared_baseline_subset_v1. Excludes tasks already in that manifest.",
+      "tags": [
+        "extended_baseline",
+        "mbpp"
+      ]
+    }
+  },
+  {
+    "dataset_name": "mbpp",
+    "task_id": "8",
+    "requirement": "Write a function to find squares of individual elements in a list.",
+    "entry_point": "square_nums",
+    "test_cases": "def test_mbpp_task():\n    assert square_nums([1, 2, 3, 4, 5, 6, 7, 8, 9, 10])==[1, 4, 9, 16, 25, 36, 49, 64, 81, 100]\n    assert square_nums([10,20,30])==([100,400,900])\n    assert square_nums([12,15])==([144,225])\n",
+    "reference_code": "def square_nums(nums):\n square_nums = list(map(lambda x: x ** 2, nums))\n return square_nums",
+    "seed_code": "",
+    "metadata": {
+      "source_file": "Benchmark Questions Verification V2.ipynb",
+      "dataset_path": "F:\\LLM\\LLM_learning\\MBPP\\sanitized-mbpp.json",
+      "split": "extended_baseline",
+      "version": "v1",
+      "owner": "cogmas-tdd",
+      "note": "Extends shared_baseline_subset_v1. Excludes tasks already in that manifest.",
+      "tags": [
+        "extended_baseline",
+        "mbpp"
+      ]
+    }
+  },
+  {
+    "dataset_name": "mbpp",
+    "task_id": "16",
+    "requirement": "Write a function to that returns true if the input string contains sequences of lowercase letters joined with an underscore and false otherwise.",
+    "entry_point": "text_lowercase_underscore",
+    "test_cases": "def test_mbpp_task():\n    assert text_lowercase_underscore(\"aab_cbbbc\")==(True)\n    assert text_lowercase_underscore(\"aab_Abbbc\")==(False)\n    assert text_lowercase_underscore(\"Aaab_abbbc\")==(False)\n",
+    "reference_code": "import re\ndef text_lowercase_underscore(text):\n        patterns = '^[a-z]+_[a-z]+$'\n        if re.search(patterns,  text):\n                return True\n        else:\n                return False",
+    "seed_code": "",
+    "metadata": {
+      "source_file": "Benchmark Questions Verification V2.ipynb",
+      "dataset_path": "F:\\LLM\\LLM_learning\\MBPP\\sanitized-mbpp.json",
+      "split": "extended_baseline",
+      "version": "v1",
+      "owner": "cogmas-tdd",
+      "note": "Extends shared_baseline_subset_v1. Excludes tasks already in that manifest.",
+      "tags": [
+        "extended_baseline",
+        "mbpp"
+      ]
+    }
+  },
+  {
+    "dataset_name": "mbpp",
+    "task_id": "62",
+    "requirement": "Write a python function to find smallest number in a list.",
+    "entry_point": "smallest_num",
+    "test_cases": "def test_mbpp_task():\n    assert smallest_num([10, 20, 1, 45, 99]) == 1\n    assert smallest_num([1, 2, 3]) == 1\n    assert smallest_num([45, 46, 50, 60]) == 45\n",
+    "reference_code": "def smallest_num(xs):\n  return min(xs)\n",
+    "seed_code": "",
+    "metadata": {
+      "source_file": "Mike's Copy of Benchmark Questions Verification V2.ipynb",
+      "dataset_path": "F:\\LLM\\LLM_learning\\MBPP\\sanitized-mbpp.json",
+      "split": "extended_baseline",
+      "version": "v1",
+      "owner": "cogmas-tdd",
+      "note": "Extends shared_baseline_subset_v1. Excludes tasks already in that manifest.",
+      "tags": [
+        "extended_baseline",
+        "mbpp"
+      ]
+    }
+  },
+  {
+    "dataset_name": "mbpp",
+    "task_id": "65",
+    "requirement": "Write a function to flatten a list and sum all of its elements.",
+    "entry_point": "recursive_list_sum",
+    "test_cases": "def test_mbpp_task():\n    assert recursive_list_sum(([1, 2, [3,4],[5,6]]))==21\n    assert recursive_list_sum(([7, 10, [15,14],[19,41]]))==106\n    assert recursive_list_sum(([10, 20, [30,40],[50,60]]))==210\n",
+    "reference_code": "def recursive_list_sum(data_list):\n\ttotal = 0\n\tfor element in data_list:\n\t\tif type(element) == type([]):\n\t\t\ttotal = total + recursive_list_sum(element)\n\t\telse:\n\t\t\ttotal = total + element\n\treturn total",
+    "seed_code": "",
+    "metadata": {
+      "source_file": "Mike's Copy of Benchmark Questions Verification V2.ipynb",
+      "dataset_path": "F:\\LLM\\LLM_learning\\MBPP\\sanitized-mbpp.json",
+      "split": "extended_baseline",
+      "version": "v1",
+      "owner": "cogmas-tdd",
+      "note": "Extends shared_baseline_subset_v1. Excludes tasks already in that manifest.",
+      "tags": [
+        "extended_baseline",
+        "mbpp"
+      ]
+    }
+  },
+  {
+    "dataset_name": "mbpp",
+    "task_id": "68",
+    "requirement": "Write a python function to check whether the given array is monotonic or not.",
+    "entry_point": "is_Monotonic",
+    "test_cases": "def test_mbpp_task():\n    assert is_Monotonic([6, 5, 4, 4]) == True\n    assert is_Monotonic([1, 2, 2, 3]) == True\n    assert is_Monotonic([1, 3, 2]) == False\n",
+    "reference_code": "def is_Monotonic(A): \n    return (all(A[i] <= A[i + 1] for i in range(len(A) - 1)) or\n            all(A[i] >= A[i + 1] for i in range(len(A) - 1))) ",
+    "seed_code": "",
+    "metadata": {
+      "source_file": "Mike's Copy of Benchmark Questions Verification V2.ipynb",
+      "dataset_path": "F:\\LLM\\LLM_learning\\MBPP\\sanitized-mbpp.json",
+      "split": "extended_baseline",
+      "version": "v1",
+      "owner": "cogmas-tdd",
+      "note": "Extends shared_baseline_subset_v1. Excludes tasks already in that manifest.",
+      "tags": [
+        "extended_baseline",
+        "mbpp"
+      ]
+    }
+  },
+  {
+    "dataset_name": "mbpp",
+    "task_id": "71",
+    "requirement": "Write a function to sort a list of elements.",
+    "entry_point": "comb_sort",
+    "test_cases": "def test_mbpp_task():\n    assert comb_sort([5, 15, 37, 25, 79]) == [5, 15, 25, 37, 79]\n    assert comb_sort([41, 32, 15, 19, 22]) == [15, 19, 22, 32, 41]\n    assert comb_sort([99, 15, 13, 47]) == [13, 15, 47, 99]\n",
+    "reference_code": "def comb_sort(nums):\n    shrink_fact = 1.3\n    gaps = len(nums)\n    swapped = True\n    i = 0\n    while gaps > 1 or swapped:\n        gaps = int(float(gaps) / shrink_fact)\n        swapped = False\n        i = 0\n        while gaps + i < len(nums):\n            if nums[i] > nums[i+gaps]:\n                nums[i], nums[i+gaps] = nums[i+gaps], nums[i]\n                swapped = True\n            i += 1\n    return nums",
+    "seed_code": "",
+    "metadata": {
+      "source_file": "Mike's Copy of Benchmark Questions Verification V2.ipynb",
+      "dataset_path": "F:\\LLM\\LLM_learning\\MBPP\\sanitized-mbpp.json",
+      "split": "extended_baseline",
+      "version": "v1",
+      "owner": "cogmas-tdd",
+      "note": "Extends shared_baseline_subset_v1. Excludes tasks already in that manifest.",
+      "tags": [
+        "extended_baseline",
+        "mbpp"
+      ]
+    }
+  },
+  {
+    "dataset_name": "mbpp",
+    "task_id": "82",
+    "requirement": "Write a function to find the volume of a sphere.",
+    "entry_point": "volume_sphere",
+    "test_cases": "import math\n\ndef test_mbpp_task():\n    assert math.isclose(volume_sphere(10), 4188.790204786391, rel_tol=0.001)\n    assert math.isclose(volume_sphere(25), 65449.84694978735, rel_tol=0.001)\n    assert math.isclose(volume_sphere(20), 33510.32163829113, rel_tol=0.001)\n",
+    "reference_code": "import math\ndef volume_sphere(r):\n  volume=(4/3)*math.pi*r*r*r\n  return volume",
+    "seed_code": "",
+    "metadata": {
+      "source_file": "Mike's Copy of Benchmark Questions Verification V2.ipynb",
+      "dataset_path": "F:\\LLM\\LLM_learning\\MBPP\\sanitized-mbpp.json",
+      "split": "extended_baseline",
+      "version": "v1",
+      "owner": "cogmas-tdd",
+      "note": "Extends shared_baseline_subset_v1. Excludes tasks already in that manifest.",
+      "tags": [
+        "extended_baseline",
+        "mbpp"
+      ]
+    }
+  },
+  {
+    "dataset_name": "mbpp",
+    "task_id": "88",
+    "requirement": "Write a function to get the frequency of all the elements in a list, returned as a dictionary.",
+    "entry_point": "freq_count",
+    "test_cases": "def test_mbpp_task():\n    assert freq_count([10,10,10,10,20,20,20,20,40,40,50,50,30])==({10: 4, 20: 4, 40: 2, 50: 2, 30: 1})\n    assert freq_count([1,2,3,4,3,2,4,1,3,1,4])==({1:3, 2:2,3:3,4:3})\n    assert freq_count([5,6,7,4,9,10,4,5,6,7,9,5])==({10:1,5:3,6:2,7:2,4:2,9:2})\n",
+    "reference_code": "import collections\ndef freq_count(list1):\n  freq_count= collections.Counter(list1)\n  return freq_count",
+    "seed_code": "",
+    "metadata": {
+      "source_file": "Mike's Copy of Benchmark Questions Verification V2.ipynb",
+      "dataset_path": "F:\\LLM\\LLM_learning\\MBPP\\sanitized-mbpp.json",
+      "split": "extended_baseline",
+      "version": "v1",
+      "owner": "cogmas-tdd",
+      "note": "Extends shared_baseline_subset_v1. Excludes tasks already in that manifest.",
+      "tags": [
+        "extended_baseline",
+        "mbpp"
+      ]
+    }
+  },
+  {
+    "dataset_name": "mbpp",
+    "task_id": "99",
+    "requirement": "Write a function to convert the given decimal number to its binary equivalent, represented as a string with no leading zeros.",
+    "entry_point": "decimal_to_binary",
+    "test_cases": "def test_mbpp_task():\n    assert decimal_to_binary(8) == '1000'\n    assert decimal_to_binary(18) == '10010'\n    assert decimal_to_binary(7) == '111'\n",
+    "reference_code": "def decimal_to_binary(n): \n    return bin(n).replace(\"0b\",\"\") ",
+    "seed_code": "",
+    "metadata": {
+      "source_file": "Mike's Copy of Benchmark Questions Verification V2.ipynb",
+      "dataset_path": "F:\\LLM\\LLM_learning\\MBPP\\sanitized-mbpp.json",
+      "split": "extended_baseline",
+      "version": "v1",
+      "owner": "cogmas-tdd",
+      "note": "Extends shared_baseline_subset_v1. Excludes tasks already in that manifest.",
+      "tags": [
+        "extended_baseline",
+        "mbpp"
+      ]
+    }
+  },
+  {
+    "dataset_name": "mbpp",
+    "task_id": "102",
+    "requirement": "Write a function to convert a snake case string to camel case string.",
+    "entry_point": "snake_to_camel",
+    "test_cases": "def test_mbpp_task():\n    assert snake_to_camel('python_program')=='PythonProgram'\n    assert snake_to_camel('python_language')==('PythonLanguage')\n    assert snake_to_camel('programming_language')==('ProgrammingLanguage')\n",
+    "reference_code": "def snake_to_camel(word):\n        import re\n        return ''.join(x.capitalize() or '_' for x in word.split('_'))",
+    "seed_code": "",
+    "metadata": {
+      "source_file": "Mike's Copy of Benchmark Questions Verification V2.ipynb",
+      "dataset_path": "F:\\LLM\\LLM_learning\\MBPP\\sanitized-mbpp.json",
+      "split": "extended_baseline",
+      "version": "v1",
+      "owner": "cogmas-tdd",
+      "note": "Extends shared_baseline_subset_v1. Excludes tasks already in that manifest.",
+      "tags": [
+        "extended_baseline",
+        "mbpp"
+      ]
+    }
+  },
+  {
+    "dataset_name": "mbpp",
+    "task_id": "105",
+    "requirement": "Write a python function to count true booleans in the given list.",
+    "entry_point": "count",
+    "test_cases": "def test_mbpp_task():\n    assert count([True,False,True]) == 2\n    assert count([False,False]) == 0\n    assert count([True,True,True]) == 3\n",
+    "reference_code": "def count(lst):   \n    return sum(lst) ",
+    "seed_code": "",
+    "metadata": {
+      "source_file": "Mike's Copy of Benchmark Questions Verification V2.ipynb",
+      "dataset_path": "F:\\LLM\\LLM_learning\\MBPP\\sanitized-mbpp.json",
+      "split": "extended_baseline",
+      "version": "v1",
+      "owner": "cogmas-tdd",
+      "note": "Extends shared_baseline_subset_v1. Excludes tasks already in that manifest.",
+      "tags": [
+        "extended_baseline",
+        "mbpp"
+      ]
+    }
+  },
+  {
+    "dataset_name": "mbpp",
+    "task_id": "118",
+    "requirement": "Write a function to convert a string to a list of strings split on the space character.",
+    "entry_point": "string_to_list",
+    "test_cases": "def test_mbpp_task():\n    assert string_to_list(\"python programming\")==['python','programming']\n    assert string_to_list(\"lists tuples strings\")==['lists','tuples','strings']\n    assert string_to_list(\"write a program\")==['write','a','program']\n",
+    "reference_code": "def string_to_list(string): \n    lst = list(string.split(\" \")) \n    return lst",
+    "seed_code": "",
+    "metadata": {
+      "source_file": "Mike's Copy of Benchmark Questions Verification V2.ipynb",
+      "dataset_path": "F:\\LLM\\LLM_learning\\MBPP\\sanitized-mbpp.json",
+      "split": "extended_baseline",
+      "version": "v1",
+      "owner": "cogmas-tdd",
+      "note": "Extends shared_baseline_subset_v1. Excludes tasks already in that manifest.",
+      "tags": [
+        "extended_baseline",
+        "mbpp"
+      ]
+    }
+  },
+  {
+    "dataset_name": "mbpp",
+    "task_id": "130",
+    "requirement": "Write a function to find the item with maximum frequency in a given list.",
+    "entry_point": "max_occurrences",
+    "test_cases": "def test_mbpp_task():\n    assert max_occurrences([2,3,8,4,7,9,8,2,6,5,1,6,1,2,3,2,4,6,9,1,2])==2\n    assert max_occurrences([2,3,8,4,7,9,8,7,9,15,14,10,12,13,16,18])==8\n    assert max_occurrences([10,20,20,30,40,90,80,50,30,20,50,10])==20\n",
+    "reference_code": "from collections import defaultdict\ndef max_occurrences(nums):\n    dict = defaultdict(int)\n    for i in nums:\n        dict[i] += 1\n    result = max(dict.items(), key=lambda x: x[1]) \n    return result[0]",
+    "seed_code": "",
+    "metadata": {
+      "source_file": "Mike's Copy of Benchmark Questions Verification V2.ipynb",
+      "dataset_path": "F:\\LLM\\LLM_learning\\MBPP\\sanitized-mbpp.json",
+      "split": "extended_baseline",
+      "version": "v1",
+      "owner": "cogmas-tdd",
+      "note": "Extends shared_baseline_subset_v1. Excludes tasks already in that manifest.",
+      "tags": [
+        "extended_baseline",
+        "mbpp"
+      ]
+    }
+  },
+  {
+    "dataset_name": "mbpp",
+    "task_id": "161",
+    "requirement": "Write a function to remove all elements from a given list present in another list.",
+    "entry_point": "remove_elements",
+    "test_cases": "def test_mbpp_task():\n    assert remove_elements([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], [2, 4, 6, 8]) == [1, 3, 5, 7, 9, 10]\n    assert remove_elements([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], [1, 3, 5, 7]) == [2, 4, 6, 8, 9, 10]\n    assert remove_elements([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], [5, 7]) == [1, 2, 3, 4, 6, 8, 9, 10]\n",
+    "reference_code": "def remove_elements(list1, list2):\n    result = [x for x in list1 if x not in list2]\n    return result",
+    "seed_code": "",
+    "metadata": {
+      "source_file": "Benchmark Questions Verification V2.ipynb",
+      "dataset_path": "F:\\LLM\\LLM_learning\\MBPP\\sanitized-mbpp.json",
+      "split": "extended_baseline",
+      "version": "v1",
+      "owner": "cogmas-tdd",
+      "note": "Extends shared_baseline_subset_v1. Excludes tasks already in that manifest.",
+      "tags": [
+        "extended_baseline",
+        "mbpp"
+      ]
+    }
+  },
+  {
+    "dataset_name": "mbpp",
+    "task_id": "222",
+    "requirement": "Write a function to check if all the elements in tuple have same data type or not.",
+    "entry_point": "check_type",
+    "test_cases": "def test_mbpp_task():\n    assert check_type((5, 6, 7, 3, 5, 6) ) == True\n    assert check_type((1, 2, \"4\") ) == False\n    assert check_type((3, 2, 1, 4, 5) ) == True\n",
+    "reference_code": "def check_type(test_tuple):\n  res = True\n  for ele in test_tuple:\n    if not isinstance(ele, type(test_tuple[0])):\n      res = False\n      break\n  return (res) ",
+    "seed_code": "",
+    "metadata": {
+      "source_file": "Benchmark Questions Verification V2.ipynb",
+      "dataset_path": "F:\\LLM\\LLM_learning\\MBPP\\sanitized-mbpp.json",
+      "split": "extended_baseline",
+      "version": "v1",
+      "owner": "cogmas-tdd",
+      "note": "Extends shared_baseline_subset_v1. Excludes tasks already in that manifest.",
+      "tags": [
+        "extended_baseline",
+        "mbpp"
+      ]
+    }
+  },
+  {
+    "dataset_name": "mbpp",
+    "task_id": "230",
+    "requirement": "Write a function that takes in a string and character, replaces blank spaces in the string with the character, and returns the string.",
+    "entry_point": "replace_blank",
+    "test_cases": "def test_mbpp_task():\n    assert replace_blank(\"hello people\",'@')==(\"hello@people\")\n    assert replace_blank(\"python program language\",'$')==(\"python$program$language\")\n    assert replace_blank(\"blank space\",\"-\")==(\"blank-space\")\n",
+    "reference_code": "def replace_blank(str1,char):\n str2 = str1.replace(' ', char)\n return str2",
+    "seed_code": "",
+    "metadata": {
+      "source_file": "Benchmark Questions Verification V2.ipynb",
+      "dataset_path": "F:\\LLM\\LLM_learning\\MBPP\\sanitized-mbpp.json",
+      "split": "extended_baseline",
+      "version": "v1",
+      "owner": "cogmas-tdd",
+      "note": "Extends shared_baseline_subset_v1. Excludes tasks already in that manifest.",
+      "tags": [
+        "extended_baseline",
+        "mbpp"
+      ]
+    }
+  },
+  {
+    "dataset_name": "mbpp",
+    "task_id": "246",
+    "requirement": "Write a function for computing square roots using the babylonian method.",
+    "entry_point": "babylonian_squareroot",
+    "test_cases": "import math\n\ndef test_mbpp_task():\n    assert math.isclose(babylonian_squareroot(10), 3.162277660168379, rel_tol=0.001)\n    assert math.isclose(babylonian_squareroot(2), 1.414213562373095, rel_tol=0.001)\n    assert math.isclose(babylonian_squareroot(9), 3.0, rel_tol=0.001)\n",
+    "reference_code": "def babylonian_squareroot(number):\n    if(number == 0):\n        return 0;\n    g = number/2.0;\n    g2 = g + 1;\n    while(g != g2):\n        n = number/ g;\n        g2 = g;\n        g = (g + n)/2;\n    return g;",
+    "seed_code": "",
+    "metadata": {
+      "source_file": "Benchmark Questions Verification V2.ipynb",
+      "dataset_path": "F:\\LLM\\LLM_learning\\MBPP\\sanitized-mbpp.json",
+      "split": "extended_baseline",
+      "version": "v1",
+      "owner": "cogmas-tdd",
+      "note": "Extends shared_baseline_subset_v1. Excludes tasks already in that manifest.",
+      "tags": [
+        "extended_baseline",
+        "mbpp"
+      ]
+    }
+  },
+  {
+    "dataset_name": "mbpp",
+    "task_id": "248",
+    "requirement": "Write a function that takes in an integer n and calculates the harmonic sum of n-1.",
+    "entry_point": "harmonic_sum",
+    "test_cases": "import math\n\ndef test_mbpp_task():\n    assert math.isclose(harmonic_sum(7), 2.5928571428571425, rel_tol=0.001)\n    assert math.isclose(harmonic_sum(4), 2.083333333333333, rel_tol=0.001)\n    assert math.isclose(harmonic_sum(19), 3.547739657143682, rel_tol=0.001)\n",
+    "reference_code": "def harmonic_sum(n):\n  if n < 2:\n    return 1\n  else:\n    return 1 / n + (harmonic_sum(n - 1)) ",
+    "seed_code": "",
+    "metadata": {
+      "source_file": "Benchmark Questions Verification V2.ipynb",
+      "dataset_path": "F:\\LLM\\LLM_learning\\MBPP\\sanitized-mbpp.json",
+      "split": "extended_baseline",
+      "version": "v1",
+      "owner": "cogmas-tdd",
+      "note": "Extends shared_baseline_subset_v1. Excludes tasks already in that manifest.",
+      "tags": [
+        "extended_baseline",
+        "mbpp"
+      ]
+    }
+  },
+  {
+    "dataset_name": "humaneval",
+    "task_id": "HumanEval/2",
+    "requirement": "\n\ndef truncate_number(number: float) -> float:\n    \"\"\" Given a positive floating point number, it can be decomposed into\n    and integer part (largest integer smaller than given number) and decimals\n    (leftover part always smaller than 1).\n\n    Return the decimal part of the number.\n    >>> truncate_number(3.5)\n    0.5\n    \"\"\"\n",
+    "entry_point": "truncate_number",
+    "test_cases": "METADATA = {\n    'author': 'jt',\n    'dataset': 'test'\n}\n\n\ndef check(candidate):\n    assert candidate(3.5) == 0.5\n    assert abs(candidate(1.33) - 0.33) < 1e-6\n    assert abs(candidate(123.456) - 0.456) < 1e-6\n\ndef test_humaneval_task():\n    check(truncate_number)\n",
+    "reference_code": "\n\ndef truncate_number(number: float) -> float:\n    \"\"\" Given a positive floating point number, it can be decomposed into\n    and integer part (largest integer smaller than given number) and decimals\n    (leftover part always smaller than 1).\n\n    Return the decimal part of the number.\n    >>> truncate_number(3.5)\n    0.5\n    \"\"\"\n    return number % 1.0\n",
+    "seed_code": "",
+    "metadata": {
+      "dataset_path": "F:\\LLM\\LLM_learning\\human-eval\\data\\HumanEval.jsonl.gz",
+      "split": "extended_baseline",
+      "version": "v1",
+      "owner": "cogmas-tdd",
+      "note": "Extends shared_baseline_subset_v1. Excludes tasks already in that manifest.",
+      "tags": [
+        "extended_baseline",
+        "humaneval"
+      ]
+    }
+  },
+  {
+    "dataset_name": "humaneval",
+    "task_id": "HumanEval/3",
+    "requirement": "from typing import List\n\n\ndef below_zero(operations: List[int]) -> bool:\n    \"\"\" You're given a list of deposit and withdrawal operations on a bank account that starts with\n    zero balance. Your task is to detect if at any point the balance of account fallls below zero, and\n    at that point function should return True. Otherwise it should return False.\n    >>> below_zero([1, 2, 3])\n    False\n    >>> below_zero([1, 2, -4, 5])\n    True\n    \"\"\"\n",
+    "entry_point": "below_zero",
+    "test_cases": "METADATA = {\n    'author': 'jt',\n    'dataset': 'test'\n}\n\n\ndef check(candidate):\n    assert candidate([]) == False\n    assert candidate([1, 2, -3, 1, 2, -3]) == False\n    assert candidate([1, 2, -4, 5, 6]) == True\n    assert candidate([1, -1, 2, -2, 5, -5, 4, -4]) == False\n    assert candidate([1, -1, 2, -2, 5, -5, 4, -5]) == True\n    assert candidate([1, -2, 2, -2, 5, -5, 4, -4]) == True\n\ndef test_humaneval_task():\n    check(below_zero)\n",
+    "reference_code": "from typing import List\n\n\ndef below_zero(operations: List[int]) -> bool:\n    \"\"\" You're given a list of deposit and withdrawal operations on a bank account that starts with\n    zero balance. Your task is to detect if at any point the balance of account fallls below zero, and\n    at that point function should return True. Otherwise it should return False.\n    >>> below_zero([1, 2, 3])\n    False\n    >>> below_zero([1, 2, -4, 5])\n    True\n    \"\"\"\n    balance = 0\n\n    for op in operations:\n        balance += op\n        if balance < 0:\n            return True\n\n    return False\n",
+    "seed_code": "",
+    "metadata": {
+      "dataset_path": "F:\\LLM\\LLM_learning\\human-eval\\data\\HumanEval.jsonl.gz",
+      "split": "extended_baseline",
+      "version": "v1",
+      "owner": "cogmas-tdd",
+      "note": "Extends shared_baseline_subset_v1. Excludes tasks already in that manifest.",
+      "tags": [
+        "extended_baseline",
+        "humaneval"
+      ]
+    }
+  },
+  {
+    "dataset_name": "humaneval",
+    "task_id": "HumanEval/5",
+    "requirement": "from typing import List\n\n\ndef intersperse(numbers: List[int], delimeter: int) -> List[int]:\n    \"\"\" Insert a number 'delimeter' between every two consecutive elements of input list `numbers'\n    >>> intersperse([], 4)\n    []\n    >>> intersperse([1, 2, 3], 4)\n    [1, 4, 2, 4, 3]\n    \"\"\"\n",
+    "entry_point": "intersperse",
+    "test_cases": "METADATA = {\n    'author': 'jt',\n    'dataset': 'test'\n}\n\n\ndef check(candidate):\n    assert candidate([], 7) == []\n    assert candidate([5, 6, 3, 2], 8) == [5, 8, 6, 8, 3, 8, 2]\n    assert candidate([2, 2, 2], 2) == [2, 2, 2, 2, 2]\n\ndef test_humaneval_task():\n    check(intersperse)\n",
+    "reference_code": "from typing import List\n\n\ndef intersperse(numbers: List[int], delimeter: int) -> List[int]:\n    \"\"\" Insert a number 'delimeter' between every two consecutive elements of input list `numbers'\n    >>> intersperse([], 4)\n    []\n    >>> intersperse([1, 2, 3], 4)\n    [1, 4, 2, 4, 3]\n    \"\"\"\n    if not numbers:\n        return []\n\n    result = []\n\n    for n in numbers[:-1]:\n        result.append(n)\n        result.append(delimeter)\n\n    result.append(numbers[-1])\n\n    return result\n",
+    "seed_code": "",
+    "metadata": {
+      "dataset_path": "F:\\LLM\\LLM_learning\\human-eval\\data\\HumanEval.jsonl.gz",
+      "split": "extended_baseline",
+      "version": "v1",
+      "owner": "cogmas-tdd",
+      "note": "Extends shared_baseline_subset_v1. Excludes tasks already in that manifest.",
+      "tags": [
+        "extended_baseline",
+        "humaneval"
+      ]
+    }
+  },
+  {
+    "dataset_name": "humaneval",
+    "task_id": "HumanEval/13",
+    "requirement": "\n\ndef greatest_common_divisor(a: int, b: int) -> int:\n    \"\"\" Return a greatest common divisor of two integers a and b\n    >>> greatest_common_divisor(3, 5)\n    1\n    >>> greatest_common_divisor(25, 15)\n    5\n    \"\"\"\n",
+    "entry_point": "greatest_common_divisor",
+    "test_cases": "METADATA = {\n    'author': 'jt',\n    'dataset': 'test'\n}\n\n\ndef check(candidate):\n    assert candidate(3, 7) == 1\n    assert candidate(10, 15) == 5\n    assert candidate(49, 14) == 7\n    assert candidate(144, 60) == 12\n\ndef test_humaneval_task():\n    check(greatest_common_divisor)\n",
+    "reference_code": "\n\ndef greatest_common_divisor(a: int, b: int) -> int:\n    \"\"\" Return a greatest common divisor of two integers a and b\n    >>> greatest_common_divisor(3, 5)\n    1\n    >>> greatest_common_divisor(25, 15)\n    5\n    \"\"\"\n    while b:\n        a, b = b, a % b\n    return a\n",
+    "seed_code": "",
+    "metadata": {
+      "dataset_path": "F:\\LLM\\LLM_learning\\human-eval\\data\\HumanEval.jsonl.gz",
+      "split": "extended_baseline",
+      "version": "v1",
+      "owner": "cogmas-tdd",
+      "note": "Extends shared_baseline_subset_v1. Excludes tasks already in that manifest.",
+      "tags": [
+        "extended_baseline",
+        "humaneval"
+      ]
+    }
+  },
+  {
+    "dataset_name": "humaneval",
+    "task_id": "HumanEval/16",
+    "requirement": "\n\ndef count_distinct_characters(string: str) -> int:\n    \"\"\" Given a string, find out how many distinct characters (regardless of case) does it consist of\n    >>> count_distinct_characters('xyzXYZ')\n    3\n    >>> count_distinct_characters('Jerry')\n    4\n    \"\"\"\n",
+    "entry_point": "count_distinct_characters",
+    "test_cases": "METADATA = {\n    'author': 'jt',\n    'dataset': 'test'\n}\n\n\ndef check(candidate):\n    assert candidate('') == 0\n    assert candidate('abcde') == 5\n    assert candidate('abcde' + 'cade' + 'CADE') == 5\n    assert candidate('aaaaAAAAaaaa') == 1\n    assert candidate('Jerry jERRY JeRRRY') == 5\n\ndef test_humaneval_task():\n    check(count_distinct_characters)\n",
+    "reference_code": "\n\ndef count_distinct_characters(string: str) -> int:\n    \"\"\" Given a string, find out how many distinct characters (regardless of case) does it consist of\n    >>> count_distinct_characters('xyzXYZ')\n    3\n    >>> count_distinct_characters('Jerry')\n    4\n    \"\"\"\n    return len(set(string.lower()))\n",
+    "seed_code": "",
+    "metadata": {
+      "dataset_path": "F:\\LLM\\LLM_learning\\human-eval\\data\\HumanEval.jsonl.gz",
+      "split": "extended_baseline",
+      "version": "v1",
+      "owner": "cogmas-tdd",
+      "note": "Extends shared_baseline_subset_v1. Excludes tasks already in that manifest.",
+      "tags": [
+        "extended_baseline",
+        "humaneval"
+      ]
+    }
+  }
+]

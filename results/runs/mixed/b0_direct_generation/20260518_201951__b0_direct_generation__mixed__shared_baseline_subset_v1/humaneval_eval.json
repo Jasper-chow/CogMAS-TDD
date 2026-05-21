@@ -1,0 +1,25 @@
+{
+  "sample_file": "F:\\LLM\\LLM_learning\\results\\runs\\mixed\\b0_direct_generation\\20260518_201951__b0_direct_generation__mixed__shared_baseline_subset_v1\\humaneval_samples.jsonl",
+  "problem_file": "F:\\LLM\\LLM_learning\\human-eval\\data\\HumanEval.jsonl.gz",
+  "sample_count": 2,
+  "task_count": 2,
+  "passed_count": 0,
+  "pass_metrics": {
+    "pass@1": 0.0
+  },
+  "detailed_results": [
+    {
+      "task_id": "HumanEval/0",
+      "passed": false,
+      "result": "failed: ",
+      "completion_id": 0
+    },
+    {
+      "task_id": "HumanEval/1",
+      "passed": false,
+      "result": "failed: ",
+      "completion_id": 0
+    }
+  ],
+  "detailed_result_count": 2
+}

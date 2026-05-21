@@ -1,0 +1,14 @@
+{
+  "dataset_label": "humaneval",
+  "profile": "b0_direct_generation",
+  "manifest_name": "humaneval_smoke_v1",
+  "manifest_description": "A fixed HumanEval smoke subset for official pass@1 evaluation checks.",
+  "task_count": 2,
+  "task_ids": [
+    "HumanEval/0",
+    "HumanEval/1"
+  ],
+  "results_dir": "F:\\LLM\\LLM_learning\\results\\runs\\humaneval\\b0_direct_generation\\20260518_170352__b0_direct_generation__humaneval__humaneval_smoke_v1__official_eval_smoke_fix4",
+  "seed_source": "reference",
+  "equivalence_mode": "weak"
+}

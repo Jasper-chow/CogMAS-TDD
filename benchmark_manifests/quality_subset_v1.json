@@ -1,0 +1,433 @@
+{
+  "name": "quality_subset_v1",
+  "description": "30-task MBPP quality-focused subset. Each task has a low-quality but functionally correct seed implementation containing at least one CISQ-detectable quality issue.",
+  "metadata": {
+    "split": "quality_subset",
+    "version": "v1",
+    "owner": "cogmas-tdd",
+    "seed_source": "manifest",
+    "note": "Use --seed-source manifest when running this manifest."
+  },
+  "items": [
+    {
+      "dataset": "mbpp",
+      "task_id": "2",
+      "tags": [
+        "quality",
+        "seed_provided"
+      ],
+      "seed_code": "def similar_elements(test_tup1, test_tup2):\n    result = []\n    for item in test_tup1:\n        for item2 in test_tup2:\n            if item == item2:\n                already_in = False\n                for existing in result:\n                    if existing == item:\n                        already_in = True\n                        break\n                if not already_in:\n                    result.append(item)\n    return tuple(result)\n",
+      "metadata": {
+        "quality_issue": "CWE-407: O(n²) nested loops instead of set intersection",
+        "seed_validated": true,
+        "source": "cogmas-tdd-generated"
+      }
+    },
+    {
+      "dataset": "mbpp",
+      "task_id": "9",
+      "tags": [
+        "quality",
+        "seed_provided"
+      ],
+      "seed_code": "def find_Rotations(s):\n    n = len(s)\n    for i in range(1, n + 1):\n        rotated = \"\"\n        for j in range(n):\n            rotated += s[(i + j) % n]\n        if rotated == s:\n            return i\n    return n\n",
+      "metadata": {
+        "quality_issue": "CWE-407: O(n²) rotation check instead of O(n) string-doubling trick",
+        "seed_validated": true,
+        "source": "cogmas-tdd-generated"
+      }
+    },
+    {
+      "dataset": "mbpp",
+      "task_id": "88",
+      "tags": [
+        "quality",
+        "seed_provided"
+      ],
+      "seed_code": "def freq_count(list1):\n    result = {}\n    for item in list1:\n        count = 0\n        for other in list1:\n            if item == other:\n                count += 1\n        result[item] = count\n    return result\n",
+      "metadata": {
+        "quality_issue": "CWE-407: O(n²) frequency count instead of Counter",
+        "seed_validated": true,
+        "source": "cogmas-tdd-generated"
+      }
+    },
+    {
+      "dataset": "mbpp",
+      "task_id": "130",
+      "tags": [
+        "quality",
+        "seed_provided"
+      ],
+      "seed_code": "def max_occurrences(list1):\n    max_count = 0\n    max_item = list1[0]\n    for item in list1:\n        count = 0\n        for other in list1:\n            if item == other:\n                count += 1\n        if count > max_count:\n            max_count = count\n            max_item = item\n    return max_item\n",
+      "metadata": {
+        "quality_issue": "CWE-407: O(n²) max-occurrence search instead of Counter",
+        "seed_validated": true,
+        "source": "cogmas-tdd-generated"
+      }
+    },
+    {
+      "dataset": "mbpp",
+      "task_id": "238",
+      "tags": [
+        "quality",
+        "seed_provided"
+      ],
+      "seed_code": "def number_of_substrings(str1):\n    count = 0\n    n = len(str1)\n    for i in range(n):\n        for j in range(i + 1, n + 1):\n            count += 1\n    return count\n",
+      "metadata": {
+        "quality_issue": "CWE-407: O(n²) explicit loop instead of n*(n+1)/2 formula",
+        "seed_validated": true,
+        "source": "cogmas-tdd-generated"
+      }
+    },
+    {
+      "dataset": "mbpp",
+      "task_id": "395",
+      "tags": [
+        "quality",
+        "seed_provided"
+      ],
+      "seed_code": "def first_non_repeating_character(str1):\n    for i in range(len(str1)):\n        count = 0\n        for j in range(len(str1)):\n            if str1[i] == str1[j]:\n                count += 1\n        if count == 1:\n            return str1[i]\n    return None\n",
+      "metadata": {
+        "quality_issue": "CWE-407: O(n²) first-non-repeating instead of single-pass dict",
+        "seed_validated": true,
+        "source": "cogmas-tdd-generated"
+      }
+    },
+    {
+      "dataset": "mbpp",
+      "task_id": "96",
+      "tags": [
+        "quality",
+        "seed_provided"
+      ],
+      "seed_code": "def divisor(n):\n    count = 0\n    for i in range(1, n + 1):\n        if n % i == 0:\n            count += 1\n    return count\n",
+      "metadata": {
+        "quality_issue": "CWE-407: O(n) divisor count instead of O(sqrt(n))",
+        "seed_validated": true,
+        "source": "cogmas-tdd-generated"
+      }
+    },
+    {
+      "dataset": "mbpp",
+      "task_id": "286",
+      "tags": [
+        "quality",
+        "seed_provided"
+      ],
+      "seed_code": "def max_sub_array_sum_repeated(a, n, k):\n    extended = []\n    for _ in range(k):\n        for item in a:\n            extended.append(item)\n    total_len = n * k\n    max_sum = extended[0]\n    for i in range(total_len):\n        current_sum = 0\n        for j in range(i, total_len):\n            current_sum += extended[j]\n            if current_sum > max_sum:\n                max_sum = current_sum\n    return max_sum\n",
+      "metadata": {
+        "quality_issue": "CWE-407: O(n²k²) brute force instead of Kadane variant",
+        "seed_validated": true,
+        "source": "cogmas-tdd-generated"
+      }
+    },
+    {
+      "dataset": "mbpp",
+      "task_id": "408",
+      "tags": [
+        "quality",
+        "seed_provided"
+      ],
+      "seed_code": "def k_smallest_pairs(nums1, nums2, k):\n    all_pairs = []\n    for x in nums1:\n        for y in nums2:\n            all_pairs.append([x, y])\n    n = len(all_pairs)\n    for i in range(n):\n        for j in range(n - i - 1):\n            if all_pairs[j][0] + all_pairs[j][1] > all_pairs[j+1][0] + all_pairs[j+1][1]:\n                all_pairs[j], all_pairs[j+1] = all_pairs[j+1], all_pairs[j]\n    return all_pairs[:k]\n",
+      "metadata": {
+        "quality_issue": "CWE-407: generate all pairs + bubble sort instead of heap",
+        "seed_validated": true,
+        "source": "cogmas-tdd-generated"
+      }
+    },
+    {
+      "dataset": "mbpp",
+      "task_id": "123",
+      "tags": [
+        "quality",
+        "seed_provided"
+      ],
+      "seed_code": "def amicable_numbers_sum(limit):\n    def sum_divisors(n):\n        total = 1\n        for i in range(2, n):\n            if n % i == 0:\n                total += i\n        return total\n\n    result = 0\n    for n in range(2, limit + 1):\n        s = sum_divisors(n)\n        if s != n and s <= limit:\n            if sum_divisors(s) == n:\n                result += n\n    return result\n",
+      "metadata": {
+        "quality_issue": "CWE-407: recomputes divisor sums without caching (double O(n) per pair)",
+        "seed_validated": true,
+        "source": "cogmas-tdd-generated"
+      }
+    },
+    {
+      "dataset": "mbpp",
+      "task_id": "3",
+      "tags": [
+        "quality",
+        "seed_provided"
+      ],
+      "seed_code": "def is_not_prime(n):\n    if n <= 1:\n        return True\n    if n == 2:\n        return False\n    if n == 3:\n        return False\n    if n == 5:\n        return False\n    if n == 7:\n        return False\n    if n % 2 == 0:\n        return True\n    if n % 3 == 0:\n        return True\n    if n % 5 == 0:\n        return True\n    i = 7\n    while i * i <= n:\n        if n % i == 0:\n            return True\n        if n % (i + 4) == 0:\n            return True\n        if n % (i + 6) == 0:\n            return True\n        i += 10\n    return False\n",
+      "metadata": {
+        "quality_issue": "CWE-1121: Excessive if/elif chain instead of loop for primality test",
+        "seed_validated": true,
+        "source": "cogmas-tdd-generated"
+      }
+    },
+    {
+      "dataset": "mbpp",
+      "task_id": "397",
+      "tags": [
+        "quality",
+        "seed_provided"
+      ],
+      "seed_code": "def median_numbers(a, b, c):\n    if a <= b <= c or c <= b <= a:\n        return float(b)\n    elif b <= a <= c or c <= a <= b:\n        return float(a)\n    elif a <= c <= b or b <= c <= a:\n        return float(c)\n    elif a == b and b == c:\n        return float(a)\n    elif a == b:\n        return float(a)\n    elif b == c:\n        return float(b)\n    elif a == c:\n        return float(a)\n    return float(-1)\n",
+      "metadata": {
+        "quality_issue": "CWE-1121: Many if/elif branches instead of sort+middle (8 branches for 3 numbers)",
+        "seed_validated": true,
+        "source": "cogmas-tdd-generated"
+      }
+    },
+    {
+      "dataset": "mbpp",
+      "task_id": "227",
+      "tags": [
+        "quality",
+        "seed_provided"
+      ],
+      "seed_code": "def min_of_three(a, b, c):\n    if a < b:\n        if a < c:\n            minimum = a\n        else:\n            if c < a:\n                minimum = c\n            else:\n                minimum = a\n    else:\n        if b < c:\n            minimum = b\n        else:\n            if c < b:\n                minimum = c\n            else:\n                minimum = b\n    return minimum\n",
+      "metadata": {
+        "quality_issue": "CWE-1121: Nested if/elif instead of min() — high cyclomatic complexity",
+        "seed_validated": true,
+        "source": "cogmas-tdd-generated"
+      }
+    },
+    {
+      "dataset": "mbpp",
+      "task_id": "67",
+      "tags": [
+        "quality",
+        "seed_provided"
+      ],
+      "seed_code": "def bell_number(n):\n    triangle = []\n    triangle.append([1])\n    for i in range(1, n + 1):\n        current_row = [triangle[i - 1][-1]]\n        for j in range(len(triangle[i - 1])):\n            current_row.append(current_row[-1] + triangle[i - 1][j])\n        triangle.append(current_row)\n        for prev_row in triangle[:-1]:\n            _ = sum(prev_row)\n    return triangle[n][0]\n",
+      "metadata": {
+        "quality_issue": "CWE-1050: Recomputes sum of all prior rows in Bell triangle on each iteration",
+        "seed_validated": true,
+        "source": "cogmas-tdd-generated"
+      }
+    },
+    {
+      "dataset": "mbpp",
+      "task_id": "68",
+      "tags": [
+        "quality",
+        "seed_provided"
+      ],
+      "seed_code": "def is_Monotonic(A):\n    is_inc = True\n    is_dec = True\n    for i in range(len(A) - 1):\n        if A[i] > A[i + 1]:\n            is_inc = False\n    for i in range(len(A) - 1):\n        if A[i] < A[i + 1]:\n            is_dec = False\n    return is_inc or is_dec\n",
+      "metadata": {
+        "quality_issue": "CWE-1050: Two separate full passes instead of one combined monotonicity check",
+        "seed_validated": true,
+        "source": "cogmas-tdd-generated"
+      }
+    },
+    {
+      "dataset": "mbpp",
+      "task_id": "84",
+      "tags": [
+        "quality",
+        "seed_provided"
+      ],
+      "seed_code": "def sequence(n):\n    if n == 1 or n == 2:\n        return 1\n    values = [0] * (n + 1)\n    values[1] = 1\n    values[2] = 1\n    for i in range(3, n + 1):\n        prev = values[i - 1]\n        values[i] = values[prev] + values[i - prev]\n    return values[n]\n",
+      "metadata": {
+        "quality_issue": "CWE-1050: Rebuilds full values array each call — no global memoization",
+        "seed_validated": true,
+        "source": "cogmas-tdd-generated"
+      }
+    },
+    {
+      "dataset": "mbpp",
+      "task_id": "65",
+      "tags": [
+        "quality",
+        "seed_provided"
+      ],
+      "seed_code": "def recursive_list_sum(data_list):\n    total = 0\n    for item in data_list:\n        if type(item) == list:\n            total = total + recursive_list_sum(item)\n        else:\n            total = total + item\n    return total\n",
+      "metadata": {
+        "quality_issue": "CWE-1050: Unnecessary type() check in inner loop instead of isinstance",
+        "seed_validated": true,
+        "source": "cogmas-tdd-generated"
+      }
+    },
+    {
+      "dataset": "mbpp",
+      "task_id": "247",
+      "tags": [
+        "quality",
+        "seed_provided"
+      ],
+      "seed_code": "def lps(s):\n    n = len(s)\n    table = [[0] * n for _ in range(n)]\n    for i in range(n):\n        table[i][i] = 1\n    for cl in range(2, n + 1):\n        for i in range(n - cl + 1):\n            j = i + cl - 1\n            if s[i] == s[j] and cl == 2:\n                table[i][j] = 2\n            elif s[i] == s[j]:\n                table[i][j] = table[i + 1][j - 1] + 2\n            else:\n                table[i][j] = max(table[i][j - 1], table[i + 1][j])\n    for i in range(n):\n        if table[i][i] != 1:\n            pass\n    return table[0][n - 1]\n",
+      "metadata": {
+        "quality_issue": "CWE-1050: DP table allocates full n×n even though n*(n+1)/2 suffices; dead verification loop",
+        "seed_validated": true,
+        "source": "cogmas-tdd-generated"
+      }
+    },
+    {
+      "dataset": "mbpp",
+      "task_id": "299",
+      "tags": [
+        "quality",
+        "seed_provided"
+      ],
+      "seed_code": "def max_aggregate(stdata):\n    names = []\n    for name, _ in stdata:\n        if name not in names:\n            names.append(name)\n    max_name = None\n    max_total = None\n    for name in names:\n        total = 0\n        for n2, val in stdata:\n            if n2 == name:\n                total += val\n        if max_total is None or total > max_total:\n            max_total = total\n            max_name = name\n    return (max_name, max_total)\n",
+      "metadata": {
+        "quality_issue": "CWE-1050: O(n²) — separate pass per unique name instead of single Counter pass",
+        "seed_validated": true,
+        "source": "cogmas-tdd-generated"
+      }
+    },
+    {
+      "dataset": "mbpp",
+      "task_id": "11",
+      "tags": [
+        "quality",
+        "seed_provided"
+      ],
+      "seed_code": "def remove_Occ(s, ch):\n    if ch not in s:\n        return s\n    first_idx = -1\n    for i in range(len(s)):\n        if s[i] == ch:\n            first_idx = i\n            break\n    last_idx = -1\n    for i in range(len(s)):\n        if s[i] == ch:\n            last_idx = i\n    result = \"\"\n    for i in range(len(s)):\n        if i == first_idx or i == last_idx:\n            continue\n        result += s[i]\n    return result\n",
+      "metadata": {
+        "quality_issue": "CWE-1041: Three separate linear scans instead of single pass",
+        "seed_validated": true,
+        "source": "cogmas-tdd-generated"
+      }
+    },
+    {
+      "dataset": "mbpp",
+      "task_id": "63",
+      "tags": [
+        "quality",
+        "seed_provided"
+      ],
+      "seed_code": "def max_difference(test_list):\n    diffs = []\n    for pair in test_list:\n        a, b = pair[0], pair[1]\n        if a > b:\n            diffs.append(a - b)\n        else:\n            diffs.append(b - a)\n    max_diff = 0\n    for d in diffs:\n        if d > max_diff:\n            max_diff = d\n    return max_diff\n",
+      "metadata": {
+        "quality_issue": "CWE-1041: Builds intermediate list for diffs then scans again instead of single pass",
+        "seed_validated": true,
+        "source": "cogmas-tdd-generated"
+      }
+    },
+    {
+      "dataset": "mbpp",
+      "task_id": "66",
+      "tags": [
+        "quality",
+        "seed_provided"
+      ],
+      "seed_code": "def pos_count(list1):\n    count_positive = 0\n    count_zero = 0\n    count_negative = 0\n    for num in list1:\n        if num > 0:\n            count_positive += 1\n        elif num == 0:\n            count_zero += 1\n        else:\n            count_negative += 1\n    unused_total = count_positive + count_zero + count_negative\n    return count_positive\n",
+      "metadata": {
+        "quality_issue": "CWE-1041: Counts all three categories; only positive count needed — dead counters",
+        "seed_validated": true,
+        "source": "cogmas-tdd-generated"
+      }
+    },
+    {
+      "dataset": "mbpp",
+      "task_id": "12",
+      "tags": [
+        "quality",
+        "seed_provided"
+      ],
+      "seed_code": "def sort_matrix(M):\n    result = [list(row) for row in M]\n    # Pre-compute sums (but then ignores them and recomputes inline — dead work)\n    _unused_sums = [sum(row) for row in result]\n    for i in range(len(result)):\n        for j in range(len(result) - i - 1):\n            sum_j = 0\n            for elem in result[j]:\n                sum_j += elem\n            sum_j1 = 0\n            for elem in result[j + 1]:\n                sum_j1 += elem\n            if sum_j > sum_j1:\n                result[j], result[j + 1] = result[j + 1], result[j]\n    return result\n",
+      "metadata": {
+        "quality_issue": "CWE-1041: Recomputes row sum on every comparison instead of pre-computing; O(n^2*k) work",
+        "seed_validated": true,
+        "source": "cogmas-tdd-generated"
+      }
+    },
+    {
+      "dataset": "mbpp",
+      "task_id": "71",
+      "tags": [
+        "quality",
+        "seed_provided"
+      ],
+      "seed_code": "def comb_sort(alist):\n    gap = len(alist)\n    shrink = 1.3\n    sorted_flag = False\n    while not sorted_flag:\n        gap = int(gap / shrink)\n        if gap <= 1:\n            gap = 1\n            sorted_flag = True\n        swapped = False\n        for i in range(len(alist) - gap):\n            if alist[i] > alist[i + gap]:\n                temp = alist[i]\n                alist[i] = alist[i + gap]\n                alist[i + gap] = temp\n                swapped = True\n                sorted_flag = False\n        if not swapped and gap == 1:\n            sorted_flag = True\n    return alist\n",
+      "metadata": {
+        "quality_issue": "CWE-1041: Uses temp variable swap + redundant sorted-flag check",
+        "seed_validated": true,
+        "source": "cogmas-tdd-generated"
+      }
+    },
+    {
+      "dataset": "mbpp",
+      "task_id": "93",
+      "tags": [
+        "quality",
+        "seed_provided"
+      ],
+      "seed_code": "def power(a, b):\n    if b == 0:\n        return 1\n    if b == 1:\n        return a\n    if b == 2:\n        return a * a\n    if b == 3:\n        return a * a * a\n    if a == 0:\n        return 0\n    if a == 1:\n        return 1\n    result = 1\n    for _ in range(b):\n        result *= a\n    return result\n",
+      "metadata": {
+        "quality_issue": "CWE-1052: Hardcoded magic-number base cases instead of general loop",
+        "seed_validated": true,
+        "source": "cogmas-tdd-generated"
+      }
+    },
+    {
+      "dataset": "mbpp",
+      "task_id": "246",
+      "tags": [
+        "quality",
+        "seed_provided"
+      ],
+      "seed_code": "def babylonian_squareroot(number):\n    MAX_ITER = 10000\n    TOLERANCE = 0.0000001\n    if number < 0:\n        return -1\n    if number == 0:\n        return 0\n    x = number / 2.0\n    for _ in range(MAX_ITER):\n        x_new = (x + number / x) / 2.0\n        if abs(x_new - x) < TOLERANCE:\n            break\n        x = x_new\n    return x\n",
+      "metadata": {
+        "quality_issue": "CWE-1052: Hardcoded magic convergence tolerance and iteration cap",
+        "seed_validated": true,
+        "source": "cogmas-tdd-generated"
+      }
+    },
+    {
+      "dataset": "mbpp",
+      "task_id": "62",
+      "tags": [
+        "quality",
+        "seed_provided"
+      ],
+      "seed_code": "def smallest_num(s):\n    current_min = s[0]\n    for i in range(len(s)):\n        if s[i] < current_min:\n            current_min = s[i]\n    return current_min\n",
+      "metadata": {
+        "quality_issue": "CWE-476: No empty-list guard; will raise IndexError on empty input",
+        "seed_validated": true,
+        "source": "cogmas-tdd-generated"
+      }
+    },
+    {
+      "dataset": "mbpp",
+      "task_id": "82",
+      "tags": [
+        "quality",
+        "seed_provided"
+      ],
+      "seed_code": "def volume_sphere(r):\n    pi_value = 3.14159\n    volume = 4 * (1 / 3) * pi_value * r * r * r\n    return round(volume, 2)\n",
+      "metadata": {
+        "quality_issue": "CWE-1052 + CWE-476: Uses truncated magic PI; no guard for negative radius",
+        "seed_validated": true,
+        "source": "cogmas-tdd-generated"
+      }
+    },
+    {
+      "dataset": "mbpp",
+      "task_id": "137",
+      "tags": [
+        "quality",
+        "seed_provided"
+      ],
+      "seed_code": "def zero_count(l):\n    zero_cnt = 0\n    non_zero_cnt = 0\n    for item in l:\n        if item == 0:\n            zero_cnt += 1\n        else:\n            non_zero_cnt += 1\n    return zero_cnt / non_zero_cnt\n",
+      "metadata": {
+        "quality_issue": "CWE-369: Division by non_zero_count with no guard — crashes if all elements are 0",
+        "seed_validated": true,
+        "source": "cogmas-tdd-generated"
+      }
+    },
+    {
+      "dataset": "mbpp",
+      "task_id": "248",
+      "tags": [
+        "quality",
+        "seed_provided"
+      ],
+      "seed_code": "def harmonic_sum(n):\n    total = 0\n    current = 1\n    while current <= n:\n        total = total + 1.0 / current\n        current = current + 1\n    return total\n",
+      "metadata": {
+        "quality_issue": "CWE-476: No guard for n <= 0; uses while loop instead of sum comprehension",
+        "seed_validated": true,
+        "source": "cogmas-tdd-generated"
+      }
+    }
+  ]
+}

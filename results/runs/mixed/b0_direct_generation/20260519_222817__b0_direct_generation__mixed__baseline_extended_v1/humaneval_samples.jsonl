@@ -1,0 +1,5 @@
+{"task_id": "HumanEval/2", "completion": "    return number - int(number)"}
+{"task_id": "HumanEval/3", "completion": "    balance = 0\n    for op in operations:\n        balance += op\n        if balance < 0:\n            return True\n    return False"}
+{"task_id": "HumanEval/5", "completion": "from typing import List\\n\\ndef intersperse(numbers: List[int], delimiter: int) -> List[int]:\\n    if not numbers:\\n        return []\\n    return list(numbers[0]) + [delimiter] + intersperse(numbers[1:], delimiter) if numbers[1:] else list(numbers)"}
+{"task_id": "HumanEval/13", "completion": "def greatest\n\ngreatest_common_divisor(a: int, bb: int) -> int:\nn    \"n   nnnn   nnnn        "}
+{"task_id": "HumanEval/16", "completion": "def count_distinct_characters(string:strstrstr "}
