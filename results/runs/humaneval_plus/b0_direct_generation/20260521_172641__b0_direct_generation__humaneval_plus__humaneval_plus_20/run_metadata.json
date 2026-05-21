@@ -1,0 +1,32 @@
+{
+  "dataset_label": "humaneval_plus",
+  "profile": "b0_direct_generation",
+  "manifest_name": "humaneval_plus_20",
+  "manifest_description": "First 20 HumanEval+ tasks — dev/smoke run",
+  "task_count": 20,
+  "task_ids": [
+    "HumanEval/0",
+    "HumanEval/1",
+    "HumanEval/2",
+    "HumanEval/3",
+    "HumanEval/4",
+    "HumanEval/5",
+    "HumanEval/6",
+    "HumanEval/7",
+    "HumanEval/8",
+    "HumanEval/9",
+    "HumanEval/10",
+    "HumanEval/11",
+    "HumanEval/12",
+    "HumanEval/13",
+    "HumanEval/14",
+    "HumanEval/15",
+    "HumanEval/16",
+    "HumanEval/17",
+    "HumanEval/18",
+    "HumanEval/19"
+  ],
+  "results_dir": "F:\\LLM\\LLM_learning\\results\\runs\\humaneval_plus\\b0_direct_generation\\20260521_172641__b0_direct_generation__humaneval_plus__humaneval_plus_20",
+  "seed_source": "empty",
+  "equivalence_mode": "weak"
+}

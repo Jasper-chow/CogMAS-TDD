@@ -2,7 +2,10 @@
   "permissions": {
     "allow": [
       "PowerShell(uv run *)",
-      "PowerShell(Get-Item *)"
+      "PowerShell(Get-Item *)",
+      "Bash(uv add *)",
+      "Bash(echo \"EXIT:$?\")",
+      "Bash(uv run *)"
     ]
   }
 }

@@ -138,6 +138,55 @@ def load_mbpp_tasks(
     return tasks
 
 
+def _humaneval_sort_key(task_id: str) -> int:
+    try:
+        return int(task_id.split("/")[-1])
+    except ValueError:
+        return 0
+
+
+def load_humaneval_plus_tasks(
+    *,
+    offset: int = 0,
+    limit: int | None = None,
+    task_ids: list[str] | None = None,
+) -> list[BenchmarkTask]:
+    try:
+        from evalplus.data import get_human_eval_plus  # type: ignore[import]
+    except ImportError as exc:
+        raise ImportError(
+            "evalplus is required for HumanEval+. Install with: uv add evalplus"
+        ) from exc
+
+    problems = get_human_eval_plus()
+    sorted_items = sorted(problems.items(), key=lambda kv: _humaneval_sort_key(kv[0]))
+    selected = _iter_filtered(
+        ({"task_id": tid, **data} for tid, data in sorted_items),
+        offset=offset,
+        limit=limit,
+        task_ids=set(task_ids or []),
+    )
+    tasks: list[BenchmarkTask] = []
+    for item in selected:
+        task_id = str(item["task_id"])
+        prompt = item["prompt"]
+        entry_point = item["entry_point"]
+        canonical_solution = item.get("canonical_solution", "")
+        test = item.get("test", "")
+        tasks.append(
+            BenchmarkTask(
+                dataset_name="humaneval_plus",
+                task_id=task_id,
+                requirement=prompt,
+                entry_point=entry_point,
+                test_cases=_wrap_humaneval_tests(test, entry_point),
+                reference_code=prompt + canonical_solution,
+                metadata={"source": "evalplus"},
+            )
+        )
+    return tasks
+
+
 def load_humaneval_tasks(
     *,
     path: str | Path = DEFAULT_HUMANEVAL_PATH,
@@ -190,6 +239,12 @@ def load_benchmark_tasks(
     if lowered == "humaneval":
         return load_humaneval_tasks(
             path=path or DEFAULT_HUMANEVAL_PATH,
+            offset=offset,
+            limit=limit,
+            task_ids=task_ids,
+        )
+    if lowered == "humaneval_plus":
+        return load_humaneval_plus_tasks(
             offset=offset,
             limit=limit,
             task_ids=task_ids,

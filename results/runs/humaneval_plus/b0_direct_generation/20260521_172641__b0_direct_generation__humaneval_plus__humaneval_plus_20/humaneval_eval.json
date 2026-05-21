@@ -1,0 +1,133 @@
+{
+  "sample_file": "F:\\LLM\\LLM_learning\\results\\runs\\humaneval_plus\\b0_direct_generation\\20260521_172641__b0_direct_generation__humaneval_plus__humaneval_plus_20\\humaneval_samples.jsonl",
+  "problem_file": "F:\\LLM\\LLM_learning\\human-eval\\data\\HumanEval.jsonl.gz",
+  "sample_count": 20,
+  "task_count": 20,
+  "passed_count": 13,
+  "pass_metrics": {
+    "pass@1": 0.65
+  },
+  "detailed_results": [
+    {
+      "task_id": "HumanEval/1",
+      "passed": false,
+      "result": "failed: ",
+      "completion_id": 0
+    },
+    {
+      "task_id": "HumanEval/2",
+      "passed": true,
+      "result": "passed",
+      "completion_id": 0
+    },
+    {
+      "task_id": "HumanEval/3",
+      "passed": true,
+      "result": "passed",
+      "completion_id": 0
+    },
+    {
+      "task_id": "HumanEval/0",
+      "passed": true,
+      "result": "passed",
+      "completion_id": 0
+    },
+    {
+      "task_id": "HumanEval/4",
+      "passed": true,
+      "result": "passed",
+      "completion_id": 0
+    },
+    {
+      "task_id": "HumanEval/6",
+      "passed": true,
+      "result": "passed",
+      "completion_id": 0
+    },
+    {
+      "task_id": "HumanEval/7",
+      "passed": false,
+      "result": "failed: unexpected character after line continuation character (<string>, line 11)",
+      "completion_id": 0
+    },
+    {
+      "task_id": "HumanEval/5",
+      "passed": true,
+      "result": "passed",
+      "completion_id": 0
+    },
+    {
+      "task_id": "HumanEval/8",
+      "passed": false,
+      "result": "failed: unexpected character after line continuation character (<string>, line 12)",
+      "completion_id": 0
+    },
+    {
+      "task_id": "HumanEval/9",
+      "passed": true,
+      "result": "passed",
+      "completion_id": 0
+    },
+    {
+      "task_id": "HumanEval/11",
+      "passed": true,
+      "result": "passed",
+      "completion_id": 0
+    },
+    {
+      "task_id": "HumanEval/10",
+      "passed": false,
+      "result": "failed: name 's' is not defined",
+      "completion_id": 0
+    },
+    {
+      "task_id": "HumanEval/13",
+      "passed": true,
+      "result": "passed",
+      "completion_id": 0
+    },
+    {
+      "task_id": "HumanEval/15",
+      "passed": true,
+      "result": "passed",
+      "completion_id": 0
+    },
+    {
+      "task_id": "HumanEval/12",
+      "passed": false,
+      "result": "failed: unexpected character after line continuation character (<string>, line 14)",
+      "completion_id": 0
+    },
+    {
+      "task_id": "HumanEval/14",
+      "passed": false,
+      "result": "failed: unexpected character after line continuation character (<string>, line 9)",
+      "completion_id": 0
+    },
+    {
+      "task_id": "HumanEval/16",
+      "passed": true,
+      "result": "passed",
+      "completion_id": 0
+    },
+    {
+      "task_id": "HumanEval/18",
+      "passed": true,
+      "result": "passed",
+      "completion_id": 0
+    },
+    {
+      "task_id": "HumanEval/17",
+      "passed": true,
+      "result": "passed",
+      "completion_id": 0
+    },
+    {
+      "task_id": "HumanEval/19",
+      "passed": false,
+      "result": "failed: name 'number_map' is not defined",
+      "completion_id": 0
+    }
+  ],
+  "detailed_result_count": 20
+}

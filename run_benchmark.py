@@ -42,7 +42,7 @@ from utils.result_layout import DEFAULT_RUNS_ROOT, create_run_artifacts
 
 def _parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description="Run CogMAS-TDD on benchmark tasks")
-    parser.add_argument("--dataset", choices=["mbpp", "humaneval"], default="")
+    parser.add_argument("--dataset", choices=["mbpp", "humaneval", "humaneval_plus"], default="")
     parser.add_argument("--dataset-path", default="")
     parser.add_argument("--manifest-path", default="")
     parser.add_argument("--manifest-name", default="")
@@ -239,7 +239,8 @@ def _write_humaneval_outputs(
     eval_path: str | Path,
 ) -> dict[str, Any] | None:
     humaneval_results = [
-        item for item in run_results if item["task"].dataset_name == "humaneval"
+        item for item in run_results
+        if item["task"].dataset_name in ("humaneval", "humaneval_plus")
     ]
     if not humaneval_results or args.skip_official_humaneval_eval:
         return None

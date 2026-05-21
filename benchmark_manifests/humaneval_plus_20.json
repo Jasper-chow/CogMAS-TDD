@@ -1,0 +1,72 @@
+{
+  "name": "humaneval_plus_20",
+  "description": "First 20 HumanEval+ tasks — dev/smoke run",
+  "default_dataset": "humaneval_plus",
+  "items": [
+    {
+      "task_id": "HumanEval/0"
+    },
+    {
+      "task_id": "HumanEval/1"
+    },
+    {
+      "task_id": "HumanEval/2"
+    },
+    {
+      "task_id": "HumanEval/3"
+    },
+    {
+      "task_id": "HumanEval/4"
+    },
+    {
+      "task_id": "HumanEval/5"
+    },
+    {
+      "task_id": "HumanEval/6"
+    },
+    {
+      "task_id": "HumanEval/7"
+    },
+    {
+      "task_id": "HumanEval/8"
+    },
+    {
+      "task_id": "HumanEval/9"
+    },
+    {
+      "task_id": "HumanEval/10"
+    },
+    {
+      "task_id": "HumanEval/11"
+    },
+    {
+      "task_id": "HumanEval/12"
+    },
+    {
+      "task_id": "HumanEval/13"
+    },
+    {
+      "task_id": "HumanEval/14"
+    },
+    {
+      "task_id": "HumanEval/15"
+    },
+    {
+      "task_id": "HumanEval/16"
+    },
+    {
+      "task_id": "HumanEval/17"
+    },
+    {
+      "task_id": "HumanEval/18"
+    },
+    {
+      "task_id": "HumanEval/19"
+    }
+  ],
+  "metadata": {
+    "dataset": "humaneval_plus",
+    "source": "evalplus",
+    "task_count": 20
+  }
+}

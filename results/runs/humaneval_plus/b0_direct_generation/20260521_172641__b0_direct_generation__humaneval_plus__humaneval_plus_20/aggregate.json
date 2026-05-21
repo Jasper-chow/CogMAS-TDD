@@ -1,0 +1,160 @@
+{
+  "input_record_count": 20,
+  "aggregation": {
+    "overview": {
+      "label": "all",
+      "total_runs": 20,
+      "unique_tasks": 20,
+      "task_ids": [
+        "HumanEval/0",
+        "HumanEval/1",
+        "HumanEval/10",
+        "HumanEval/11",
+        "HumanEval/12",
+        "HumanEval/13",
+        "HumanEval/14",
+        "HumanEval/15",
+        "HumanEval/16",
+        "HumanEval/17",
+        "HumanEval/18",
+        "HumanEval/19",
+        "HumanEval/2",
+        "HumanEval/3",
+        "HumanEval/4",
+        "HumanEval/5",
+        "HumanEval/6",
+        "HumanEval/7",
+        "HumanEval/8",
+        "HumanEval/9"
+      ],
+      "profiles": [
+        "b0_direct_generation"
+      ],
+      "datasets": [
+        "humaneval_plus"
+      ],
+      "source_files": [],
+      "workflow_success_rate": 0.7,
+      "test_pass_rate": 0.7,
+      "evaluation_pass_rate": 0.0,
+      "avg_green_attempts": 1.0,
+      "avg_same_error_streak": 0.3,
+      "avg_iteration": 0.0,
+      "avg_failed_rule_count": 0.0,
+      "avg_activated_rule_count": 0.0,
+      "weak_equivalence": {
+        "coverage": 0.0,
+        "pass_rate": 0.0,
+        "count": 0
+      },
+      "strong_equivalence": {
+        "coverage": 0.0,
+        "pass_rate": 0.0,
+        "count": 0
+      },
+      "semantic_equivalence": {
+        "coverage": 0.0,
+        "pass_rate": 0.0,
+        "count": 0
+      },
+      "l2_refactor_rate": 0.0,
+      "l3_refactor_rate": 0.0,
+      "workflow_status_distribution": {
+        "failed": 6,
+        "success": 14
+      },
+      "stop_reason_distribution": {
+        "finished_without_evaluation": 14,
+        "max_green_attempts": 6
+      },
+      "final_verdict_distribution": {
+        "unknown": 20
+      },
+      "dynamic_verdict_distribution": {
+        "unknown": 20
+      },
+      "static_verdict_distribution": {
+        "unknown": 20
+      }
+    },
+    "group_by": "profile_dataset",
+    "groups": {
+      "b0_direct_generation::humaneval_plus": {
+        "label": "b0_direct_generation::humaneval_plus",
+        "total_runs": 20,
+        "unique_tasks": 20,
+        "task_ids": [
+          "HumanEval/0",
+          "HumanEval/1",
+          "HumanEval/10",
+          "HumanEval/11",
+          "HumanEval/12",
+          "HumanEval/13",
+          "HumanEval/14",
+          "HumanEval/15",
+          "HumanEval/16",
+          "HumanEval/17",
+          "HumanEval/18",
+          "HumanEval/19",
+          "HumanEval/2",
+          "HumanEval/3",
+          "HumanEval/4",
+          "HumanEval/5",
+          "HumanEval/6",
+          "HumanEval/7",
+          "HumanEval/8",
+          "HumanEval/9"
+        ],
+        "profiles": [
+          "b0_direct_generation"
+        ],
+        "datasets": [
+          "humaneval_plus"
+        ],
+        "source_files": [],
+        "workflow_success_rate": 0.7,
+        "test_pass_rate": 0.7,
+        "evaluation_pass_rate": 0.0,
+        "avg_green_attempts": 1.0,
+        "avg_same_error_streak": 0.3,
+        "avg_iteration": 0.0,
+        "avg_failed_rule_count": 0.0,
+        "avg_activated_rule_count": 0.0,
+        "weak_equivalence": {
+          "coverage": 0.0,
+          "pass_rate": 0.0,
+          "count": 0
+        },
+        "strong_equivalence": {
+          "coverage": 0.0,
+          "pass_rate": 0.0,
+          "count": 0
+        },
+        "semantic_equivalence": {
+          "coverage": 0.0,
+          "pass_rate": 0.0,
+          "count": 0
+        },
+        "l2_refactor_rate": 0.0,
+        "l3_refactor_rate": 0.0,
+        "workflow_status_distribution": {
+          "failed": 6,
+          "success": 14
+        },
+        "stop_reason_distribution": {
+          "finished_without_evaluation": 14,
+          "max_green_attempts": 6
+        },
+        "final_verdict_distribution": {
+          "unknown": 20
+        },
+        "dynamic_verdict_distribution": {
+          "unknown": 20
+        },
+        "static_verdict_distribution": {
+          "unknown": 20
+        }
+      }
+    }
+  }
+}
