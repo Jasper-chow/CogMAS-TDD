@@ -149,34 +149,21 @@ def extract_humaneval_completion(
     code: str,
     *,
     prompt: str,
-    entry_point: str,
+    entry_point: str,  # noqa: ARG001 — kept for API compatibility
 ) -> str:
     stripped_code = code.strip("\n")
     stripped_prompt = prompt.strip("\n")
+    # Case 1: generated code already starts with the full prompt — return only the suffix.
     if stripped_code.startswith(stripped_prompt):
-        completion = stripped_code[len(stripped_prompt) :].lstrip("\n")
-        return completion
-
-    header_prefix = f"def {entry_point}("
-    code_lines = code.splitlines()
-    start_index = next(
-        (index for index, line in enumerate(code_lines) if line.lstrip().startswith(header_prefix)),
-        -1,
-    )
-    if start_index == -1:
-        return stripped_code
-
-    body_lines: list[str] = []
-    for line in code_lines[start_index + 1 :]:
-        if not line.strip():
-            body_lines.append(line)
-            continue
-        indent = len(line) - len(line.lstrip(" "))
-        if indent == 0:
-            break
-        body_lines.append(line)
-    completion = "\n".join(body_lines).rstrip()
-    return completion or stripped_code
+        return stripped_code[len(stripped_prompt) :].lstrip("\n")
+    # Case 2: return the full generated code as the completion.
+    # The HumanEval eval concatenates `prompt + completion`, so any redefinition of
+    # `entry_point` in the generated code overrides the incomplete stub from the prompt
+    # (Python last-definition-wins).  Module-level imports and helper functions placed
+    # before or after the main function are also preserved this way, fixing NameErrors
+    # that arise when L2/L3 refactoring adds imports, extracts helpers, or renames
+    # function parameters.
+    return stripped_code
 
 
 def write_humaneval_samples(samples: list[dict[str, Any]], output_path: str | Path) -> Path:

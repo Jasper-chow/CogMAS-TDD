@@ -12,9 +12,11 @@ from __future__ import annotations
 import argparse
 import asyncio
 import json
+from datetime import datetime, timezone
 from pathlib import Path
 import subprocess
 import sys
+import time
 from typing import Any
 
 from dotenv import load_dotenv
@@ -37,6 +39,7 @@ from utils.humaneval_official import (
     extract_humaneval_completion,
     write_humaneval_samples,
 )
+from utils.experiment_logger import append_experiment_record
 from utils.result_layout import DEFAULT_RUNS_ROOT, create_run_artifacts
 
 
@@ -72,6 +75,18 @@ def _parse_args() -> argparse.Namespace:
     parser.add_argument("--list-only", action="store_true")
     parser.add_argument("--export-loaded-tasks", default="")
     parser.add_argument("--print-each", action="store_true")
+    parser.add_argument(
+        "--per-task-timeout",
+        type=float,
+        default=600.0,
+        help="Max seconds per task before it is cancelled and recorded as failed (0 = no limit)",
+    )
+    parser.add_argument(
+        "--inter-task-sleep",
+        type=float,
+        default=0.0,
+        help="Seconds to sleep between tasks (throttle to avoid API rate limits)",
+    )
     args = parser.parse_args()
     if args.list_manifests:
         return args
@@ -93,11 +108,19 @@ def _resolve_code_seed(task: BenchmarkTask, seed_source: str) -> str:
 def _load_tasks(args: argparse.Namespace) -> tuple[list[BenchmarkTask], BenchmarkTaskManifest | None]:
     if args.manifest_name:
         manifest = load_tasks_from_manifest_name(args.manifest_name)
-        return manifest.items, manifest
+        items = manifest.items
+        if args.task_ids:
+            task_id_set = set(args.task_ids)
+            items = [t for t in items if t.task_id in task_id_set]
+        return items, manifest
 
     if args.manifest_path:
         manifest = load_tasks_from_manifest(args.manifest_path)
-        return manifest.items, manifest
+        items = manifest.items
+        if args.task_ids:
+            task_id_set = set(args.task_ids)
+            items = [t for t in items if t.task_id in task_id_set]
+        return items, manifest
 
     return (
         load_benchmark_tasks(
@@ -204,6 +227,15 @@ def _build_summary(
     avg_iteration = (
         sum(item.get("iteration", 0) for item in records) / total if total else 0.0
     )
+    avg_wall_seconds = (
+        sum(item.get("wall_seconds") or 0 for item in records) / total if total else 0.0
+    )
+    avg_tokens = (
+        sum(item.get("total_tokens", 0) for item in records) / total if total else 0.0
+    )
+    avg_llm_calls = (
+        sum(item.get("llm_calls", 0) for item in records) / total if total else 0.0
+    )
     return {
         "dataset": dataset_label,
         "profile": args.profile,
@@ -215,6 +247,9 @@ def _build_summary(
         "test_pass_rate": passed / total if total else 0.0,
         "avg_green_attempts": avg_green_attempts,
         "avg_iteration": avg_iteration,
+        "avg_wall_seconds": round(avg_wall_seconds, 3),
+        "avg_tokens": round(avg_tokens, 1),
+        "avg_llm_calls": round(avg_llm_calls, 2),
     }
 
 
@@ -328,16 +363,64 @@ async def main() -> None:
         _print_loaded_tasks(tasks)
         return
 
+    per_task_limit: float | None = args.per_task_timeout if args.per_task_timeout > 0 else None
     run_results: list[dict[str, Any]] = []
     records: list[dict[str, Any]] = []
     for task in tasks:
         task_args = argparse.Namespace(**vars(args))
         task_args.results_path = results_path
-        result = await _run_single_task(task, task_args)
+        task_start = time.time()
+        try:
+            if per_task_limit is not None:
+                result = await asyncio.wait_for(
+                    _run_single_task(task, task_args), timeout=per_task_limit
+                )
+            else:
+                result = await _run_single_task(task, task_args)
+        except asyncio.TimeoutError:
+            wall = round(time.time() - task_start, 3)
+            timeout_record: dict[str, Any] = {
+                "timestamp": datetime.now(timezone.utc).isoformat(),
+                "profile_name": args.profile,
+                "run_id": "",
+                "dataset_name": task.dataset_name,
+                "task_id": task.task_id,
+                "workflow_status": "failed",
+                "stop_reason": "per_task_timeout",
+                "test_passed": False,
+                "green_attempts": 0,
+                "same_error_streak": 0,
+                "iteration": 0,
+                "dynamic_verdict": "unknown",
+                "static_verdict": "unknown",
+                "final_verdict": "unknown",
+                "enabled_agents": [],
+                "weak_passed": None,
+                "strong_passed": None,
+                "is_equivalent": None,
+                "has_l2_refactor": False,
+                "has_l3_refactor": False,
+                "cr_overall_score": None,
+                "cr_security_score": None,
+                "cr_reliability_score": None,
+                "cr_maintainability_score": None,
+                "cr_performance_score": None,
+                "cr_needs_refactoring": None,
+                "cr_total_findings": None,
+                "wall_seconds": wall,
+                "total_tokens": 0,
+                "llm_calls": 0,
+                "last_review_comment": f"per_task_timeout after {per_task_limit:.0f}s",
+                "all_review_comments": [f"per_task_timeout after {per_task_limit:.0f}s"],
+            }
+            append_experiment_record(timeout_record, results_path)
+            result = {"task": task, "record": timeout_record, "final_state": {}}
         run_results.append(result)
         records.append(result["record"])
         if args.print_each:
             print(json.dumps(result["record"], ensure_ascii=False, indent=2))
+        if args.inter_task_sleep > 0:
+            await asyncio.sleep(args.inter_task_sleep)
 
     official_humaneval_eval = _write_humaneval_outputs(
         run_results,

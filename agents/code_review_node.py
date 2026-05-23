@@ -129,7 +129,7 @@ async def _review_single_dimension(
     dimension: str,
     guide: dict[str, str],
     few_shot: str = "",
-) -> DimensionReview:
+) -> tuple[DimensionReview, int]:
     """独立的单维度 Reviewer — 只关注自己负责的 CISQ 维度。"""
     few_shot_section = (
         f"\n\nHigh-quality reference for a similar task (use as calibration standard):\n{few_shot}"
@@ -164,19 +164,19 @@ async def _review_single_dimension(
     fallback = DimensionReview(
         score=4, findings=[], suggestions=[], severity="none", needs_refactoring=False
     )
-    data, _, _ = generate_with_outlines(
+    data, _, _, token_count = generate_with_outlines(
         prompt=prompt,
         output_model=DimensionReview,
         fallback_data=fallback.model_dump(),
     )
-    return DimensionReview(**data)
+    return DimensionReview(**data), token_count
 
 
 async def _verify_findings(
     code: str,
     dimension_label: str,
     review: DimensionReview,
-) -> DimensionReview:
+) -> tuple[DimensionReview, int]:
     """
     Evaluation Agent：对单个维度的 findings 做幻觉过滤。
 
@@ -184,7 +184,7 @@ async def _verify_findings(
     只保留能在代码中找到具体证据的条目。
     """
     if not review.findings:
-        return review
+        return review, 0
 
     numbered = "\n".join(f"{i + 1}. {f}" for i, f in enumerate(review.findings))
 
@@ -204,7 +204,7 @@ async def _verify_findings(
 
     # Conservative fallback: keep all findings (better to over-report than lose real ones)
     fallback = VerificationResult(verified_indices=list(range(1, len(review.findings) + 1)))
-    data, _, _ = generate_with_outlines(
+    data, _, _, token_count = generate_with_outlines(
         prompt=prompt,
         output_model=VerificationResult,
         fallback_data=fallback.model_dump(),
@@ -226,7 +226,7 @@ async def _verify_findings(
         suggestions=verified_suggestions,
         severity=review.severity if verified_findings else "none",
         needs_refactoring=bool(verified_findings) and review.score <= 3,
-    )
+    ), token_count
 
 
 async def run(state: AgentState) -> AgentState:
@@ -253,14 +253,23 @@ async def run(state: AgentState) -> AgentState:
     # cr_few_shot_examples 由检索模块填充（第二步），当前为空字符串
     few_shot = state.get("cr_few_shot_examples", "")
 
+    accumulated_tokens = state.get("_task_tokens", 0)
+    llm_calls = state.get("_task_llm_calls", 0)
+
     reviews: dict[str, DimensionReview] = {}
     for dim, guide in _DIMENSION_GUIDES.items():
-        review = await _review_single_dimension(code, requirement, dim, guide, few_shot)
-        review = await _verify_findings(code, guide["label"], review)
-        reviews[dim] = review
+        review_raw, tc_review = await _review_single_dimension(code, requirement, dim, guide, few_shot)
+        accumulated_tokens += tc_review
+        llm_calls += 1
+        had_findings = bool(review_raw.findings)
+        review_verified, tc_verify = await _verify_findings(code, guide["label"], review_raw)
+        accumulated_tokens += tc_verify
+        if had_findings:
+            llm_calls += 1
+        reviews[dim] = review_verified
         comments.append(
-            f"{NODE_NAME}: [{guide['label']}] score={review.score}, "
-            f"findings={len(review.findings)}, needs_refactor={review.needs_refactoring}"
+            f"{NODE_NAME}: [{guide['label']}] score={review_verified.score}, "
+            f"findings={len(review_verified.findings)}, needs_refactor={review_verified.needs_refactoring}"
         )
 
     scores = [r.score for r in reviews.values()]
@@ -287,4 +296,6 @@ async def run(state: AgentState) -> AgentState:
     return {
         "code_review_report": report.model_dump(),
         "review_comments": comments,
+        "_task_tokens": accumulated_tokens,
+        "_task_llm_calls": llm_calls,
     }

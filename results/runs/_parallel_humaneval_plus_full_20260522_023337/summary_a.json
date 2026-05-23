@@ -1,0 +1,12 @@
+{
+  "dataset": "humaneval_plus",
+  "profile": "ours",
+  "manifest_name": "humaneval_plus_full_a_20260522_023337",
+  "seed_source": "empty",
+  "run_dir": "F:\\LLM\\LLM_learning\\results\\runs\\humaneval_plus\\ours\\20260522_023347__ours__humaneval_plus__humaneval_plus_full_a_20260522_023337",
+  "total_tasks": 82,
+  "workflow_success_rate": 0.8414634146341463,
+  "test_pass_rate": 0.8414634146341463,
+  "avg_green_attempts": 1.670731707317073,
+  "avg_iteration": 0.8414634146341463
+}

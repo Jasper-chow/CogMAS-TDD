@@ -12,6 +12,7 @@ CogMAS-TDD 主入口。
 import argparse
 import asyncio
 import json
+import time
 import uuid
 from pathlib import Path
 from typing import Any
@@ -338,6 +339,7 @@ async def run_experiment_once(
 
     app = build_workflow(config)
     run_id = str(uuid.uuid4())
+    start_time = time.time()
     initial_state = build_initial_state(
         code=code,
         test_cases=test_cases,
@@ -354,6 +356,7 @@ async def run_experiment_once(
     )
     result = await app.ainvoke(initial_state)
     finalized_result = _finalize_state(result, config)
+    finalized_result["wall_seconds"] = round(time.time() - start_time, 3)
 
     resolved_results_path = results_path or str(
         Path("results") / "experiments" / f"{profile}.jsonl"

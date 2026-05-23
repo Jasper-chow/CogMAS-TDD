@@ -1,0 +1,25 @@
+{
+  "dataset": "humaneval_plus",
+  "profile": "b2_error_feedback",
+  "manifest_name": "humaneval_plus_full",
+  "seed_source": "empty",
+  "run_dir": "F:\\LLM\\LLM_learning\\results\\runs\\humaneval_plus\\b2_error_feedback\\20260523_033404__b2_error_feedback__humaneval_plus__humaneval_plus_full",
+  "total_tasks": 164,
+  "workflow_success_rate": 0.8414634146341463,
+  "test_pass_rate": 0.8414634146341463,
+  "avg_green_attempts": 1.646341463414634,
+  "avg_iteration": 0.0,
+  "avg_wall_seconds": 17.077,
+  "avg_tokens": 1235.7,
+  "avg_llm_calls": 1.65,
+  "official_humaneval_eval": {
+    "sample_file": "F:\\LLM\\LLM_learning\\results\\runs\\humaneval_plus\\b2_error_feedback\\20260523_033404__b2_error_feedback__humaneval_plus__humaneval_plus_full\\humaneval_samples.jsonl",
+    "problem_file": "F:\\LLM\\LLM_learning\\human-eval\\data\\HumanEval.jsonl.gz",
+    "sample_count": 164,
+    "task_count": 164,
+    "passed_count": 138,
+    "pass_metrics": {
+      "pass@1": 0.8414634146341463
+    }
+  }
+}

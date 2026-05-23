@@ -70,7 +70,7 @@ async def run(state: AgentState) -> AgentState:
 质量注意事项（CISQ 规则提示）：
 {pitfall_text}""".strip()
 
-    data, used_llm, note = generate_with_outlines(
+    data, used_llm, note, _token_count = generate_with_outlines(
         prompt=prompt,
         output_model=RedNodeOutput,
         fallback_data=fallback.model_dump(),

@@ -8,6 +8,8 @@ Evaluation 节点（LDB 动态仲裁层）。
 - 将判定结果写回 traces，供主图决定“通过”还是“回环重构”。
 """
 
+from typing import Any
+
 from pydantic import BaseModel
 
 from state import AgentState
@@ -33,7 +35,7 @@ class StaticReviewOutput(BaseModel):
 
     passed: bool = False
     failed_rule_ids: list[str] = []
-    findings: list[str] = []
+    findings: list[Any] = []  # LLM may return list[dict]; accept any element type
     summary: str = ""
 
 async def run(state: AgentState) -> AgentState:
@@ -84,7 +86,7 @@ async def run(state: AgentState) -> AgentState:
 ```python
 {l3_code}
 ```""".strip()
-    static_data, used_llm, note = generate_with_outlines(
+    static_data, used_llm, note, token_count = generate_with_outlines(
         prompt=static_prompt,
         output_model=StaticReviewOutput,
         fallback_data=heuristic_review,
@@ -128,6 +130,9 @@ async def run(state: AgentState) -> AgentState:
         }
     )
 
+    accumulated_tokens = state.get("_task_tokens", 0) + token_count
+    llm_calls = state.get("_task_llm_calls", 0) + 1
+
     comments = [*state.get("review_comments", [])]
     comments.append(
         f"{NODE_NAME}: dynamic={dynamic_verdict}, static={static_verdict}, final={final_verdict}"
@@ -142,5 +147,7 @@ async def run(state: AgentState) -> AgentState:
         "final_verdict": final_verdict,
         "failed_rule_ids": static_review.failed_rule_ids,
         "refactor_feedback": refactor_feedback,
+        "_task_tokens": accumulated_tokens,
+        "_task_llm_calls": llm_calls,
         "review_comments": comments,
     }

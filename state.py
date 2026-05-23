@@ -104,6 +104,9 @@ class AgentState(TypedDict, total=False):
     original_test_cases: str
     code_review_report: dict[str, Any]   # CodeReviewReport from code_review_node
     cr_few_shot_examples: str             # retrieved high-quality examples for CR (retrieval module, step 2)
+    _task_tokens: int
+    _task_llm_calls: int
+    wall_seconds: float
 
 
 def build_initial_state(

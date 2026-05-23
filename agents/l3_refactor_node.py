@@ -12,6 +12,7 @@ L3 重构节点（可维护性与性能优化层）。
 from pydantic import BaseModel
 
 from state import AgentState
+from utils.executor import execute_code_with_trace
 from utils.helpers import generate_with_outlines
 
 NODE_NAME = "l3_refactor_node"
@@ -37,6 +38,7 @@ def _extract_findings(code_review_report: dict) -> tuple[list[str], list[str]]:
 async def run(state: AgentState) -> AgentState:
     current_code = state.get("code", "")
     comments = list(state.get("review_comments", []))
+    test_cases = state.get("test_cases", "")
 
     cr_report = state.get("code_review_report", {})
     findings, suggestions = _extract_findings(cr_report)
@@ -48,6 +50,7 @@ async def run(state: AgentState) -> AgentState:
             else "no CR report available, skipping"
         )
         comments.append(f"{NODE_NAME}: {msg}")
+        # Explicit pass-through: l3_code = current_code (L2 output or l1_code), no LLM call.
         return {"l3_code": current_code, "review_comments": comments}
 
     issues_text = "\n".join(
@@ -75,14 +78,27 @@ async def run(state: AgentState) -> AgentState:
         f"- applied_fixes: list of issue descriptions you addressed"
     )
 
-    data, used_llm, note = generate_with_outlines(
+    data, used_llm, note, token_count = generate_with_outlines(
         prompt=prompt,
         output_model=L3RefactorOutput,
         fallback_data=fallback.model_dump(),
     )
     output = L3RefactorOutput(**data)
+    accumulated_tokens = state.get("_task_tokens", 0) + token_count
+    llm_calls = state.get("_task_llm_calls", 0) + 1
 
     has_change = bool(output.code.strip()) and output.code.strip() != current_code.strip()
+
+    # Verify refactored code still passes tests; roll back on failure to prevent semantic drift.
+    if has_change and test_cases:
+        verify = execute_code_with_trace(output.code, test_cases)
+        if not verify["passed"]:
+            comments.append(
+                f"{NODE_NAME}: refactored code failed tests ({verify['error']!r}), rolling back to pre-L3 code"
+            )
+            output.code = current_code
+            has_change = False
+
     comments.append(
         f"{NODE_NAME}: {'applied' if has_change else 'no'} maintainability/performance fixes "
         f"({'LLM' if used_llm else 'fallback'}), {note}"
@@ -90,7 +106,9 @@ async def run(state: AgentState) -> AgentState:
 
     return {
         "code": output.code if has_change else current_code,
-        "l3_code": output.code if has_change else "",
+        "l3_code": output.code if has_change else current_code,  # always set l3_code; never leave it empty
         "has_l3_refactor": has_change,
+        "_task_tokens": accumulated_tokens,
+        "_task_llm_calls": llm_calls,
         "review_comments": comments,
     }

@@ -89,7 +89,7 @@ async def run(state: AgentState) -> AgentState:
         code=code,
         trace_blocks=focused_blocks,
     )
-    data, used_llm, note = generate_with_outlines(
+    data, used_llm, note, _token_count = generate_with_outlines(
         prompt=debug_prompt,
         output_model=LDBDebugOutput,
         fallback_data=fallback_payload,

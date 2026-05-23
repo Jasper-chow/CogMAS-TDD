@@ -152,7 +152,7 @@ def load_humaneval_plus_tasks(
     task_ids: list[str] | None = None,
 ) -> list[BenchmarkTask]:
     try:
-        from evalplus.data import get_human_eval_plus  # type: ignore[import]
+        from evalplus.data.humaneval import get_human_eval_plus  # type: ignore[import]
     except ImportError as exc:
         raise ImportError(
             "evalplus is required for HumanEval+. Install with: uv add evalplus"

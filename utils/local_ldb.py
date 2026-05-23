@@ -17,10 +17,29 @@ from __future__ import annotations
 """
 
 import ast
+import ctypes
 import sys
+import threading
 from dataclasses import dataclass
 from types import FrameType
 from typing import Any
+
+_LDB_TRACE_TIMEOUT: float = 30.0
+
+
+def _force_stop_thread(thread: threading.Thread) -> None:
+    """向目标线程异步注入 SystemExit，终止纯 Python 死循环。"""
+    if not thread.is_alive():
+        return
+    tid = thread.ident
+    if tid is None:
+        return
+    res = ctypes.pythonapi.PyThreadState_SetAsyncExc(
+        ctypes.c_ulong(tid),
+        ctypes.py_object(SystemExit),
+    )
+    if res > 1:
+        ctypes.pythonapi.PyThreadState_SetAsyncExc(ctypes.c_ulong(tid), None)
 
 
 CONTROL_NODES = (
@@ -282,12 +301,36 @@ def get_code_traces_block(code: str, failed_test: str, entry_point: str) -> list
 
 
 def get_ldb_block_trace(*, code: str, failed_test: str, entry_point: str) -> dict[str, Any]:
-    """兼容当前节点调用方式的包装器。"""
-    try:
-        trace_blocks = get_code_traces_block(code, failed_test, entry_point)
-        return {"ok": True, "trace_blocks": trace_blocks, "error": ""}
-    except Exception as exc:  # noqa: BLE001
-        return {"ok": False, "trace_blocks": [], "error": f"local ldb error: {exc}"}
+    """兼容当前节点调用方式的包装器，带超时保护防止死循环卡住。"""
+    result_box: list[dict[str, Any]] = []
+    saved_sys_path = list(sys.path)
+
+    def _worker() -> None:
+        try:
+            trace_blocks = get_code_traces_block(code, failed_test, entry_point)
+            result_box.append({"ok": True, "trace_blocks": trace_blocks, "error": ""})
+        except Exception as exc:  # noqa: BLE001
+            result_box.append({"ok": False, "trace_blocks": [], "error": f"local ldb error: {exc}"})
+
+    thread = threading.Thread(target=_worker, daemon=True)
+    thread.start()
+    thread.join(timeout=_LDB_TRACE_TIMEOUT)
+
+    if thread.is_alive():
+        _force_stop_thread(thread)
+        thread.join(timeout=3)  # 等待 SystemExit 生效
+        sys.path[:] = saved_sys_path
+        return {
+            "ok": False,
+            "trace_blocks": [],
+            "error": f"ldb trace timeout after {_LDB_TRACE_TIMEOUT:.0f}s (likely infinite loop in generated code)",
+        }
+
+    return result_box[0] if result_box else {
+        "ok": False,
+        "trace_blocks": [],
+        "error": "ldb trace worker completed without result",
+    }
 
 
 def render_trace_blocks_for_prompt(

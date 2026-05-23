@@ -80,6 +80,9 @@ def summarize_run(
         "has_l2_refactor": bool(state.get("l2_code")),
         "has_l3_refactor": bool(state.get("l3_code")),
         **cr_metrics,
+        "wall_seconds": state.get("wall_seconds"),
+        "total_tokens": state.get("_task_tokens", 0),
+        "llm_calls": state.get("_task_llm_calls", 0),
         "last_review_comment": comments[-1] if comments else "",
         "all_review_comments": comments,
     }

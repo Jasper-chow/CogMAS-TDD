@@ -10,17 +10,42 @@ LDB 执行引擎（简化版）。
 
 注意：
 - 当前是可运行的教学级实现，不是生产级语义等价证明器。
-- 目的是先打通“可追踪、可比较、可回环”的技术闭环。
+- 目的是先打通"可追踪、可比较、可回环"的技术闭环。
 """
 
+import ctypes
 import sys
 import tempfile
+import threading
 import types
 import uuid
 from importlib import util as importlib_util
 from pathlib import Path
 from types import FrameType
 from typing import Any, Callable
+
+# LLM 生成的代码可能包含死循环，必须限制单次执行时长。
+_TRACE_EXECUTION_TIMEOUT: float = 30.0
+
+
+def _force_stop_thread(thread: threading.Thread) -> None:
+    """向目标线程异步注入 SystemExit，终止纯 Python 死循环。
+
+    原理：PyThreadState_SetAsyncExc 在下一条字节码执行时抛出异常，
+    对 while True: pass 等纯 Python 死循环有效，对 C 扩展阻塞无效。
+    """
+    if not thread.is_alive():
+        return
+    tid = thread.ident
+    if tid is None:
+        return
+    res = ctypes.pythonapi.PyThreadState_SetAsyncExc(
+        ctypes.c_ulong(tid),
+        ctypes.py_object(SystemExit),
+    )
+    if res > 1:
+        # 影响了多个线程，立即撤销
+        ctypes.pythonapi.PyThreadState_SetAsyncExc(ctypes.c_ulong(tid), None)
 
 TraceRecord = dict[str, Any]
 
@@ -78,22 +103,8 @@ def _ensure_test_imports(test_code: str) -> str:
     return "from app import *\n\n" + test_code
 
 
-def execute_code_with_trace(code: str, test_cases: str) -> dict[str, Any]:
-    """
-    执行代码与测试并捕获真实运行轨迹。
-
-    返回：
-    - passed: 是否通过执行
-    - error: 错误摘要（为空表示成功）
-    - trace: 轨迹记录列表
-    """
-    if not code or not test_cases:
-        return {
-            "passed": False,
-            "error": "missing code or test_cases for trace execution",
-            "trace": [],
-        }
-
+def _execute_code_with_trace_inner(code: str, test_cases: str) -> dict[str, Any]:
+    """内部实现，在独立线程中运行以支持超时取消。"""
     trace: list[TraceRecord] = []
     with tempfile.TemporaryDirectory(prefix="cogmas_trace_") as tmpdir:
         workspace = Path(tmpdir)
@@ -139,11 +150,71 @@ def execute_code_with_trace(code: str, test_cases: str) -> dict[str, Any]:
             sys.modules.pop(test_module_name, None)
 
 
+def execute_code_with_trace(
+    code: str, test_cases: str, timeout: float = _TRACE_EXECUTION_TIMEOUT
+) -> dict[str, Any]:
+    """
+    执行代码与测试并捕获真实运行轨迹，带超时保护。
+
+    返回：
+    - passed: 是否通过执行
+    - error: 错误摘要（为空表示成功）
+    - trace: 轨迹记录列表
+
+    超时处理：
+    - 在独立 daemon 线程中运行；超时后主线程立即返回并尽力恢复全局状态。
+    - 卡住的线程会在进程退出时自动清理（daemon=True）。
+    """
+    if not code or not test_cases:
+        return {
+            "passed": False,
+            "error": "missing code or test_cases for trace execution",
+            "trace": [],
+        }
+
+    # 快照全局状态，超时时在主线程中恢复，避免污染后续任务。
+    saved_sys_path = list(sys.path)
+    saved_app_module = sys.modules.get("app")
+
+    result_box: list[dict[str, Any]] = []
+
+    def _worker() -> None:
+        try:
+            result_box.append(_execute_code_with_trace_inner(code, test_cases))
+        except Exception as exc:  # noqa: BLE001
+            result_box.append({"passed": False, "error": repr(exc), "trace": []})
+
+    thread = threading.Thread(target=_worker, daemon=True)
+    thread.start()
+    thread.join(timeout=timeout)
+
+    if thread.is_alive():
+        # 超时：强制终止死循环线程，然后恢复全局状态。
+        _force_stop_thread(thread)
+        thread.join(timeout=3)  # 等待 SystemExit 生效
+        sys.path[:] = saved_sys_path
+        if saved_app_module is not None:
+            sys.modules["app"] = saved_app_module
+        else:
+            sys.modules.pop("app", None)
+        return {
+            "passed": False,
+            "error": f"execution timeout after {timeout:.0f}s",
+            "trace": [],
+        }
+
+    return result_box[0] if result_box else {
+        "passed": False,
+        "error": "worker thread completed without result",
+        "trace": [],
+    }
+
+
 def compare_traces_weak(
     original_trace: list[TraceRecord], refactored_trace: list[TraceRecord]
 ) -> bool:
     """
-    对比两份轨迹并给出“是否等价”的占位判定。
+    对比两份轨迹并给出"是否等价"的占位判定。
 
     当前判定规则（简化）：
     1. 轨迹长度必须一致；

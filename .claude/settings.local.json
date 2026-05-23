@@ -5,7 +5,8 @@
       "PowerShell(Get-Item *)",
       "Bash(uv add *)",
       "Bash(echo \"EXIT:$?\")",
-      "Bash(uv run *)"
+      "Bash(uv run *)",
+      "PowerShell(Get-Content *)"
     ]
   }
 }

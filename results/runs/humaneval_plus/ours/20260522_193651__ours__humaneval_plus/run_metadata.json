@@ -1,0 +1,17 @@
+{
+  "dataset_label": "humaneval_plus",
+  "profile": "ours",
+  "manifest_name": "",
+  "manifest_description": "",
+  "task_count": 5,
+  "task_ids": [
+    "HumanEval/129",
+    "HumanEval/130",
+    "HumanEval/131",
+    "HumanEval/132",
+    "HumanEval/133"
+  ],
+  "results_dir": "F:\\LLM\\LLM_learning\\results\\runs\\humaneval_plus\\ours\\20260522_193651__ours__humaneval_plus",
+  "seed_source": "empty",
+  "equivalence_mode": "weak"
+}

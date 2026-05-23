@@ -12,6 +12,7 @@ L2 重构节点（安全与可靠性加固层）。
 from pydantic import BaseModel
 
 from state import AgentState
+from utils.executor import execute_code_with_trace
 from utils.helpers import generate_with_outlines
 
 NODE_NAME = "l2_refactor_node"
@@ -38,6 +39,7 @@ async def run(state: AgentState) -> AgentState:
     current_code = state.get("code", "")
     l1_code = state.get("l1_code") or current_code
     comments = list(state.get("review_comments", []))
+    test_cases = state.get("test_cases", "")
 
     cr_report = state.get("code_review_report", {})
     findings, suggestions = _extract_findings(cr_report)
@@ -49,7 +51,8 @@ async def run(state: AgentState) -> AgentState:
             else "no CR report available, skipping"
         )
         comments.append(f"{NODE_NAME}: {msg}")
-        return {"l1_code": l1_code, "review_comments": comments}
+        # Clear stale l3_code from any previous retry iteration.
+        return {"l1_code": l1_code, "l3_code": "", "review_comments": comments}
 
     issues_text = "\n".join(
         f"- Issue: {f}\n  Fix: {s}" for f, s in zip(findings, suggestions or [""] * len(findings))
@@ -76,14 +79,27 @@ async def run(state: AgentState) -> AgentState:
         f"- applied_fixes: list of issue descriptions you addressed"
     )
 
-    data, used_llm, note = generate_with_outlines(
+    data, used_llm, note, token_count = generate_with_outlines(
         prompt=prompt,
         output_model=L2RefactorOutput,
         fallback_data=fallback.model_dump(),
     )
     output = L2RefactorOutput(**data)
+    accumulated_tokens = state.get("_task_tokens", 0) + token_count
+    llm_calls = state.get("_task_llm_calls", 0) + 1
 
     has_change = bool(output.code.strip()) and output.code.strip() != l1_code.strip()
+
+    # Verify refactored code still passes tests; roll back on failure to prevent semantic drift.
+    if has_change and test_cases:
+        verify = execute_code_with_trace(output.code, test_cases)
+        if not verify["passed"]:
+            comments.append(
+                f"{NODE_NAME}: refactored code failed tests ({verify['error']!r}), rolling back to l1_code"
+            )
+            output = fallback
+            has_change = False
+
     comments.append(
         f"{NODE_NAME}: {'applied' if has_change else 'no'} security/reliability fixes "
         f"({'LLM' if used_llm else 'fallback'}), {note}"
@@ -93,6 +109,9 @@ async def run(state: AgentState) -> AgentState:
         "code": output.code if has_change else l1_code,
         "l1_code": l1_code,
         "l2_code": output.code if has_change else "",
+        "l3_code": "",  # clear stale l3_code from any previous retry iteration
         "has_l2_refactor": has_change,
+        "_task_tokens": accumulated_tokens,
+        "_task_llm_calls": llm_calls,
         "review_comments": comments,
     }
