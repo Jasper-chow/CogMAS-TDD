@@ -65,32 +65,46 @@ async def run(state: AgentState) -> AgentState:
     )
 
     prompt = (
-        f"You are a security and reliability engineer. Refactor the following Python code "
+        f"You are a reliability engineer. Refactor the following Python function "
         f"to fix the specific issues identified by code review.\n\n"
         f"Original code:\n```python\n{l1_code}\n```\n\n"
-        f"Issues to fix (Security & Reliability):\n{issues_text}\n\n"
-        f"Rules:\n"
-        f"- Fix ONLY the listed issues. Do not change unrelated logic.\n"
-        f"- Preserve the original function signature and behavior.\n"
-        f"- Do not add unnecessary complexity.\n\n"
+        f"Issues to fix (Reliability):\n{issues_text}\n\n"
+        f"CRITICAL RULES — violating any of these means the refactor is rejected:\n"
+        f"1. Fix ONLY the listed issues. Do not change unrelated logic, variable names, or function signatures.\n"
+        f"2. Start from the original code. Apply the minimum edit needed to address each listed issue.\n"
+        f"3. Preserve ALL existing import statements, helper functions, and type annotations.\n"
+        f"4. Do not add new imports, new functions, or new abstractions unless a finding explicitly demands it.\n"
+        f"5. The refactored code must compile and pass the same tests as the original.\n"
+        f"6. Do NOT add input validation, try/except blocks, or raise statements unless a finding "
+        f"explicitly identifies a missing guard for a bug that would occur with valid inputs.\n"
+        f"7. Do NOT replace idiomatic Python (list comprehensions, built-in functions like max/min/sum) "
+        f"with verbose loop equivalents — that worsens readability without fixing anything.\n"
+        f"8. Do NOT rename variables or rewrite correct logic that is unrelated to the listed issues.\n"
+        f"9. Do NOT use 'assert' as a runtime guard — assert statements are disabled when Python runs "
+        f"with the -O flag and must not be used for correctness-critical checks. "
+        f"If a finding requires removing an existing assert, replace it with a proper conditional check only "
+        f"if the assert guards against a bug that can actually occur.\n\n"
         f"Return strict JSON:\n"
-        f"- code: the refactored Python implementation\n"
-        f"- explanation: what you changed and why\n"
-        f"- applied_fixes: list of issue descriptions you addressed"
+        f"- code: the refactored Python implementation (complete, compilable code)\n"
+        f"- explanation: what you changed and why (one sentence per fix)\n"
+        f"- applied_fixes: list of issue descriptions you addressed (same count as findings if all fixed)"
     )
 
-    data, used_llm, note, token_count = generate_with_outlines(
+    data, used_llm, note, tc = generate_with_outlines(
         prompt=prompt,
         output_model=L2RefactorOutput,
         fallback_data=fallback.model_dump(),
     )
     output = L2RefactorOutput(**data)
-    accumulated_tokens = state.get("_task_tokens", 0) + token_count
+    accumulated_tokens = state.get("_task_tokens", 0) + tc.total
+    accumulated_input = state.get("_task_input_tokens", 0) + tc.input
+    accumulated_output = state.get("_task_output_tokens", 0) + tc.output
     llm_calls = state.get("_task_llm_calls", 0) + 1
 
     has_change = bool(output.code.strip()) and output.code.strip() != l1_code.strip()
+    resolved_count = len(output.applied_fixes) if has_change else 0
+    prev_resolved = state.get("cr_findings_resolved", 0) + resolved_count
 
-    # Verify refactored code still passes tests; roll back on failure to prevent semantic drift.
     if has_change and test_cases:
         verify = execute_code_with_trace(output.code, test_cases)
         if not verify["passed"]:
@@ -99,19 +113,23 @@ async def run(state: AgentState) -> AgentState:
             )
             output = fallback
             has_change = False
+            prev_resolved = state.get("cr_findings_resolved", 0)
 
     comments.append(
         f"{NODE_NAME}: {'applied' if has_change else 'no'} security/reliability fixes "
-        f"({'LLM' if used_llm else 'fallback'}), {note}"
+        f"({'LLM' if used_llm else 'fallback'}), resolved={resolved_count}/{len(findings)}, {note}"
     )
 
     return {
         "code": output.code if has_change else l1_code,
         "l1_code": l1_code,
         "l2_code": output.code if has_change else "",
-        "l3_code": "",  # clear stale l3_code from any previous retry iteration
+        "l3_code": "",
         "has_l2_refactor": has_change,
+        "cr_findings_resolved": prev_resolved,
         "_task_tokens": accumulated_tokens,
+        "_task_input_tokens": accumulated_input,
+        "_task_output_tokens": accumulated_output,
         "_task_llm_calls": llm_calls,
         "review_comments": comments,
     }

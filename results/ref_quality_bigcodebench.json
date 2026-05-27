@@ -1,0 +1,1202 @@
+[
+  {
+    "task_id": "BigCodeBench/84",
+    "cc_mean": 14.0,
+    "cc_max": 14,
+    "cognitive_complexity": 11.0,
+    "mi_score": 72.84,
+    "loc": 25
+  },
+  {
+    "task_id": "BigCodeBench/193",
+    "cc_mean": 14.0,
+    "cc_max": 14,
+    "cognitive_complexity": 8.0,
+    "mi_score": 77.79,
+    "loc": 23
+  },
+  {
+    "task_id": "BigCodeBench/458",
+    "cc_mean": 14.0,
+    "cc_max": 14,
+    "cognitive_complexity": 17.0,
+    "mi_score": 76.6,
+    "loc": 28
+  },
+  {
+    "task_id": "BigCodeBench/524",
+    "cc_mean": 12.0,
+    "cc_max": 12,
+    "cognitive_complexity": 10.0,
+    "mi_score": 82.53,
+    "loc": 26
+  },
+  {
+    "task_id": "BigCodeBench/129",
+    "cc_mean": 11.0,
+    "cc_max": 11,
+    "cognitive_complexity": 9.0,
+    "mi_score": 82.33,
+    "loc": 31
+  },
+  {
+    "task_id": "BigCodeBench/507",
+    "cc_mean": 11.0,
+    "cc_max": 11,
+    "cognitive_complexity": 9.0,
+    "mi_score": 83.04,
+    "loc": 14
+  },
+  {
+    "task_id": "BigCodeBench/964",
+    "cc_mean": 11.0,
+    "cc_max": 11,
+    "cognitive_complexity": 21.0,
+    "mi_score": 79.04,
+    "loc": 35
+  },
+  {
+    "task_id": "BigCodeBench/1040",
+    "cc_mean": 11.0,
+    "cc_max": 11,
+    "cognitive_complexity": 30.0,
+    "mi_score": 77.48,
+    "loc": 47
+  },
+  {
+    "task_id": "BigCodeBench/655",
+    "cc_mean": 10.0,
+    "cc_max": 10,
+    "cognitive_complexity": 4.0,
+    "mi_score": 73.81,
+    "loc": 25
+  },
+  {
+    "task_id": "BigCodeBench/985",
+    "cc_mean": 10.0,
+    "cc_max": 10,
+    "cognitive_complexity": 14.0,
+    "mi_score": 79.64,
+    "loc": 32
+  },
+  {
+    "task_id": "BigCodeBench/989",
+    "cc_mean": 10.0,
+    "cc_max": 10,
+    "cognitive_complexity": 3.0,
+    "mi_score": 80.34,
+    "loc": 18
+  },
+  {
+    "task_id": "BigCodeBench/95",
+    "cc_mean": 9.0,
+    "cc_max": 9,
+    "cognitive_complexity": 9.0,
+    "mi_score": 74.92,
+    "loc": 20
+  },
+  {
+    "task_id": "BigCodeBench/350",
+    "cc_mean": 9.0,
+    "cc_max": 9,
+    "cognitive_complexity": 11.0,
+    "mi_score": 81.05,
+    "loc": 30
+  },
+  {
+    "task_id": "BigCodeBench/384",
+    "cc_mean": 9.0,
+    "cc_max": 9,
+    "cognitive_complexity": 6.0,
+    "mi_score": 62.83,
+    "loc": 16
+  },
+  {
+    "task_id": "BigCodeBench/493",
+    "cc_mean": 9.0,
+    "cc_max": 9,
+    "cognitive_complexity": 7.0,
+    "mi_score": 81.46,
+    "loc": 26
+  },
+  {
+    "task_id": "BigCodeBench/752",
+    "cc_mean": 9.0,
+    "cc_max": 9,
+    "cognitive_complexity": 7.0,
+    "mi_score": 63.96,
+    "loc": 23
+  },
+  {
+    "task_id": "BigCodeBench/854",
+    "cc_mean": 9.0,
+    "cc_max": 9,
+    "cognitive_complexity": 4.0,
+    "mi_score": 65.96,
+    "loc": 17
+  },
+  {
+    "task_id": "BigCodeBench/879",
+    "cc_mean": 9.0,
+    "cc_max": 9,
+    "cognitive_complexity": 8.0,
+    "mi_score": 55.23,
+    "loc": 18
+  },
+  {
+    "task_id": "BigCodeBench/988",
+    "cc_mean": 9.0,
+    "cc_max": 9,
+    "cognitive_complexity": 4.0,
+    "mi_score": 82.59,
+    "loc": 18
+  },
+  {
+    "task_id": "BigCodeBench/1026",
+    "cc_mean": 9.0,
+    "cc_max": 9,
+    "cognitive_complexity": 6.0,
+    "mi_score": 74.29,
+    "loc": 29
+  },
+  {
+    "task_id": "BigCodeBench/75",
+    "cc_mean": 8.0,
+    "cc_max": 8,
+    "cognitive_complexity": 6.0,
+    "mi_score": 73.61,
+    "loc": 25
+  },
+  {
+    "task_id": "BigCodeBench/177",
+    "cc_mean": 8.0,
+    "cc_max": 8,
+    "cognitive_complexity": 14.0,
+    "mi_score": 81.76,
+    "loc": 22
+  },
+  {
+    "task_id": "BigCodeBench/356",
+    "cc_mean": 8.0,
+    "cc_max": 8,
+    "cognitive_complexity": 8.0,
+    "mi_score": 74.39,
+    "loc": 22
+  },
+  {
+    "task_id": "BigCodeBench/424",
+    "cc_mean": 8.0,
+    "cc_max": 8,
+    "cognitive_complexity": 8.0,
+    "mi_score": 65.49,
+    "loc": 27
+  },
+  {
+    "task_id": "BigCodeBench/482",
+    "cc_mean": 8.0,
+    "cc_max": 8,
+    "cognitive_complexity": 9.0,
+    "mi_score": 80.29,
+    "loc": 31
+  },
+  {
+    "task_id": "BigCodeBench/491",
+    "cc_mean": 8.0,
+    "cc_max": 8,
+    "cognitive_complexity": 7.0,
+    "mi_score": 77.71,
+    "loc": 28
+  },
+  {
+    "task_id": "BigCodeBench/501",
+    "cc_mean": 8.0,
+    "cc_max": 8,
+    "cognitive_complexity": 11.0,
+    "mi_score": 83.12,
+    "loc": 23
+  },
+  {
+    "task_id": "BigCodeBench/518",
+    "cc_mean": 8.0,
+    "cc_max": 8,
+    "cognitive_complexity": 5.0,
+    "mi_score": 76.4,
+    "loc": 16
+  },
+  {
+    "task_id": "BigCodeBench/520",
+    "cc_mean": 8.0,
+    "cc_max": 8,
+    "cognitive_complexity": 7.0,
+    "mi_score": 78.61,
+    "loc": 23
+  },
+  {
+    "task_id": "BigCodeBench/522",
+    "cc_mean": 8.0,
+    "cc_max": 8,
+    "cognitive_complexity": 13.0,
+    "mi_score": 80.11,
+    "loc": 27
+  },
+  {
+    "task_id": "BigCodeBench/746",
+    "cc_mean": 8.0,
+    "cc_max": 8,
+    "cognitive_complexity": 8.0,
+    "mi_score": 70.95,
+    "loc": 20
+  },
+  {
+    "task_id": "BigCodeBench/764",
+    "cc_mean": 8.0,
+    "cc_max": 8,
+    "cognitive_complexity": 9.0,
+    "mi_score": 78.9,
+    "loc": 24
+  },
+  {
+    "task_id": "BigCodeBench/780",
+    "cc_mean": 8.0,
+    "cc_max": 8,
+    "cognitive_complexity": 5.0,
+    "mi_score": 73.85,
+    "loc": 19
+  },
+  {
+    "task_id": "BigCodeBench/811",
+    "cc_mean": 8.0,
+    "cc_max": 8,
+    "cognitive_complexity": 6.0,
+    "mi_score": 57.72,
+    "loc": 16
+  },
+  {
+    "task_id": "BigCodeBench/819",
+    "cc_mean": 8.0,
+    "cc_max": 8,
+    "cognitive_complexity": 7.0,
+    "mi_score": 68.44,
+    "loc": 21
+  },
+  {
+    "task_id": "BigCodeBench/864",
+    "cc_mean": 8.0,
+    "cc_max": 8,
+    "cognitive_complexity": 1.0,
+    "mi_score": 63.99,
+    "loc": 14
+  },
+  {
+    "task_id": "BigCodeBench/900",
+    "cc_mean": 8.0,
+    "cc_max": 8,
+    "cognitive_complexity": 7.0,
+    "mi_score": 85.26,
+    "loc": 18
+  },
+  {
+    "task_id": "BigCodeBench/960",
+    "cc_mean": 8.0,
+    "cc_max": 8,
+    "cognitive_complexity": 12.0,
+    "mi_score": 80.41,
+    "loc": 24
+  },
+  {
+    "task_id": "BigCodeBench/1015",
+    "cc_mean": 8.0,
+    "cc_max": 8,
+    "cognitive_complexity": 6.0,
+    "mi_score": 100.0,
+    "loc": 32
+  },
+  {
+    "task_id": "BigCodeBench/1028",
+    "cc_mean": 8.0,
+    "cc_max": 8,
+    "cognitive_complexity": 11.0,
+    "mi_score": 80.26,
+    "loc": 31
+  },
+  {
+    "task_id": "BigCodeBench/30",
+    "cc_mean": 7.0,
+    "cc_max": 7,
+    "cognitive_complexity": 8.0,
+    "mi_score": 85.74,
+    "loc": 17
+  },
+  {
+    "task_id": "BigCodeBench/31",
+    "cc_mean": 7.0,
+    "cc_max": 7,
+    "cognitive_complexity": 2.0,
+    "mi_score": 86.29,
+    "loc": 15
+  },
+  {
+    "task_id": "BigCodeBench/108",
+    "cc_mean": 7.0,
+    "cc_max": 7,
+    "cognitive_complexity": 5.0,
+    "mi_score": 72.7,
+    "loc": 22
+  },
+  {
+    "task_id": "BigCodeBench/140",
+    "cc_mean": 7.0,
+    "cc_max": 7,
+    "cognitive_complexity": 4.0,
+    "mi_score": 63.94,
+    "loc": 13
+  },
+  {
+    "task_id": "BigCodeBench/166",
+    "cc_mean": 7.0,
+    "cc_max": 7,
+    "cognitive_complexity": 4.0,
+    "mi_score": 69.34,
+    "loc": 13
+  },
+  {
+    "task_id": "BigCodeBench/185",
+    "cc_mean": 7.0,
+    "cc_max": 7,
+    "cognitive_complexity": 4.0,
+    "mi_score": 83.36,
+    "loc": 20
+  },
+  {
+    "task_id": "BigCodeBench/188",
+    "cc_mean": 7.0,
+    "cc_max": 7,
+    "cognitive_complexity": 7.0,
+    "mi_score": 75.61,
+    "loc": 23
+  },
+  {
+    "task_id": "BigCodeBench/374",
+    "cc_mean": 7.0,
+    "cc_max": 7,
+    "cognitive_complexity": 16.0,
+    "mi_score": 87.56,
+    "loc": 20
+  },
+  {
+    "task_id": "BigCodeBench/475",
+    "cc_mean": 7.0,
+    "cc_max": 7,
+    "cognitive_complexity": 5.0,
+    "mi_score": 77.9,
+    "loc": 20
+  },
+  {
+    "task_id": "BigCodeBench/551",
+    "cc_mean": 7.0,
+    "cc_max": 7,
+    "cognitive_complexity": 4.0,
+    "mi_score": 84.12,
+    "loc": 22
+  },
+  {
+    "task_id": "BigCodeBench/557",
+    "cc_mean": 7.0,
+    "cc_max": 7,
+    "cognitive_complexity": 3.0,
+    "mi_score": 81.26,
+    "loc": 16
+  },
+  {
+    "task_id": "BigCodeBench/560",
+    "cc_mean": 7.0,
+    "cc_max": 7,
+    "cognitive_complexity": 2.0,
+    "mi_score": 89.32,
+    "loc": 24
+  },
+  {
+    "task_id": "BigCodeBench/571",
+    "cc_mean": 7.0,
+    "cc_max": 7,
+    "cognitive_complexity": 5.0,
+    "mi_score": 85.69,
+    "loc": 21
+  },
+  {
+    "task_id": "BigCodeBench/657",
+    "cc_mean": 7.0,
+    "cc_max": 7,
+    "cognitive_complexity": 2.0,
+    "mi_score": 80.41,
+    "loc": 14
+  },
+  {
+    "task_id": "BigCodeBench/743",
+    "cc_mean": 7.0,
+    "cc_max": 7,
+    "cognitive_complexity": 15.0,
+    "mi_score": 90.18,
+    "loc": 16
+  },
+  {
+    "task_id": "BigCodeBench/930",
+    "cc_mean": 7.0,
+    "cc_max": 7,
+    "cognitive_complexity": 2.0,
+    "mi_score": 78.88,
+    "loc": 13
+  },
+  {
+    "task_id": "BigCodeBench/965",
+    "cc_mean": 7.0,
+    "cc_max": 7,
+    "cognitive_complexity": 9.0,
+    "mi_score": 82.24,
+    "loc": 16
+  },
+  {
+    "task_id": "BigCodeBench/972",
+    "cc_mean": 7.0,
+    "cc_max": 7,
+    "cognitive_complexity": 3.0,
+    "mi_score": 84.43,
+    "loc": 12
+  },
+  {
+    "task_id": "BigCodeBench/973",
+    "cc_mean": 7.0,
+    "cc_max": 7,
+    "cognitive_complexity": 7.0,
+    "mi_score": 82.84,
+    "loc": 21
+  },
+  {
+    "task_id": "BigCodeBench/977",
+    "cc_mean": 7.0,
+    "cc_max": 7,
+    "cognitive_complexity": 6.0,
+    "mi_score": 70.87,
+    "loc": 15
+  },
+  {
+    "task_id": "BigCodeBench/993",
+    "cc_mean": 7.0,
+    "cc_max": 7,
+    "cognitive_complexity": 7.0,
+    "mi_score": 80.88,
+    "loc": 19
+  },
+  {
+    "task_id": "BigCodeBench/1006",
+    "cc_mean": 7.0,
+    "cc_max": 7,
+    "cognitive_complexity": 6.0,
+    "mi_score": 82.87,
+    "loc": 27
+  },
+  {
+    "task_id": "BigCodeBench/13",
+    "cc_mean": 6.0,
+    "cc_max": 6,
+    "cognitive_complexity": 5.0,
+    "mi_score": 91.5,
+    "loc": 27
+  },
+  {
+    "task_id": "BigCodeBench/15",
+    "cc_mean": 6.0,
+    "cc_max": 6,
+    "cognitive_complexity": 5.0,
+    "mi_score": 80.38,
+    "loc": 21
+  },
+  {
+    "task_id": "BigCodeBench/17",
+    "cc_mean": 6.0,
+    "cc_max": 6,
+    "cognitive_complexity": 7.0,
+    "mi_score": 82.65,
+    "loc": 16
+  },
+  {
+    "task_id": "BigCodeBench/19",
+    "cc_mean": 6.0,
+    "cc_max": 6,
+    "cognitive_complexity": 3.0,
+    "mi_score": 87.37,
+    "loc": 15
+  },
+  {
+    "task_id": "BigCodeBench/72",
+    "cc_mean": 6.0,
+    "cc_max": 6,
+    "cognitive_complexity": 12.0,
+    "mi_score": 85.63,
+    "loc": 21
+  },
+  {
+    "task_id": "BigCodeBench/76",
+    "cc_mean": 6.0,
+    "cc_max": 6,
+    "cognitive_complexity": 3.0,
+    "mi_score": 54.31,
+    "loc": 13
+  },
+  {
+    "task_id": "BigCodeBench/105",
+    "cc_mean": 6.0,
+    "cc_max": 6,
+    "cognitive_complexity": 4.0,
+    "mi_score": 82.03,
+    "loc": 21
+  },
+  {
+    "task_id": "BigCodeBench/109",
+    "cc_mean": 6.0,
+    "cc_max": 6,
+    "cognitive_complexity": 4.0,
+    "mi_score": 66.31,
+    "loc": 14
+  },
+  {
+    "task_id": "BigCodeBench/110",
+    "cc_mean": 6.0,
+    "cc_max": 6,
+    "cognitive_complexity": 4.0,
+    "mi_score": 77.71,
+    "loc": 16
+  },
+  {
+    "task_id": "BigCodeBench/175",
+    "cc_mean": 6.0,
+    "cc_max": 6,
+    "cognitive_complexity": 3.0,
+    "mi_score": 74.7,
+    "loc": 19
+  },
+  {
+    "task_id": "BigCodeBench/187",
+    "cc_mean": 6.0,
+    "cc_max": 6,
+    "cognitive_complexity": 3.0,
+    "mi_score": 81.62,
+    "loc": 16
+  },
+  {
+    "task_id": "BigCodeBench/203",
+    "cc_mean": 6.0,
+    "cc_max": 6,
+    "cognitive_complexity": 6.0,
+    "mi_score": 83.88,
+    "loc": 28
+  },
+  {
+    "task_id": "BigCodeBench/218",
+    "cc_mean": 6.0,
+    "cc_max": 6,
+    "cognitive_complexity": 4.0,
+    "mi_score": 78.28,
+    "loc": 20
+  },
+  {
+    "task_id": "BigCodeBench/224",
+    "cc_mean": 6.0,
+    "cc_max": 6,
+    "cognitive_complexity": 2.0,
+    "mi_score": 76.47,
+    "loc": 17
+  },
+  {
+    "task_id": "BigCodeBench/225",
+    "cc_mean": 6.0,
+    "cc_max": 6,
+    "cognitive_complexity": 8.0,
+    "mi_score": 66.21,
+    "loc": 13
+  },
+  {
+    "task_id": "BigCodeBench/302",
+    "cc_mean": 6.0,
+    "cc_max": 6,
+    "cognitive_complexity": 3.0,
+    "mi_score": 73.34,
+    "loc": 18
+  },
+  {
+    "task_id": "BigCodeBench/306",
+    "cc_mean": 6.0,
+    "cc_max": 6,
+    "cognitive_complexity": 8.0,
+    "mi_score": 83.0,
+    "loc": 20
+  },
+  {
+    "task_id": "BigCodeBench/321",
+    "cc_mean": 6.0,
+    "cc_max": 6,
+    "cognitive_complexity": 4.0,
+    "mi_score": 72.65,
+    "loc": 19
+  },
+  {
+    "task_id": "BigCodeBench/341",
+    "cc_mean": 6.0,
+    "cc_max": 6,
+    "cognitive_complexity": 6.0,
+    "mi_score": 68.29,
+    "loc": 17
+  },
+  {
+    "task_id": "BigCodeBench/385",
+    "cc_mean": 6.0,
+    "cc_max": 6,
+    "cognitive_complexity": 1.0,
+    "mi_score": 68.53,
+    "loc": 9
+  },
+  {
+    "task_id": "BigCodeBench/434",
+    "cc_mean": 6.0,
+    "cc_max": 6,
+    "cognitive_complexity": 7.0,
+    "mi_score": 81.02,
+    "loc": 24
+  },
+  {
+    "task_id": "BigCodeBench/461",
+    "cc_mean": 6.0,
+    "cc_max": 6,
+    "cognitive_complexity": 6.0,
+    "mi_score": 75.62,
+    "loc": 30
+  },
+  {
+    "task_id": "BigCodeBench/494",
+    "cc_mean": 6.0,
+    "cc_max": 6,
+    "cognitive_complexity": 5.0,
+    "mi_score": 85.0,
+    "loc": 21
+  },
+  {
+    "task_id": "BigCodeBench/503",
+    "cc_mean": 6.0,
+    "cc_max": 6,
+    "cognitive_complexity": 4.0,
+    "mi_score": 77.18,
+    "loc": 14
+  },
+  {
+    "task_id": "BigCodeBench/526",
+    "cc_mean": 6.0,
+    "cc_max": 6,
+    "cognitive_complexity": 7.0,
+    "mi_score": 100.0,
+    "loc": 21
+  },
+  {
+    "task_id": "BigCodeBench/576",
+    "cc_mean": 6.0,
+    "cc_max": 6,
+    "cognitive_complexity": 7.0,
+    "mi_score": 67.87,
+    "loc": 15
+  },
+  {
+    "task_id": "BigCodeBench/658",
+    "cc_mean": 6.0,
+    "cc_max": 6,
+    "cognitive_complexity": 1.0,
+    "mi_score": 87.41,
+    "loc": 15
+  },
+  {
+    "task_id": "BigCodeBench/668",
+    "cc_mean": 6.0,
+    "cc_max": 6,
+    "cognitive_complexity": 6.0,
+    "mi_score": 88.03,
+    "loc": 13
+  },
+  {
+    "task_id": "BigCodeBench/713",
+    "cc_mean": 6.0,
+    "cc_max": 6,
+    "cognitive_complexity": 12.0,
+    "mi_score": 88.1,
+    "loc": 19
+  },
+  {
+    "task_id": "BigCodeBench/718",
+    "cc_mean": 6.0,
+    "cc_max": 6,
+    "cognitive_complexity": 1.0,
+    "mi_score": 88.34,
+    "loc": 11
+  },
+  {
+    "task_id": "BigCodeBench/733",
+    "cc_mean": 6.0,
+    "cc_max": 6,
+    "cognitive_complexity": 2.0,
+    "mi_score": 93.15,
+    "loc": 15
+  },
+  {
+    "task_id": "BigCodeBench/744",
+    "cc_mean": 6.0,
+    "cc_max": 6,
+    "cognitive_complexity": 2.0,
+    "mi_score": 62.06,
+    "loc": 13
+  },
+  {
+    "task_id": "BigCodeBench/766",
+    "cc_mean": 6.0,
+    "cc_max": 6,
+    "cognitive_complexity": 4.0,
+    "mi_score": 80.86,
+    "loc": 14
+  },
+  {
+    "task_id": "BigCodeBench/775",
+    "cc_mean": 6.0,
+    "cc_max": 6,
+    "cognitive_complexity": 4.0,
+    "mi_score": 86.98,
+    "loc": 18
+  },
+  {
+    "task_id": "BigCodeBench/776",
+    "cc_mean": 6.0,
+    "cc_max": 6,
+    "cognitive_complexity": 7.0,
+    "mi_score": 82.91,
+    "loc": 21
+  },
+  {
+    "task_id": "BigCodeBench/801",
+    "cc_mean": 6.0,
+    "cc_max": 6,
+    "cognitive_complexity": 11.0,
+    "mi_score": 85.48,
+    "loc": 19
+  },
+  {
+    "task_id": "BigCodeBench/836",
+    "cc_mean": 6.0,
+    "cc_max": 6,
+    "cognitive_complexity": 13.0,
+    "mi_score": 84.0,
+    "loc": 17
+  },
+  {
+    "task_id": "BigCodeBench/853",
+    "cc_mean": 6.0,
+    "cc_max": 6,
+    "cognitive_complexity": 10.0,
+    "mi_score": 85.7,
+    "loc": 20
+  },
+  {
+    "task_id": "BigCodeBench/870",
+    "cc_mean": 6.0,
+    "cc_max": 6,
+    "cognitive_complexity": 4.0,
+    "mi_score": 100.0,
+    "loc": 15
+  },
+  {
+    "task_id": "BigCodeBench/871",
+    "cc_mean": 6.0,
+    "cc_max": 6,
+    "cognitive_complexity": 5.0,
+    "mi_score": 100.0,
+    "loc": 16
+  },
+  {
+    "task_id": "BigCodeBench/875",
+    "cc_mean": 6.0,
+    "cc_max": 6,
+    "cognitive_complexity": 12.0,
+    "mi_score": 48.66,
+    "loc": 13
+  },
+  {
+    "task_id": "BigCodeBench/885",
+    "cc_mean": 6.0,
+    "cc_max": 6,
+    "cognitive_complexity": 4.0,
+    "mi_score": 51.8,
+    "loc": 19
+  },
+  {
+    "task_id": "BigCodeBench/962",
+    "cc_mean": 6.0,
+    "cc_max": 6,
+    "cognitive_complexity": 8.0,
+    "mi_score": 83.03,
+    "loc": 25
+  },
+  {
+    "task_id": "BigCodeBench/978",
+    "cc_mean": 6.0,
+    "cc_max": 6,
+    "cognitive_complexity": 5.0,
+    "mi_score": 74.02,
+    "loc": 20
+  },
+  {
+    "task_id": "BigCodeBench/981",
+    "cc_mean": 6.0,
+    "cc_max": 6,
+    "cognitive_complexity": 4.0,
+    "mi_score": 78.22,
+    "loc": 24
+  },
+  {
+    "task_id": "BigCodeBench/986",
+    "cc_mean": 6.0,
+    "cc_max": 6,
+    "cognitive_complexity": 5.0,
+    "mi_score": 89.99,
+    "loc": 24
+  },
+  {
+    "task_id": "BigCodeBench/994",
+    "cc_mean": 6.0,
+    "cc_max": 6,
+    "cognitive_complexity": 8.0,
+    "mi_score": 100.0,
+    "loc": 20
+  },
+  {
+    "task_id": "BigCodeBench/1003",
+    "cc_mean": 6.0,
+    "cc_max": 6,
+    "cognitive_complexity": 4.0,
+    "mi_score": 85.42,
+    "loc": 22
+  },
+  {
+    "task_id": "BigCodeBench/1012",
+    "cc_mean": 6.0,
+    "cc_max": 6,
+    "cognitive_complexity": 5.0,
+    "mi_score": 85.83,
+    "loc": 26
+  },
+  {
+    "task_id": "BigCodeBench/1016",
+    "cc_mean": 6.0,
+    "cc_max": 6,
+    "cognitive_complexity": 5.0,
+    "mi_score": 84.91,
+    "loc": 25
+  },
+  {
+    "task_id": "BigCodeBench/1019",
+    "cc_mean": 6.0,
+    "cc_max": 6,
+    "cognitive_complexity": 7.0,
+    "mi_score": 100.0,
+    "loc": 23
+  },
+  {
+    "task_id": "BigCodeBench/1053",
+    "cc_mean": 6.0,
+    "cc_max": 6,
+    "cognitive_complexity": 4.0,
+    "mi_score": 100.0,
+    "loc": 27
+  },
+  {
+    "task_id": "BigCodeBench/1057",
+    "cc_mean": 6.0,
+    "cc_max": 6,
+    "cognitive_complexity": 4.0,
+    "mi_score": 84.03,
+    "loc": 15
+  },
+  {
+    "task_id": "BigCodeBench/1060",
+    "cc_mean": 6.0,
+    "cc_max": 6,
+    "cognitive_complexity": 4.0,
+    "mi_score": 77.93,
+    "loc": 20
+  },
+  {
+    "task_id": "BigCodeBench/1084",
+    "cc_mean": 6.0,
+    "cc_max": 6,
+    "cognitive_complexity": 3.0,
+    "mi_score": 83.29,
+    "loc": 20
+  },
+  {
+    "task_id": "BigCodeBench/1100",
+    "cc_mean": 6.0,
+    "cc_max": 6,
+    "cognitive_complexity": 1.0,
+    "mi_score": 65.94,
+    "loc": 11
+  },
+  {
+    "task_id": "BigCodeBench/5",
+    "cc_mean": 5.0,
+    "cc_max": 5,
+    "cognitive_complexity": 0.0,
+    "mi_score": 68.72,
+    "loc": 9
+  },
+  {
+    "task_id": "BigCodeBench/16",
+    "cc_mean": 5.0,
+    "cc_max": 5,
+    "cognitive_complexity": 4.0,
+    "mi_score": 83.22,
+    "loc": 17
+  },
+  {
+    "task_id": "BigCodeBench/18",
+    "cc_mean": 5.0,
+    "cc_max": 5,
+    "cognitive_complexity": 4.0,
+    "mi_score": 90.43,
+    "loc": 28
+  },
+  {
+    "task_id": "BigCodeBench/36",
+    "cc_mean": 5.0,
+    "cc_max": 5,
+    "cognitive_complexity": 7.0,
+    "mi_score": 84.59,
+    "loc": 24
+  },
+  {
+    "task_id": "BigCodeBench/55",
+    "cc_mean": 5.0,
+    "cc_max": 5,
+    "cognitive_complexity": 3.0,
+    "mi_score": 81.52,
+    "loc": 15
+  },
+  {
+    "task_id": "BigCodeBench/104",
+    "cc_mean": 5.0,
+    "cc_max": 5,
+    "cognitive_complexity": 3.0,
+    "mi_score": 76.86,
+    "loc": 18
+  },
+  {
+    "task_id": "BigCodeBench/107",
+    "cc_mean": 5.0,
+    "cc_max": 5,
+    "cognitive_complexity": 3.0,
+    "mi_score": 79.2,
+    "loc": 21
+  },
+  {
+    "task_id": "BigCodeBench/117",
+    "cc_mean": 5.0,
+    "cc_max": 5,
+    "cognitive_complexity": 4.0,
+    "mi_score": 65.55,
+    "loc": 21
+  },
+  {
+    "task_id": "BigCodeBench/120",
+    "cc_mean": 5.0,
+    "cc_max": 5,
+    "cognitive_complexity": 2.0,
+    "mi_score": 53.09,
+    "loc": 13
+  },
+  {
+    "task_id": "BigCodeBench/124",
+    "cc_mean": 5.0,
+    "cc_max": 5,
+    "cognitive_complexity": 2.0,
+    "mi_score": 76.22,
+    "loc": 21
+  },
+  {
+    "task_id": "BigCodeBench/127",
+    "cc_mean": 5.0,
+    "cc_max": 5,
+    "cognitive_complexity": 6.0,
+    "mi_score": 78.02,
+    "loc": 17
+  },
+  {
+    "task_id": "BigCodeBench/139",
+    "cc_mean": 5.0,
+    "cc_max": 5,
+    "cognitive_complexity": 4.0,
+    "mi_score": 85.94,
+    "loc": 18
+  },
+  {
+    "task_id": "BigCodeBench/144",
+    "cc_mean": 5.0,
+    "cc_max": 5,
+    "cognitive_complexity": 6.0,
+    "mi_score": 86.85,
+    "loc": 17
+  },
+  {
+    "task_id": "BigCodeBench/161",
+    "cc_mean": 5.0,
+    "cc_max": 5,
+    "cognitive_complexity": 7.0,
+    "mi_score": 94.46,
+    "loc": 24
+  },
+  {
+    "task_id": "BigCodeBench/186",
+    "cc_mean": 5.0,
+    "cc_max": 5,
+    "cognitive_complexity": 4.0,
+    "mi_score": 82.82,
+    "loc": 15
+  },
+  {
+    "task_id": "BigCodeBench/190",
+    "cc_mean": 5.0,
+    "cc_max": 5,
+    "cognitive_complexity": 3.0,
+    "mi_score": 100.0,
+    "loc": 24
+  },
+  {
+    "task_id": "BigCodeBench/200",
+    "cc_mean": 5.0,
+    "cc_max": 5,
+    "cognitive_complexity": 1.0,
+    "mi_score": 80.16,
+    "loc": 17
+  },
+  {
+    "task_id": "BigCodeBench/214",
+    "cc_mean": 5.0,
+    "cc_max": 5,
+    "cognitive_complexity": 7.0,
+    "mi_score": 90.6,
+    "loc": 19
+  },
+  {
+    "task_id": "BigCodeBench/223",
+    "cc_mean": 5.0,
+    "cc_max": 5,
+    "cognitive_complexity": 5.0,
+    "mi_score": 63.28,
+    "loc": 15
+  },
+  {
+    "task_id": "BigCodeBench/242",
+    "cc_mean": 5.0,
+    "cc_max": 5,
+    "cognitive_complexity": 4.0,
+    "mi_score": 81.33,
+    "loc": 19
+  },
+  {
+    "task_id": "BigCodeBench/263",
+    "cc_mean": 5.0,
+    "cc_max": 5,
+    "cognitive_complexity": 7.0,
+    "mi_score": 82.11,
+    "loc": 15
+  },
+  {
+    "task_id": "BigCodeBench/286",
+    "cc_mean": 5.0,
+    "cc_max": 5,
+    "cognitive_complexity": 5.0,
+    "mi_score": 89.11,
+    "loc": 24
+  },
+  {
+    "task_id": "BigCodeBench/290",
+    "cc_mean": 5.0,
+    "cc_max": 5,
+    "cognitive_complexity": 3.0,
+    "mi_score": 91.25,
+    "loc": 16
+  },
+  {
+    "task_id": "BigCodeBench/299",
+    "cc_mean": 5.0,
+    "cc_max": 5,
+    "cognitive_complexity": 2.0,
+    "mi_score": 74.52,
+    "loc": 14
+  },
+  {
+    "task_id": "BigCodeBench/310",
+    "cc_mean": 5.0,
+    "cc_max": 5,
+    "cognitive_complexity": 0.0,
+    "mi_score": 90.12,
+    "loc": 17
+  },
+  {
+    "task_id": "BigCodeBench/313",
+    "cc_mean": 5.0,
+    "cc_max": 5,
+    "cognitive_complexity": 9.0,
+    "mi_score": 86.76,
+    "loc": 22
+  },
+  {
+    "task_id": "BigCodeBench/338",
+    "cc_mean": 5.0,
+    "cc_max": 5,
+    "cognitive_complexity": 8.0,
+    "mi_score": 81.01,
+    "loc": 21
+  },
+  {
+    "task_id": "BigCodeBench/343",
+    "cc_mean": 5.0,
+    "cc_max": 5,
+    "cognitive_complexity": 3.0,
+    "mi_score": 61.78,
+    "loc": 13
+  },
+  {
+    "task_id": "BigCodeBench/345",
+    "cc_mean": 5.0,
+    "cc_max": 5,
+    "cognitive_complexity": 2.0,
+    "mi_score": 51.2,
+    "loc": 8
+  },
+  {
+    "task_id": "BigCodeBench/346",
+    "cc_mean": 5.0,
+    "cc_max": 5,
+    "cognitive_complexity": 6.0,
+    "mi_score": 80.44,
+    "loc": 17
+  },
+  {
+    "task_id": "BigCodeBench/367",
+    "cc_mean": 5.0,
+    "cc_max": 5,
+    "cognitive_complexity": 2.0,
+    "mi_score": 89.13,
+    "loc": 20
+  },
+  {
+    "task_id": "BigCodeBench/378",
+    "cc_mean": 5.0,
+    "cc_max": 5,
+    "cognitive_complexity": 5.0,
+    "mi_score": 76.49,
+    "loc": 23
+  }
+]

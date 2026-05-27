@@ -1,0 +1,212 @@
+{
+  "input_record_count": 40,
+  "aggregation": {
+    "overview": {
+      "label": "all",
+      "total_runs": 40,
+      "unique_tasks": 40,
+      "task_ids": [
+        "BigCodeBench/1015",
+        "BigCodeBench/1026",
+        "BigCodeBench/1028",
+        "BigCodeBench/1040",
+        "BigCodeBench/129",
+        "BigCodeBench/177",
+        "BigCodeBench/193",
+        "BigCodeBench/350",
+        "BigCodeBench/356",
+        "BigCodeBench/384",
+        "BigCodeBench/424",
+        "BigCodeBench/458",
+        "BigCodeBench/482",
+        "BigCodeBench/491",
+        "BigCodeBench/493",
+        "BigCodeBench/501",
+        "BigCodeBench/507",
+        "BigCodeBench/518",
+        "BigCodeBench/520",
+        "BigCodeBench/522",
+        "BigCodeBench/524",
+        "BigCodeBench/655",
+        "BigCodeBench/746",
+        "BigCodeBench/75",
+        "BigCodeBench/752",
+        "BigCodeBench/764",
+        "BigCodeBench/780",
+        "BigCodeBench/811",
+        "BigCodeBench/819",
+        "BigCodeBench/84",
+        "BigCodeBench/854",
+        "BigCodeBench/864",
+        "BigCodeBench/879",
+        "BigCodeBench/900",
+        "BigCodeBench/95",
+        "BigCodeBench/960",
+        "BigCodeBench/964",
+        "BigCodeBench/985",
+        "BigCodeBench/988",
+        "BigCodeBench/989"
+      ],
+      "profiles": [
+        "ours_from_ref"
+      ],
+      "datasets": [
+        "bigcodebench"
+      ],
+      "source_files": [],
+      "workflow_success_rate": 0.55,
+      "test_pass_rate": 0.575,
+      "evaluation_pass_rate": 0.55,
+      "avg_green_attempts": 0.0,
+      "avg_same_error_streak": 0.425,
+      "avg_iteration": 0.625,
+      "avg_failed_rule_count": 0.0,
+      "avg_activated_rule_count": 0.0,
+      "weak_equivalence": {
+        "coverage": 0.575,
+        "pass_rate": 0.391304347826087,
+        "count": 23
+      },
+      "strong_equivalence": {
+        "coverage": 0.575,
+        "pass_rate": 0.0,
+        "count": 23
+      },
+      "semantic_equivalence": {
+        "coverage": 0.575,
+        "pass_rate": 0.391304347826087,
+        "count": 23
+      },
+      "l2_refactor_rate": 0.125,
+      "l3_refactor_rate": 0.575,
+      "workflow_status_distribution": {
+        "failed": 18,
+        "success": 22
+      },
+      "stop_reason_distribution": {
+        "evaluation_passed": 22,
+        "max_refactor_retries": 1,
+        "test_failed": 17
+      },
+      "final_verdict_distribution": {
+        "fail": 1,
+        "pass": 22,
+        "unknown": 17
+      },
+      "dynamic_verdict_distribution": {
+        "fail": 1,
+        "pass": 22,
+        "unknown": 17
+      },
+      "static_verdict_distribution": {
+        "pass": 23,
+        "unknown": 17
+      }
+    },
+    "group_by": "profile_dataset",
+    "groups": {
+      "ours_from_ref::bigcodebench": {
+        "label": "ours_from_ref::bigcodebench",
+        "total_runs": 40,
+        "unique_tasks": 40,
+        "task_ids": [
+          "BigCodeBench/1015",
+          "BigCodeBench/1026",
+          "BigCodeBench/1028",
+          "BigCodeBench/1040",
+          "BigCodeBench/129",
+          "BigCodeBench/177",
+          "BigCodeBench/193",
+          "BigCodeBench/350",
+          "BigCodeBench/356",
+          "BigCodeBench/384",
+          "BigCodeBench/424",
+          "BigCodeBench/458",
+          "BigCodeBench/482",
+          "BigCodeBench/491",
+          "BigCodeBench/493",
+          "BigCodeBench/501",
+          "BigCodeBench/507",
+          "BigCodeBench/518",
+          "BigCodeBench/520",
+          "BigCodeBench/522",
+          "BigCodeBench/524",
+          "BigCodeBench/655",
+          "BigCodeBench/746",
+          "BigCodeBench/75",
+          "BigCodeBench/752",
+          "BigCodeBench/764",
+          "BigCodeBench/780",
+          "BigCodeBench/811",
+          "BigCodeBench/819",
+          "BigCodeBench/84",
+          "BigCodeBench/854",
+          "BigCodeBench/864",
+          "BigCodeBench/879",
+          "BigCodeBench/900",
+          "BigCodeBench/95",
+          "BigCodeBench/960",
+          "BigCodeBench/964",
+          "BigCodeBench/985",
+          "BigCodeBench/988",
+          "BigCodeBench/989"
+        ],
+        "profiles": [
+          "ours_from_ref"
+        ],
+        "datasets": [
+          "bigcodebench"
+        ],
+        "source_files": [],
+        "workflow_success_rate": 0.55,
+        "test_pass_rate": 0.575,
+        "evaluation_pass_rate": 0.55,
+        "avg_green_attempts": 0.0,
+        "avg_same_error_streak": 0.425,
+        "avg_iteration": 0.625,
+        "avg_failed_rule_count": 0.0,
+        "avg_activated_rule_count": 0.0,
+        "weak_equivalence": {
+          "coverage": 0.575,
+          "pass_rate": 0.391304347826087,
+          "count": 23
+        },
+        "strong_equivalence": {
+          "coverage": 0.575,
+          "pass_rate": 0.0,
+          "count": 23
+        },
+        "semantic_equivalence": {
+          "coverage": 0.575,
+          "pass_rate": 0.391304347826087,
+          "count": 23
+        },
+        "l2_refactor_rate": 0.125,
+        "l3_refactor_rate": 0.575,
+        "workflow_status_distribution": {
+          "failed": 18,
+          "success": 22
+        },
+        "stop_reason_distribution": {
+          "evaluation_passed": 22,
+          "max_refactor_retries": 1,
+          "test_failed": 17
+        },
+        "final_verdict_distribution": {
+          "fail": 1,
+          "pass": 22,
+          "unknown": 17
+        },
+        "dynamic_verdict_distribution": {
+          "fail": 1,
+          "pass": 22,
+          "unknown": 17
+        },
+        "static_verdict_distribution": {
+          "pass": 23,
+          "unknown": 17
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "dataset_label": "bigcodebench",
+  "profile": "ours",
+  "manifest_name": "bigcodebench_highcc",
+  "manifest_description": "BigCodeBench tasks with reference solution CC >= 10 (high cyclomatic complexity, code debt validation set)",
+  "task_count": 11,
+  "task_ids": [
+    "BigCodeBench/84",
+    "BigCodeBench/193",
+    "BigCodeBench/458",
+    "BigCodeBench/524",
+    "BigCodeBench/129",
+    "BigCodeBench/507",
+    "BigCodeBench/964",
+    "BigCodeBench/1040",
+    "BigCodeBench/655",
+    "BigCodeBench/985",
+    "BigCodeBench/989"
+  ],
+  "results_dir": "F:\\LLM\\LLM_learning\\results\\runs\\bigcodebench\\ours\\20260527_131916__ours__bigcodebench__bigcodebench_highcc__ours_ref_seed_highcc",
+  "seed_source": "reference",
+  "equivalence_mode": "weak"
+}

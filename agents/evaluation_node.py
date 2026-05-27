@@ -86,14 +86,16 @@ async def run(state: AgentState) -> AgentState:
 ```python
 {l3_code}
 ```""".strip()
-    static_data, used_llm, note, token_count = generate_with_outlines(
+    static_data, used_llm, note, tc = generate_with_outlines(
         prompt=static_prompt,
         output_model=StaticReviewOutput,
         fallback_data=heuristic_review,
     )
     static_review = StaticReviewOutput(**static_data)
     static_verdict = "pass" if static_review.passed else "fail"
-    final_verdict = "pass" if dynamic_verdict == "pass" and static_verdict == "pass" else "fail"
+    # static_verdict is recorded as a quality metric but does not gate workflow success;
+    # only dynamic correctness (both versions pass tests) determines the verdict.
+    final_verdict = "pass" if dynamic_verdict == "pass" else "fail"
 
     trace_feedback = summarize_trace_difference(original_trace, refactored_trace)
     if final_verdict == "pass":
@@ -130,7 +132,9 @@ async def run(state: AgentState) -> AgentState:
         }
     )
 
-    accumulated_tokens = state.get("_task_tokens", 0) + token_count
+    accumulated_tokens = state.get("_task_tokens", 0) + tc.total
+    accumulated_input = state.get("_task_input_tokens", 0) + tc.input
+    accumulated_output = state.get("_task_output_tokens", 0) + tc.output
     llm_calls = state.get("_task_llm_calls", 0) + 1
 
     comments = [*state.get("review_comments", [])]
@@ -148,6 +152,8 @@ async def run(state: AgentState) -> AgentState:
         "failed_rule_ids": static_review.failed_rule_ids,
         "refactor_feedback": refactor_feedback,
         "_task_tokens": accumulated_tokens,
+        "_task_input_tokens": accumulated_input,
+        "_task_output_tokens": accumulated_output,
         "_task_llm_calls": llm_calls,
         "review_comments": comments,
     }

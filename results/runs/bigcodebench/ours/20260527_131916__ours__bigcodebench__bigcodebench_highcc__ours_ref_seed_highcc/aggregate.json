@@ -1,0 +1,150 @@
+{
+  "input_record_count": 11,
+  "aggregation": {
+    "overview": {
+      "label": "all",
+      "total_runs": 11,
+      "unique_tasks": 11,
+      "task_ids": [
+        "BigCodeBench/1040",
+        "BigCodeBench/129",
+        "BigCodeBench/193",
+        "BigCodeBench/458",
+        "BigCodeBench/507",
+        "BigCodeBench/524",
+        "BigCodeBench/655",
+        "BigCodeBench/84",
+        "BigCodeBench/964",
+        "BigCodeBench/985",
+        "BigCodeBench/989"
+      ],
+      "profiles": [
+        "ours"
+      ],
+      "datasets": [
+        "bigcodebench"
+      ],
+      "source_files": [],
+      "workflow_success_rate": 0.6363636363636364,
+      "test_pass_rate": 0.6363636363636364,
+      "evaluation_pass_rate": 0.6363636363636364,
+      "avg_green_attempts": 2.272727272727273,
+      "avg_same_error_streak": 0.45454545454545453,
+      "avg_iteration": 0.6363636363636364,
+      "avg_failed_rule_count": 0.0,
+      "avg_activated_rule_count": 0.0,
+      "weak_equivalence": {
+        "coverage": 0.6363636363636364,
+        "pass_rate": 0.2857142857142857,
+        "count": 7
+      },
+      "strong_equivalence": {
+        "coverage": 0.6363636363636364,
+        "pass_rate": 0.0,
+        "count": 7
+      },
+      "semantic_equivalence": {
+        "coverage": 0.6363636363636364,
+        "pass_rate": 0.2857142857142857,
+        "count": 7
+      },
+      "l2_refactor_rate": 0.09090909090909091,
+      "l3_refactor_rate": 0.6363636363636364,
+      "workflow_status_distribution": {
+        "failed": 4,
+        "success": 7
+      },
+      "stop_reason_distribution": {
+        "evaluation_passed": 7,
+        "max_green_attempts": 3,
+        "same_error_streak_limit": 1
+      },
+      "final_verdict_distribution": {
+        "pass": 7,
+        "unknown": 4
+      },
+      "dynamic_verdict_distribution": {
+        "pass": 7,
+        "unknown": 4
+      },
+      "static_verdict_distribution": {
+        "pass": 7,
+        "unknown": 4
+      }
+    },
+    "group_by": "profile_dataset",
+    "groups": {
+      "ours::bigcodebench": {
+        "label": "ours::bigcodebench",
+        "total_runs": 11,
+        "unique_tasks": 11,
+        "task_ids": [
+          "BigCodeBench/1040",
+          "BigCodeBench/129",
+          "BigCodeBench/193",
+          "BigCodeBench/458",
+          "BigCodeBench/507",
+          "BigCodeBench/524",
+          "BigCodeBench/655",
+          "BigCodeBench/84",
+          "BigCodeBench/964",
+          "BigCodeBench/985",
+          "BigCodeBench/989"
+        ],
+        "profiles": [
+          "ours"
+        ],
+        "datasets": [
+          "bigcodebench"
+        ],
+        "source_files": [],
+        "workflow_success_rate": 0.6363636363636364,
+        "test_pass_rate": 0.6363636363636364,
+        "evaluation_pass_rate": 0.6363636363636364,
+        "avg_green_attempts": 2.272727272727273,
+        "avg_same_error_streak": 0.45454545454545453,
+        "avg_iteration": 0.6363636363636364,
+        "avg_failed_rule_count": 0.0,
+        "avg_activated_rule_count": 0.0,
+        "weak_equivalence": {
+          "coverage": 0.6363636363636364,
+          "pass_rate": 0.2857142857142857,
+          "count": 7
+        },
+        "strong_equivalence": {
+          "coverage": 0.6363636363636364,
+          "pass_rate": 0.0,
+          "count": 7
+        },
+        "semantic_equivalence": {
+          "coverage": 0.6363636363636364,
+          "pass_rate": 0.2857142857142857,
+          "count": 7
+        },
+        "l2_refactor_rate": 0.09090909090909091,
+        "l3_refactor_rate": 0.6363636363636364,
+        "workflow_status_distribution": {
+          "failed": 4,
+          "success": 7
+        },
+        "stop_reason_distribution": {
+          "evaluation_passed": 7,
+          "max_green_attempts": 3,
+          "same_error_streak_limit": 1
+        },
+        "final_verdict_distribution": {
+          "pass": 7,
+          "unknown": 4
+        },
+        "dynamic_verdict_distribution": {
+          "pass": 7,
+          "unknown": 4
+        },
+        "static_verdict_distribution": {
+          "pass": 7,
+          "unknown": 4
+        }
+      }
+    }
+  }
+}

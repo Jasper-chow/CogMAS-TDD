@@ -14,6 +14,7 @@ LDB 执行引擎（简化版）。
 """
 
 import ctypes
+import os
 import sys
 import tempfile
 import threading
@@ -22,6 +23,11 @@ import uuid
 from importlib import util as importlib_util
 from pathlib import Path
 from types import FrameType
+
+# Force non-interactive matplotlib backend so BigCodeBench tasks that import
+# matplotlib don't crash with "main thread is not in main loop" when executed
+# from worker threads.
+os.environ.setdefault("MPLBACKEND", "Agg")
 from typing import Any, Callable
 
 # LLM 生成的代码可能包含死循环，必须限制单次执行时长。
@@ -128,7 +134,23 @@ def _execute_code_with_trace_inner(code: str, test_cases: str) -> dict[str, Any]
                 for name in dir(test_module)
                 if name.startswith("test_") and callable(getattr(test_module, name))
             ]
-            if not test_functions:
+
+            # Also collect unittest.TestCase subclasses (e.g. BigCodeBench format).
+            import unittest as _unittest
+            unittest_suite = _unittest.TestSuite()
+            for _name in dir(test_module):
+                _obj = getattr(test_module, _name)
+                try:
+                    if (
+                        isinstance(_obj, type)
+                        and issubclass(_obj, _unittest.TestCase)
+                        and _obj is not _unittest.TestCase
+                    ):
+                        unittest_suite.addTests(_unittest.TestLoader().loadTestsFromTestCase(_obj))
+                except TypeError:
+                    pass
+
+            if not test_functions and unittest_suite.countTestCases() == 0:
                 return {
                     "passed": False,
                     "error": "no test_ functions found for trace execution",
@@ -138,6 +160,13 @@ def _execute_code_with_trace_inner(code: str, test_cases: str) -> dict[str, Any]
             def _runner() -> None:
                 for test_func in test_functions:
                     test_func()
+                if unittest_suite.countTestCases() > 0:
+                    runner = _unittest.TextTestRunner(stream=open(os.devnull, "w"), verbosity=0)
+                    result = runner.run(unittest_suite)
+                    if not result.wasSuccessful():
+                        failures = result.failures + result.errors
+                        msg = failures[0][1] if failures else "unittest failed"
+                        raise AssertionError(msg)
 
             trace = trace_function(_runner)
             return {"passed": True, "error": "", "trace": trace}

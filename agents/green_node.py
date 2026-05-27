@@ -121,19 +121,23 @@ async def run(state: AgentState) -> AgentState:
                 f"- code: the complete corrected Python implementation\n"
                 f"- explanation: brief description of what you fixed"
             )
-    data, used_llm, note, token_count = generate_with_outlines(
+    data, used_llm, note, tc = generate_with_outlines(
         prompt=prompt,
         output_model=GreenNodeOutput,
         fallback_data=fallback.model_dump(),
     )
     output = GreenNodeOutput(**data)
-    accumulated_tokens = state.get("_task_tokens", 0) + token_count
+    accumulated_tokens = state.get("_task_tokens", 0) + tc.total
+    accumulated_input = state.get("_task_input_tokens", 0) + tc.input
+    accumulated_output = state.get("_task_output_tokens", 0) + tc.output
     llm_calls = state.get("_task_llm_calls", 0) + 1
     return {
         "code": output.code,
         "green_output": output.model_dump(),
         "green_attempts": state.get("green_attempts", 0) + 1,
         "_task_tokens": accumulated_tokens,
+        "_task_input_tokens": accumulated_input,
+        "_task_output_tokens": accumulated_output,
         "_task_llm_calls": llm_calls,
         "review_comments": [
             *state.get("review_comments", []),

@@ -1,0 +1,29 @@
+{
+  "dataset": "humaneval_plus",
+  "profile": "ablation_no_l2l3",
+  "manifest_name": "humaneval_plus_full",
+  "seed_source": "empty",
+  "run_dir": "F:\\LLM\\LLM_learning\\results\\runs\\humaneval_plus\\ablation_no_l2l3\\20260526_135435__ablation_no_l2l3__humaneval_plus__humaneval_plus_full",
+  "total_tasks": 164,
+  "workflow_success_rate": 0.8475609756097561,
+  "test_pass_rate": 0.8536585365853658,
+  "avg_green_attempts": 1.6219512195121952,
+  "avg_iteration": 0.8658536585365854,
+  "avg_wall_seconds": 44.153,
+  "avg_tokens": 5086.1,
+  "avg_llm_calls": 8.13,
+  "avg_cr_score": 3.57,
+  "cr_initial_findings_total": 472,
+  "cr_findings_resolved_total": 0,
+  "findings_resolved_rate": 0.0,
+  "official_humaneval_eval": {
+    "sample_file": "F:\\LLM\\LLM_learning\\results\\runs\\humaneval_plus\\ablation_no_l2l3\\20260526_135435__ablation_no_l2l3__humaneval_plus__humaneval_plus_full\\humaneval_samples.jsonl",
+    "problem_file": "F:\\LLM\\LLM_learning\\human-eval\\data\\HumanEval.jsonl.gz",
+    "sample_count": 164,
+    "task_count": 164,
+    "passed_count": 139,
+    "pass_metrics": {
+      "pass@1": 0.8475609756097561
+    }
+  }
+}

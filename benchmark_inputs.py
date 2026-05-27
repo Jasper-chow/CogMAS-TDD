@@ -220,6 +220,49 @@ def load_humaneval_tasks(
     return tasks
 
 
+def load_bigcodebench_tasks(
+    *,
+    split: str = "v0.1.2",
+    offset: int = 0,
+    limit: int | None = None,
+    task_ids: list[str] | None = None,
+) -> list[BenchmarkTask]:
+    """Load tasks from BigCodeBench (function-level, complex real-world APIs)."""
+    try:
+        from datasets import load_dataset  # type: ignore[import]
+    except ImportError as exc:
+        raise ImportError(
+            "datasets is required for BigCodeBench. Install with: uv add datasets"
+        ) from exc
+
+    ds = load_dataset("bigcode/bigcodebench", split=split)
+    raw_items = list(ds)
+    selected = _iter_filtered(
+        raw_items,
+        offset=offset,
+        limit=limit,
+        task_ids=set(task_ids or []),
+    )
+    tasks: list[BenchmarkTask] = []
+    for item in selected:
+        task_id = str(item["task_id"])
+        # complete_prompt = imports + signature + docstring; canonical_solution = body
+        reference_code = item["complete_prompt"] + item["canonical_solution"]
+        tasks.append(
+            BenchmarkTask(
+                dataset_name="bigcodebench",
+                task_id=task_id,
+                requirement=item["instruct_prompt"],
+                entry_point=item["entry_point"],
+                test_cases=item["test"],
+                reference_code=reference_code,
+                seed_code=item["code_prompt"],
+                metadata={"libs": item.get("libs", [])},
+            )
+        )
+    return tasks
+
+
 def load_benchmark_tasks(
     dataset_name: str,
     *,
@@ -245,6 +288,12 @@ def load_benchmark_tasks(
         )
     if lowered == "humaneval_plus":
         return load_humaneval_plus_tasks(
+            offset=offset,
+            limit=limit,
+            task_ids=task_ids,
+        )
+    if lowered == "bigcodebench":
+        return load_bigcodebench_tasks(
             offset=offset,
             limit=limit,
             task_ids=task_ids,

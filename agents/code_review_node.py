@@ -23,7 +23,7 @@ from typing import Any
 from pydantic import BaseModel
 
 from state import AgentState
-from utils.helpers import generate_with_outlines
+from utils.helpers import TokenUsage, generate_with_outlines
 
 NODE_NAME = "code_review_node"
 
@@ -44,7 +44,7 @@ def _load_cisq_rules() -> dict[str, list[dict[str, str]]]:
         "maintainability": [],
         "performance_efficiency": [],
     }
-    subset_path = Path(__file__).parent.parent / "knowledge" / "CISQ_mapping_python_benchmark_subset.json"
+    subset_path = Path(__file__).parent.parent / "knowledge" / "CISQ_mapping_python_algorithmic_subset.json"
     if not subset_path.exists():
         return rules_by_dim
     try:
@@ -142,16 +142,29 @@ async def _review_single_dimension(
 
     prompt = (
         f"You are a code quality reviewer specializing in {guide['label']}.\n\n"
+        f"CONTEXT: This is a pure algorithmic Python function (no file I/O, no network, no user input, "
+        f"no external resources). The function's inputs are guaranteed well-formed by the caller's tests. "
+        f"Do NOT flag missing input validation, missing try/except, or missing error-reporting unless "
+        f"a specific CISQ rule below explicitly applies to a pattern visible in this code.\n\n"
         f"Task requirement: {requirement}\n\n"
         f"Code to review:\n```python\n{code}\n```"
         f"{few_shot_section}"
         f"{cisq_block}\n\n"
         f"Review ONLY for {guide['label']} issues.\n"
         f"Key concerns: {guide['concerns']}\n\n"
-        f"Important rules:\n"
-        f"- Each finding MUST reference a specific line or pattern visible in the code above.\n"
-        f"- Do NOT invent issues that cannot be seen in the code.\n"
-        f"- Score 5 = no issues found. Score 1 = critical problems.\n"
+        f"Scoring rules (DEDUCTION-BASED):\n"
+        f"- Start from 5. Deduct 1 point for each distinct, real issue visible in the code above.\n"
+        f"- Minimum score is 1.\n"
+        f"- 0 issues → score MUST be 5.  1 issue → 4.  2 issues → 3.  3+ issues → 1-2.\n"
+        f"- MANDATORY: if your findings list is empty, your score MUST be 5. "
+        f"A low score with zero findings is a contradiction and will be overridden to 5.\n"
+        f"- Short, clean algorithmic functions often score 5. Do NOT manufacture issues to avoid giving 5.\n\n"
+        f"Rules:\n"
+        f"- Each finding MUST quote or reference a specific line or pattern visible in the code above.\n"
+        f"- Do NOT flag issues that require adding new code (e.g., input validation, try/except, raise) "
+        f"unless the existing code has a demonstrable bug due to missing handling.\n"
+        f"- Do NOT replace idiomatic Python (list comprehensions, generator expressions, built-in functions) "
+        f"with verbose loop equivalents — Pythonic code is correct and maintainable.\n"
         f"- needs_refactoring should be true only if score is 3 or below.\n\n"
         f"Return strict JSON:\n"
         f"- score: integer 1-5\n"
@@ -162,7 +175,7 @@ async def _review_single_dimension(
     )
 
     fallback = DimensionReview(
-        score=4, findings=[], suggestions=[], severity="none", needs_refactoring=False
+        score=3, findings=[], suggestions=[], severity="none", needs_refactoring=False
     )
     data, _, _, token_count = generate_with_outlines(
         prompt=prompt,
@@ -184,7 +197,7 @@ async def _verify_findings(
     只保留能在代码中找到具体证据的条目。
     """
     if not review.findings:
-        return review, 0
+        return review, TokenUsage()
 
     numbered = "\n".join(f"{i + 1}. {f}" for i, f in enumerate(review.findings))
 
@@ -220,12 +233,14 @@ async def _verify_findings(
     )
     verified_suggestions = [suggestions_src[i] for i in kept_idx]
 
+    # If all findings were filtered out as hallucinations, reset score to 5.
+    final_score = review.score if verified_findings else 5
     return DimensionReview(
-        score=review.score,
+        score=final_score,
         findings=verified_findings,
         suggestions=verified_suggestions,
         severity=review.severity if verified_findings else "none",
-        needs_refactoring=bool(verified_findings) and review.score <= 3,
+        needs_refactoring=bool(verified_findings) and final_score <= 3,
     ), token_count
 
 
@@ -254,16 +269,22 @@ async def run(state: AgentState) -> AgentState:
     few_shot = state.get("cr_few_shot_examples", "")
 
     accumulated_tokens = state.get("_task_tokens", 0)
+    accumulated_input = state.get("_task_input_tokens", 0)
+    accumulated_output = state.get("_task_output_tokens", 0)
     llm_calls = state.get("_task_llm_calls", 0)
 
     reviews: dict[str, DimensionReview] = {}
     for dim, guide in _DIMENSION_GUIDES.items():
         review_raw, tc_review = await _review_single_dimension(code, requirement, dim, guide, few_shot)
-        accumulated_tokens += tc_review
+        accumulated_tokens += tc_review.total
+        accumulated_input += tc_review.input
+        accumulated_output += tc_review.output
         llm_calls += 1
         had_findings = bool(review_raw.findings)
         review_verified, tc_verify = await _verify_findings(code, guide["label"], review_raw)
-        accumulated_tokens += tc_verify
+        accumulated_tokens += tc_verify.total
+        accumulated_input += tc_verify.input
+        accumulated_output += tc_verify.output
         if had_findings:
             llm_calls += 1
         reviews[dim] = review_verified
@@ -293,9 +314,15 @@ async def run(state: AgentState) -> AgentState:
         review_summary=summary,
     )
 
+    total_findings = sum(len(r.findings) for r in reviews.values())
+
     return {
         "code_review_report": report.model_dump(),
         "review_comments": comments,
+        "cr_initial_findings": total_findings,
+        "cr_findings_resolved": 0,
         "_task_tokens": accumulated_tokens,
+        "_task_input_tokens": accumulated_input,
+        "_task_output_tokens": accumulated_output,
         "_task_llm_calls": llm_calls,
     }

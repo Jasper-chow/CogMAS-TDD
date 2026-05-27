@@ -1,0 +1,19 @@
+{
+  "dataset": "bigcodebench",
+  "profile": "b2_error_feedback",
+  "manifest_name": "bigcodebench_complex_3.0cc",
+  "seed_source": "empty",
+  "run_dir": "F:\\LLM\\LLM_learning\\results\\runs\\bigcodebench\\b2_error_feedback\\20260526_234250__b2_error_feedback__bigcodebench__bigcodebench_complex_3.0cc",
+  "total_tasks": 150,
+  "workflow_success_rate": 0.31333333333333335,
+  "test_pass_rate": 0.31333333333333335,
+  "avg_green_attempts": 3.18,
+  "avg_iteration": 0.0,
+  "avg_wall_seconds": 34.975,
+  "avg_tokens": 5788.9,
+  "avg_llm_calls": 3.18,
+  "avg_cr_score": 0.0,
+  "cr_initial_findings_total": 0,
+  "cr_findings_resolved_total": 0,
+  "findings_resolved_rate": 0.0
+}

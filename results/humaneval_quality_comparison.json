@@ -1,0 +1,3237 @@
+{
+  "ours_quality": {
+    "HumanEval/0": {
+      "cc_mean": 6.0,
+      "cc_max": 6,
+      "cognitive_complexity": 6.0,
+      "mi_score": 62.36,
+      "loc": 11,
+      "pylint_score": 9.09,
+      "bandit_issues": 0
+    },
+    "HumanEval/1": {
+      "cc_mean": 6.0,
+      "cc_max": 6,
+      "cognitive_complexity": 8.0,
+      "mi_score": 60.68,
+      "loc": 17,
+      "pylint_score": 8.24,
+      "bandit_issues": 0
+    },
+    "HumanEval/2": {
+      "cc_mean": 2.0,
+      "cc_max": 2,
+      "cognitive_complexity": 1.0,
+      "mi_score": 74.66,
+      "loc": 5,
+      "pylint_score": 8.0,
+      "bandit_issues": 0
+    },
+    "HumanEval/3": {
+      "cc_mean": 2.0,
+      "cc_max": 2,
+      "cognitive_complexity": 0.0,
+      "mi_score": 81.86,
+      "loc": 4,
+      "pylint_score": 7.5,
+      "bandit_issues": 0
+    },
+    "HumanEval/4": {
+      "cc_mean": 2.5,
+      "cc_max": 3,
+      "cognitive_complexity": 1.0,
+      "mi_score": 64.35,
+      "loc": 12,
+      "pylint_score": 8.33,
+      "bandit_issues": 0
+    },
+    "HumanEval/5": {
+      "cc_mean": 3.0,
+      "cc_max": 3,
+      "cognitive_complexity": 3.0,
+      "mi_score": 71.56,
+      "loc": 8,
+      "pylint_score": 8.75,
+      "bandit_issues": 0
+    },
+    "HumanEval/6": {
+      "cc_mean": 6.0,
+      "cc_max": 6,
+      "cognitive_complexity": 7.0,
+      "mi_score": 58.57,
+      "loc": 16,
+      "pylint_score": 8.12,
+      "bandit_issues": 0
+    },
+    "HumanEval/7": {
+      "cc_mean": 3.0,
+      "cc_max": 3,
+      "cognitive_complexity": 0.0,
+      "mi_score": 84.45,
+      "loc": 3,
+      "pylint_score": 6.67,
+      "bandit_issues": 0
+    },
+    "HumanEval/8": {
+      "cc_mean": 2.33,
+      "cc_max": 3,
+      "cognitive_complexity": 1.33,
+      "mi_score": 61.98,
+      "loc": 17,
+      "pylint_score": 9.41,
+      "bandit_issues": 0
+    },
+    "HumanEval/9": {
+      "cc_mean": 4.0,
+      "cc_max": 4,
+      "cognitive_complexity": 4.0,
+      "mi_score": 69.29,
+      "loc": 11,
+      "pylint_score": 8.18,
+      "bandit_issues": 0
+    },
+    "HumanEval/10": {
+      "cc_mean": 3.0,
+      "cc_max": 5,
+      "cognitive_complexity": 2.5,
+      "mi_score": 61.55,
+      "loc": 15,
+      "pylint_score": 9.17,
+      "bandit_issues": 0
+    },
+    "HumanEval/11": {
+      "cc_mean": 9.0,
+      "cc_max": 9,
+      "cognitive_complexity": 5.0,
+      "mi_score": 86.8,
+      "loc": 7,
+      "pylint_score": 5.71,
+      "bandit_issues": 0
+    },
+    "HumanEval/12": {
+      "cc_mean": null,
+      "cc_max": null,
+      "cognitive_complexity": null,
+      "mi_score": null,
+      "loc": null,
+      "pylint_score": null,
+      "bandit_issues": 0
+    },
+    "HumanEval/13": {
+      "cc_mean": 2.0,
+      "cc_max": 2,
+      "cognitive_complexity": 1.0,
+      "mi_score": 81.86,
+      "loc": 4,
+      "pylint_score": 7.5,
+      "bandit_issues": 0
+    },
+    "HumanEval/14": {
+      "cc_mean": 2.0,
+      "cc_max": 2,
+      "cognitive_complexity": 0.0,
+      "mi_score": 81.86,
+      "loc": 4,
+      "pylint_score": 6.67,
+      "bandit_issues": 0
+    },
+    "HumanEval/15": {
+      "cc_mean": 1.0,
+      "cc_max": 1,
+      "cognitive_complexity": 0.0,
+      "mi_score": 88.56,
+      "loc": 2,
+      "pylint_score": 5.0,
+      "bandit_issues": 0
+    },
+    "HumanEval/16": {
+      "cc_mean": 1.0,
+      "cc_max": 1,
+      "cognitive_complexity": 0.0,
+      "mi_score": 100.0,
+      "loc": 4,
+      "pylint_score": 7.5,
+      "bandit_issues": 0
+    },
+    "HumanEval/17": {
+      "cc_mean": 4.0,
+      "cc_max": 4,
+      "cognitive_complexity": 2.0,
+      "mi_score": 69.29,
+      "loc": 11,
+      "pylint_score": 9.0,
+      "bandit_issues": 0
+    },
+    "HumanEval/18": {
+      "cc_mean": 6.0,
+      "cc_max": 6,
+      "cognitive_complexity": 6.0,
+      "mi_score": 60.51,
+      "loc": 14,
+      "pylint_score": 9.29,
+      "bandit_issues": 0
+    },
+    "HumanEval/19": {
+      "cc_mean": 1.0,
+      "cc_max": 1,
+      "cognitive_complexity": 0.0,
+      "mi_score": 100.0,
+      "loc": 7,
+      "pylint_score": 4.0,
+      "bandit_issues": 0
+    },
+    "HumanEval/20": {
+      "cc_mean": 1.67,
+      "cc_max": 3,
+      "cognitive_complexity": 1.0,
+      "mi_score": 60.08,
+      "loc": 17,
+      "pylint_score": 4.71,
+      "bandit_issues": 0
+    },
+    "HumanEval/21": {
+      "cc_mean": 4.0,
+      "cc_max": 4,
+      "cognitive_complexity": 2.0,
+      "mi_score": 65.53,
+      "loc": 10,
+      "pylint_score": 9.0,
+      "bandit_issues": 0
+    },
+    "HumanEval/22": {
+      "cc_mean": 3.0,
+      "cc_max": 3,
+      "cognitive_complexity": 0.0,
+      "mi_score": 100.0,
+      "loc": 3,
+      "pylint_score": 6.67,
+      "bandit_issues": 0
+    },
+    "HumanEval/23": {
+      "cc_mean": 1.0,
+      "cc_max": 1,
+      "cognitive_complexity": 0.0,
+      "mi_score": 100.0,
+      "loc": 2,
+      "pylint_score": 5.0,
+      "bandit_issues": 0
+    },
+    "HumanEval/24": {
+      "cc_mean": 3.0,
+      "cc_max": 3,
+      "cognitive_complexity": 3.0,
+      "mi_score": 73.41,
+      "loc": 5,
+      "pylint_score": 8.0,
+      "bandit_issues": 0
+    },
+    "HumanEval/25": {
+      "cc_mean": 4.0,
+      "cc_max": 5,
+      "cognitive_complexity": 5.0,
+      "mi_score": 55.66,
+      "loc": 21,
+      "pylint_score": 9.52,
+      "bandit_issues": 0
+    },
+    "HumanEval/26": {
+      "cc_mean": 4.0,
+      "cc_max": 4,
+      "cognitive_complexity": 4.0,
+      "mi_score": 68.73,
+      "loc": 11,
+      "pylint_score": 9.0,
+      "bandit_issues": 0
+    },
+    "HumanEval/27": {
+      "cc_mean": 2.0,
+      "cc_max": 2,
+      "cognitive_complexity": 0.0,
+      "mi_score": 100.0,
+      "loc": 2,
+      "pylint_score": 5.0,
+      "bandit_issues": 0
+    },
+    "HumanEval/28": {
+      "cc_mean": 1.0,
+      "cc_max": 1,
+      "cognitive_complexity": 0.0,
+      "mi_score": 100.0,
+      "loc": 3,
+      "pylint_score": 6.67,
+      "bandit_issues": 0
+    },
+    "HumanEval/29": {
+      "cc_mean": 3.0,
+      "cc_max": 3,
+      "cognitive_complexity": 0.0,
+      "mi_score": 100.0,
+      "loc": 3,
+      "pylint_score": 6.67,
+      "bandit_issues": 0
+    },
+    "HumanEval/30": {
+      "cc_mean": 3.0,
+      "cc_max": 3,
+      "cognitive_complexity": 0.0,
+      "mi_score": 88.29,
+      "loc": 2,
+      "pylint_score": 5.0,
+      "bandit_issues": 0
+    },
+    "HumanEval/31": {
+      "cc_mean": 8.0,
+      "cc_max": 8,
+      "cognitive_complexity": 8.0,
+      "mi_score": 56.91,
+      "loc": 15,
+      "pylint_score": 8.0,
+      "bandit_issues": 0
+    },
+    "HumanEval/32": {
+      "cc_mean": 4.0,
+      "cc_max": 6,
+      "cognitive_complexity": 3.5,
+      "mi_score": 77.08,
+      "loc": 18,
+      "pylint_score": 8.24,
+      "bandit_issues": 0
+    },
+    "HumanEval/33": {
+      "cc_mean": 6.0,
+      "cc_max": 6,
+      "cognitive_complexity": 3.0,
+      "mi_score": 93.16,
+      "loc": 11,
+      "pylint_score": 9.09,
+      "bandit_issues": 0
+    },
+    "HumanEval/34": {
+      "cc_mean": 1.0,
+      "cc_max": 1,
+      "cognitive_complexity": 0.0,
+      "mi_score": 100.0,
+      "loc": 2,
+      "pylint_score": 5.0,
+      "bandit_issues": 0
+    },
+    "HumanEval/35": {
+      "cc_mean": 8.0,
+      "cc_max": 8,
+      "cognitive_complexity": 10.0,
+      "mi_score": 63.03,
+      "loc": 11,
+      "pylint_score": 9.09,
+      "bandit_issues": 0
+    },
+    "HumanEval/36": {
+      "cc_mean": 4.0,
+      "cc_max": 4,
+      "cognitive_complexity": 4.0,
+      "mi_score": 69.63,
+      "loc": 6,
+      "pylint_score": 8.33,
+      "bandit_issues": 0
+    },
+    "HumanEval/37": {
+      "cc_mean": 7.0,
+      "cc_max": 7,
+      "cognitive_complexity": 3.0,
+      "mi_score": 66.03,
+      "loc": 9,
+      "pylint_score": 8.89,
+      "bandit_issues": 0
+    },
+    "HumanEval/38": {
+      "cc_mean": null,
+      "cc_max": null,
+      "cognitive_complexity": null,
+      "mi_score": null,
+      "loc": null,
+      "pylint_score": null,
+      "bandit_issues": 0
+    },
+    "HumanEval/39": {
+      "cc_mean": 6.0,
+      "cc_max": 6,
+      "cognitive_complexity": 7.67,
+      "mi_score": 65.52,
+      "loc": 24,
+      "pylint_score": 9.17,
+      "bandit_issues": 0
+    },
+    "HumanEval/40": {
+      "cc_mean": 7.0,
+      "cc_max": 7,
+      "cognitive_complexity": 11.0,
+      "mi_score": 56.98,
+      "loc": 16,
+      "pylint_score": 8.67,
+      "bandit_issues": 0
+    },
+    "HumanEval/41": {
+      "cc_mean": 1.0,
+      "cc_max": 1,
+      "cognitive_complexity": 0.0,
+      "mi_score": 89.96,
+      "loc": 2,
+      "pylint_score": 5.0,
+      "bandit_issues": 0
+    },
+    "HumanEval/42": {
+      "cc_mean": 2.0,
+      "cc_max": 2,
+      "cognitive_complexity": 0.0,
+      "mi_score": 88.42,
+      "loc": 2,
+      "pylint_score": 5.0,
+      "bandit_issues": 0
+    },
+    "HumanEval/43": {
+      "cc_mean": 3.0,
+      "cc_max": 3,
+      "cognitive_complexity": 3.0,
+      "mi_score": 73.71,
+      "loc": 7,
+      "pylint_score": 8.57,
+      "bandit_issues": 0
+    },
+    "HumanEval/44": {
+      "cc_mean": 5.0,
+      "cc_max": 5,
+      "cognitive_complexity": 4.0,
+      "mi_score": 64.22,
+      "loc": 11,
+      "pylint_score": 9.0,
+      "bandit_issues": 0
+    },
+    "HumanEval/45": {
+      "cc_mean": null,
+      "cc_max": null,
+      "cognitive_complexity": null,
+      "mi_score": null,
+      "loc": null,
+      "pylint_score": null,
+      "bandit_issues": 0
+    },
+    "HumanEval/46": {
+      "cc_mean": 6.0,
+      "cc_max": 6,
+      "cognitive_complexity": 4.0,
+      "mi_score": 63.96,
+      "loc": 9,
+      "pylint_score": 6.67,
+      "bandit_issues": 0
+    },
+    "HumanEval/47": {
+      "cc_mean": 5.0,
+      "cc_max": 5,
+      "cognitive_complexity": 6.0,
+      "mi_score": 61.31,
+      "loc": 12,
+      "pylint_score": 8.18,
+      "bandit_issues": 0
+    },
+    "HumanEval/48": {
+      "cc_mean": 5.0,
+      "cc_max": 5,
+      "cognitive_complexity": 5.0,
+      "mi_score": 62.6,
+      "loc": 11,
+      "pylint_score": 9.09,
+      "bandit_issues": 0
+    },
+    "HumanEval/49": {
+      "cc_mean": null,
+      "cc_max": null,
+      "cognitive_complexity": null,
+      "mi_score": null,
+      "loc": null,
+      "pylint_score": null,
+      "bandit_issues": 0
+    },
+    "HumanEval/50": {
+      "cc_mean": null,
+      "cc_max": null,
+      "cognitive_complexity": null,
+      "mi_score": null,
+      "loc": null,
+      "pylint_score": null,
+      "bandit_issues": 0
+    },
+    "HumanEval/51": {
+      "cc_mean": 3.0,
+      "cc_max": 3,
+      "cognitive_complexity": 0.0,
+      "mi_score": 84.45,
+      "loc": 3,
+      "pylint_score": 6.67,
+      "bandit_issues": 0
+    },
+    "HumanEval/52": {
+      "cc_mean": null,
+      "cc_max": null,
+      "cognitive_complexity": null,
+      "mi_score": null,
+      "loc": null,
+      "pylint_score": null,
+      "bandit_issues": 0
+    },
+    "HumanEval/53": {
+      "cc_mean": null,
+      "cc_max": null,
+      "cognitive_complexity": null,
+      "mi_score": null,
+      "loc": null,
+      "pylint_score": null,
+      "bandit_issues": 0
+    },
+    "HumanEval/54": {
+      "cc_mean": 3.0,
+      "cc_max": 3,
+      "cognitive_complexity": 2.0,
+      "mi_score": 75.26,
+      "loc": 4,
+      "pylint_score": 7.5,
+      "bandit_issues": 0
+    },
+    "HumanEval/55": {
+      "cc_mean": 5.0,
+      "cc_max": 5,
+      "cognitive_complexity": 6.0,
+      "mi_score": 64.04,
+      "loc": 12,
+      "pylint_score": 4.55,
+      "bandit_issues": 0
+    },
+    "HumanEval/56": {
+      "cc_mean": null,
+      "cc_max": null,
+      "cognitive_complexity": null,
+      "mi_score": null,
+      "loc": null,
+      "pylint_score": null,
+      "bandit_issues": 0
+    },
+    "HumanEval/57": {
+      "cc_mean": 6.0,
+      "cc_max": 6,
+      "cognitive_complexity": 6.0,
+      "mi_score": 91.2,
+      "loc": 10,
+      "pylint_score": 9.0,
+      "bandit_issues": 0
+    },
+    "HumanEval/58": {
+      "cc_mean": 1.0,
+      "cc_max": 1,
+      "cognitive_complexity": 0.0,
+      "mi_score": 100.0,
+      "loc": 5,
+      "pylint_score": 8.0,
+      "bandit_issues": 0
+    },
+    "HumanEval/59": {
+      "cc_mean": 7.0,
+      "cc_max": 7,
+      "cognitive_complexity": 7.0,
+      "mi_score": 59.73,
+      "loc": 13,
+      "pylint_score": 8.33,
+      "bandit_issues": 0
+    },
+    "HumanEval/60": {
+      "cc_mean": 1.0,
+      "cc_max": 1,
+      "cognitive_complexity": 0.0,
+      "mi_score": 83.28,
+      "loc": 2,
+      "pylint_score": 5.0,
+      "bandit_issues": 0
+    },
+    "HumanEval/61": {
+      "cc_mean": 10.0,
+      "cc_max": 10,
+      "cognitive_complexity": 12.0,
+      "mi_score": 56.02,
+      "loc": 19,
+      "pylint_score": 7.37,
+      "bandit_issues": 0
+    },
+    "HumanEval/62": {
+      "cc_mean": 4.0,
+      "cc_max": 4,
+      "cognitive_complexity": 2.0,
+      "mi_score": 74.89,
+      "loc": 4,
+      "pylint_score": 7.5,
+      "bandit_issues": 0
+    },
+    "HumanEval/63": {
+      "cc_mean": 5.0,
+      "cc_max": 5,
+      "cognitive_complexity": 6.0,
+      "mi_score": 64.28,
+      "loc": 10,
+      "pylint_score": 6.67,
+      "bandit_issues": 0
+    },
+    "HumanEval/64": {
+      "cc_mean": 6.0,
+      "cc_max": 6,
+      "cognitive_complexity": 3.0,
+      "mi_score": 67.19,
+      "loc": 8,
+      "pylint_score": 8.75,
+      "bandit_issues": 0
+    },
+    "HumanEval/65": {
+      "cc_mean": 2.0,
+      "cc_max": 2,
+      "cognitive_complexity": 2.0,
+      "mi_score": 66.17,
+      "loc": 10,
+      "pylint_score": 7.14,
+      "bandit_issues": 0
+    },
+    "HumanEval/66": {
+      "cc_mean": 3.0,
+      "cc_max": 3,
+      "cognitive_complexity": 0.0,
+      "mi_score": 100.0,
+      "loc": 2,
+      "pylint_score": 0.0,
+      "bandit_issues": 0
+    },
+    "HumanEval/67": {
+      "cc_mean": 1.0,
+      "cc_max": 1,
+      "cognitive_complexity": 0.0,
+      "mi_score": 100.0,
+      "loc": 4,
+      "pylint_score": 5.0,
+      "bandit_issues": 0
+    },
+    "HumanEval/68": {
+      "cc_mean": 5.0,
+      "cc_max": 5,
+      "cognitive_complexity": 2.0,
+      "mi_score": 68.0,
+      "loc": 9,
+      "pylint_score": 8.75,
+      "bandit_issues": 0
+    },
+    "HumanEval/69": {
+      "cc_mean": 6.0,
+      "cc_max": 6,
+      "cognitive_complexity": 8.0,
+      "mi_score": 61.42,
+      "loc": 13,
+      "pylint_score": 8.33,
+      "bandit_issues": 0
+    },
+    "HumanEval/70": {
+      "cc_mean": 5.0,
+      "cc_max": 5,
+      "cognitive_complexity": 5.0,
+      "mi_score": 68.05,
+      "loc": 10,
+      "pylint_score": 9.0,
+      "bandit_issues": 0
+    },
+    "HumanEval/71": {
+      "cc_mean": 15.0,
+      "cc_max": 15,
+      "cognitive_complexity": 6.0,
+      "mi_score": 83.75,
+      "loc": 12,
+      "pylint_score": 5.83,
+      "bandit_issues": 0
+    },
+    "HumanEval/72": {
+      "cc_mean": 4.0,
+      "cc_max": 4,
+      "cognitive_complexity": 4.0,
+      "mi_score": 95.09,
+      "loc": 7,
+      "pylint_score": 8.57,
+      "bandit_issues": 0
+    },
+    "HumanEval/73": {
+      "cc_mean": 5.0,
+      "cc_max": 5,
+      "cognitive_complexity": 5.0,
+      "mi_score": 62.3,
+      "loc": 11,
+      "pylint_score": 9.09,
+      "bandit_issues": 0
+    },
+    "HumanEval/74": {
+      "cc_mean": 4.0,
+      "cc_max": 4,
+      "cognitive_complexity": 2.0,
+      "mi_score": 76.29,
+      "loc": 7,
+      "pylint_score": 6.67,
+      "bandit_issues": 0
+    },
+    "HumanEval/75": {
+      "cc_mean": 6.0,
+      "cc_max": 7,
+      "cognitive_complexity": 7.67,
+      "mi_score": 61.69,
+      "loc": 26,
+      "pylint_score": 8.85,
+      "bandit_issues": 0
+    },
+    "HumanEval/76": {
+      "cc_mean": 9.0,
+      "cc_max": 9,
+      "cognitive_complexity": 8.0,
+      "mi_score": 58.73,
+      "loc": 13,
+      "pylint_score": 9.23,
+      "bandit_issues": 0
+    },
+    "HumanEval/77": {
+      "cc_mean": 2.0,
+      "cc_max": 2,
+      "cognitive_complexity": 1.0,
+      "mi_score": 69.58,
+      "loc": 6,
+      "pylint_score": 8.33,
+      "bandit_issues": 0
+    },
+    "HumanEval/78": {
+      "cc_mean": 3.0,
+      "cc_max": 3,
+      "cognitive_complexity": 0.0,
+      "mi_score": 84.45,
+      "loc": 3,
+      "pylint_score": 6.67,
+      "bandit_issues": 0
+    },
+    "HumanEval/79": {
+      "cc_mean": 4.0,
+      "cc_max": 4,
+      "cognitive_complexity": 3.0,
+      "mi_score": 61.1,
+      "loc": 12,
+      "pylint_score": 9.0,
+      "bandit_issues": 0
+    },
+    "HumanEval/80": {
+      "cc_mean": 6.0,
+      "cc_max": 6,
+      "cognitive_complexity": 5.0,
+      "mi_score": 65.86,
+      "loc": 7,
+      "pylint_score": 8.57,
+      "bandit_issues": 0
+    },
+    "HumanEval/81": {
+      "cc_mean": 17.0,
+      "cc_max": 17,
+      "cognitive_complexity": 19.0,
+      "mi_score": 48.07,
+      "loc": 34,
+      "pylint_score": 9.39,
+      "bandit_issues": 0
+    },
+    "HumanEval/82": {
+      "cc_mean": 1.0,
+      "cc_max": 1,
+      "cognitive_complexity": 4.0,
+      "mi_score": 66.93,
+      "loc": 9,
+      "pylint_score": 8.89,
+      "bandit_issues": 0
+    },
+    "HumanEval/83": {
+      "cc_mean": 2.0,
+      "cc_max": 2,
+      "cognitive_complexity": 2.0,
+      "mi_score": 69.86,
+      "loc": 5,
+      "pylint_score": 5.0,
+      "bandit_issues": 0
+    },
+    "HumanEval/84": {
+      "cc_mean": 6.0,
+      "cc_max": 6,
+      "cognitive_complexity": 4.0,
+      "mi_score": 65.58,
+      "loc": 10,
+      "pylint_score": 7.78,
+      "bandit_issues": 0
+    },
+    "HumanEval/85": {
+      "cc_mean": 3.0,
+      "cc_max": 3,
+      "cognitive_complexity": 3.0,
+      "mi_score": 72.43,
+      "loc": 6,
+      "pylint_score": 8.33,
+      "bandit_issues": 0
+    },
+    "HumanEval/86": {
+      "cc_mean": 2.0,
+      "cc_max": 2,
+      "cognitive_complexity": 2.0,
+      "mi_score": 100.0,
+      "loc": 7,
+      "pylint_score": 6.67,
+      "bandit_issues": 0
+    },
+    "HumanEval/87": {
+      "cc_mean": 1.0,
+      "cc_max": 1,
+      "cognitive_complexity": 5.0,
+      "mi_score": 69.69,
+      "loc": 11,
+      "pylint_score": 9.0,
+      "bandit_issues": 0
+    },
+    "HumanEval/88": {
+      "cc_mean": 4.0,
+      "cc_max": 4,
+      "cognitive_complexity": 4.0,
+      "mi_score": 62.23,
+      "loc": 13,
+      "pylint_score": 8.18,
+      "bandit_issues": 0
+    },
+    "HumanEval/89": {
+      "cc_mean": 6.0,
+      "cc_max": 6,
+      "cognitive_complexity": 7.0,
+      "mi_score": 74.77,
+      "loc": 14,
+      "pylint_score": 8.46,
+      "bandit_issues": 0
+    },
+    "HumanEval/90": {
+      "cc_mean": 3.0,
+      "cc_max": 3,
+      "cognitive_complexity": 2.0,
+      "mi_score": 73.61,
+      "loc": 7,
+      "pylint_score": 8.57,
+      "bandit_issues": 0
+    },
+    "HumanEval/91": {
+      "cc_mean": 6.0,
+      "cc_max": 6,
+      "cognitive_complexity": 6.0,
+      "mi_score": 64.37,
+      "loc": 10,
+      "pylint_score": 8.0,
+      "bandit_issues": 0
+    },
+    "HumanEval/92": {
+      "cc_mean": 6.0,
+      "cc_max": 6,
+      "cognitive_complexity": 3.0,
+      "mi_score": 95.7,
+      "loc": 6,
+      "pylint_score": 8.33,
+      "bandit_issues": 0
+    },
+    "HumanEval/93": {
+      "cc_mean": 5.0,
+      "cc_max": 5,
+      "cognitive_complexity": 12.0,
+      "mi_score": 76.45,
+      "loc": 13,
+      "pylint_score": 8.18,
+      "bandit_issues": 0
+    },
+    "HumanEval/94": {
+      "cc_mean": 9.0,
+      "cc_max": 9,
+      "cognitive_complexity": 14.0,
+      "mi_score": 50.83,
+      "loc": 24,
+      "pylint_score": 9.17,
+      "bandit_issues": 0
+    },
+    "HumanEval/95": {
+      "cc_mean": 7.0,
+      "cc_max": 7,
+      "cognitive_complexity": 4.0,
+      "mi_score": 71.14,
+      "loc": 6,
+      "pylint_score": 8.33,
+      "bandit_issues": 0
+    },
+    "HumanEval/96": {
+      "cc_mean": 6.0,
+      "cc_max": 6,
+      "cognitive_complexity": 8.0,
+      "mi_score": 58.93,
+      "loc": 15,
+      "pylint_score": 9.33,
+      "bandit_issues": 0
+    },
+    "HumanEval/97": {
+      "cc_mean": 1.0,
+      "cc_max": 1,
+      "cognitive_complexity": 0.0,
+      "mi_score": 100.0,
+      "loc": 4,
+      "pylint_score": 7.5,
+      "bandit_issues": 0
+    },
+    "HumanEval/98": {
+      "cc_mean": 4.0,
+      "cc_max": 4,
+      "cognitive_complexity": 4.0,
+      "mi_score": 70.11,
+      "loc": 6,
+      "pylint_score": 8.33,
+      "bandit_issues": 0
+    },
+    "HumanEval/99": {
+      "cc_mean": 5.0,
+      "cc_max": 5,
+      "cognitive_complexity": 4.0,
+      "mi_score": 65.75,
+      "loc": 9,
+      "pylint_score": 7.78,
+      "bandit_issues": 0
+    },
+    "HumanEval/100": {
+      "cc_mean": 3.0,
+      "cc_max": 3,
+      "cognitive_complexity": 4.0,
+      "mi_score": 66.89,
+      "loc": 10,
+      "pylint_score": 8.89,
+      "bandit_issues": 0
+    },
+    "HumanEval/101": {
+      "cc_mean": 5.0,
+      "cc_max": 5,
+      "cognitive_complexity": 2.0,
+      "mi_score": 74.06,
+      "loc": 5,
+      "pylint_score": 6.0,
+      "bandit_issues": 0
+    },
+    "HumanEval/102": {
+      "cc_mean": 4.0,
+      "cc_max": 4,
+      "cognitive_complexity": 3.0,
+      "mi_score": 66.12,
+      "loc": 8,
+      "pylint_score": 8.75,
+      "bandit_issues": 0
+    },
+    "HumanEval/103": {
+      "cc_mean": 8.0,
+      "cc_max": 8,
+      "cognitive_complexity": 5.0,
+      "mi_score": 58.36,
+      "loc": 14,
+      "pylint_score": 9.29,
+      "bandit_issues": 0
+    },
+    "HumanEval/104": {
+      "cc_mean": 3.0,
+      "cc_max": 3,
+      "cognitive_complexity": 3.0,
+      "mi_score": 66.28,
+      "loc": 9,
+      "pylint_score": 8.89,
+      "bandit_issues": 0
+    },
+    "HumanEval/105": {
+      "cc_mean": 6.0,
+      "cc_max": 6,
+      "cognitive_complexity": 2.0,
+      "mi_score": 95.19,
+      "loc": 11,
+      "pylint_score": 8.0,
+      "bandit_issues": 0
+    },
+    "HumanEval/106": {
+      "cc_mean": 4.0,
+      "cc_max": 4,
+      "cognitive_complexity": 2.67,
+      "mi_score": 58.1,
+      "loc": 17,
+      "pylint_score": 9.38,
+      "bandit_issues": 0
+    },
+    "HumanEval/107": {
+      "cc_mean": 4.0,
+      "cc_max": 4,
+      "cognitive_complexity": 3.5,
+      "mi_score": 61.91,
+      "loc": 13,
+      "pylint_score": 9.09,
+      "bandit_issues": 0
+    },
+    "HumanEval/108": {
+      "cc_mean": 3.0,
+      "cc_max": 3,
+      "cognitive_complexity": 4.0,
+      "mi_score": 65.24,
+      "loc": 9,
+      "pylint_score": 7.5,
+      "bandit_issues": 0
+    },
+    "HumanEval/109": {
+      "cc_mean": 6.0,
+      "cc_max": 6,
+      "cognitive_complexity": 6.0,
+      "mi_score": 88.1,
+      "loc": 10,
+      "pylint_score": 8.75,
+      "bandit_issues": 0
+    },
+    "HumanEval/110": {
+      "cc_mean": 10.0,
+      "cc_max": 10,
+      "cognitive_complexity": 3.0,
+      "mi_score": 66.84,
+      "loc": 6,
+      "pylint_score": 8.33,
+      "bandit_issues": 0
+    },
+    "HumanEval/111": {
+      "cc_mean": 7.0,
+      "cc_max": 7,
+      "cognitive_complexity": 6.0,
+      "mi_score": 64.45,
+      "loc": 12,
+      "pylint_score": 9.0,
+      "bandit_issues": 0
+    },
+    "HumanEval/112": {
+      "cc_mean": 3.0,
+      "cc_max": 3,
+      "cognitive_complexity": 0.0,
+      "mi_score": 100.0,
+      "loc": 5,
+      "pylint_score": 7.5,
+      "bandit_issues": 0
+    },
+    "HumanEval/113": {
+      "cc_mean": 6.0,
+      "cc_max": 6,
+      "cognitive_complexity": 5.0,
+      "mi_score": 63.64,
+      "loc": 11,
+      "pylint_score": 9.09,
+      "bandit_issues": 0
+    },
+    "HumanEval/114": {
+      "cc_mean": 4.0,
+      "cc_max": 4,
+      "cognitive_complexity": 5.0,
+      "mi_score": 84.03,
+      "loc": 11,
+      "pylint_score": 3.64,
+      "bandit_issues": 0
+    },
+    "HumanEval/115": {
+      "cc_mean": 2.0,
+      "cc_max": 2,
+      "cognitive_complexity": 0.0,
+      "mi_score": 84.58,
+      "loc": 3,
+      "pylint_score": 0.0,
+      "bandit_issues": 0
+    },
+    "HumanEval/116": {
+      "cc_mean": 4.0,
+      "cc_max": 4,
+      "cognitive_complexity": 0.0,
+      "mi_score": 100.0,
+      "loc": 5,
+      "pylint_score": 5.0,
+      "bandit_issues": 0
+    },
+    "HumanEval/117": {
+      "cc_mean": 9.0,
+      "cc_max": 9,
+      "cognitive_complexity": 7.0,
+      "mi_score": 60.75,
+      "loc": 13,
+      "pylint_score": 8.46,
+      "bandit_issues": 0
+    },
+    "HumanEval/118": {
+      "cc_mean": 5.0,
+      "cc_max": 5,
+      "cognitive_complexity": 4.0,
+      "mi_score": 68.41,
+      "loc": 6,
+      "pylint_score": 8.33,
+      "bandit_issues": 0
+    },
+    "HumanEval/119": {
+      "cc_mean": 5.0,
+      "cc_max": 5,
+      "cognitive_complexity": 9.5,
+      "mi_score": 79.35,
+      "loc": 16,
+      "pylint_score": 6.67,
+      "bandit_issues": 0
+    },
+    "HumanEval/120": {
+      "cc_mean": 4.0,
+      "cc_max": 4,
+      "cognitive_complexity": 3.0,
+      "mi_score": 68.62,
+      "loc": 9,
+      "pylint_score": 8.75,
+      "bandit_issues": 0
+    },
+    "HumanEval/121": {
+      "cc_mean": 5.0,
+      "cc_max": 5,
+      "cognitive_complexity": 2.0,
+      "mi_score": 71.78,
+      "loc": 5,
+      "pylint_score": 8.0,
+      "bandit_issues": 0
+    },
+    "HumanEval/122": {
+      "cc_mean": 4.0,
+      "cc_max": 4,
+      "cognitive_complexity": 0.0,
+      "mi_score": 75.41,
+      "loc": 5,
+      "pylint_score": 2.5,
+      "bandit_issues": 0
+    },
+    "HumanEval/123": {
+      "cc_mean": 8.0,
+      "cc_max": 8,
+      "cognitive_complexity": 7.0,
+      "mi_score": 58.52,
+      "loc": 14,
+      "pylint_score": 9.23,
+      "bandit_issues": 0
+    },
+    "HumanEval/124": {
+      "cc_mean": 3.4,
+      "cc_max": 9,
+      "cognitive_complexity": 2.2,
+      "mi_score": 48.99,
+      "loc": 26,
+      "pylint_score": 9.62,
+      "bandit_issues": 0
+    },
+    "HumanEval/125": {
+      "cc_mean": 6.0,
+      "cc_max": 6,
+      "cognitive_complexity": 2.0,
+      "mi_score": 65.37,
+      "loc": 9,
+      "pylint_score": 7.5,
+      "bandit_issues": 0
+    },
+    "HumanEval/126": {
+      "cc_mean": 5.0,
+      "cc_max": 5,
+      "cognitive_complexity": 3.0,
+      "mi_score": 70.05,
+      "loc": 5,
+      "pylint_score": 5.0,
+      "bandit_issues": 0
+    },
+    "HumanEval/127": {
+      "cc_mean": 4.0,
+      "cc_max": 4,
+      "cognitive_complexity": 3.5,
+      "mi_score": 59.17,
+      "loc": 14,
+      "pylint_score": 9.29,
+      "bandit_issues": 0
+    },
+    "HumanEval/128": {
+      "cc_mean": 5.0,
+      "cc_max": 5,
+      "cognitive_complexity": 5.0,
+      "mi_score": 62.77,
+      "loc": 12,
+      "pylint_score": 8.33,
+      "bandit_issues": 0
+    },
+    "HumanEval/129": {
+      "cc_mean": 3.0,
+      "cc_max": 3,
+      "cognitive_complexity": 11.0,
+      "mi_score": 56.73,
+      "loc": 18,
+      "pylint_score": 8.24,
+      "bandit_issues": 0
+    },
+    "HumanEval/130": {
+      "cc_mean": 5.0,
+      "cc_max": 5,
+      "cognitive_complexity": 9.0,
+      "mi_score": 60.18,
+      "loc": 13,
+      "pylint_score": 8.18,
+      "bandit_issues": 0
+    },
+    "HumanEval/131": {
+      "cc_mean": 6.0,
+      "cc_max": 6,
+      "cognitive_complexity": 6.0,
+      "mi_score": 62.99,
+      "loc": 13,
+      "pylint_score": 9.23,
+      "bandit_issues": 0
+    },
+    "HumanEval/132": {
+      "cc_mean": 6.0,
+      "cc_max": 6,
+      "cognitive_complexity": 10.0,
+      "mi_score": 64.85,
+      "loc": 12,
+      "pylint_score": 9.17,
+      "bandit_issues": 0
+    },
+    "HumanEval/133": {
+      "cc_mean": 4.0,
+      "cc_max": 4,
+      "cognitive_complexity": 2.0,
+      "mi_score": 71.43,
+      "loc": 8,
+      "pylint_score": 7.5,
+      "bandit_issues": 0
+    },
+    "HumanEval/134": {
+      "cc_mean": 6.0,
+      "cc_max": 6,
+      "cognitive_complexity": 5.0,
+      "mi_score": 64.44,
+      "loc": 9,
+      "pylint_score": 8.89,
+      "bandit_issues": 0
+    },
+    "HumanEval/135": {
+      "cc_mean": 5.0,
+      "cc_max": 5,
+      "cognitive_complexity": 5.0,
+      "mi_score": 68.04,
+      "loc": 7,
+      "pylint_score": 8.57,
+      "bandit_issues": 0
+    },
+    "HumanEval/136": {
+      "cc_mean": 8.0,
+      "cc_max": 8,
+      "cognitive_complexity": 11.0,
+      "mi_score": 62.56,
+      "loc": 11,
+      "pylint_score": 9.09,
+      "bandit_issues": 0
+    },
+    "HumanEval/137": {
+      "cc_mean": 7.0,
+      "cc_max": 7,
+      "cognitive_complexity": 8.0,
+      "mi_score": 89.05,
+      "loc": 11,
+      "pylint_score": 8.0,
+      "bandit_issues": 0
+    },
+    "HumanEval/138": {
+      "cc_mean": 3.0,
+      "cc_max": 3,
+      "cognitive_complexity": 2.0,
+      "mi_score": 71.14,
+      "loc": 7,
+      "pylint_score": 8.57,
+      "bandit_issues": 0
+    },
+    "HumanEval/139": {
+      "cc_mean": 5.0,
+      "cc_max": 5,
+      "cognitive_complexity": 4.0,
+      "mi_score": 60.03,
+      "loc": 15,
+      "pylint_score": 8.0,
+      "bandit_issues": 0
+    },
+    "HumanEval/140": {
+      "cc_mean": 3.0,
+      "cc_max": 3,
+      "cognitive_complexity": 2.0,
+      "mi_score": 98.58,
+      "loc": 10,
+      "pylint_score": 9.0,
+      "bandit_issues": 0
+    },
+    "HumanEval/141": {
+      "cc_mean": 3.0,
+      "cc_max": 3,
+      "cognitive_complexity": 3.0,
+      "mi_score": 96.72,
+      "loc": 8,
+      "pylint_score": 5.71,
+      "bandit_issues": 0
+    },
+    "HumanEval/142": {
+      "cc_mean": 5.0,
+      "cc_max": 5,
+      "cognitive_complexity": 7.0,
+      "mi_score": 61.27,
+      "loc": 12,
+      "pylint_score": 9.09,
+      "bandit_issues": 0
+    },
+    "HumanEval/143": {
+      "cc_mean": 4.5,
+      "cc_max": 5,
+      "cognitive_complexity": 3.0,
+      "mi_score": 60.56,
+      "loc": 13,
+      "pylint_score": 9.23,
+      "bandit_issues": 0
+    },
+    "HumanEval/144": {
+      "cc_mean": 4.0,
+      "cc_max": 4,
+      "cognitive_complexity": 3.0,
+      "mi_score": 90.35,
+      "loc": 11,
+      "pylint_score": 9.09,
+      "bandit_issues": 0
+    },
+    "HumanEval/145": {
+      "cc_mean": 1.0,
+      "cc_max": 1,
+      "cognitive_complexity": 0.0,
+      "mi_score": 100.0,
+      "loc": 5,
+      "pylint_score": 7.5,
+      "bandit_issues": 0
+    },
+    "HumanEval/146": {
+      "cc_mean": 5.0,
+      "cc_max": 5,
+      "cognitive_complexity": 7.0,
+      "mi_score": 62.21,
+      "loc": 10,
+      "pylint_score": 7.0,
+      "bandit_issues": 0
+    },
+    "HumanEval/147": {
+      "cc_mean": 7.0,
+      "cc_max": 7,
+      "cognitive_complexity": 11.0,
+      "mi_score": 60.07,
+      "loc": 12,
+      "pylint_score": 8.33,
+      "bandit_issues": 0
+    },
+    "HumanEval/148": {
+      "cc_mean": 4.0,
+      "cc_max": 4,
+      "cognitive_complexity": 3.0,
+      "mi_score": 65.53,
+      "loc": 10,
+      "pylint_score": 8.89,
+      "bandit_issues": 0
+    },
+    "HumanEval/149": {
+      "cc_mean": 3.0,
+      "cc_max": 3,
+      "cognitive_complexity": 0.0,
+      "mi_score": 100.0,
+      "loc": 5,
+      "pylint_score": 7.5,
+      "bandit_issues": 0
+    },
+    "HumanEval/150": {
+      "cc_mean": 6.0,
+      "cc_max": 6,
+      "cognitive_complexity": 6.0,
+      "mi_score": 63.54,
+      "loc": 11,
+      "pylint_score": 9.09,
+      "bandit_issues": 0
+    },
+    "HumanEval/151": {
+      "cc_mean": 5.67,
+      "cc_max": 11,
+      "cognitive_complexity": 0.67,
+      "mi_score": 55.36,
+      "loc": 14,
+      "pylint_score": 5.71,
+      "bandit_issues": 7
+    },
+    "HumanEval/152": {
+      "cc_mean": 5.0,
+      "cc_max": 5,
+      "cognitive_complexity": 3.0,
+      "mi_score": 68.68,
+      "loc": 7,
+      "pylint_score": 8.57,
+      "bandit_issues": 0
+    },
+    "HumanEval/153": {
+      "cc_mean": 1.0,
+      "cc_max": 1,
+      "cognitive_complexity": 0.0,
+      "mi_score": 76.69,
+      "loc": 7,
+      "pylint_score": 7.14,
+      "bandit_issues": 0
+    },
+    "HumanEval/154": {
+      "cc_mean": 4.0,
+      "cc_max": 4,
+      "cognitive_complexity": 4.0,
+      "mi_score": 66.44,
+      "loc": 10,
+      "pylint_score": 7.78,
+      "bandit_issues": 0
+    },
+    "HumanEval/155": {
+      "cc_mean": 5.0,
+      "cc_max": 5,
+      "cognitive_complexity": 3.0,
+      "mi_score": 59.11,
+      "loc": 18,
+      "pylint_score": 8.24,
+      "bandit_issues": 0
+    },
+    "HumanEval/156": {
+      "cc_mean": 8.0,
+      "cc_max": 8,
+      "cognitive_complexity": 7.0,
+      "mi_score": 60.45,
+      "loc": 12,
+      "pylint_score": 9.17,
+      "bandit_issues": 0
+    },
+    "HumanEval/157": {
+      "cc_mean": 1.0,
+      "cc_max": 1,
+      "cognitive_complexity": 0.0,
+      "mi_score": 100.0,
+      "loc": 3,
+      "pylint_score": 6.67,
+      "bandit_issues": 0
+    },
+    "HumanEval/158": {
+      "cc_mean": 5.0,
+      "cc_max": 5,
+      "cognitive_complexity": 5.0,
+      "mi_score": 66.3,
+      "loc": 9,
+      "pylint_score": 8.89,
+      "bandit_issues": 0
+    },
+    "HumanEval/159": {
+      "cc_mean": 4.0,
+      "cc_max": 4,
+      "cognitive_complexity": 2.0,
+      "mi_score": 69.65,
+      "loc": 6,
+      "pylint_score": 8.33,
+      "bandit_issues": 0
+    },
+    "HumanEval/160": {
+      "cc_mean": 7.0,
+      "cc_max": 7,
+      "cognitive_complexity": 8.0,
+      "mi_score": 61.14,
+      "loc": 13,
+      "pylint_score": 7.69,
+      "bandit_issues": 1
+    },
+    "HumanEval/161": {
+      "cc_mean": 5.0,
+      "cc_max": 5,
+      "cognitive_complexity": 4.0,
+      "mi_score": 74.57,
+      "loc": 7,
+      "pylint_score": 6.0,
+      "bandit_issues": 0
+    },
+    "HumanEval/162": {
+      "cc_mean": 2.0,
+      "cc_max": 2,
+      "cognitive_complexity": 1.0,
+      "mi_score": 82.38,
+      "loc": 5,
+      "pylint_score": 8.0,
+      "bandit_issues": 1
+    },
+    "HumanEval/163": {
+      "cc_mean": 6.0,
+      "cc_max": 6,
+      "cognitive_complexity": 6.0,
+      "mi_score": 95.08,
+      "loc": 9,
+      "pylint_score": 8.89,
+      "bandit_issues": 0
+    }
+  },
+  "b2_quality": {
+    "HumanEval/0": {
+      "cc_mean": 3.0,
+      "cc_max": 3,
+      "cognitive_complexity": 3.0,
+      "mi_score": 69.95,
+      "loc": 7,
+      "pylint_score": 8.57,
+      "bandit_issues": 0
+    },
+    "HumanEval/1": {
+      "cc_mean": 6.0,
+      "cc_max": 6,
+      "cognitive_complexity": 9.0,
+      "mi_score": 59.45,
+      "loc": 20,
+      "pylint_score": 7.89,
+      "bandit_issues": 0
+    },
+    "HumanEval/2": {
+      "cc_mean": 1.0,
+      "cc_max": 1,
+      "cognitive_complexity": 0.0,
+      "mi_score": 88.56,
+      "loc": 2,
+      "pylint_score": 5.0,
+      "bandit_issues": 0
+    },
+    "HumanEval/3": {
+      "cc_mean": 3.0,
+      "cc_max": 3,
+      "cognitive_complexity": 3.0,
+      "mi_score": 71.89,
+      "loc": 8,
+      "pylint_score": 8.75,
+      "bandit_issues": 0
+    },
+    "HumanEval/4": {
+      "cc_mean": 3.0,
+      "cc_max": 3,
+      "cognitive_complexity": 1.0,
+      "mi_score": 70.22,
+      "loc": 7,
+      "pylint_score": 8.57,
+      "bandit_issues": 0
+    },
+    "HumanEval/5": {
+      "cc_mean": 3.0,
+      "cc_max": 3,
+      "cognitive_complexity": 2.0,
+      "mi_score": 76.67,
+      "loc": 9,
+      "pylint_score": 8.89,
+      "bandit_issues": 0
+    },
+    "HumanEval/6": {
+      "cc_mean": 5.0,
+      "cc_max": 5,
+      "cognitive_complexity": 9.0,
+      "mi_score": 63.43,
+      "loc": 14,
+      "pylint_score": 7.86,
+      "bandit_issues": 0
+    },
+    "HumanEval/7": {
+      "cc_mean": 3.0,
+      "cc_max": 3,
+      "cognitive_complexity": 0.0,
+      "mi_score": 84.45,
+      "loc": 3,
+      "pylint_score": 6.67,
+      "bandit_issues": 0
+    },
+    "HumanEval/8": {
+      "cc_mean": 3.0,
+      "cc_max": 3,
+      "cognitive_complexity": 2.0,
+      "mi_score": 71.32,
+      "loc": 9,
+      "pylint_score": 8.89,
+      "bandit_issues": 0
+    },
+    "HumanEval/9": {
+      "cc_mean": 3.0,
+      "cc_max": 3,
+      "cognitive_complexity": 3.0,
+      "mi_score": 74.04,
+      "loc": 9,
+      "pylint_score": 7.78,
+      "bandit_issues": 0
+    },
+    "HumanEval/10": {
+      "cc_mean": 4.0,
+      "cc_max": 4,
+      "cognitive_complexity": 4.0,
+      "mi_score": 66.85,
+      "loc": 8,
+      "pylint_score": 8.57,
+      "bandit_issues": 0
+    },
+    "HumanEval/11": {
+      "cc_mean": 3.0,
+      "cc_max": 3,
+      "cognitive_complexity": 4.0,
+      "mi_score": 74.04,
+      "loc": 9,
+      "pylint_score": 6.25,
+      "bandit_issues": 0
+    },
+    "HumanEval/12": {
+      "cc_mean": null,
+      "cc_max": null,
+      "cognitive_complexity": null,
+      "mi_score": null,
+      "loc": null,
+      "pylint_score": null,
+      "bandit_issues": 0
+    },
+    "HumanEval/13": {
+      "cc_mean": 2.0,
+      "cc_max": 2,
+      "cognitive_complexity": 1.0,
+      "mi_score": 81.86,
+      "loc": 4,
+      "pylint_score": 7.5,
+      "bandit_issues": 0
+    },
+    "HumanEval/14": {
+      "cc_mean": 2.0,
+      "cc_max": 2,
+      "cognitive_complexity": 0.0,
+      "mi_score": 81.86,
+      "loc": 4,
+      "pylint_score": 6.67,
+      "bandit_issues": 0
+    },
+    "HumanEval/15": {
+      "cc_mean": 2.0,
+      "cc_max": 2,
+      "cognitive_complexity": 0.0,
+      "mi_score": 88.42,
+      "loc": 2,
+      "pylint_score": 5.0,
+      "bandit_issues": 0
+    },
+    "HumanEval/16": {
+      "cc_mean": 1.0,
+      "cc_max": 1,
+      "cognitive_complexity": 0.0,
+      "mi_score": 100.0,
+      "loc": 4,
+      "pylint_score": 7.5,
+      "bandit_issues": 0
+    },
+    "HumanEval/17": {
+      "cc_mean": 2.0,
+      "cc_max": 2,
+      "cognitive_complexity": 0.0,
+      "mi_score": 100.0,
+      "loc": 5,
+      "pylint_score": 7.5,
+      "bandit_issues": 0
+    },
+    "HumanEval/18": {
+      "cc_mean": 3.0,
+      "cc_max": 3,
+      "cognitive_complexity": 4.0,
+      "mi_score": 67.96,
+      "loc": 10,
+      "pylint_score": 8.89,
+      "bandit_issues": 0
+    },
+    "HumanEval/19": {
+      "cc_mean": 1.0,
+      "cc_max": 1,
+      "cognitive_complexity": 0.0,
+      "mi_score": 100.0,
+      "loc": 7,
+      "pylint_score": 4.0,
+      "bandit_issues": 0
+    },
+    "HumanEval/20": {
+      "cc_mean": 3.0,
+      "cc_max": 3,
+      "cognitive_complexity": 3.0,
+      "mi_score": 64.21,
+      "loc": 11,
+      "pylint_score": 9.09,
+      "bandit_issues": 0
+    },
+    "HumanEval/21": {
+      "cc_mean": 2.0,
+      "cc_max": 2,
+      "cognitive_complexity": 0.0,
+      "mi_score": 72.94,
+      "loc": 6,
+      "pylint_score": 8.33,
+      "bandit_issues": 0
+    },
+    "HumanEval/22": {
+      "cc_mean": 3.0,
+      "cc_max": 3,
+      "cognitive_complexity": 0.0,
+      "mi_score": 100.0,
+      "loc": 3,
+      "pylint_score": 6.67,
+      "bandit_issues": 0
+    },
+    "HumanEval/23": {
+      "cc_mean": 1.0,
+      "cc_max": 1,
+      "cognitive_complexity": 0.0,
+      "mi_score": 100.0,
+      "loc": 2,
+      "pylint_score": 5.0,
+      "bandit_issues": 0
+    },
+    "HumanEval/24": {
+      "cc_mean": 3.0,
+      "cc_max": 3,
+      "cognitive_complexity": 3.0,
+      "mi_score": 75.52,
+      "loc": 4,
+      "pylint_score": 5.0,
+      "bandit_issues": 0
+    },
+    "HumanEval/25": {
+      "cc_mean": 3.0,
+      "cc_max": 3,
+      "cognitive_complexity": 3.0,
+      "mi_score": 65.9,
+      "loc": 10,
+      "pylint_score": 9.0,
+      "bandit_issues": 0
+    },
+    "HumanEval/26": {
+      "cc_mean": 5.0,
+      "cc_max": 5,
+      "cognitive_complexity": 4.0,
+      "mi_score": 67.45,
+      "loc": 12,
+      "pylint_score": 9.09,
+      "bandit_issues": 0
+    },
+    "HumanEval/27": {
+      "cc_mean": 4.0,
+      "cc_max": 4,
+      "cognitive_complexity": 5.0,
+      "mi_score": 100.0,
+      "loc": 10,
+      "pylint_score": 8.89,
+      "bandit_issues": 0
+    },
+    "HumanEval/28": {
+      "cc_mean": 1.0,
+      "cc_max": 1,
+      "cognitive_complexity": 0.0,
+      "mi_score": 100.0,
+      "loc": 3,
+      "pylint_score": 6.67,
+      "bandit_issues": 0
+    },
+    "HumanEval/29": {
+      "cc_mean": 3.0,
+      "cc_max": 3,
+      "cognitive_complexity": 0.0,
+      "mi_score": 100.0,
+      "loc": 3,
+      "pylint_score": 6.67,
+      "bandit_issues": 0
+    },
+    "HumanEval/30": {
+      "cc_mean": 3.0,
+      "cc_max": 3,
+      "cognitive_complexity": 0.0,
+      "mi_score": 88.29,
+      "loc": 2,
+      "pylint_score": 5.0,
+      "bandit_issues": 0
+    },
+    "HumanEval/31": {
+      "cc_mean": 8.0,
+      "cc_max": 8,
+      "cognitive_complexity": 8.0,
+      "mi_score": 58.26,
+      "loc": 13,
+      "pylint_score": 9.23,
+      "bandit_issues": 0
+    },
+    "HumanEval/32": {
+      "cc_mean": 4.0,
+      "cc_max": 6,
+      "cognitive_complexity": 3.5,
+      "mi_score": 77.08,
+      "loc": 18,
+      "pylint_score": 8.24,
+      "bandit_issues": 0
+    },
+    "HumanEval/33": {
+      "cc_mean": 4.0,
+      "cc_max": 4,
+      "cognitive_complexity": 1.0,
+      "mi_score": 99.78,
+      "loc": 7,
+      "pylint_score": 8.57,
+      "bandit_issues": 0
+    },
+    "HumanEval/34": {
+      "cc_mean": 1.0,
+      "cc_max": 1,
+      "cognitive_complexity": 0.0,
+      "mi_score": 100.0,
+      "loc": 2,
+      "pylint_score": 5.0,
+      "bandit_issues": 0
+    },
+    "HumanEval/35": {
+      "cc_mean": 2.0,
+      "cc_max": 2,
+      "cognitive_complexity": 1.0,
+      "mi_score": 84.49,
+      "loc": 4,
+      "pylint_score": 7.5,
+      "bandit_issues": 0
+    },
+    "HumanEval/36": {
+      "cc_mean": 4.0,
+      "cc_max": 4,
+      "cognitive_complexity": 4.0,
+      "mi_score": 69.63,
+      "loc": 6,
+      "pylint_score": 8.33,
+      "bandit_issues": 0
+    },
+    "HumanEval/37": {
+      "cc_mean": 5.0,
+      "cc_max": 5,
+      "cognitive_complexity": 1.0,
+      "mi_score": 72.56,
+      "loc": 7,
+      "pylint_score": 8.57,
+      "bandit_issues": 0
+    },
+    "HumanEval/38": {
+      "cc_mean": null,
+      "cc_max": null,
+      "cognitive_complexity": null,
+      "mi_score": null,
+      "loc": null,
+      "pylint_score": null,
+      "bandit_issues": 0
+    },
+    "HumanEval/39": {
+      "cc_mean": 3.0,
+      "cc_max": 3,
+      "cognitive_complexity": 5.67,
+      "mi_score": 56.33,
+      "loc": 21,
+      "pylint_score": 9.52,
+      "bandit_issues": 0
+    },
+    "HumanEval/40": {
+      "cc_mean": 5.0,
+      "cc_max": 5,
+      "cognitive_complexity": 10.0,
+      "mi_score": 68.88,
+      "loc": 7,
+      "pylint_score": 7.14,
+      "bandit_issues": 0
+    },
+    "HumanEval/41": {
+      "cc_mean": 1.0,
+      "cc_max": 1,
+      "cognitive_complexity": 0.0,
+      "mi_score": 89.96,
+      "loc": 2,
+      "pylint_score": 5.0,
+      "bandit_issues": 0
+    },
+    "HumanEval/42": {
+      "cc_mean": 2.0,
+      "cc_max": 2,
+      "cognitive_complexity": 0.0,
+      "mi_score": 88.42,
+      "loc": 2,
+      "pylint_score": 5.0,
+      "bandit_issues": 0
+    },
+    "HumanEval/43": {
+      "cc_mean": 3.0,
+      "cc_max": 3,
+      "cognitive_complexity": 3.0,
+      "mi_score": 73.71,
+      "loc": 7,
+      "pylint_score": 8.57,
+      "bandit_issues": 0
+    },
+    "HumanEval/44": {
+      "cc_mean": 3.0,
+      "cc_max": 3,
+      "cognitive_complexity": 2.0,
+      "mi_score": 70.53,
+      "loc": 7,
+      "pylint_score": 8.33,
+      "bandit_issues": 0
+    },
+    "HumanEval/45": {
+      "cc_mean": null,
+      "cc_max": null,
+      "cognitive_complexity": null,
+      "mi_score": null,
+      "loc": null,
+      "pylint_score": null,
+      "bandit_issues": 0
+    },
+    "HumanEval/46": {
+      "cc_mean": 6.0,
+      "cc_max": 6,
+      "cognitive_complexity": 4.0,
+      "mi_score": 63.96,
+      "loc": 9,
+      "pylint_score": 6.67,
+      "bandit_issues": 0
+    },
+    "HumanEval/47": {
+      "cc_mean": 2.0,
+      "cc_max": 2,
+      "cognitive_complexity": 2.0,
+      "mi_score": 67.49,
+      "loc": 7,
+      "pylint_score": 6.67,
+      "bandit_issues": 0
+    },
+    "HumanEval/48": {
+      "cc_mean": 1.0,
+      "cc_max": 1,
+      "cognitive_complexity": 0.0,
+      "mi_score": 82.0,
+      "loc": 3,
+      "pylint_score": 5.0,
+      "bandit_issues": 0
+    },
+    "HumanEval/49": {
+      "cc_mean": null,
+      "cc_max": null,
+      "cognitive_complexity": null,
+      "mi_score": null,
+      "loc": null,
+      "pylint_score": null,
+      "bandit_issues": 0
+    },
+    "HumanEval/50": {
+      "cc_mean": null,
+      "cc_max": null,
+      "cognitive_complexity": null,
+      "mi_score": null,
+      "loc": null,
+      "pylint_score": null,
+      "bandit_issues": 0
+    },
+    "HumanEval/51": {
+      "cc_mean": 3.0,
+      "cc_max": 3,
+      "cognitive_complexity": 0.0,
+      "mi_score": 84.45,
+      "loc": 3,
+      "pylint_score": 6.67,
+      "bandit_issues": 0
+    },
+    "HumanEval/52": {
+      "cc_mean": null,
+      "cc_max": null,
+      "cognitive_complexity": null,
+      "mi_score": null,
+      "loc": null,
+      "pylint_score": null,
+      "bandit_issues": 0
+    },
+    "HumanEval/53": {
+      "cc_mean": 1.0,
+      "cc_max": 1,
+      "cognitive_complexity": 0.0,
+      "mi_score": 88.56,
+      "loc": 2,
+      "pylint_score": 5.0,
+      "bandit_issues": 0
+    },
+    "HumanEval/54": {
+      "cc_mean": 1.0,
+      "cc_max": 1,
+      "cognitive_complexity": 0.0,
+      "mi_score": 88.56,
+      "loc": 2,
+      "pylint_score": 5.0,
+      "bandit_issues": 0
+    },
+    "HumanEval/55": {
+      "cc_mean": 4.0,
+      "cc_max": 4,
+      "cognitive_complexity": 5.0,
+      "mi_score": 66.75,
+      "loc": 10,
+      "pylint_score": 7.78,
+      "bandit_issues": 0
+    },
+    "HumanEval/56": {
+      "cc_mean": null,
+      "cc_max": null,
+      "cognitive_complexity": null,
+      "mi_score": null,
+      "loc": null,
+      "pylint_score": null,
+      "bandit_issues": 0
+    },
+    "HumanEval/57": {
+      "cc_mean": 6.0,
+      "cc_max": 6,
+      "cognitive_complexity": 6.0,
+      "mi_score": 64.7,
+      "loc": 10,
+      "pylint_score": 9.0,
+      "bandit_issues": 0
+    },
+    "HumanEval/58": {
+      "cc_mean": 1.0,
+      "cc_max": 1,
+      "cognitive_complexity": 0.0,
+      "mi_score": 100.0,
+      "loc": 5,
+      "pylint_score": 8.0,
+      "bandit_issues": 0
+    },
+    "HumanEval/59": {
+      "cc_mean": 3.0,
+      "cc_max": 3,
+      "cognitive_complexity": 4.0,
+      "mi_score": 68.15,
+      "loc": 8,
+      "pylint_score": 8.57,
+      "bandit_issues": 0
+    },
+    "HumanEval/60": {
+      "cc_mean": 1.0,
+      "cc_max": 1,
+      "cognitive_complexity": 0.0,
+      "mi_score": 83.28,
+      "loc": 2,
+      "pylint_score": 5.0,
+      "bandit_issues": 0
+    },
+    "HumanEval/61": {
+      "cc_mean": 5.0,
+      "cc_max": 5,
+      "cognitive_complexity": 6.0,
+      "mi_score": 65.07,
+      "loc": 10,
+      "pylint_score": 6.0,
+      "bandit_issues": 0
+    },
+    "HumanEval/62": {
+      "cc_mean": 2.0,
+      "cc_max": 2,
+      "cognitive_complexity": 0.0,
+      "mi_score": 88.42,
+      "loc": 2,
+      "pylint_score": 5.0,
+      "bandit_issues": 0
+    },
+    "HumanEval/63": {
+      "cc_mean": 5.0,
+      "cc_max": 5,
+      "cognitive_complexity": 6.0,
+      "mi_score": 64.28,
+      "loc": 10,
+      "pylint_score": 6.67,
+      "bandit_issues": 0
+    },
+    "HumanEval/64": {
+      "cc_mean": 4.0,
+      "cc_max": 4,
+      "cognitive_complexity": 1.0,
+      "mi_score": 74.15,
+      "loc": 6,
+      "pylint_score": 8.33,
+      "bandit_issues": 0
+    },
+    "HumanEval/65": {
+      "cc_mean": 2.0,
+      "cc_max": 2,
+      "cognitive_complexity": 2.0,
+      "mi_score": 66.17,
+      "loc": 10,
+      "pylint_score": 7.14,
+      "bandit_issues": 0
+    },
+    "HumanEval/66": {
+      "cc_mean": 3.0,
+      "cc_max": 3,
+      "cognitive_complexity": 0.0,
+      "mi_score": 100.0,
+      "loc": 2,
+      "pylint_score": 0.0,
+      "bandit_issues": 0
+    },
+    "HumanEval/67": {
+      "cc_mean": 1.0,
+      "cc_max": 1,
+      "cognitive_complexity": 0.0,
+      "mi_score": 100.0,
+      "loc": 4,
+      "pylint_score": 5.0,
+      "bandit_issues": 0
+    },
+    "HumanEval/68": {
+      "cc_mean": 5.0,
+      "cc_max": 5,
+      "cognitive_complexity": 2.0,
+      "mi_score": 69.12,
+      "loc": 8,
+      "pylint_score": 8.75,
+      "bandit_issues": 0
+    },
+    "HumanEval/69": {
+      "cc_mean": 4.0,
+      "cc_max": 4,
+      "cognitive_complexity": 4.0,
+      "mi_score": 68.82,
+      "loc": 8,
+      "pylint_score": 6.25,
+      "bandit_issues": 0
+    },
+    "HumanEval/70": {
+      "cc_mean": 3.0,
+      "cc_max": 3,
+      "cognitive_complexity": 3.0,
+      "mi_score": 72.14,
+      "loc": 11,
+      "pylint_score": 9.09,
+      "bandit_issues": 0
+    },
+    "HumanEval/71": {
+      "cc_mean": 4.0,
+      "cc_max": 4,
+      "cognitive_complexity": 2.0,
+      "mi_score": 93.6,
+      "loc": 7,
+      "pylint_score": 8.57,
+      "bandit_issues": 0
+    },
+    "HumanEval/72": {
+      "cc_mean": 3.0,
+      "cc_max": 3,
+      "cognitive_complexity": 2.0,
+      "mi_score": 100.0,
+      "loc": 6,
+      "pylint_score": 8.33,
+      "bandit_issues": 0
+    },
+    "HumanEval/73": {
+      "cc_mean": 3.0,
+      "cc_max": 3,
+      "cognitive_complexity": 3.0,
+      "mi_score": 66.22,
+      "loc": 9,
+      "pylint_score": 8.89,
+      "bandit_issues": 0
+    },
+    "HumanEval/74": {
+      "cc_mean": 4.0,
+      "cc_max": 4,
+      "cognitive_complexity": 2.0,
+      "mi_score": 76.29,
+      "loc": 7,
+      "pylint_score": 6.67,
+      "bandit_issues": 0
+    },
+    "HumanEval/75": {
+      "cc_mean": 6.0,
+      "cc_max": 6,
+      "cognitive_complexity": 9.0,
+      "mi_score": 56.54,
+      "loc": 17,
+      "pylint_score": 6.88,
+      "bandit_issues": 0
+    },
+    "HumanEval/76": {
+      "cc_mean": 4.0,
+      "cc_max": 4,
+      "cognitive_complexity": 3.0,
+      "mi_score": 66.72,
+      "loc": 9,
+      "pylint_score": 8.89,
+      "bandit_issues": 0
+    },
+    "HumanEval/77": {
+      "cc_mean": 2.0,
+      "cc_max": 2,
+      "cognitive_complexity": 1.0,
+      "mi_score": 71.99,
+      "loc": 5,
+      "pylint_score": 8.0,
+      "bandit_issues": 0
+    },
+    "HumanEval/78": {
+      "cc_mean": 3.0,
+      "cc_max": 3,
+      "cognitive_complexity": 0.0,
+      "mi_score": 100.0,
+      "loc": 3,
+      "pylint_score": 6.67,
+      "bandit_issues": 0
+    },
+    "HumanEval/79": {
+      "cc_mean": 2.0,
+      "cc_max": 2,
+      "cognitive_complexity": 1.0,
+      "mi_score": 78.02,
+      "loc": 6,
+      "pylint_score": 8.0,
+      "bandit_issues": 0
+    },
+    "HumanEval/80": {
+      "cc_mean": 6.0,
+      "cc_max": 6,
+      "cognitive_complexity": 5.0,
+      "mi_score": 65.86,
+      "loc": 7,
+      "pylint_score": 8.57,
+      "bandit_issues": 0
+    },
+    "HumanEval/81": {
+      "cc_mean": 14.0,
+      "cc_max": 14,
+      "cognitive_complexity": 15.0,
+      "mi_score": 50.85,
+      "loc": 30,
+      "pylint_score": 9.31,
+      "bandit_issues": 0
+    },
+    "HumanEval/82": {
+      "cc_mean": 1.0,
+      "cc_max": 1,
+      "cognitive_complexity": 4.0,
+      "mi_score": 66.93,
+      "loc": 9,
+      "pylint_score": 8.89,
+      "bandit_issues": 0
+    },
+    "HumanEval/83": {
+      "cc_mean": 2.0,
+      "cc_max": 2,
+      "cognitive_complexity": 2.0,
+      "mi_score": 73.15,
+      "loc": 5,
+      "pylint_score": 5.0,
+      "bandit_issues": 0
+    },
+    "HumanEval/84": {
+      "cc_mean": 3.0,
+      "cc_max": 3,
+      "cognitive_complexity": 1.0,
+      "mi_score": 77.88,
+      "loc": 6,
+      "pylint_score": 6.0,
+      "bandit_issues": 0
+    },
+    "HumanEval/85": {
+      "cc_mean": 3.0,
+      "cc_max": 3,
+      "cognitive_complexity": 0.0,
+      "mi_score": 84.69,
+      "loc": 2,
+      "pylint_score": 5.0,
+      "bandit_issues": 0
+    },
+    "HumanEval/86": {
+      "cc_mean": 3.0,
+      "cc_max": 3,
+      "cognitive_complexity": 0.0,
+      "mi_score": 100.0,
+      "loc": 4,
+      "pylint_score": 7.5,
+      "bandit_issues": 0
+    },
+    "HumanEval/87": {
+      "cc_mean": 4.0,
+      "cc_max": 4,
+      "cognitive_complexity": 6.0,
+      "mi_score": 71.19,
+      "loc": 9,
+      "pylint_score": 8.75,
+      "bandit_issues": 0
+    },
+    "HumanEval/88": {
+      "cc_mean": 3.0,
+      "cc_max": 3,
+      "cognitive_complexity": 3.0,
+      "mi_score": 68.12,
+      "loc": 8,
+      "pylint_score": 7.14,
+      "bandit_issues": 0
+    },
+    "HumanEval/89": {
+      "cc_mean": 3.0,
+      "cc_max": 3,
+      "cognitive_complexity": 4.0,
+      "mi_score": 84.65,
+      "loc": 9,
+      "pylint_score": 8.75,
+      "bandit_issues": 0
+    },
+    "HumanEval/90": {
+      "cc_mean": 3.0,
+      "cc_max": 3,
+      "cognitive_complexity": 2.0,
+      "mi_score": 73.61,
+      "loc": 7,
+      "pylint_score": 8.57,
+      "bandit_issues": 0
+    },
+    "HumanEval/91": {
+      "cc_mean": 4.0,
+      "cc_max": 4,
+      "cognitive_complexity": 4.0,
+      "mi_score": 69.57,
+      "loc": 8,
+      "pylint_score": 7.5,
+      "bandit_issues": 0
+    },
+    "HumanEval/92": {
+      "cc_mean": 6.0,
+      "cc_max": 6,
+      "cognitive_complexity": 3.0,
+      "mi_score": 95.7,
+      "loc": 6,
+      "pylint_score": 8.33,
+      "bandit_issues": 0
+    },
+    "HumanEval/93": {
+      "cc_mean": 4.0,
+      "cc_max": 4,
+      "cognitive_complexity": 5.0,
+      "mi_score": 65.23,
+      "loc": 12,
+      "pylint_score": 8.0,
+      "bandit_issues": 0
+    },
+    "HumanEval/94": {
+      "cc_mean": 6.0,
+      "cc_max": 6,
+      "cognitive_complexity": 13.0,
+      "mi_score": 52.51,
+      "loc": 22,
+      "pylint_score": 9.09,
+      "bandit_issues": 0
+    },
+    "HumanEval/95": {
+      "cc_mean": 7.0,
+      "cc_max": 7,
+      "cognitive_complexity": 4.0,
+      "mi_score": 71.14,
+      "loc": 6,
+      "pylint_score": 6.67,
+      "bandit_issues": 0
+    },
+    "HumanEval/96": {
+      "cc_mean": 3.0,
+      "cc_max": 3,
+      "cognitive_complexity": 7.0,
+      "mi_score": 63.08,
+      "loc": 13,
+      "pylint_score": 9.23,
+      "bandit_issues": 0
+    },
+    "HumanEval/97": {
+      "cc_mean": 1.0,
+      "cc_max": 1,
+      "cognitive_complexity": 0.0,
+      "mi_score": 100.0,
+      "loc": 4,
+      "pylint_score": 7.5,
+      "bandit_issues": 0
+    },
+    "HumanEval/98": {
+      "cc_mean": 3.0,
+      "cc_max": 3,
+      "cognitive_complexity": 3.0,
+      "mi_score": 72.82,
+      "loc": 7,
+      "pylint_score": 8.57,
+      "bandit_issues": 0
+    },
+    "HumanEval/99": {
+      "cc_mean": 2.0,
+      "cc_max": 2,
+      "cognitive_complexity": 2.0,
+      "mi_score": 73.19,
+      "loc": 6,
+      "pylint_score": 6.0,
+      "bandit_issues": 0
+    },
+    "HumanEval/100": {
+      "cc_mean": 3.0,
+      "cc_max": 3,
+      "cognitive_complexity": 4.0,
+      "mi_score": 66.89,
+      "loc": 10,
+      "pylint_score": 8.89,
+      "bandit_issues": 0
+    },
+    "HumanEval/101": {
+      "cc_mean": 3.0,
+      "cc_max": 3,
+      "cognitive_complexity": 0.0,
+      "mi_score": 100.0,
+      "loc": 3,
+      "pylint_score": 3.33,
+      "bandit_issues": 0
+    },
+    "HumanEval/102": {
+      "cc_mean": 5.0,
+      "cc_max": 5,
+      "cognitive_complexity": 4.0,
+      "mi_score": 63.5,
+      "loc": 10,
+      "pylint_score": 9.0,
+      "bandit_issues": 0
+    },
+    "HumanEval/103": {
+      "cc_mean": 2.0,
+      "cc_max": 2,
+      "cognitive_complexity": 1.0,
+      "mi_score": 68.91,
+      "loc": 7,
+      "pylint_score": 8.57,
+      "bandit_issues": 0
+    },
+    "HumanEval/104": {
+      "cc_mean": 3.0,
+      "cc_max": 3,
+      "cognitive_complexity": 0.0,
+      "mi_score": 76.8,
+      "loc": 4,
+      "pylint_score": 7.5,
+      "bandit_issues": 0
+    },
+    "HumanEval/105": {
+      "cc_mean": 4.0,
+      "cc_max": 4,
+      "cognitive_complexity": 0.0,
+      "mi_score": 99.41,
+      "loc": 9,
+      "pylint_score": 7.14,
+      "bandit_issues": 0
+    },
+    "HumanEval/106": {
+      "cc_mean": 3.0,
+      "cc_max": 3,
+      "cognitive_complexity": 3.33,
+      "mi_score": 59.47,
+      "loc": 15,
+      "pylint_score": 8.46,
+      "bandit_issues": 0
+    },
+    "HumanEval/107": {
+      "cc_mean": 4.0,
+      "cc_max": 4,
+      "cognitive_complexity": 3.5,
+      "mi_score": 61.91,
+      "loc": 13,
+      "pylint_score": 9.09,
+      "bandit_issues": 0
+    },
+    "HumanEval/108": {
+      "cc_mean": 3.0,
+      "cc_max": 3,
+      "cognitive_complexity": 4.0,
+      "mi_score": 65.24,
+      "loc": 9,
+      "pylint_score": 7.5,
+      "bandit_issues": 0
+    },
+    "HumanEval/109": {
+      "cc_mean": 5.0,
+      "cc_max": 5,
+      "cognitive_complexity": 5.0,
+      "mi_score": 89.65,
+      "loc": 10,
+      "pylint_score": 8.75,
+      "bandit_issues": 0
+    },
+    "HumanEval/110": {
+      "cc_mean": 6.0,
+      "cc_max": 6,
+      "cognitive_complexity": 1.0,
+      "mi_score": 74.05,
+      "loc": 4,
+      "pylint_score": 7.5,
+      "bandit_issues": 0
+    },
+    "HumanEval/111": {
+      "cc_mean": 7.0,
+      "cc_max": 7,
+      "cognitive_complexity": 6.0,
+      "mi_score": 64.45,
+      "loc": 12,
+      "pylint_score": 9.0,
+      "bandit_issues": 0
+    },
+    "HumanEval/112": {
+      "cc_mean": 3.0,
+      "cc_max": 3,
+      "cognitive_complexity": 0.0,
+      "mi_score": 100.0,
+      "loc": 5,
+      "pylint_score": 7.5,
+      "bandit_issues": 0
+    },
+    "HumanEval/113": {
+      "cc_mean": 3.0,
+      "cc_max": 3,
+      "cognitive_complexity": 1.0,
+      "mi_score": 74.29,
+      "loc": 6,
+      "pylint_score": 5.0,
+      "bandit_issues": 0
+    },
+    "HumanEval/114": {
+      "cc_mean": 4.0,
+      "cc_max": 4,
+      "cognitive_complexity": 5.0,
+      "mi_score": 67.83,
+      "loc": 10,
+      "pylint_score": 6.0,
+      "bandit_issues": 0
+    },
+    "HumanEval/115": {
+      "cc_mean": 2.0,
+      "cc_max": 2,
+      "cognitive_complexity": 0.0,
+      "mi_score": 84.58,
+      "loc": 3,
+      "pylint_score": 0.0,
+      "bandit_issues": 0
+    },
+    "HumanEval/116": {
+      "cc_mean": 1.0,
+      "cc_max": 1,
+      "cognitive_complexity": 0.0,
+      "mi_score": 100.0,
+      "loc": 5,
+      "pylint_score": 7.5,
+      "bandit_issues": 0
+    },
+    "HumanEval/117": {
+      "cc_mean": 6.0,
+      "cc_max": 6,
+      "cognitive_complexity": 4.0,
+      "mi_score": 67.71,
+      "loc": 10,
+      "pylint_score": 9.0,
+      "bandit_issues": 0
+    },
+    "HumanEval/118": {
+      "cc_mean": 5.0,
+      "cc_max": 5,
+      "cognitive_complexity": 4.0,
+      "mi_score": 68.41,
+      "loc": 6,
+      "pylint_score": 8.33,
+      "bandit_issues": 0
+    },
+    "HumanEval/119": {
+      "cc_mean": 3.0,
+      "cc_max": 3,
+      "cognitive_complexity": 8.5,
+      "mi_score": 83.32,
+      "loc": 14,
+      "pylint_score": 6.15,
+      "bandit_issues": 0
+    },
+    "HumanEval/120": {
+      "cc_mean": 2.0,
+      "cc_max": 2,
+      "cognitive_complexity": 1.0,
+      "mi_score": 79.74,
+      "loc": 5,
+      "pylint_score": 7.5,
+      "bandit_issues": 0
+    },
+    "HumanEval/121": {
+      "cc_mean": 3.0,
+      "cc_max": 3,
+      "cognitive_complexity": 0.0,
+      "mi_score": 84.69,
+      "loc": 2,
+      "pylint_score": 5.0,
+      "bandit_issues": 0
+    },
+    "HumanEval/122": {
+      "cc_mean": 3.0,
+      "cc_max": 3,
+      "cognitive_complexity": 0.0,
+      "mi_score": 80.38,
+      "loc": 3,
+      "pylint_score": 5.0,
+      "bandit_issues": 0
+    },
+    "HumanEval/123": {
+      "cc_mean": 5.0,
+      "cc_max": 5,
+      "cognitive_complexity": 4.0,
+      "mi_score": 63.71,
+      "loc": 10,
+      "pylint_score": 8.89,
+      "bandit_issues": 0
+    },
+    "HumanEval/124": {
+      "cc_mean": 14.0,
+      "cc_max": 14,
+      "cognitive_complexity": 13.0,
+      "mi_score": 78.69,
+      "loc": 17,
+      "pylint_score": 8.24,
+      "bandit_issues": 0
+    },
+    "HumanEval/125": {
+      "cc_mean": 5.33,
+      "cc_max": 9,
+      "cognitive_complexity": 1.33,
+      "mi_score": 54.47,
+      "loc": 18,
+      "pylint_score": 8.82,
+      "bandit_issues": 8
+    },
+    "HumanEval/126": {
+      "cc_mean": 4.0,
+      "cc_max": 4,
+      "cognitive_complexity": 2.0,
+      "mi_score": 72.12,
+      "loc": 5,
+      "pylint_score": 7.5,
+      "bandit_issues": 0
+    },
+    "HumanEval/127": {
+      "cc_mean": 5.0,
+      "cc_max": 5,
+      "cognitive_complexity": 5.0,
+      "mi_score": 86.48,
+      "loc": 14,
+      "pylint_score": 6.43,
+      "bandit_issues": 0
+    },
+    "HumanEval/128": {
+      "cc_mean": 5.0,
+      "cc_max": 5,
+      "cognitive_complexity": 5.0,
+      "mi_score": 62.77,
+      "loc": 12,
+      "pylint_score": 8.33,
+      "bandit_issues": 0
+    },
+    "HumanEval/129": {
+      "cc_mean": 3.0,
+      "cc_max": 3,
+      "cognitive_complexity": 11.0,
+      "mi_score": 56.73,
+      "loc": 18,
+      "pylint_score": 8.24,
+      "bandit_issues": 0
+    },
+    "HumanEval/130": {
+      "cc_mean": 5.0,
+      "cc_max": 5,
+      "cognitive_complexity": 9.0,
+      "mi_score": 59.92,
+      "loc": 13,
+      "pylint_score": 8.18,
+      "bandit_issues": 0
+    },
+    "HumanEval/131": {
+      "cc_mean": 4.0,
+      "cc_max": 4,
+      "cognitive_complexity": 4.0,
+      "mi_score": 68.62,
+      "loc": 9,
+      "pylint_score": 8.89,
+      "bandit_issues": 0
+    },
+    "HumanEval/132": {
+      "cc_mean": 6.0,
+      "cc_max": 6,
+      "cognitive_complexity": 8.0,
+      "mi_score": 61.84,
+      "loc": 12,
+      "pylint_score": 9.17,
+      "bandit_issues": 0
+    },
+    "HumanEval/133": {
+      "cc_mean": 2.0,
+      "cc_max": 2,
+      "cognitive_complexity": 1.0,
+      "mi_score": 72.96,
+      "loc": 7,
+      "pylint_score": 8.57,
+      "bandit_issues": 0
+    },
+    "HumanEval/134": {
+      "cc_mean": 7.0,
+      "cc_max": 7,
+      "cognitive_complexity": 5.0,
+      "mi_score": 83.56,
+      "loc": 8,
+      "pylint_score": 0.0,
+      "bandit_issues": 0
+    },
+    "HumanEval/135": {
+      "cc_mean": 5.0,
+      "cc_max": 5,
+      "cognitive_complexity": 5.0,
+      "mi_score": 68.04,
+      "loc": 7,
+      "pylint_score": 8.57,
+      "bandit_issues": 0
+    },
+    "HumanEval/136": {
+      "cc_mean": 7.0,
+      "cc_max": 7,
+      "cognitive_complexity": 2.0,
+      "mi_score": 74.53,
+      "loc": 6,
+      "pylint_score": 8.33,
+      "bandit_issues": 0
+    },
+    "HumanEval/137": {
+      "cc_mean": 7.0,
+      "cc_max": 7,
+      "cognitive_complexity": 8.0,
+      "mi_score": 89.05,
+      "loc": 11,
+      "pylint_score": 8.0,
+      "bandit_issues": 0
+    },
+    "HumanEval/138": {
+      "cc_mean": 3.0,
+      "cc_max": 3,
+      "cognitive_complexity": 2.0,
+      "mi_score": 69.95,
+      "loc": 6,
+      "pylint_score": 8.33,
+      "bandit_issues": 0
+    },
+    "HumanEval/139": {
+      "cc_mean": 2.0,
+      "cc_max": 2,
+      "cognitive_complexity": 1.0,
+      "mi_score": 71.48,
+      "loc": 7,
+      "pylint_score": 8.57,
+      "bandit_issues": 0
+    },
+    "HumanEval/140": {
+      "cc_mean": 1.0,
+      "cc_max": 1,
+      "cognitive_complexity": 0.0,
+      "mi_score": 100.0,
+      "loc": 5,
+      "pylint_score": 6.0,
+      "bandit_issues": 0
+    },
+    "HumanEval/141": {
+      "cc_mean": 4.0,
+      "cc_max": 4,
+      "cognitive_complexity": 3.0,
+      "mi_score": 95.21,
+      "loc": 9,
+      "pylint_score": 8.89,
+      "bandit_issues": 0
+    },
+    "HumanEval/142": {
+      "cc_mean": 4.0,
+      "cc_max": 4,
+      "cognitive_complexity": 5.0,
+      "mi_score": 63.48,
+      "loc": 10,
+      "pylint_score": 8.89,
+      "bandit_issues": 0
+    },
+    "HumanEval/143": {
+      "cc_mean": 3.5,
+      "cc_max": 4,
+      "cognitive_complexity": 2.0,
+      "mi_score": 64.36,
+      "loc": 11,
+      "pylint_score": 9.09,
+      "bandit_issues": 0
+    },
+    "HumanEval/144": {
+      "cc_mean": 1.0,
+      "cc_max": 1,
+      "cognitive_complexity": 0.0,
+      "mi_score": 100.0,
+      "loc": 6,
+      "pylint_score": 8.33,
+      "bandit_issues": 0
+    },
+    "HumanEval/145": {
+      "cc_mean": 1.0,
+      "cc_max": 1,
+      "cognitive_complexity": 0.0,
+      "mi_score": 100.0,
+      "loc": 5,
+      "pylint_score": 7.5,
+      "bandit_issues": 0
+    },
+    "HumanEval/146": {
+      "cc_mean": 5.0,
+      "cc_max": 5,
+      "cognitive_complexity": 7.0,
+      "mi_score": 63.64,
+      "loc": 10,
+      "pylint_score": 8.0,
+      "bandit_issues": 0
+    },
+    "HumanEval/147": {
+      "cc_mean": 6.0,
+      "cc_max": 6,
+      "cognitive_complexity": 10.0,
+      "mi_score": 63.29,
+      "loc": 9,
+      "pylint_score": 8.89,
+      "bandit_issues": 0
+    },
+    "HumanEval/148": {
+      "cc_mean": 4.0,
+      "cc_max": 4,
+      "cognitive_complexity": 3.0,
+      "mi_score": 65.53,
+      "loc": 10,
+      "pylint_score": 8.89,
+      "bandit_issues": 0
+    },
+    "HumanEval/149": {
+      "cc_mean": 3.0,
+      "cc_max": 3,
+      "cognitive_complexity": 0.0,
+      "mi_score": 100.0,
+      "loc": 5,
+      "pylint_score": 7.5,
+      "bandit_issues": 0
+    },
+    "HumanEval/150": {
+      "cc_mean": 4.0,
+      "cc_max": 4,
+      "cognitive_complexity": 4.0,
+      "mi_score": 68.81,
+      "loc": 7,
+      "pylint_score": 8.57,
+      "bandit_issues": 0
+    },
+    "HumanEval/151": {
+      "cc_mean": 5.0,
+      "cc_max": 5,
+      "cognitive_complexity": 1.0,
+      "mi_score": 80.45,
+      "loc": 2,
+      "pylint_score": 5.0,
+      "bandit_issues": 0
+    },
+    "HumanEval/152": {
+      "cc_mean": 2.0,
+      "cc_max": 2,
+      "cognitive_complexity": 1.0,
+      "mi_score": 79.74,
+      "loc": 5,
+      "pylint_score": 6.0,
+      "bandit_issues": 0
+    },
+    "HumanEval/153": {
+      "cc_mean": 1.0,
+      "cc_max": 1,
+      "cognitive_complexity": 0.0,
+      "mi_score": 76.69,
+      "loc": 7,
+      "pylint_score": 7.14,
+      "bandit_issues": 0
+    },
+    "HumanEval/154": {
+      "cc_mean": 4.0,
+      "cc_max": 4,
+      "cognitive_complexity": 4.0,
+      "mi_score": 66.44,
+      "loc": 10,
+      "pylint_score": 7.78,
+      "bandit_issues": 0
+    },
+    "HumanEval/155": {
+      "cc_mean": 5.0,
+      "cc_max": 5,
+      "cognitive_complexity": 0.0,
+      "mi_score": 73.02,
+      "loc": 5,
+      "pylint_score": 8.0,
+      "bandit_issues": 0
+    },
+    "HumanEval/156": {
+      "cc_mean": 3.0,
+      "cc_max": 3,
+      "cognitive_complexity": 3.0,
+      "mi_score": 70.08,
+      "loc": 8,
+      "pylint_score": 8.75,
+      "bandit_issues": 0
+    },
+    "HumanEval/157": {
+      "cc_mean": 1.0,
+      "cc_max": 1,
+      "cognitive_complexity": 0.0,
+      "mi_score": 100.0,
+      "loc": 3,
+      "pylint_score": 6.67,
+      "bandit_issues": 0
+    },
+    "HumanEval/158": {
+      "cc_mean": 5.0,
+      "cc_max": 5,
+      "cognitive_complexity": 5.0,
+      "mi_score": 66.3,
+      "loc": 9,
+      "pylint_score": 8.89,
+      "bandit_issues": 0
+    },
+    "HumanEval/159": {
+      "cc_mean": 1.0,
+      "cc_max": 1,
+      "cognitive_complexity": 0.0,
+      "mi_score": 78.4,
+      "loc": 4,
+      "pylint_score": 7.5,
+      "bandit_issues": 0
+    },
+    "HumanEval/160": {
+      "cc_mean": 2.0,
+      "cc_max": 2,
+      "cognitive_complexity": 1.0,
+      "mi_score": 72.6,
+      "loc": 5,
+      "pylint_score": 6.0,
+      "bandit_issues": 1
+    },
+    "HumanEval/161": {
+      "cc_mean": 5.0,
+      "cc_max": 5,
+      "cognitive_complexity": 4.0,
+      "mi_score": 74.57,
+      "loc": 7,
+      "pylint_score": 6.0,
+      "bandit_issues": 0
+    },
+    "HumanEval/162": {
+      "cc_mean": 2.0,
+      "cc_max": 2,
+      "cognitive_complexity": 1.0,
+      "mi_score": 82.38,
+      "loc": 5,
+      "pylint_score": 8.0,
+      "bandit_issues": 1
+    },
+    "HumanEval/163": {
+      "cc_mean": 5.0,
+      "cc_max": 5,
+      "cognitive_complexity": 10.0,
+      "mi_score": 66.5,
+      "loc": 9,
+      "pylint_score": 8.89,
+      "bandit_issues": 0
+    }
+  },
+  "ours_passed": [
+    "HumanEval/61",
+    "HumanEval/140",
+    "HumanEval/155",
+    "HumanEval/122",
+    "HumanEval/80",
+    "HumanEval/37",
+    "HumanEval/41",
+    "HumanEval/121",
+    "HumanEval/28",
+    "HumanEval/85",
+    "HumanEval/29",
+    "HumanEval/131",
+    "HumanEval/40",
+    "HumanEval/146",
+    "HumanEval/96",
+    "HumanEval/20",
+    "HumanEval/149",
+    "HumanEval/107",
+    "HumanEval/64",
+    "HumanEval/77",
+    "HumanEval/139",
+    "HumanEval/116",
+    "HumanEval/43",
+    "HumanEval/103",
+    "HumanEval/36",
+    "HumanEval/112",
+    "HumanEval/94",
+    "HumanEval/74",
+    "HumanEval/72",
+    "HumanEval/128",
+    "HumanEval/129",
+    "HumanEval/91",
+    "HumanEval/82",
+    "HumanEval/79",
+    "HumanEval/136",
+    "HumanEval/2",
+    "HumanEval/138",
+    "HumanEval/151",
+    "HumanEval/67",
+    "HumanEval/34",
+    "HumanEval/133",
+    "HumanEval/35",
+    "HumanEval/106",
+    "HumanEval/18",
+    "HumanEval/101",
+    "HumanEval/15",
+    "HumanEval/51",
+    "HumanEval/1",
+    "HumanEval/123",
+    "HumanEval/10",
+    "HumanEval/73",
+    "HumanEval/147",
+    "HumanEval/118",
+    "HumanEval/156",
+    "HumanEval/157",
+    "HumanEval/70",
+    "HumanEval/25",
+    "HumanEval/90",
+    "HumanEval/58",
+    "HumanEval/113",
+    "HumanEval/71",
+    "HumanEval/81",
+    "HumanEval/21",
+    "HumanEval/59",
+    "HumanEval/160",
+    "HumanEval/114",
+    "HumanEval/27",
+    "HumanEval/148",
+    "HumanEval/19",
+    "HumanEval/33",
+    "HumanEval/4",
+    "HumanEval/150",
+    "HumanEval/7",
+    "HumanEval/93",
+    "HumanEval/76",
+    "HumanEval/117",
+    "HumanEval/144",
+    "HumanEval/143",
+    "HumanEval/161",
+    "HumanEval/54",
+    "HumanEval/42",
+    "HumanEval/30",
+    "HumanEval/111",
+    "HumanEval/62",
+    "HumanEval/24",
+    "HumanEval/120",
+    "HumanEval/152",
+    "HumanEval/97",
+    "HumanEval/92",
+    "HumanEval/125",
+    "HumanEval/22",
+    "HumanEval/3",
+    "HumanEval/75",
+    "HumanEval/68",
+    "HumanEval/17",
+    "HumanEval/104",
+    "HumanEval/44",
+    "HumanEval/142",
+    "HumanEval/16",
+    "HumanEval/66",
+    "HumanEval/102",
+    "HumanEval/57",
+    "HumanEval/100",
+    "HumanEval/99",
+    "HumanEval/98",
+    "HumanEval/105",
+    "HumanEval/78",
+    "HumanEval/23",
+    "HumanEval/11",
+    "HumanEval/48",
+    "HumanEval/0",
+    "HumanEval/14",
+    "HumanEval/153",
+    "HumanEval/89",
+    "HumanEval/159",
+    "HumanEval/6",
+    "HumanEval/119",
+    "HumanEval/84",
+    "HumanEval/5",
+    "HumanEval/13",
+    "HumanEval/110",
+    "HumanEval/124",
+    "HumanEval/31",
+    "HumanEval/162",
+    "HumanEval/47",
+    "HumanEval/55",
+    "HumanEval/69",
+    "HumanEval/109",
+    "HumanEval/8",
+    "HumanEval/63",
+    "HumanEval/39",
+    "HumanEval/88",
+    "HumanEval/87",
+    "HumanEval/95",
+    "HumanEval/158",
+    "HumanEval/9",
+    "HumanEval/60"
+  ],
+  "b2_passed": [
+    "HumanEval/61",
+    "HumanEval/140",
+    "HumanEval/155",
+    "HumanEval/122",
+    "HumanEval/80",
+    "HumanEval/37",
+    "HumanEval/41",
+    "HumanEval/121",
+    "HumanEval/28",
+    "HumanEval/141",
+    "HumanEval/85",
+    "HumanEval/29",
+    "HumanEval/131",
+    "HumanEval/40",
+    "HumanEval/146",
+    "HumanEval/96",
+    "HumanEval/20",
+    "HumanEval/149",
+    "HumanEval/107",
+    "HumanEval/64",
+    "HumanEval/77",
+    "HumanEval/139",
+    "HumanEval/116",
+    "HumanEval/43",
+    "HumanEval/103",
+    "HumanEval/36",
+    "HumanEval/112",
+    "HumanEval/94",
+    "HumanEval/86",
+    "HumanEval/74",
+    "HumanEval/72",
+    "HumanEval/128",
+    "HumanEval/129",
+    "HumanEval/91",
+    "HumanEval/82",
+    "HumanEval/79",
+    "HumanEval/136",
+    "HumanEval/2",
+    "HumanEval/138",
+    "HumanEval/151",
+    "HumanEval/34",
+    "HumanEval/133",
+    "HumanEval/35",
+    "HumanEval/106",
+    "HumanEval/18",
+    "HumanEval/101",
+    "HumanEval/15",
+    "HumanEval/51",
+    "HumanEval/123",
+    "HumanEval/10",
+    "HumanEval/73",
+    "HumanEval/147",
+    "HumanEval/118",
+    "HumanEval/156",
+    "HumanEval/157",
+    "HumanEval/70",
+    "HumanEval/25",
+    "HumanEval/90",
+    "HumanEval/58",
+    "HumanEval/113",
+    "HumanEval/71",
+    "HumanEval/81",
+    "HumanEval/21",
+    "HumanEval/59",
+    "HumanEval/160",
+    "HumanEval/114",
+    "HumanEval/27",
+    "HumanEval/148",
+    "HumanEval/19",
+    "HumanEval/33",
+    "HumanEval/4",
+    "HumanEval/150",
+    "HumanEval/83",
+    "HumanEval/7",
+    "HumanEval/76",
+    "HumanEval/117",
+    "HumanEval/144",
+    "HumanEval/143",
+    "HumanEval/161",
+    "HumanEval/54",
+    "HumanEval/42",
+    "HumanEval/30",
+    "HumanEval/111",
+    "HumanEval/62",
+    "HumanEval/24",
+    "HumanEval/152",
+    "HumanEval/97",
+    "HumanEval/92",
+    "HumanEval/53",
+    "HumanEval/125",
+    "HumanEval/22",
+    "HumanEval/3",
+    "HumanEval/75",
+    "HumanEval/68",
+    "HumanEval/17",
+    "HumanEval/104",
+    "HumanEval/44",
+    "HumanEval/142",
+    "HumanEval/16",
+    "HumanEval/66",
+    "HumanEval/102",
+    "HumanEval/57",
+    "HumanEval/26",
+    "HumanEval/100",
+    "HumanEval/99",
+    "HumanEval/98",
+    "HumanEval/105",
+    "HumanEval/78",
+    "HumanEval/23",
+    "HumanEval/11",
+    "HumanEval/48",
+    "HumanEval/0",
+    "HumanEval/14",
+    "HumanEval/153",
+    "HumanEval/89",
+    "HumanEval/159",
+    "HumanEval/6",
+    "HumanEval/119",
+    "HumanEval/84",
+    "HumanEval/5",
+    "HumanEval/13",
+    "HumanEval/110",
+    "HumanEval/124",
+    "HumanEval/31",
+    "HumanEval/162",
+    "HumanEval/47",
+    "HumanEval/55",
+    "HumanEval/69",
+    "HumanEval/109",
+    "HumanEval/8",
+    "HumanEval/63",
+    "HumanEval/39",
+    "HumanEval/88",
+    "HumanEval/87",
+    "HumanEval/95",
+    "HumanEval/158",
+    "HumanEval/9",
+    "HumanEval/60"
+  ]
+}

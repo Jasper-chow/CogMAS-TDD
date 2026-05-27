@@ -9,7 +9,9 @@ from .executor import (
     trace_function,
 )
 from .helpers import (
+    TokenUsage,
     build_standard_constraints,
+    compute_code_quality,
     detect_active_dimensions,
     generate_with_outlines,
     heuristic_static_cisq_audit,
@@ -43,4 +45,6 @@ __all__ = [
     "append_experiment_record",
     "generate_with_outlines",
     "merge_state",
+    "TokenUsage",
+    "compute_code_quality",
 ]

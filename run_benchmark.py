@@ -236,6 +236,12 @@ def _build_summary(
     avg_llm_calls = (
         sum(item.get("llm_calls", 0) for item in records) / total if total else 0.0
     )
+    cr_initial_total = sum(item.get("cr_initial_findings", 0) for item in records)
+    cr_resolved_total = sum(item.get("cr_findings_resolved", 0) for item in records)
+    findings_resolved_rate = (cr_resolved_total / cr_initial_total) if cr_initial_total else 0.0
+    avg_cr_score = (
+        sum(item.get("cr_overall_score") or 0 for item in records) / total if total else 0.0
+    )
     return {
         "dataset": dataset_label,
         "profile": args.profile,
@@ -250,6 +256,10 @@ def _build_summary(
         "avg_wall_seconds": round(avg_wall_seconds, 3),
         "avg_tokens": round(avg_tokens, 1),
         "avg_llm_calls": round(avg_llm_calls, 2),
+        "avg_cr_score": round(avg_cr_score, 2),
+        "cr_initial_findings_total": cr_initial_total,
+        "cr_findings_resolved_total": cr_resolved_total,
+        "findings_resolved_rate": round(findings_resolved_rate, 3),
     }
 
 

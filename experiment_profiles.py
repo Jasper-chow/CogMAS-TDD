@@ -70,6 +70,20 @@ PROFILE_OVERRIDES: dict[str, dict[str, Any]] = {
         },
         "limits": {"max_green_attempts": 1},
     },
+    "b0_post_hoc_cr": {
+        # B0 风格生成 + 后验 CR 评估（不重构），用于对比 ours 的质量基线
+        "agents": {
+            "code_review_node": {"enabled": True},
+            "l2_refactor_node": {"enabled": False},
+            "l3_refactor_node": {"enabled": False},
+            "evaluation_node":  {"enabled": False},
+        },
+        "workflow": {
+            "allow_green_retry_without_ldb": False,
+            "hide_tests_in_green": True,
+        },
+        "limits": {"max_green_attempts": 1},
+    },
     "b2_error_feedback": {
         # 纯 TDD 错误反馈，无 CR，无重构
         "agents": {
@@ -103,6 +117,19 @@ PROFILE_OVERRIDES: dict[str, dict[str, Any]] = {
     "ablation_no_eval": {
         # 去掉 Evaluation 验证
         "agents": {"evaluation_node": {"enabled": False}},
+    },
+
+    # ── 参考代码实验（从有技术债的canonical解作为起始点） ─────────────────────────
+    "ours_from_ref": {
+        # Start directly at test_runner with reference_code as seed (--seed-source reference).
+        # green_node is disabled so the canonical solution passes through unchanged to CR/L2/L3.
+        # On test failure the pipeline stops (no LLM repair loop).
+        "agents": {
+            "green_node": {"enabled": False},
+        },
+        "workflow": {
+            "allow_green_retry_without_ldb": False,
+        },
     },
 }
 
@@ -138,10 +165,10 @@ def summarize_enabled_agents(config: dict[str, Any]) -> list[str]:
 
 def first_enabled_stage(config: dict[str, Any]) -> str:
     """工作流起始节点。rar4is 保留兼容但默认关闭。"""
-    for node_name in ("rar4is_node", "red_node", "green_node"):
+    for node_name in ("rar4is_node", "red_node", "green_node", "test_runner_node"):
         if config["agents"][node_name]["enabled"]:
             return node_name
-    raise ValueError("at least one of rar4is_node/red_node/green_node must be enabled")
+    raise ValueError("at least one of rar4is_node/red_node/green_node/test_runner_node must be enabled")
 
 
 def next_after_rar4is(config: dict[str, Any]) -> str:

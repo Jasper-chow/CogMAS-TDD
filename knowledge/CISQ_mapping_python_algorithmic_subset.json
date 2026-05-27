@@ -1,0 +1,104 @@
+[
+  {
+    "CWE_ID": "1121",
+    "Characteristic": "Maintainability",
+    "Description": "Excessive McCabe Cyclomatic Complexity",
+    "Refactor_Advice": "Only flag if the function has a single if-elif chain with 5 or more branches (5+ elif clauses). The ONLY acceptable fix is to replace that chain with a dictionary lookup. Do NOT use guard clauses, early returns, or function splits — these add new conditional nodes and increase cognitive complexity in short functions."
+  },
+  {
+    "CWE_ID": "561",
+    "Characteristic": "Maintainability",
+    "Description": "Dead Code",
+    "Refactor_Advice": "Identify and remove unreachable code segments: branches that can never be entered given the function's logic, variables that are assigned but never read, or return statements followed by more code."
+  },
+  {
+    "CWE_ID": "570",
+    "Characteristic": "Maintainability",
+    "Description": "Expression is Always False",
+    "Refactor_Advice": "If a conditional expression can be proven always False given the surrounding logic (e.g., checking x < 0 when x was already constrained to be >= 0), remove the dead branch entirely."
+  },
+  {
+    "CWE_ID": "571",
+    "Characteristic": "Maintainability",
+    "Description": "Expression is Always True",
+    "Refactor_Advice": "If a conditional expression is always True (e.g., redundant None check after a guaranteed initialization), remove the condition and execute the block unconditionally."
+  },
+  {
+    "CWE_ID": "1041",
+    "Characteristic": "Maintainability",
+    "Description": "Duplicate / Copy-Paste Code",
+    "Refactor_Advice": "If the same logic block appears more than once within the function body (duplicated lines, repeated conditional checks with identical bodies), extract it into a local variable computed once before use. Only flag if the duplication spans 3+ lines."
+  },
+  {
+    "CWE_ID": "480",
+    "Characteristic": "Maintainability",
+    "Description": "Use of Incorrect Operator",
+    "Refactor_Advice": "Verify that comparison and arithmetic operators match the intended semantics: == vs is, & vs and, | vs or, // vs /. Flag only if a wrong operator is visibly present in the code."
+  },
+  {
+    "CWE_ID": "783",
+    "Characteristic": "Maintainability",
+    "Description": "Operator Precedence Logic Error",
+    "Refactor_Advice": "In compound boolean or arithmetic expressions, add explicit parentheses to clarify evaluation order when mixing and/or/not with comparison operators, or mixing +/* with bitwise operators. Only flag when the ambiguity is visible and could change behaviour."
+  },
+  {
+    "CWE_ID": "1052",
+    "Characteristic": "Maintainability",
+    "Description": "Magic Number / Hard-Coded Literal",
+    "Refactor_Advice": "Only flag if the function contains 3 or more unexplained numeric or string literals AND the function body is over 25 lines. Do NOT flag single constants in short functions (under 25 lines) — extracting them to named variables adds lines without reducing complexity."
+  },
+  {
+    "CWE_ID": "1095",
+    "Characteristic": "Maintainability",
+    "Description": "Loop Control Variable Modified Inside Loop Body",
+    "Refactor_Advice": "If the loop index or counter variable is modified inside the loop body (not via the loop header), refactor to make the control flow explicit and predictable."
+  },
+  {
+    "CWE_ID": "407",
+    "Characteristic": "Maintainability",
+    "Description": "Algorithmic Complexity",
+    "Refactor_Advice": "Identify nested loops or repeated passes over the same data that produce O(n^2) or worse complexity when a linear alternative exists. Suggest a concrete alternative (e.g., replace inner linear search with a set/dict lookup). Only flag if the inefficiency is clearly visible in the code."
+  },
+  {
+    "CWE_ID": "1050",
+    "Characteristic": "Performance Efficiency",
+    "Description": "Repeated Expensive Computation Inside a Loop",
+    "Refactor_Advice": "If an expression that does not change across iterations is computed inside a loop (e.g., len(s), sorted(arr), set(items)), hoist it to a variable before the loop. Only flag if the computation is visibly inside a loop body and is non-trivial (not a simple attribute access)."
+  },
+  {
+    "CWE_ID": "682",
+    "Characteristic": "Reliability",
+    "Description": "Incorrect Calculation",
+    "Refactor_Advice": "Check arithmetic expressions for off-by-one errors, wrong indices, or logical mistakes in the formula. Flag only if a specific miscalculation is visible in the code."
+  },
+  {
+    "CWE_ID": "369",
+    "Characteristic": "Reliability",
+    "Description": "Divide By Zero",
+    "Refactor_Advice": "Only flag this if a division operator (/ or //) is explicitly present in the code AND the denominator could plausibly be zero given the function's input domain. Do NOT add guards preemptively."
+  },
+  {
+    "CWE_ID": "835",
+    "Characteristic": "Reliability",
+    "Description": "Loop with Unreachable Exit Condition",
+    "Refactor_Advice": "If a while loop's termination condition cannot be reached because the controlling variable is never updated inside the loop, fix the update logic or replace with a for loop."
+  },
+  {
+    "CWE_ID": "1077",
+    "Characteristic": "Reliability",
+    "Description": "Floating-Point Equality Comparison",
+    "Refactor_Advice": "Only flag if the code explicitly compares a float value with == or !=. Suggest using math.isclose() or an epsilon-based comparison instead."
+  },
+  {
+    "CWE_ID": "597",
+    "Characteristic": "Reliability",
+    "Description": "Identity Operator Used for String Equality",
+    "Refactor_Advice": "If string values are compared with 'is' or 'is not' instead of '==' or '!=', replace with the equality operator. Flag only if this pattern is visible in the code."
+  },
+  {
+    "CWE_ID": "477",
+    "Characteristic": "Security",
+    "Description": "Use of Obsolete or Deprecated Python Feature",
+    "Refactor_Advice": "Replace deprecated Python builtins or idioms with their modern equivalents: e.g., has_key() -> 'in', xrange() -> range(), map()/filter() returning non-list -> list comprehension if a list is needed, string % formatting -> f-strings. Flag only patterns that are visibly present."
+  }
+]

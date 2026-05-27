@@ -32,7 +32,7 @@ from experiment_profiles import (
     next_after_test_pass,
 )
 from state import AgentState, build_initial_state
-from utils.helpers import resolve_llm_settings
+from utils.helpers import resolve_llm_settings, compute_code_quality
 from utils.experiment_logger import append_experiment_record, summarize_run
 
 def build_llm(config: dict[str, Any]) -> ChatOpenAI:
@@ -262,6 +262,10 @@ def _apply_runtime_overrides(config: dict[str, Any], args: argparse.Namespace) -
 
 def _finalize_state(state: AgentState, runtime_config: dict[str, Any]) -> AgentState:
     finalized = AgentState(**state)
+
+    # Compute objective code quality metrics on final output code.
+    final_code = state.get("l3_code") or state.get("l2_code") or state.get("code", "")
+    finalized.update(compute_code_quality(final_code))
 
     if state.get("final_verdict") == "pass":
         finalized["workflow_status"] = "success"

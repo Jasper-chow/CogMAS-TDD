@@ -64,32 +64,55 @@ async def run(state: AgentState) -> AgentState:
     )
 
     prompt = (
-        f"You are a software architect focused on code quality. Refactor the following Python code "
+        f"You are a software architect focused on code quality. Refactor the following Python function "
         f"to fix the specific maintainability and performance issues identified by code review.\n\n"
         f"Code to refactor:\n```python\n{current_code}\n```\n\n"
         f"Issues to fix (Maintainability & Performance):\n{issues_text}\n\n"
-        f"Rules:\n"
-        f"- Fix ONLY the listed issues. Do not change unrelated logic.\n"
-        f"- Preserve the original function signature and behavior.\n"
-        f"- Improvements should make the code cleaner or more efficient, not more complex.\n\n"
+        f"CRITICAL RULES — violating any of these means the refactor is rejected:\n"
+        f"1. Fix ONLY the listed issues. Do not change unrelated logic, variable names, or function signatures.\n"
+        f"2. Start from the original code. Apply the minimum edit needed to address each listed issue.\n"
+        f"3. Preserve ALL existing import statements, helper functions, and type annotations.\n"
+        f"4. Do not add new imports, new functions, or new abstractions unless a finding explicitly demands it.\n"
+        f"5. The refactored code must compile and pass the same tests as the original.\n"
+        f"6. For complexity (CWE-1121): the ONLY acceptable fix is replacing a long if-elif chain "
+        f"(5+ branches) with a dictionary lookup. Do NOT use guard clauses, early returns, or any other "
+        f"restructuring — adding new 'if' or 'continue' statements increases cognitive complexity.\n"
+        f"7. For performance: hoist an invariant expression out of a loop by assigning it to a variable "
+        f"before the loop. Do NOT change correct O(n) code to a different O(n) implementation.\n"
+        f"8. Do NOT replace idiomatic Python (list comprehensions, built-in max/min/sum/sorted) with "
+        f"verbose loop equivalents.\n"
+        f"9. Do NOT add input validation, try/except, or raise statements.\n"
+        f"10. Do NOT rename variables that are already clear and correctly used.\n"
+        f"11. If the code contains a manual loop that exactly replicates a Python builtin "
+        f"(a loop to find max/min, sum all elements, or check if any/all satisfy a condition), "
+        f"replace it with the builtin (max(), min(), sum(), any(), all()). "
+        f"Only do this when the builtin captures the intent with no behavioural change.\n"
+        f"12. LINE COUNT GUARD: your refactored code must have the same number of lines or fewer "
+        f"than the original. If applying a fix would require adding new lines, do NOT apply it — "
+        f"return the original code unchanged for that finding.\n"
+        f"13. BRANCH COUNT GUARD: do NOT add any new if/elif/else/for/while/with statement that "
+        f"does not exist in the original code. Structural additions increase cognitive complexity.\n\n"
         f"Return strict JSON:\n"
-        f"- code: the refactored Python implementation\n"
-        f"- explanation: what you changed and why\n"
-        f"- applied_fixes: list of issue descriptions you addressed"
+        f"- code: the refactored Python implementation (complete, compilable code)\n"
+        f"- explanation: what you changed and why (one sentence per fix)\n"
+        f"- applied_fixes: list of issue descriptions you addressed (same count as findings if all fixed)"
     )
 
-    data, used_llm, note, token_count = generate_with_outlines(
+    data, used_llm, note, tc = generate_with_outlines(
         prompt=prompt,
         output_model=L3RefactorOutput,
         fallback_data=fallback.model_dump(),
     )
     output = L3RefactorOutput(**data)
-    accumulated_tokens = state.get("_task_tokens", 0) + token_count
+    accumulated_tokens = state.get("_task_tokens", 0) + tc.total
+    accumulated_input = state.get("_task_input_tokens", 0) + tc.input
+    accumulated_output = state.get("_task_output_tokens", 0) + tc.output
     llm_calls = state.get("_task_llm_calls", 0) + 1
 
     has_change = bool(output.code.strip()) and output.code.strip() != current_code.strip()
+    resolved_count = len(output.applied_fixes) if has_change else 0
+    prev_resolved = state.get("cr_findings_resolved", 0) + resolved_count
 
-    # Verify refactored code still passes tests; roll back on failure to prevent semantic drift.
     if has_change and test_cases:
         verify = execute_code_with_trace(output.code, test_cases)
         if not verify["passed"]:
@@ -98,17 +121,21 @@ async def run(state: AgentState) -> AgentState:
             )
             output.code = current_code
             has_change = False
+            prev_resolved = state.get("cr_findings_resolved", 0)
 
     comments.append(
         f"{NODE_NAME}: {'applied' if has_change else 'no'} maintainability/performance fixes "
-        f"({'LLM' if used_llm else 'fallback'}), {note}"
+        f"({'LLM' if used_llm else 'fallback'}), resolved={resolved_count}/{len(findings)}, {note}"
     )
 
     return {
         "code": output.code if has_change else current_code,
-        "l3_code": output.code if has_change else current_code,  # always set l3_code; never leave it empty
+        "l3_code": output.code if has_change else current_code,
         "has_l3_refactor": has_change,
+        "cr_findings_resolved": prev_resolved,
         "_task_tokens": accumulated_tokens,
+        "_task_input_tokens": accumulated_input,
+        "_task_output_tokens": accumulated_output,
         "_task_llm_calls": llm_calls,
         "review_comments": comments,
     }
