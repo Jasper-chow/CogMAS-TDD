@@ -1,0 +1,19 @@
+{
+  "dataset": "bigcodebench",
+  "profile": "ablation_no_l2l3",
+  "manifest_name": "bigcodebench_complex_3.0cc",
+  "seed_source": "empty",
+  "run_dir": "D:\\projects\\Cogmas-TDD relate\\CogMAS-TDD\\results\\runs\\bigcodebench\\ablation_no_l2l3\\20260528_000053__ablation_no_l2l3__bigcodebench__bigcodebench_complex_3.0cc__machine_b_run_2",
+  "total_tasks": 150,
+  "workflow_success_rate": 0.08666666666666667,
+  "test_pass_rate": 0.3466666666666667,
+  "avg_green_attempts": 3.2666666666666666,
+  "avg_iteration": 0.8666666666666667,
+  "avg_wall_seconds": 67.14,
+  "avg_tokens": 9222.3,
+  "avg_llm_calls": 6.13,
+  "avg_cr_score": 1.46,
+  "cr_initial_findings_total": 177,
+  "cr_findings_resolved_total": 0,
+  "findings_resolved_rate": 0.0
+}
